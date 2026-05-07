@@ -1,6 +1,6 @@
 # NEUROINSPO
 
-A Pinterest-style inspiration board for neuroscience papers. Drop in a PDF and a figure thumbnail, run one script, and the paper appears as a pinned card with a fan-out page animation and an inline PDF viewer.
+An inspiration board for neuroscience papers. Drop in a PDF and a figure thumbnail, run one script, and the paper appears as a pinned card with a fan-out page animation and an inline PDF viewer.
 
 ## Features
 

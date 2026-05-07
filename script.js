@@ -1,7 +1,7 @@
 /* neuroinspo — main script */
 
 let allPapers  = [];
-let currentSort = 'upload';
+let currentSort = 'pub';
 let activeDoi   = null;   // DOI of the paper whose panel is open
 
 // ─── Data loading ────────────────────────────────────────────────────────────

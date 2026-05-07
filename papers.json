@@ -1,0 +1,82 @@
+[
+  {
+    "filename": "2026.03.18.712735v1.full",
+    "pdf": "papers/2026.03.18.712735v1.full.pdf",
+    "thumbnail": "papers/2026.03.18.712735v1.full.png",
+    "page_images": [
+      "papers/2026.03.18.712735v1.full_page1.jpg",
+      "papers/2026.03.18.712735v1.full_page2.jpg"
+    ],
+    "doi": "10.64898/2026.03.18.712735",
+    "title": "Loss of neuronal population organization links pathology to behavior in a model of Alzheimer’s disease",
+    "citation": "Ruff et al., 2026",
+    "pub_date": "2026-03-18",
+    "upload_date": "2026-05-06T21:06:34.238128",
+    "journal": null,
+    "is_author": true
+  },
+  {
+    "filename": "2026.05.04.722785v1.full",
+    "pdf": "papers/2026.05.04.722785v1.full.pdf",
+    "thumbnail": "papers/2026.05.04.722785v1.full.png",
+    "page_images": [
+      "papers/2026.05.04.722785v1.full_page1.jpg",
+      "papers/2026.05.04.722785v1.full_page2.jpg"
+    ],
+    "doi": "10.64898/2026.05.04.722785",
+    "title": "Adaptive problem solving in the primate frontal cortex",
+    "citation": "Ramadan et al., 2026",
+    "pub_date": "2026-05-06",
+    "upload_date": "2026-05-06T16:59:34.622440",
+    "journal": null,
+    "is_author": false
+  },
+  {
+    "filename": "2603.06557v1",
+    "pdf": "papers/2603.06557v1.pdf",
+    "thumbnail": "papers/2603.06557v1.png",
+    "page_images": [
+      "papers/2603.06557v1_page1.jpg",
+      "papers/2603.06557v1_page2.jpg"
+    ],
+    "doi": "10.48550/arXiv.2603.06557",
+    "title": "Causal Interpretation of Neural Network Computations with Contribution Decomposition",
+    "citation": "Melander et al., 2026",
+    "pub_date": "2026-03-06",
+    "upload_date": "2026-03-17T12:47:46",
+    "journal": "arXiv",
+    "is_author": false
+  },
+  {
+    "filename": "s41593-026-02207-1",
+    "pdf": "papers/s41593-026-02207-1.pdf",
+    "thumbnail": "papers/s41593-026-02207-1.png",
+    "page_images": [
+      "papers/s41593-026-02207-1_page1.jpg",
+      "papers/s41593-026-02207-1_page2.jpg"
+    ],
+    "doi": "10.1038/s41593-026-02207-1",
+    "title": "Neuronal tuning aligns dynamically with object and texture manifolds across the visual hierarchy",
+    "citation": "Wang and Ponce, 2026",
+    "pub_date": "2026-03-10",
+    "upload_date": "2026-03-13T12:07:06.490883",
+    "journal": "Nature Neuroscience",
+    "is_author": false
+  },
+  {
+    "filename": "s41593-026-02290-4",
+    "pdf": "papers/s41593-026-02290-4.pdf",
+    "thumbnail": "papers/s41593-026-02290-4.png",
+    "page_images": [
+      "papers/s41593-026-02290-4_page1.jpg",
+      "papers/s41593-026-02290-4_page2.jpg"
+    ],
+    "doi": "10.1038/s41593-026-02290-4",
+    "title": "A communication subspace relays context-dependent actions from human prefrontal to motor cortex",
+    "citation": "Binish et al., 2026",
+    "pub_date": "2026-05-01",
+    "upload_date": "2026-05-04T09:46:02.040718",
+    "journal": "Nature Neuroscience",
+    "is_author": false
+  }
+]

@@ -1,7 +1,3 @@
-# Papers — keep PDFs, PNGs and generated assets local only
-papers/
-papers.json
-
 # macOS
 .DS_Store
 .AppleDouble

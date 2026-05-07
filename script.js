@@ -188,13 +188,6 @@ function makeCard(paper) {
     info.appendChild(jrn);
   }
 
-  if (paper.doi) {
-    const doi = document.createElement('p');
-    doi.className   = 'card-doi';
-    doi.textContent = `doi: ${paper.doi}`;
-    info.appendChild(doi);
-  }
-
   card.appendChild(info);
   wrapper.appendChild(card);
 

@@ -252,19 +252,6 @@ main {
   text-overflow: ellipsis;
 }
 
-/* DOI badge — shown on hover */
-.card-doi {
-  display: none;
-  margin-top: 8px;
-  font-size: 10px;
-  color: var(--text-dim);
-  font-family: monospace;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.card-wrapper:hover .card-doi { display: block; }
 
 /* ─── Loading ────────────────────────────────────────────────────────────── */
 .loading {
@@ -337,6 +324,9 @@ main {
 .pdf-panel {
   /* Spans the full grid width wherever it's inserted */
   grid-column: 1 / -1;
+  max-width: 960px;
+  width: 100%;
+  justify-self: start;
   background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: var(--shadow-hover);

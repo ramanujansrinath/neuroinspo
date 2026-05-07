@@ -58,5 +58,53 @@
     "journal": "Nature Neuroscience",
     "abstract": "",
     "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.04.23.720375",
+    "url": "https://doi.org/10.64898/2026.04.23.720375",
+    "thumbnail": "thumbnails/6.png",
+    "title": "Universal Geometry of Compositional Construction in Prefrontal Cortex",
+    "citation": "Manakov et al., 2026",
+    "pub_date": "2026-04-23",
+    "upload_date": "2026-05-07T11:17:58",
+    "journal": null,
+    "abstract": "Summary Compositional generation underlies the systematic and essentially unlimited construction of complex concepts from simpler parts, as is foundational to intelligent behavior, but its underlying neural mechanisms remain unclear. Here we reveal a neural implementation of hierarchical compositional construction of abstract sequences. We demonstrate that in an open-ended setting with very sparse feedback, rats innately utilize hierarchical composition to construct adaptive action sequences that would have been difficult to discover from scratch. Prefrontal neural population representations of these abstract sequences adhere to a low-dimensional format that encodes the orderly progression of elemental units comprising the sequence while converging to a sequence-general endpoint. Higher-level compositions in the hierarchy are systematically related to their lower-level constituent parts, reusing much of the representation, while providing context separation and satisfying format constraints. These neural representations are geometrically identical across animals, pointing to a convergent solution for how knowledge is hierarchically assembled via a compositional mechanism.",
+    "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.01.18.700235",
+    "url": "https://doi.org/10.64898/2026.01.18.700235",
+    "thumbnail": "thumbnails/7.png",
+    "title": "Neural representation of action grammar structure in primate frontal cortex",
+    "citation": "Tian et al., 2026",
+    "pub_date": "2026-01-19",
+    "upload_date": "2026-05-07T11:20:24",
+    "journal": null,
+    "abstract": "Humans and other animals can solve new problems, even on the first attempt. This capacity to generate novel problem-solving behavior has been hypothesized to depend on brain mechanisms for recombining units of knowledge using systems of procedural rules, or grammars . Yet, whether and how the brain represents and implements grammars remains unclear, in large part due to the lack of neural recordings (typically performed in animal models) during grammar-based problem solving (typically studied in humans). Here, we address that gap, and in turn identify an underlying neural basis of grammatical behavior. We designed a visual–motor construction task in which macaque monkeys trace complex, often novel, geometric figures by generating a sequence of strokes, each a distinct shape, like a circle, dash, or chevron (action symbols 1 ). Critically, sequencing was guided by a learned hierarchical action grammar A n B m C k , meaning “repeat shape A, then repeat shape B, then repeat shape C”, where the number of repetitions (n, m, and k) varied across problems. Behavior was internally generated (no cues guiding stroke order), problem-directed (to construct a specific image), and exhibited zero-shot generalization (successful on the first trial for novel problems, including harder ones)--key hallmarks of grammar use. To identify underlying neural substrates, we recorded from multiple frontal cortical areas previously implicated in rule use or action sequencing. Activity during drawing encoded key structural properties of the action grammar: (i) shape index (A, B, C), (ii) abstract role (e.g., the role A independent of the specific shape), and (iii) ordinal position within a shape repeat. Moreover, all three properties were strongest in a single region, the pre-supplementary motor area (preSMA). We suggest the possibility that this conjunction of representations is a signature of an implementation of an iterative algorithm resembling a “for-loop” program: internally tracking how many repetitions remain for each shape index and switching to the next when complete. Our study establishes a paradigm for studying the neural basis of grammar-guided novel behavior and identifies in preSMA a dynamic representation of grammatical structure supporting such behavior.",
+    "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.02.19.706797",
+    "url": "https://doi.org/10.64898/2026.02.19.706797",
+    "thumbnail": "thumbnails/8.png",
+    "title": "Visual semantic tuning across the cortex shifts between tasks",
+    "citation": "Zhang and Gallant, 2026",
+    "pub_date": "2026-02-20",
+    "upload_date": "2026-05-07T11:21:05",
+    "journal": null,
+    "abstract": "Attention is a powerful mechanism that dynamically optimizes brain representations to prioritize behaviorally-relevant information. While previous studies focusing on single tasks have demonstrated that attention shifts tuning towards attended targets, real-world behavior often requires humans to switch between tasks with different demands. How does visual semantic tuning in the human brain shift to support the behavioral demands of different naturalistic tasks? To answer this question, we used voxelwise encoding models to compare visual semantic tuning across the human cerebral cortex between two distinct naturalistic tasks, movie watching and navigation. Results show that visual semantic tuning in the cortex differed substantially between tasks. Principal component analysis reveals that during navigation, tuning shifts increase the representation of vehicles and traffic signs compared to movie watching, and that these shifts were localized to distinct functional networks. These tuning shifts reconfigure the human brain’s representations of object categories based on their behavioral relevance. These findings demonstrate that visual semantic tuning in the brain dynamically shifts towards task-relevant information across naturalistic tasks, optimizing functional representations to achieve diverse behavioral goals. Significance statement In real-world situations, we switch between many tasks with behaviorally distinct goals that require us to attend to different targets. Here we show that visual semantic tuning across the human cortex shifts between passive movie-watching and active navigation. These tuning shifts increase the representation of behaviorally-relevant objects, such as cars during navigation. Tuning shifts towards different object categories are distributed across distinct functional networks, suggesting that they engage different cognitive mechanisms. These results show that visual semantic tuning in the human brain is highly task-dependent and is optimized to represent behaviorally-relevant information.",
+    "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.04.24.720703",
+    "url": "https://doi.org/10.64898/2026.04.24.720703",
+    "thumbnail": "thumbnails/9.png",
+    "title": "Distinct tasks engage a shared neural subspace in human hippocampus and anterior cingulate cortex",
+    "citation": "Lu et al., 2026",
+    "pub_date": "2026-04-28",
+    "upload_date": "2026-05-07T11:22:20",
+    "journal": null,
+    "abstract": "A hallmark of human cognitive flexibility is the ability to perform a wide range of unrelated tasks. While much is known about how neural circuits support individual tasks, less is understood about how these circuits support multiple tasks. Are neural representations largely task-specific, or do they retain a shared structure across distinct behaviors? To investigate this question, we recorded neural population activity from the hippocampus and anterior cingulate cortex, two regions linked to generalization and cognitive control, in eleven human patients performing three distinct tasks. Using dimensionality reduction, we estimated the neural subspace associated with each task and compared subspace geometry across tasks. We found that task-related subspaces were not independent: across tasks, approximately half of the subspace dimensions were shared, and these were primarily the dimensions containing most of the shared neural covariance. These findings indicate that neural population activity in these regions is not purely task-specific. This suggests a stable, low-dimensional circuit structure may persist even across unrelated behaviors, potentially providing a common substrate for flexible cognition.",
+    "is_author": false
   }
 ]

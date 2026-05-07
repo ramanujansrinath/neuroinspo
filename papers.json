@@ -1,82 +1,62 @@
 [
   {
-    "filename": "2026.03.18.712735v1.full",
-    "pdf": "papers/2026.03.18.712735v1.full.pdf",
-    "thumbnail": "papers/2026.03.18.712735v1.full.png",
-    "page_images": [
-      "papers/2026.03.18.712735v1.full_page1.jpg",
-      "papers/2026.03.18.712735v1.full_page2.jpg"
-    ],
     "doi": "10.64898/2026.03.18.712735",
+    "url": "https://doi.org/10.64898/2026.03.18.712735",
+    "thumbnail": "thumbnails/1.png",
     "title": "Loss of neuronal population organization links pathology to behavior in a model of Alzheimer’s disease",
     "citation": "Ruff et al., 2026",
     "pub_date": "2026-03-18",
-    "upload_date": "2026-05-06T21:06:34.238128",
+    "upload_date": "2026-05-06T21:07:00.065679",
     "journal": null,
+    "abstract": "Alzheimer’s disease (AD) and related dementias (ADRD) are defined by molecular and cellular pathology and cognitive decline, but linking these levels requires understanding how pathology alters large-scale neuronal activity. We longitudinally tracked behavior, multi-area neuronal population activity, and fluid and histological biomarkers in a macaque model of early-stage ADRD. As pathology progressed, visually guided behavior became increasingly disorganized, reflected in less structured exploration despite preserved task performance. Guided by systems neuroscience principles linking neuronal population activity with organized goal-directed behavior, we found progressive reductions in coordinated neuronal population activity within and between visual and parietal cortices, even as single-neuron tuning and basic feature encoding remained stable. These changes emerged when tau pathology was largely confined to regions providing feedback to visual cortex. This disorganized state appears modifiable: proof-of-concept methylphenidate administration was associated with transient improvement in behavioral organization. Together, these findings identify disruption of neuronal population organization as a defining feature of early-stage ADRD and frame early dysfunction as a disorder of coordinated population activity.",
     "is_author": true
   },
   {
-    "filename": "2026.05.04.722785v1.full",
-    "pdf": "papers/2026.05.04.722785v1.full.pdf",
-    "thumbnail": "papers/2026.05.04.722785v1.full.png",
-    "page_images": [
-      "papers/2026.05.04.722785v1.full_page1.jpg",
-      "papers/2026.05.04.722785v1.full_page2.jpg"
-    ],
     "doi": "10.64898/2026.05.04.722785",
+    "url": "https://doi.org/10.64898/2026.05.04.722785",
+    "thumbnail": "thumbnails/2.png",
     "title": "Adaptive problem solving in the primate frontal cortex",
     "citation": "Ramadan et al., 2026",
     "pub_date": "2026-05-06",
-    "upload_date": "2026-05-06T16:59:34.622440",
+    "upload_date": "2026-05-06T17:05:35.854894",
     "journal": null,
+    "abstract": "Humans solve problems adaptively by selecting strategies suited to the situation. For example, when missing the bus to an appointment, we may wait for the next bus, call a taxi, cancel, or reschedule depending on the circumstances. Yet the neural and computational principles that support such flexible problem solving remain poorly understood. To address this question, we designed a moderately complex decision task for monkeys that allows multiple plausible solution strategies. Animals learned the task rapidly, generalized to novel maze geometries, and their choices were inconsistent with any single fixed strategy. We then recorded large-scale neural activity from the frontal cortex and found that population dynamics varied systematically with maze geometry. Neural responses clustered into two distinct dynamical regimes with separable initial states, consistent with hierarchical and sequential strategies. A decoder trained on population activity revealed time-resolved decision dynamics that aligned with these regimes, and an unsupervised latent-space analysis provided convergent evidence that strategy use varied across trials. A behavioral model grounded in neurally inferred strategies accounted for choices better than fixed-strategy alternatives and captured trial-by-trial variability. Together, these results provide a neural and computational account of how the brain selects and implements distinct strategies during adaptive problem solving.",
     "is_author": false
   },
   {
-    "filename": "2603.06557v1",
-    "pdf": "papers/2603.06557v1.pdf",
-    "thumbnail": "papers/2603.06557v1.png",
-    "page_images": [
-      "papers/2603.06557v1_page1.jpg",
-      "papers/2603.06557v1_page2.jpg"
-    ],
     "doi": "10.48550/arXiv.2603.06557",
+    "url": "https://doi.org/10.48550/arXiv.2603.06557",
+    "thumbnail": "thumbnails/3.png",
     "title": "Causal Interpretation of Neural Network Computations with Contribution Decomposition",
     "citation": "Melander et al., 2026",
     "pub_date": "2026-03-06",
-    "upload_date": "2026-03-17T12:47:46",
+    "upload_date": "2026-05-06T17:06:27.653397",
     "journal": "arXiv",
+    "abstract": "Understanding how neural networks transform inputs into outputs is crucial for interpreting and manipulating their behavior. Most existing approaches analyze internal representations by identifying hidden-layer activation patterns correlated with human-interpretable concepts. Here we take a direct approach to examine how hidden neurons act to drive network outputs. We introduce CODEC (Contribution Decomposition), a method that uses sparse autoencoders to decompose network behavior into sparse motifs of hidden-neuron contributions, revealing causal processes that cannot be determined by analyzing activations alone. Applying CODEC to benchmark image-classification networks, we find that contributions grow in sparsity and dimensionality across layers and, unexpectedly, that they progressively decorrelate positive and negative effects on network outputs. We further show that decomposing contributions into sparse modes enables greater control and interpretation of intermediate layers, supporting both causal manipulations of network output and human-interpretable visualizations of distinct image components that combine to drive that output. Finally, by analyzing state-of-the-art models of neural activity in the vertebrate retina, we demonstrate that CODEC uncovers combinatorial actions of model interneurons and identifies the sources of dynamic receptive fields. Overall, CODEC provides a rich and interpretable framework for understanding how nonlinear computations evolve across hierarchical layers, establishing contribution modes as an informative unit of analysis for mechanistic insights into artificial neural networks.",
     "is_author": false
   },
   {
-    "filename": "s41593-026-02207-1",
-    "pdf": "papers/s41593-026-02207-1.pdf",
-    "thumbnail": "papers/s41593-026-02207-1.png",
-    "page_images": [
-      "papers/s41593-026-02207-1_page1.jpg",
-      "papers/s41593-026-02207-1_page2.jpg"
-    ],
     "doi": "10.1038/s41593-026-02207-1",
+    "url": "https://doi.org/10.1038/s41593-026-02207-1",
+    "thumbnail": "thumbnails/4.png",
     "title": "Neuronal tuning aligns dynamically with object and texture manifolds across the visual hierarchy",
     "citation": "Wang and Ponce, 2026",
     "pub_date": "2026-03-10",
-    "upload_date": "2026-03-13T12:07:06.490883",
+    "upload_date": "2026-05-06T17:06:52.141933",
     "journal": "Nature Neuroscience",
+    "abstract": "Visual neurons respond to a vast range of images, from textures to objects, but the rules linking these responses remain unclear. Although tuning to simple features is well established in the primary visual cortex, this framework breaks down in higher areas, where neurons encode diverse and unpredictable features. To ask what features neurons prioritize, we used generative models (deep networks that synthesize new images from a learned latent space), allowing neurons in V1, V4 and the posterior inferotemporal cortex (PIT) to guide image synthesis through closed-loop optimization. We compared models that emphasize texture versus those that emphasize object structure. Although V1 and V4 aligned more strongly with texture-based spaces, many PIT neurons responded equally well to both types of optimized images, revealing a focus on shared local motifs rather than whole-object templates, and this alignment to objects emerged later in their response. These findings reveal coding principles across the ventral stream and clarify the limits of current vision models.",
     "is_author": false
   },
   {
-    "filename": "s41593-026-02290-4",
-    "pdf": "papers/s41593-026-02290-4.pdf",
-    "thumbnail": "papers/s41593-026-02290-4.png",
-    "page_images": [
-      "papers/s41593-026-02290-4_page1.jpg",
-      "papers/s41593-026-02290-4_page2.jpg"
-    ],
     "doi": "10.1038/s41593-026-02290-4",
+    "url": "https://doi.org/10.1038/s41593-026-02290-4",
+    "thumbnail": "thumbnails/5.png",
     "title": "A communication subspace relays context-dependent actions from human prefrontal to motor cortex",
     "citation": "Binish et al., 2026",
     "pub_date": "2026-05-01",
-    "upload_date": "2026-05-04T09:46:02.040718",
+    "upload_date": "2026-05-06T17:07:28.535246",
     "journal": "Nature Neuroscience",
+    "abstract": "",
     "is_author": false
   }
 ]

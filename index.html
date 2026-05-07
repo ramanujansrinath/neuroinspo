@@ -51,30 +51,7 @@
   </header>
 
   <main>
-    <!-- Inline PDF panel — hidden until a card is clicked -->
-    <div class="pdf-panel" id="pdf-panel" aria-hidden="true">
-      <div class="pdf-panel-bar">
-        <div class="pdf-panel-meta">
-          <span class="pdf-panel-citation" id="pdf-panel-citation"></span>
-          <span class="pdf-panel-title" id="pdf-panel-title"></span>
-        </div>
-        <div class="pdf-panel-actions">
-          <a class="pdf-action-btn" id="pdf-download" href="#" target="_blank" title="Open PDF in new tab">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M8 2v8M5 7l3 3 3-3M2 12h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Download
-          </a>
-          <button class="pdf-action-btn pdf-close-btn" id="pdf-close" title="Close">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <iframe class="pdf-frame" id="pdf-frame" src="" title="Paper PDF"></iframe>
-    </div>
-
+    <!-- Panel is created dynamically by script.js and injected into the grid -->
     <div class="papers-grid" id="papers-grid"></div>
 
     <div class="loading" id="loading">

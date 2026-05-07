@@ -1,8 +1,8 @@
 /* neuroinspo — main script */
 
-let allPapers = [];
+let allPapers  = [];
 let currentSort = 'upload';
-let activeFilename = null;   // which paper has the panel open
+let activeDoi   = null;   // DOI of the paper whose panel is open
 
 // ─── Data loading ────────────────────────────────────────────────────────────
 
@@ -36,64 +36,108 @@ function sorted(papers, by) {
   });
 }
 
-// ─── PDF panel ───────────────────────────────────────────────────────────────
+// ─── Panel ───────────────────────────────────────────────────────────────────
 
-function openPanel(paper) {
-  const panel    = document.getElementById('pdf-panel');
-  const frame    = document.getElementById('pdf-frame');
-  const titleEl  = document.getElementById('pdf-panel-title');
-  const citeEl   = document.getElementById('pdf-panel-citation');
-  const dlBtn    = document.getElementById('pdf-download');
+function buildPanel(paper) {
+  const panel = document.createElement('div');
+  panel.id        = 'pdf-panel';
+  panel.className = 'pdf-panel';
 
-  // Update content
-  titleEl.textContent = paper.title;
-  citeEl.textContent  = paper.citation;
-  dlBtn.href          = paper.pdf;
+  const escapedTitle = paper.title.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const abstractHtml = paper.abstract
+    ? `<p class="panel-abstract">${paper.abstract.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</p>`
+    : '';
+  const journalHtml = paper.journal
+    ? `<span class="panel-journal">${paper.journal}</span>`
+    : '';
 
-  // Swap iframe src only if switching papers (avoids reload flicker)
-  if (frame.dataset.current !== paper.filename) {
-    frame.src = paper.pdf;
-    frame.dataset.current = paper.filename;
+  panel.innerHTML = `
+    <div class="pdf-panel-bar">
+      <div class="pdf-panel-meta">
+        <span class="pdf-panel-citation">${paper.citation}</span>
+      </div>
+      <div class="pdf-panel-actions">
+        <a class="pdf-action-btn" href="${paper.url}" target="_blank" rel="noopener" title="Open in new tab">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M6 2H2a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1V8M9 1h4m0 0v4m0-4L6 8"
+                  stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Open in new tab
+        </a>
+        <button class="pdf-action-btn pdf-close-btn" title="Close">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+            <path d="M1 1l11 11M12 1L1 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="panel-body">
+      <h2 class="panel-title">${escapedTitle}</h2>
+      ${journalHtml}
+      ${abstractHtml}
+      <p class="panel-doi">doi: <a href="${paper.url}" target="_blank" rel="noopener">${paper.doi}</a></p>
+    </div>
+  `;
+
+  panel.querySelector('.pdf-close-btn').addEventListener('click', closePanel);
+  return panel;
+}
+
+function lastCardInRow(clickedWrapper) {
+  // Find the last card visually in the same grid row as the clicked card
+  const grid    = document.getElementById('papers-grid');
+  const cards   = Array.from(grid.querySelectorAll('.card-wrapper'));
+  const rowTop  = clickedWrapper.getBoundingClientRect().top;
+  let   last    = clickedWrapper;
+  for (const card of cards) {
+    if (Math.abs(card.getBoundingClientRect().top - rowTop) < 10) {
+      last = card;
+    }
   }
+  return last;
+}
+
+function openPanel(paper, clickedWrapper) {
+  // If same card clicked again, close
+  if (activeDoi === paper.doi) { closePanel(); return; }
+
+  closePanel(true /* instant */);
+  activeDoi = paper.doi;
 
   // Mark active card
-  document.querySelectorAll('.card-wrapper').forEach(el => {
-    el.classList.toggle('active', el.dataset.filename === paper.filename);
-  });
-  activeFilename = paper.filename;
+  document.querySelectorAll('.card-wrapper')
+    .forEach(el => el.classList.toggle('active', el.dataset.doi === paper.doi));
 
-  // Open panel
-  panel.classList.add('open');
-  panel.setAttribute('aria-hidden', 'false');
+  // Build and insert panel after the last card in the same row
+  const panel     = buildPanel(paper);
+  const insertAfter = lastCardInRow(clickedWrapper);
+  insertAfter.insertAdjacentElement('afterend', panel);
+
+  // Trigger open animation after a brief delay so the browser has painted the element
+  setTimeout(() => panel.classList.add('open'), 20);
 
   // Scroll panel into view smoothly
-  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 60);
 }
 
-function closePanel() {
+function closePanel(instant = false) {
   const panel = document.getElementById('pdf-panel');
-  const frame = document.getElementById('pdf-frame');
-
-  panel.classList.remove('open');
-  panel.setAttribute('aria-hidden', 'true');
+  if (!panel) return;
 
   document.querySelectorAll('.card-wrapper').forEach(el => el.classList.remove('active'));
-  activeFilename = null;
+  activeDoi = null;
 
-  // Clear iframe after animation completes so it stops loading/rendering
-  setTimeout(() => {
-    if (!panel.classList.contains('open')) {
-      frame.src = '';
-      frame.dataset.current = '';
-    }
-  }, 460);
+  if (instant) {
+    panel.remove();
+  } else {
+    panel.classList.remove('open');
+    setTimeout(() => panel.remove(), 350);
+  }
 }
-
-document.getElementById('pdf-close').addEventListener('click', closePanel);
 
 // Close on Escape
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && activeFilename) closePanel();
+  if (e.key === 'Escape' && activeDoi) closePanel();
 });
 
 // ─── Card factory ────────────────────────────────────────────────────────────
@@ -101,20 +145,9 @@ document.addEventListener('keydown', e => {
 function makeCard(paper) {
   const wrapper = document.createElement('div');
   wrapper.className = 'card-wrapper';
+  wrapper.dataset.doi = paper.doi;
   if (paper.is_author) wrapper.classList.add('author-card');
-  wrapper.dataset.filename = paper.filename;
-  if (paper.filename === activeFilename) wrapper.classList.add('active');
-
-  // Fan layers (behind the card face)
-  const p2 = document.createElement('div');
-  p2.className = 'page-layer page-layer-2';
-  const p1 = document.createElement('div');
-  p1.className = 'page-layer page-layer-1';
-
-  // Apply PDF page images if available
-  const pages = paper.page_images || [];
-  if (pages[0]) p1.style.backgroundImage = `url('${pages[0]}')`;
-  if (pages[1]) p2.style.backgroundImage = `url('${pages[1]}')`;
+  if (paper.doi === activeDoi) wrapper.classList.add('active');
 
   // Card face
   const card = document.createElement('div');
@@ -122,15 +155,15 @@ function makeCard(paper) {
 
   if (paper.thumbnail) {
     const img = document.createElement('img');
-    img.className = 'card-thumbnail';
-    img.src = paper.thumbnail;
-    img.alt = paper.title;
-    img.loading = 'lazy';
-    img.decoding = 'async';
+    img.className  = 'card-thumbnail';
+    img.src        = paper.thumbnail;
+    img.alt        = paper.title;
+    img.loading    = 'lazy';
+    img.decoding   = 'async';
     card.appendChild(img);
   } else {
     const ph = document.createElement('div');
-    ph.className = 'card-thumbnail-missing';
+    ph.className  = 'card-thumbnail-missing';
     ph.textContent = '📄';
     card.appendChild(ph);
   }
@@ -139,59 +172,47 @@ function makeCard(paper) {
   info.className = 'card-info';
 
   const title = document.createElement('h2');
-  title.className = 'card-title';
+  title.className   = 'card-title';
   title.textContent = paper.title;
   info.appendChild(title);
 
   const cite = document.createElement('p');
-  cite.className = 'card-citation';
+  cite.className   = 'card-citation';
   cite.textContent = paper.citation;
   info.appendChild(cite);
 
   if (paper.journal) {
     const jrn = document.createElement('p');
-    jrn.className = 'card-journal';
+    jrn.className   = 'card-journal';
     jrn.textContent = paper.journal;
     info.appendChild(jrn);
   }
 
   if (paper.doi) {
     const doi = document.createElement('p');
-    doi.className = 'card-doi';
+    doi.className   = 'card-doi';
     doi.textContent = `doi: ${paper.doi}`;
     info.appendChild(doi);
   }
 
   card.appendChild(info);
-
-  // Click → toggle panel
-  wrapper.addEventListener('click', () => {
-    if (activeFilename === paper.filename) {
-      closePanel();
-    } else {
-      openPanel(paper);
-    }
-  });
-
-  wrapper.appendChild(p2);
-  wrapper.appendChild(p1);
   wrapper.appendChild(card);
 
+  wrapper.addEventListener('click', () => openPanel(paper, wrapper));
   return wrapper;
 }
 
 // ─── Render ──────────────────────────────────────────────────────────────────
 
 function renderPapers(initial = false) {
-  const grid = document.getElementById('papers-grid');
+  closePanel(true);
+  const grid   = document.getElementById('papers-grid');
   const papers = sorted(allPapers, currentSort);
 
   grid.innerHTML = '';
-
   papers.forEach((paper, i) => {
     const el = makeCard(paper);
     grid.appendChild(el);
-
     const delay = initial ? i * 55 : 0;
     setTimeout(() => el.classList.add('visible'), delay);
   });
@@ -203,15 +224,13 @@ document.querySelectorAll('.sort-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const sort = btn.dataset.sort;
     if (sort === currentSort) return;
-
     currentSort = sort;
     document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
 
     const grid = document.getElementById('papers-grid');
     grid.style.transition = 'opacity 0.18s ease';
-    grid.style.opacity = '0';
-
+    grid.style.opacity    = '0';
     setTimeout(() => {
       renderPapers(false);
       grid.querySelectorAll('.card-wrapper').forEach(el => el.classList.add('visible'));

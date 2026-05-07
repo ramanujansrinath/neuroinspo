@@ -105,6 +105,21 @@ def fetch_arxiv(arxiv_id: str) -> dict | None:
     return None
 
 
+def is_ramanujan_srinath(authors: list) -> bool:
+    """Return True if any author is Ramanujan Srinath (handles common variations)."""
+    for a in authors:
+        family = a.get("family", "").lower().strip()
+        given  = a.get("given",  "").lower().strip()
+        # Unstructured name field (e.g. arXiv)
+        full   = a.get("name",   "").lower().strip()
+
+        if family == "srinath" and (given.startswith("r") or "ramanujan" in given):
+            return True
+        if "srinath" in full and ("ramanujan" in full or full.split()[0].rstrip(".") == "r"):
+            return True
+    return False
+
+
 def format_citation(authors: list, year: str) -> str:
     last_names = [a.get("family", a.get("name", "Unknown")) for a in authors]
     if not last_names:
@@ -182,6 +197,7 @@ def process():
         citation = "Unknown"
         pub_date = None
         journal = None
+        is_author = False
 
         if doi:
             time.sleep(0.5)  # stay in Crossref polite pool
@@ -205,6 +221,10 @@ def process():
                 journals = meta.get("container-title", [])
                 journal = journals[0] if journals else None
 
+                is_author = is_ramanujan_srinath(authors)
+                if is_author:
+                    print("  ★ Ramanujan Srinath is an author")
+
                 print(f"  ✓ {citation}")
                 print(f"  ✓ {title[:70]}{'...' if len(title) > 70 else ''}")
 
@@ -219,6 +239,7 @@ def process():
             "pub_date": pub_date,
             "upload_date": upload_date,
             "journal": journal,
+            "is_author": is_author,
         })
         print()
 

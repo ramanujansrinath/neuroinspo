@@ -101,6 +101,7 @@ document.addEventListener('keydown', e => {
 function makeCard(paper) {
   const wrapper = document.createElement('div');
   wrapper.className = 'card-wrapper';
+  if (paper.is_author) wrapper.classList.add('author-card');
   wrapper.dataset.filename = paper.filename;
   if (paper.filename === activeFilename) wrapper.classList.add('active');
 

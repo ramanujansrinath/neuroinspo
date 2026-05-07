@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEUROINSPO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <!-- Placeholder icon — swap the SVG once you have a design -->
+        <div class="logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="5.5" fill="currentColor"/>
+            <!-- axons -->
+            <line x1="22" y1="16" x2="22" y2="4"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="22" y1="28" x2="22" y2="40" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="16" y1="22" x2="4"  y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="28" y1="22" x2="40" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="17.5" y1="17.5" x2="8"  y2="8"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="26.5" y1="26.5" x2="36" y2="36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="26.5" y1="17.5" x2="36" y2="8"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="17.5" y1="26.5" x2="8"  y2="36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <!-- synapse dots -->
+            <circle cx="22" cy="4"  r="2" fill="currentColor"/>
+            <circle cx="22" cy="40" r="2" fill="currentColor"/>
+            <circle cx="4"  cy="22" r="2" fill="currentColor"/>
+            <circle cx="40" cy="22" r="2" fill="currentColor"/>
+            <circle cx="8"  cy="8"  r="2" fill="currentColor"/>
+            <circle cx="36" cy="36" r="2" fill="currentColor"/>
+            <circle cx="36" cy="8"  r="2" fill="currentColor"/>
+            <circle cx="8"  cy="36" r="2" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="logo-text">NEUROINSPO</span>
+      </div>
+
+      <nav class="controls">
+        <div class="sort-toggle" role="group" aria-label="Sort papers by">
+          <button class="sort-btn active" data-sort="upload">Recently added</button>
+          <button class="sort-btn"        data-sort="pub"   >Publication date</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Inline PDF panel — hidden until a card is clicked -->
+    <div class="pdf-panel" id="pdf-panel" aria-hidden="true">
+      <div class="pdf-panel-bar">
+        <div class="pdf-panel-meta">
+          <span class="pdf-panel-citation" id="pdf-panel-citation"></span>
+          <span class="pdf-panel-title" id="pdf-panel-title"></span>
+        </div>
+        <div class="pdf-panel-actions">
+          <a class="pdf-action-btn" id="pdf-download" href="#" target="_blank" title="Open PDF in new tab">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 2v8M5 7l3 3 3-3M2 12h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Download
+          </a>
+          <button class="pdf-action-btn pdf-close-btn" id="pdf-close" title="Close">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <iframe class="pdf-frame" id="pdf-frame" src="" title="Paper PDF"></iframe>
+    </div>
+
+    <div class="papers-grid" id="papers-grid"></div>
+
+    <div class="loading" id="loading">
+      <div class="loading-dots">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div class="empty-state" id="empty-state" hidden>
+      <div class="empty-icon" aria-hidden="true">📄</div>
+      <p>No papers yet.</p>
+      <p class="empty-sub">Add PDFs and matching PNGs to <code>papers/</code>, then run <code>python process_papers.py</code>.</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

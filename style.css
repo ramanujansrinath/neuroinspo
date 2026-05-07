@@ -1,0 +1,423 @@
+/* ─── Reset & base ───────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Safari doesn't always honour [hidden] against display:flex */
+[hidden] { display: none !important; }
+
+:root {
+  --bg:           #edeae3;
+  --card-bg:      #ffffff;
+  --page1-bg:     #f0ece1;   /* warm paper behind card */
+  --page2-bg:     #e4dece;   /* deeper paper layer */
+  --text:         #1c1a17;
+  --text-mid:     #6b6760;
+  --text-dim:     #a09c96;
+  --header-h:     60px;
+  --radius:       18px;
+  --col-min:      182px;
+  --gap:          20px;
+  --shadow-rest:  0 2px 8px rgba(0,0,0,0.07), 0 0 0 1px rgba(0,0,0,0.04);
+  --shadow-hover: 0 16px 40px rgba(0,0,0,0.14), 0 2px 8px rgba(0,0,0,0.06);
+  --ease-spring:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out:     cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Header ─────────────────────────────────────────────────────────────── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  height: var(--header-h);
+  background: rgba(237, 234, 227, 0.82);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+.header-inner {
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 0 28px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 30px;
+  height: 30px;
+  color: var(--text);
+  flex-shrink: 0;
+}
+.logo-icon svg { width: 100%; height: 100%; }
+
+.logo-text {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--text);
+  user-select: none;
+}
+
+/* Sort toggle */
+.sort-toggle {
+  display: flex;
+  align-items: center;
+  background: rgba(0,0,0,0.08);
+  border-radius: 100px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.sort-btn {
+  border: none;
+  background: transparent;
+  padding: 6px 15px;
+  border-radius: 100px;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-mid);
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+  white-space: nowrap;
+}
+
+.sort-btn.active {
+  background: var(--card-bg);
+  color: var(--text);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+
+.sort-btn:hover:not(.active) {
+  color: var(--text);
+}
+
+/* ─── Main grid ──────────────────────────────────────────────────────────── */
+main {
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 32px 28px 80px;
+}
+
+.papers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--col-min), 1fr));
+  gap: var(--gap);
+  align-items: start;
+}
+
+/* ─── Card ───────────────────────────────────────────────────────────────── */
+
+/* Outer wrapper handles layout & is the hover target */
+.card-wrapper {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  /* stagger animation on initial load */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.45s var(--ease-out), transform 0.45s var(--ease-out);
+}
+
+.card-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Fan page layers ─────────────────────── */
+.page-layer {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  transform-origin: 50% 95%;   /* fan pivots near the bottom */
+  transition: transform 0.4s var(--ease-spring),
+              box-shadow 0.4s var(--ease-out);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.page-layer-1 {
+  background: var(--page1-bg) center top / cover no-repeat;
+  box-shadow: var(--shadow-rest);
+  z-index: 1;
+  transform: rotate(-1.5deg) translateY(3px);
+}
+
+.page-layer-2 {
+  background: var(--page2-bg) center top / cover no-repeat;
+  box-shadow: var(--shadow-rest);
+  z-index: 0;
+  transform: rotate(2deg) translateY(6px);
+}
+
+/* Fan-out on hover */
+.card-wrapper:hover .page-layer-1 {
+  transform: rotate(-14deg) translateY(10px) translateX(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-wrapper:hover .page-layer-2 {
+  transform: rotate(16deg) translateY(12px) translateX(6px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ── Card face ───────────────────────────── */
+.card {
+  position: relative;
+  z-index: 2;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-rest);
+  transform: translateY(0);
+  transition: transform 0.4s var(--ease-spring),
+              box-shadow 0.4s var(--ease-out);
+  will-change: transform;
+}
+
+.card-wrapper:hover .card {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Thumbnail */
+.card-thumbnail {
+  width: 100%;
+  display: block;
+  background: #f3f0ea;
+  /* let images breathe — no forced crop */
+}
+
+.card-thumbnail-missing {
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(135deg, #f0ece1 0%, #e4dece 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  opacity: 0.5;
+}
+
+/* Info area */
+.card-info {
+  padding: 14px 16px 18px;
+}
+
+.card-title {
+  font-size: 19.5px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--text);
+  margin-bottom: 7px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-citation {
+  font-size: 11.5px;
+  font-weight: 400;
+  color: var(--text-mid);
+}
+
+.card-journal {
+  margin-top: 3px;
+  font-size: 11px;
+  color: var(--text-dim);
+  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* DOI badge — shown on hover */
+.card-doi {
+  display: none;
+  margin-top: 8px;
+  font-size: 10px;
+  color: var(--text-dim);
+  font-family: monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-wrapper:hover .card-doi { display: block; }
+
+/* ─── Loading ────────────────────────────────────────────────────────────── */
+.loading {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.loading-dots {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.loading-dots span {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--text-mid);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.loading-dots span:nth-child(2) { animation-delay: 0.18s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.36s; }
+
+@keyframes pulse {
+  0%, 80%, 100% { opacity: 0.25; transform: scale(0.85); }
+  40%            { opacity: 1;    transform: scale(1); }
+}
+
+/* ─── Empty state ────────────────────────────────────────────────────────── */
+.empty-state {
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--text-mid);
+}
+
+.empty-icon { font-size: 48px; margin-bottom: 16px; }
+
+.empty-state p { font-size: 15px; line-height: 1.6; }
+.empty-sub { margin-top: 6px; font-size: 13px; color: var(--text-dim); }
+.empty-state code {
+  font-family: monospace;
+  background: rgba(0,0,0,0.06);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* ── Active card (panel is open for this paper) ── */
+.card-wrapper.active .card {
+  box-shadow: 0 0 0 2.5px var(--text), var(--shadow-rest);
+}
+
+/* ─── PDF panel ──────────────────────────────────────────────────────────── */
+.pdf-panel {
+  width: 100%;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-hover);
+  overflow: hidden;
+  /* collapsed state */
+  max-height: 0;
+  opacity: 0;
+  margin-bottom: 0;
+  pointer-events: none;
+  transition: max-height 0.45s var(--ease-out),
+              opacity    0.3s  ease,
+              margin-bottom 0.45s var(--ease-out);
+}
+
+.pdf-panel.open {
+  max-height: 85vh;
+  opacity: 1;
+  margin-bottom: var(--gap);
+  pointer-events: auto;
+}
+
+.pdf-panel-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  flex-shrink: 0;
+}
+
+.pdf-panel-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.pdf-panel-citation {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-mid);
+  white-space: nowrap;
+}
+
+.pdf-panel-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pdf-panel-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.pdf-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text);
+  background: rgba(0,0,0,0.06);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.pdf-action-btn:hover { background: rgba(0,0,0,0.11); }
+
+.pdf-close-btn { padding: 6px 10px; }
+
+.pdf-frame {
+  display: block;
+  width: 100%;
+  /* fill whatever height the panel has minus the bar (~48px) */
+  height: calc(85vh - 49px);
+  border: none;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 540px) {
+  :root { --col-min: 100%; }
+  .header-inner { padding: 0 16px; }
+  main { padding: 20px 16px 60px; }
+  .logo-text { font-size: 13px; }
+  .sort-btn { padding: 5px 11px; font-size: 11.5px; }
+}

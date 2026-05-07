@@ -1,6 +1,6 @@
 # NEUROINSPO
 
-A Pinterest-style inspiration board for neuroscience papers. Drop in a PDF and a figure thumbnail, run one script, and the paper appears as a pinned card with a fan-out page animation and an inline PDF viewer.
+An inspiration board for neuroscience papers. Drop in a PDF and a figure thumbnail, run one script, and the paper appears as a pinned card with a fan-out page animation and an inline PDF viewer.
 
 ## Features
 
@@ -40,18 +40,6 @@ The site itself is plain HTML + CSS + JS with no build step.
    - Write / update `papers.json`
 
 3. Commit `papers.json` and the generated `*_page1.jpg` / `*_page2.jpg` files. The `papers/` folder itself (PDFs and PNGs) is gitignored — host those separately or add them to your deployment bundle.
-
-## Deploying
-
-The site is four static files: `index.html`, `style.css`, `script.js`, and `papers.json`, plus the `papers/` assets. Upload them anywhere that serves static files.
-
-**Google Cloud Storage example:**
-```bash
-gsutil -m cp -r index.html style.css script.js papers.json papers/ gs://your-bucket/
-gsutil web set -m index.html gs://your-bucket/
-```
-
-**Cloudflare Pages / Vercel / Netlify:** connect the repo and set the publish directory to `.` (repo root). Add `papers/` to your platform's ignore rules if you don't want to commit the PDFs.
 
 ## How `process_papers.py` works
 

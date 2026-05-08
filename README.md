@@ -1,71 +1,74 @@
 # NEUROINSPO
 
-An inspiration board for neuroscience papers. Drop in a PDF and a figure thumbnail, run one script, and the paper appears as a pinned card with a fan-out page animation and an inline PDF viewer.
+A static inspiration board for neuroscience papers. Live at **[neuroinspo.site](https://neuroinspo.site)**.
 
-## Features
+Add a DOI and a thumbnail, run one script, and the paper appears as a card with a fan-out animation and an inline abstract panel.
 
-- **Masonry grid** of paper cards, each showing a figure thumbnail, title, and short citation
-- **Fan-out animation** on hover — the two layers behind each card show pages 1 and 2 of the actual PDF
-- **Inline PDF viewer** — click any card to open the paper full-width without leaving the page
-- **Sort** by date added or publication date
-- **Fully static** — no server required; deploy anywhere (Google Cloud Storage, Cloudflare Pages, Vercel, etc.)
+## Pages
 
-## Setup
+| Page | Description |
+|------|-------------|
+| `index.html` | Main board — personal collection of papers |
+| `superlist.html` | Superlab reading lists — a personal mirror of the [Sensorimotor Superlab](https://superlab.ca/) weekly RSS feed, for my own browsing convenience |
 
-**Dependencies** (Python only, for the processing script):
+## Adding a paper (`index.html`)
 
-```bash
-pip install requests pymupdf
-```
-
-The site itself is plain HTML + CSS + JS with no build step.
-
-## Adding a paper
-
-1. Drop the PDF and a figure thumbnail PNG into `papers/`, using the same base filename:
+1. Append the DOI URL to `dois.text` (one per line):
    ```
-   papers/
-     smith2024.pdf
-     smith2024.png
+   https://doi.org/10.1038/s41593-024-01234-5
    ```
 
-2. Run the processing script from the repo root:
+2. Drop a thumbnail PNG into `thumbnails/` numbered to match the line:
+   ```
+   thumbnails/6.png
+   ```
+
+3. Run:
    ```bash
    python3 process_papers.py
    ```
-   This will:
-   - Extract the DOI from the PDF text
-   - Fetch title, authors, and publication date from CrossRef (arXiv fallback for preprints)
-   - Render pages 1 & 2 as JPEGs for the fan animation
-   - Write / update `papers.json`
+   Fetches title, authors, abstract, and publication date from CrossRef (arXiv fallback for preprints) and writes `papers.json`. Already-fetched papers are cached and skipped.
 
-3. Commit `papers.json` and the generated `*_page1.jpg` / `*_page2.jpg` files. The `papers/` folder itself (PDFs and PNGs) is gitignored — host those separately or add them to your deployment bundle.
+## Refreshing the Superlab list (`superlist.html`)
 
-## How `process_papers.py` works
+```bash
+python3 process_superlist.py
+```
 
-| Step | Tool |
-|------|------|
-| DOI extraction | `strings` binary + regex (fast, handles large PDFs) |
-| Metadata lookup | [CrossRef API](https://api.crossref.org/) with arXiv fallback |
-| Page rendering | [PyMuPDF](https://pymupdf.readthedocs.io/) at 100 DPI |
+Fetches the latest posts from `superlab.ca/index.xml` and writes `superlist.json`. Already-fetched posts are cached.
 
-Already-processed papers are skipped on subsequent runs, so you only hit the network for new additions.
+## Automated nightly refresh
+
+A GitHub Actions workflow (`.github/workflows/update-data.yml`) runs both scripts at 3 AM UTC every night and commits any changes to `papers.json` / `superlist.json`. Can also be triggered manually from the Actions tab.
+
+## Dependencies
+
+```bash
+pip install -r requirements.txt   # just: requests
+```
+
+The site itself is plain HTML + CSS + JS — no framework, no build step.
 
 ## Project structure
 
 ```
 .
-├── index.html            # Single-page app shell
-├── style.css             # Layout, card styles, animations
-├── script.js             # Data loading, rendering, panel logic
-├── process_papers.py     # PDF → papers.json pipeline
-├── papers.json           # Generated metadata (commit this)
-└── papers/               # PDFs, thumbnails, page images (gitignored)
+├── index.html               # Main paper board
+├── superlist.html           # Superlab reading list mirror
+├── style.css / script.js    # Main board styles + logic
+├── superlist.css / .js      # Superlist styles + logic
+├── process_papers.py        # DOI → papers.json
+├── process_superlist.py     # RSS → superlist.json
+├── requirements.txt
+├── dois.text                # One DOI URL per line
+├── thumbnails/              # thumbnails/N.png (matches line N in dois.text)
+└── .github/workflows/
+    └── update-data.yml      # Nightly CI refresh
 ```
 
-## Tech stack
+## Tech
 
 - Vanilla HTML / CSS / JS — no framework, no build step
-- CSS Grid for the masonry layout
-- CSS custom properties + `cubic-bezier` spring easing for animations
-- [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) from Google Fonts
+- CSS Grid + `cubic-bezier` spring easing for animations
+- [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) via Google Fonts
+- CrossRef API + arXiv fallback for metadata

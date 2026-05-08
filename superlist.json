@@ -1,5 +1,205 @@
 [
   {
+    "list_num": 332,
+    "title": "Reading List 332",
+    "pub_date": "2026-05-08",
+    "url": "https://superlab.ca/posts/2026-05-08-list332.html",
+    "papers": [
+      {
+        "title": "Human motor memory retention requires fronto-parietal circuit plasticity",
+        "authors": "Ebrahimi S, Darainy M, Manning TF, Lewis-Hoeber E, Ostry DJ",
+        "year": "2026",
+        "journal": "J Neurophysiol 135:1175–1185",
+        "url": "https://dx.doi.org/10.1152/jn.00009.2026",
+        "doi": "10.1152/jn.00009.2026"
+      },
+      {
+        "title": "Premotor cortex uses a compositional neural geometry to plan words",
+        "authors": "Abramovich Krasa B, Kunz EM, Kamdar F, Avansino D, Hahn N, Singh A, Card NS, Wairagkar M, Iacobacci C, Hochberg LR, Brandman DM, Stavisky SD, Henderson JM, Willett FR, Druckmann S",
+        "year": "2026",
+        "journal": "bioRxiv:2026.04.27.721195",
+        "url": "https://www.biorxiv.org/content/10.64898/2026.04.27.721195v1.abstract",
+        "doi": "10.64898/2026.04.27.721195"
+      },
+      {
+        "title": "Recovery of dexterous motor control via non-monosynaptic corticospinal pathways",
+        "authors": "Sorensen E, Borda L, Ostrowski J, de Freitas RM, Verma N, Fisher LE, Wittenberg GF, Gerszten P, Weber DJ, Pirondini E, Gorassini M, Krakauer JW, Capogrosso M",
+        "year": "2026",
+        "journal": "medRxiv:2026.03.24.26348827",
+        "url": "https://www.medrxiv.org/content/10.64898/2026.03.24.26348827v2.abstract",
+        "doi": null
+      },
+      {
+        "title": "Predictive pursuit emerges in high-dimensional recurrent neural networks",
+        "authors": "Redman WT, Dinc FD, Lin X, Chan MG, Alexander AS",
+        "year": "2026",
+        "journal": "bioRxiv:2026.04.23.720457",
+        "url": "https://www.biorxiv.org/content/10.64898/2026.04.23.720457v1.abstract",
+        "doi": "10.64898/2026.04.23.720457"
+      },
+      {
+        "title": "Fast corrective responses in redundant motor control are shaped by intrinsic constraints of movement patterns",
+        "authors": "Kobayashi T, Nozaki D",
+        "year": "2026",
+        "journal": "bioRxiv:2026.03.11.711221",
+        "url": "https://www.biorxiv.org/content/10.64898/2026.03.11.711221v1.abstract",
+        "doi": "10.64898/2026.03.11.711221"
+      },
+      {
+        "title": "Large-scale electrophysiology at single-spike resolution",
+        "authors": "Siegle JH, Steinmetz NA",
+        "year": "2026",
+        "journal": "Nat Rev Neurosci",
+        "url": "https://dx.doi.org/10.1038/s41583-026-01042-4",
+        "doi": "10.1038/s41583-026-01042-4"
+      },
+      {
+        "title": "Laminar organization of cellular microcircuits modulating human interictal epileptiform discharges",
+        "authors": "Silva AB, Marathe SA, Greicius QR, Xu D, Jain S, Chung JE, Yang X, Khambhati AN, Leonard MK, Kleen JK, Chang EF",
+        "year": "2026",
+        "journal": "Nat Neurosci",
+        "url": "https://dx.doi.org/10.1038/s41593-026-02258-4",
+        "doi": "10.1038/s41593-026-02258-4"
+      },
+      {
+        "title": "Infinite horizon control with nonlinear dynamics models reproduces temporal modulation of reaching movements",
+        "authors": "De Comite A, Kalidindi HT, Pruszynski JA, Crevecoeur F",
+        "year": "2026",
+        "journal": "Neural Comput 38:823–844",
+        "url": "https://dx.doi.org/10.1162/NECO.a.1515",
+        "doi": "10.1162/NECO.a.1515"
+      },
+      {
+        "title": "Granule cells reorient cortical manifolds to separate contexts but preserve their geometry",
+        "authors": "Garcia-Garcia MG, Wojcik MJ, Thota S, Drake L, Otchere A, Akinwale O, Ramos L, Costa RP, Wagner MJ",
+        "year": "2026",
+        "journal": "bioRxiv:2026.03.03.709240",
+        "url": "https://www.biorxiv.org/content/10.64898/2026.03.03.709240v1.abstract",
+        "doi": "10.64898/2026.03.03.709240"
+      },
+      {
+        "title": "Premotor cortex uses a compositional neural geometry to plan words",
+        "authors": "Abramovich Krasa B, Kunz EM, Kamdar F, Avansino D, Hahn N, Singh A, Card NS, Wairagkar M, Iacobacci C, Hochberg LR, Brandman DM, Stavisky SD, Henderson JM, Willett FR, Druckmann S",
+        "year": "2026",
+        "journal": "bioRxiv:2026.04.27.721195",
+        "url": "https://www.biorxiv.org/content/10.64898/2026.04.27.721195v1.abstract",
+        "doi": "10.64898/2026.04.27.721195"
+      },
+      {
+        "title": "Whole-body 3D kinematics of freely behaving Drosophila",
+        "authors": "Ispizua JI, Abe ETT, Yan J, Othayoth R, Sawtelle S, Atkins F, Shiozaki H, Meier NR, Wong J, Tran TT, Mori CK, Voigts J, Stern DL, Brunton BW, Tuthill JC, Johnson RE",
+        "year": "2026",
+        "journal": "bioRxiv:2026.05.03.722293",
+        "url": "https://www.biorxiv.org/content/10.64898/2026.05.03.722293v1.abstract",
+        "doi": "10.64898/2026.05.03.722293"
+      },
+      {
+        "title": "A communication subspace relays context-dependent actions from human prefrontal to motor cortex",
+        "authors": "Binish N, Terlau J, Martini J, Lin JJ, Knight RT, Helfrich RF",
+        "year": "2026",
+        "journal": "Nat Neurosci",
+        "url": "https://dx.doi.org/10.1038/s41593-026-02290-4",
+        "doi": "10.1038/s41593-026-02290-4"
+      },
+      {
+        "title": "Adaptive problem solving in the primate frontal cortex",
+        "authors": "Ramadan M, Gosztolai A, Jazayeri M",
+        "year": "2026",
+        "journal": "bioRxiv:2026.05.04.722785",
+        "url": "https://www.biorxiv.org/content/10.64898/2026.05.04.722785v1.abstract",
+        "doi": "10.64898/2026.05.04.722785"
+      },
+      {
+        "title": "Evidence from Formal Logical Reasoning Reveals that the Language of Thought is not Natural Language",
+        "authors": "Kean H, Fung A, Jaggers P, Chen J, Rule J, Benn Y, Tenenbaum J, Piantadosi S, Varley R, Fedorenko E",
+        "year": "2025",
+        "journal": "bioRxiv:2025.07.26.666979",
+        "url": "https://www.biorxiv.org/content/10.1101/2025.07.26.666979v3.abstract",
+        "doi": "10.1101/2025.07.26.666979"
+      },
+      {
+        "title": "Neural coding of arm and hand actions is spatially organized in motor cortex",
+        "authors": "Chehade NG, Gharbawie O",
+        "year": "2026",
+        "journal": "bioRxiv:2026.05.02.722416",
+        "url": "https://www.biorxiv.org/content/10.64898/2026.05.02.722416v1.abstract",
+        "doi": "10.64898/2026.05.02.722416"
+      },
+      {
+        "title": "Involuntary feedback responses reflect a representation of partner actions",
+        "authors": "Sullivan SR, Buggeln JH, Calalo JA, Ngo TT, Semrau JA, Carter MJ, Cashaback JGA",
+        "year": "2026",
+        "journal": "eLife",
+        "url": "https://dx.doi.org/10.7554/eLife.109734.2",
+        "doi": "10.7554/eLife.109734.2"
+      },
+      {
+        "title": "Plasticity and language in the anaesthetized human hippocampus",
+        "authors": "Katlowitz KA et al.",
+        "year": "2026",
+        "journal": "Nature",
+        "url": "https://dx.doi.org/10.1038/s41586-026-10448-0",
+        "doi": "10.1038/s41586-026-10448-0"
+      },
+      {
+        "title": "Neuromodulation enables transient flexible control of motoneurons",
+        "authors": "T. Consul N, Avrillon S, Bracklein M, Gallego JA, Farina D",
+        "year": "2026",
+        "journal": "bioRxiv:2026.05.01.721852",
+        "url": "https://www.biorxiv.org/content/10.64898/2026.05.01.721852v1.abstract",
+        "doi": "10.64898/2026.05.01.721852"
+      },
+      {
+        "title": "Multiplexed magnetic resonance imaging",
+        "authors": "Li Y, Guo R, Zhao Y, Jin W, Ke Z, Chen L, Chen X, Tang W, Li Y, Liang Z-P",
+        "year": "2026",
+        "journal": "Nature",
+        "url": "https://dx.doi.org/10.1038/s41586-026-10475-x",
+        "doi": "10.1038/s41586-026-10475-x"
+      },
+      {
+        "title": "Human hippocampal ripples coordinate planning sequences and compositional representations in neocortex",
+        "authors": "He L, Wang X, Zhang J, Xiao Z, Hu X, Schwartenbeck P, Bakermans J, Behrens T, Liu Y",
+        "year": "2026",
+        "journal": "Nat Neurosci",
+        "url": "https://dx.doi.org/10.1038/s41593-026-02291-3",
+        "doi": "10.1038/s41593-026-02291-3"
+      },
+      {
+        "title": "Evolution imposes an inductive bias that alters and accelerates learning dynamics",
+        "authors": "Midler B, Pan-Vazquez A",
+        "year": "2026",
+        "journal": "bioRxiv:2026.05.04.722746",
+        "url": "https://www.biorxiv.org/content/10.64898/2026.05.04.722746v1.abstract",
+        "doi": "10.64898/2026.05.04.722746"
+      },
+      {
+        "title": "Single human fingertip mechanoreceptive afferents simultaneously encode multidimensional aspects of touch",
+        "authors": "Lang VA, Wasling HB, Ackerley R, Wessberg J",
+        "year": "2026",
+        "journal": "J Physiol",
+        "url": "https://dx.doi.org/10.1113/JP290540",
+        "doi": "10.1113/JP290540"
+      },
+      {
+        "title": "Connectivity underlying motor cortex activity during goal-directed behaviour",
+        "authors": "Finkelstein A, Daie K, Rózsa M, Darshan R, Svoboda K",
+        "year": "2025",
+        "journal": "Nature",
+        "url": "https://dx.doi.org/10.1038/s41586-025-09758-6",
+        "doi": "10.1038/s41586-025-09758-6"
+      },
+      {
+        "title": "Neural subspace reorganization reflects value-based decision making",
+        "authors": "Li H, Chrysanthidis N, Brincat SL, Rose J, Miller EK",
+        "year": "2026",
+        "journal": "bioRxiv:2026.02.02.703171",
+        "url": "https://www.biorxiv.org/content/10.64898/2026.02.02.703171v1.abstract",
+        "doi": "10.64898/2026.02.02.703171"
+      }
+    ]
+  },
+  {
     "list_num": 331,
     "title": "Reading List 331",
     "pub_date": "2026-05-01",
@@ -1980,78 +2180,6 @@
         "journal": "bioRxivorg:2025.03.03.641276",
         "url": "https://www.biorxiv.org/content/10.1101/2025.03.03.641276v3",
         "doi": "10.1101/2025.03.03.641276"
-      }
-    ]
-  },
-  {
-    "list_num": 312,
-    "title": "Reading List 312",
-    "pub_date": "2025-11-14",
-    "url": "https://superlab.ca/posts/2025-11-14-list312.html",
-    "papers": [
-      {
-        "title": "A reference atlas of the human dorsal root ganglion",
-        "authors": "Bhuiyan SA et al.",
-        "year": "",
-        "journal": "bioRxiv:2025.11.05.686654",
-        "url": "https://www.biorxiv.org/content/10.1101/2025.11.05.686654v1.abstract",
-        "doi": "10.1101/2025.11.05.686654"
-      },
-      {
-        "title": "Transcranial direct current stimulation of the supplementary motor area modulates behavioral and peripheral electrophysiological measures of motor preparation",
-        "authors": "Kumar A, Murthy A",
-        "year": "",
-        "journal": "bioRxiv:2025.10.31.685710",
-        "url": "https://www.biorxiv.org/content/10.1101/2025.10.31.685710v2",
-        "doi": "10.1101/2025.10.31.685710"
-      },
-      {
-        "title": "Selective direct influence of motor cortex on limb muscle activity during naturalistic climbing in mice",
-        "authors": "Koh N, Ma Z, Sarup A, Kristl AC, Agrios M, Young M, Miri A",
-        "year": "",
-        "journal": "Nat Neurosci:1–13",
-        "url": "http://dx.doi.org/10.1038/s41593-025-02093-z",
-        "doi": "10.1038/s41593-025-02093-z"
-      },
-      {
-        "title": "Neural manifolds that orchestrate walking and stopping",
-        "authors": "Komi S, Kaur J, Winther A, Adamsson Bonfils MC, Houser GA, Sørensen RJF, Li G, Sobriel K, Berg RW",
-        "year": "",
-        "journal": "bioRxiv:2025.11.08.687367",
-        "url": "https://www.biorxiv.org/content/10.1101/2025.11.08.687367v1.abstract",
-        "doi": "10.1101/2025.11.08.687367"
-      },
-      {
-        "title": "Brain dissection photogrammetry: a tool for studying human white matter connections integrating ex vivo and in vivo multimodal datasets",
-        "authors": "Vavassori L, Rheault F, Nocerino E, Annicchiarico L, Corsini F, Zigiotto L, De Benedictis A, Barbareschi M, Rozzanigo U, Avesani P, Sarubbo S, Petit L",
-        "year": "",
-        "journal": "Nat Commun 16:9801",
-        "url": "http://dx.doi.org/10.1038/s41467-025-64788-y",
-        "doi": "10.1038/s41467-025-64788-y"
-      },
-      {
-        "title": "Activity in primate visual cortex is minimally driven by spontaneous movements",
-        "authors": "Talluri BC, Kang I, Lazere A, Quinn KR, Kaliss N, Yates JL, Butts DA, Nienborg H",
-        "year": "",
-        "journal": "Nat Neurosci 26:1953–1959",
-        "url": "http://dx.doi.org/10.1038/s41593-023-01459-5",
-        "doi": "10.1038/s41593-023-01459-5"
-      },
-      {
-        "title": "Fundamental performance bounds on reservoir computing",
-        "authors": "Qian D, Fiete I",
-        "year": "",
-        "journal": "Phys Rev E 112:054214",
-        "url": "http://dx.doi.org/10.1103/t4hg-vpmr",
-        "doi": "10.1103/t4hg-vpmr"
-      },
-      {
-        "title": "The drain of scientific publishing",
-        "authors": "Beigel F, Brockington D, Crosetto P, Derrick G, Fyfe A, Barreiro PG, Hanson MA, Haustein S, Larivière V, Noe C, Pinfield S, Wilsdon J",
-        "year": "",
-        "journal": "arXiv [csDL]",
-        "url": "http://arxiv.org/abs/2511.04820",
-        "doi": null
       }
     ]
   }

@@ -142,5 +142,17 @@
     "journal": "Trends in Cognitive Sciences",
     "abstract": "",
     "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.05.11.724345",
+    "url": "https://doi.org/10.64898/2026.05.11.724345",
+    "thumbnail": "thumbnails/13.png",
+    "title": "Enhanced processing of cartoons in infant visual cortex",
+    "citation": "Yates et al., 2026",
+    "pub_date": "2026-05-11",
+    "upload_date": "2026-05-12T12:38:20.719199",
+    "journal": null,
+    "abstract": "Developing sensory systems may have heightened sensitivity to exaggerated features that emphasize diagnostic information, as shown by the benefits of infant-directed speech for language acquisition. Here, we examine this sensory exaggeration hypothesis in the visual domain by testing whether cartoons elicit stronger and more consistent neural representations than realistic movies in human infants. We collected fMRI data while 24 awake infants (4--15 months) watched the same 3-minute clip of the opening sequence from the original animated version of The Lion King (1994) and its shot-for-shot remake with photorealistic CGI (2019). A computer vision model confirmed that the movies differed in low-level features while depicting similar high-level content. Consistent with sensory exaggeration, the animated version yielded more reliable neural responses and better decoding of visual features than the CGI version throughout occipital cortex. This effect was not observed in adults nor in higher-order regions in infants and could not be explained by differential head motion or looking time. These results suggest that the developing visual system may be attuned to diagnostic features and that cartoons may (unwittingly) exploit this early neural preference.",
+    "is_author": false
   }
 ]

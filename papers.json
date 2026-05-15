@@ -166,5 +166,17 @@
     "journal": "Nature Neuroscience",
     "abstract": "",
     "is_author": false
+  },
+  {
+    "doi": "10.1016/j.neuron.2026.04.018",
+    "url": "https://doi.org/10.1016/j.neuron.2026.04.018",
+    "thumbnail": "thumbnails/15.png",
+    "title": "Behavioral phenotypes and neuronal biomarkers in F1 mutant macaque model of SHANK3-associated autism spectrum disorders",
+    "citation": "Jiang et al., 2026",
+    "pub_date": "2026-05-01",
+    "upload_date": "2026-05-15T12:40:12.888956",
+    "journal": "Neuron",
+    "abstract": "",
+    "is_author": false
   }
 ]

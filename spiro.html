@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spirograph — NEUROINSPO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #edeae3;
+      --card-bg:     #ffffff;
+      --text:        #1c1a17;
+      --text-mid:    #6b6760;
+      --text-dim:    #a09c96;
+      --shadow-rest: 0 2px 8px rgba(0,0,0,0.07), 0 0 0 1px rgba(0,0,0,0.04);
+      --shadow-card: 0 16px 48px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+      --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+      --radius:      18px;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      background: var(--bg);
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Sidebar ── */
+    #sidebar {
+      width: 230px;
+      min-width: 230px;
+      background: var(--card-bg);
+      border-right: 1px solid rgba(0,0,0,0.07);
+      padding: 28px 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    #sidebar-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .control {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .control-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .control-name {
+      font-size: 12.5px;
+      color: var(--text-mid);
+      font-weight: 500;
+    }
+
+    .control-value {
+      font-size: 11.5px;
+      color: var(--text-dim);
+      font-variant-numeric: tabular-nums;
+      font-family: ui-monospace, monospace;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      height: 3px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: rgba(0,0,0,0.12);
+      border-radius: 2px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--text);
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    input[type="range"]::-webkit-slider-thumb:hover { opacity: 0.65; }
+
+    .color-control {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .color-control .control-name {
+      font-size: 12.5px;
+      color: var(--text-mid);
+      font-weight: 500;
+    }
+
+    input[type="color"] {
+      width: 100%;
+      height: 34px;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 8px;
+      cursor: pointer;
+      background: none;
+      padding: 2px;
+      outline: none;
+    }
+
+    .btn-row {
+      margin-top: auto;
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-row button {
+      flex: 1;
+      padding: 8px 0;
+      background: rgba(0,0,0,0.06);
+      color: var(--text-mid);
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 1;
+      font-family: inherit;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn-row button:hover {
+      background: rgba(0,0,0,0.11);
+      color: var(--text);
+    }
+
+    #pause-btn.paused {
+      background: var(--text);
+      color: var(--card-bg);
+    }
+
+    /* ── Main ── */
+    #main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      padding: 28px 28px 24px;
+      gap: 18px;
+    }
+
+    #main h1 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text);
+      align-self: flex-start;
+    }
+
+    #canvas-wrap {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    canvas {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-card);
+    }
+  </style>
+</head>
+<body>
+
+<div id="sidebar">
+  <div id="sidebar-title">Parameters</div>
+
+  <div class="controls">
+    <div class="control">
+      <div class="control-header">
+        <span class="control-name">R — outer radius</span>
+        <span class="control-value" id="R-val">131</span>
+      </div>
+      <input type="range" id="R" min="10" max="300" value="131" step="1">
+    </div>
+
+    <div class="control">
+      <div class="control-header">
+        <span class="control-name">r — inner radius</span>
+        <span class="control-value" id="r-val">117</span>
+      </div>
+      <input type="range" id="r" min="10" max="300" value="117" step="1">
+    </div>
+
+    <div class="control">
+      <div class="control-header">
+        <span class="control-name">d — pen distance</span>
+        <span class="control-value" id="d-val">221</span>
+      </div>
+      <input type="range" id="d" min="10" max="400" value="221" step="1">
+    </div>
+
+    <div class="control">
+      <div class="control-header">
+        <span class="control-name">Speed</span>
+        <span class="control-value" id="speed-val">0.20</span>
+      </div>
+      <input type="range" id="speed" min="0.01" max="1.0" value="0.2" step="0.01">
+    </div>
+
+    <div class="control">
+      <div class="control-header">
+        <span class="control-name">Trail length</span>
+        <span class="control-value" id="trail-val">4000</span>
+      </div>
+      <input type="range" id="trail" min="50" max="20000" value="4000" step="50">
+    </div>
+
+    <div class="color-control">
+      <span class="control-name">Color</span>
+      <input type="color" id="color" value="#5200AA">
+    </div>
+  </div>
+
+  <div class="btn-row">
+    <button id="pause-btn" title="Pause">⏸</button>
+    <button id="clear-btn" title="Clear canvas">⟳</button>
+  </div>
+</div>
+
+<div id="main">
+  <h1>Spirograph by Neuroinspo</h1>
+  <div id="canvas-wrap">
+    <canvas id="canvas"></canvas>
+  </div>
+</div>
+
+<script>
+  const canvas = document.getElementById('canvas');
+  const ctx    = canvas.getContext('2d');
+  const wrap   = document.getElementById('canvas-wrap');
+
+  // ── Parameters ──
+  let R           = 131;
+  let r           = 117;
+  let d           = 221;
+  let speed       = 0.2;
+  let color       = '#5200AA';
+  let trailLength = 4000;
+
+  // ── State ──
+  let angle   = 0;
+  let liftPen = false;
+  let paused  = false;
+  // Each point: { x, y, color, lift }
+  // lift=true means don't draw a line from the previous point to this one
+  let trail = [];
+
+  const HALF_RANGE = 720;
+
+  function resize() {
+    const rect = wrap.getBoundingClientRect();
+    const size = Math.floor(Math.min(rect.width, rect.height)) - 4;
+    if (size === canvas.width) return;
+    canvas.width  = size;
+    canvas.height = size;
+  }
+
+  function toCanvas(x, y) {
+    const scale = (canvas.width / 2) / HALF_RANGE;
+    return [canvas.width / 2 + x * scale, canvas.height / 2 - y * scale];
+  }
+
+  function step() {
+    angle += speed;
+    const x = (R - r) * Math.cos(angle) + d * Math.cos(((R - r) / r) * angle);
+    const y = (R - r) * Math.sin(angle) - d * Math.sin(((R - r) / r) * angle);
+    const [cx, cy] = toCanvas(x, y);
+    trail.push({ x: cx, y: cy, color, lift: liftPen });
+    liftPen = false;
+    if (trail.length > trailLength) trail.splice(0, trail.length - trailLength);
+  }
+
+  function render() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (trail.length < 2) return;
+
+    // Draw contiguous same-color segments as single paths for performance
+    let segStart = 0;
+    for (let i = 1; i <= trail.length; i++) {
+      const atEnd     = i === trail.length;
+      const colorBreak = !atEnd && trail[i].color !== trail[segStart].color;
+      const liftBreak  = !atEnd && trail[i].lift;
+
+      if (atEnd || colorBreak || liftBreak) {
+        ctx.beginPath();
+        ctx.strokeStyle = trail[segStart].color;
+        ctx.lineWidth   = 1.5;
+        ctx.lineCap     = 'round';
+        ctx.lineJoin    = 'round';
+        ctx.moveTo(trail[segStart].x, trail[segStart].y);
+        for (let j = segStart + 1; j < i; j++) {
+          ctx.lineTo(trail[j].x, trail[j].y);
+        }
+        ctx.stroke();
+        segStart = i;
+      }
+    }
+  }
+
+  function loop() {
+    if (!paused) {
+      const stepsPerFrame = Math.max(1, Math.round(speed / 0.01));
+      for (let i = 0; i < stepsPerFrame; i++) step();
+      render();
+    }
+    requestAnimationFrame(loop);
+  }
+
+  // ── Wiring ──
+  function wire(id, setter, fmt, lift = true) {
+    const slider = document.getElementById(id);
+    const label  = document.getElementById(id + '-val');
+    slider.addEventListener('input', () => {
+      setter(parseFloat(slider.value));
+      label.textContent = fmt ? fmt(slider.value) : slider.value;
+      if (lift) liftPen = true;
+    });
+  }
+
+  wire('R',     v => R           = v);
+  wire('r',     v => r           = v);
+  wire('d',     v => d           = v);
+  wire('speed', v => speed       = v, v => parseFloat(v).toFixed(2));
+  wire('trail', v => trailLength = v, v => parseInt(v).toLocaleString(), false);
+
+  document.getElementById('color').addEventListener('input', e => {
+    color = e.target.value;
+  });
+
+  const pauseBtn = document.getElementById('pause-btn');
+  pauseBtn.addEventListener('click', () => {
+    paused = !paused;
+    pauseBtn.textContent = paused ? '▶' : '⏸';
+    pauseBtn.classList.toggle('paused', paused);
+    if (!paused) liftPen = true;  // don't connect to pre-pause position
+  });
+
+  document.getElementById('clear-btn').addEventListener('click', () => {
+    trail = [];
+    angle = 0;
+  });
+
+  window.addEventListener('resize', resize);
+
+  resize();
+  requestAnimationFrame(loop);
+</script>
+</body>
+</html>

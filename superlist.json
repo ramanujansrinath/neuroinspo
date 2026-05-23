@@ -1,5 +1,61 @@
 [
   {
+    "list_num": 334,
+    "title": "Reading List 334",
+    "pub_date": "2026-05-22",
+    "url": "https://superlab.ca/posts/2026-05-22-list334.html",
+    "papers": [
+      {
+        "title": "Simple input–output dependencies explain neuronal activity",
+        "authors": "Lynn C. W.",
+        "year": "2026",
+        "journal": "Nature Physics",
+        "url": "https://doi.org/10.1038/s41567-026-03306-3",
+        "doi": "10.1038/s41567-026-03306-3"
+      },
+      {
+        "title": "This paper changed my life: Appreciating John Hopfield’s brilliant neural network",
+        "authors": "Geffen M.",
+        "year": "2026",
+        "journal": "The Transmitter",
+        "url": "https://doi.org/10.53053/lhia1484",
+        "doi": "10.53053/lhia1484"
+      },
+      {
+        "title": "Neural networks and physical systems with emergent collective computational abilities.",
+        "authors": "Hopfield J. J.",
+        "year": "1982",
+        "journal": "Proceedings of the National Academy of Sciences 79:2554-2558",
+        "url": "https://doi.org/10.1073/pnas.79.8.2554",
+        "doi": "10.1073/pnas.79.8.2554"
+      },
+      {
+        "title": "Neural representation of action symbols in primate frontal cortex",
+        "authors": "Tian L. Y. et al.",
+        "year": "2026",
+        "journal": "Nature",
+        "url": "https://doi.org/10.1038/s41586-026-10297-x",
+        "doi": "10.1038/s41586-026-10297-x"
+      },
+      {
+        "title": "Neural correlates of perceptual decision-making in the primary somatosensory cortex",
+        "authors": "Armstrong A. G., Vlasov Y.",
+        "year": "2026",
+        "journal": "Proceedings of the National Academy of Sciences 123",
+        "url": "https://doi.org/10.1073/pnas.2514107123",
+        "doi": "10.1073/pnas.2514107123"
+      },
+      {
+        "title": "Neural xenografts contribute to long-term recovery in stroke via molecular graft-host crosstalk",
+        "authors": "Weber R. Z. et al.",
+        "year": "2025",
+        "journal": "Nature Communications 16",
+        "url": "https://doi.org/10.1038/s41467-025-63725-3",
+        "doi": "10.1038/s41467-025-63725-3"
+      }
+    ]
+  },
+  {
     "list_num": 333,
     "title": "Reading List 333",
     "pub_date": "2026-05-15",
@@ -2004,142 +2060,6 @@
         "journal": "Nat Rev Neurosci",
         "url": "http://dx.doi.org/10.1038/s41583-025-00996-1",
         "doi": "10.1038/s41583-025-00996-1"
-      }
-    ]
-  },
-  {
-    "list_num": 314,
-    "title": "Reading List 314",
-    "pub_date": "2025-12-05",
-    "url": "https://superlab.ca/posts/2025-12-05-list314.html",
-    "papers": [
-      {
-        "title": "Monkeys have rhythm",
-        "authors": "Rajendran VG, Prado L, Marquez JP, Merchant H",
-        "year": "",
-        "journal": "Science 390:940–944",
-        "url": "http://dx.doi.org/10.1126/science.adp5220",
-        "doi": "10.1126/science.adp5220"
-      },
-      {
-        "title": "A non-monotonic code for event probability in the human brain",
-        "authors": "Foucault C, Bounmy T, Demortain S, Thirion B, Eger E, Meyniel F",
-        "year": "",
-        "journal": "Nat Commun 16:10695",
-        "url": "http://dx.doi.org/10.1038/s41467-025-65727-7",
-        "doi": "10.1038/s41467-025-65727-7"
-      },
-      {
-        "title": "Coordinated multilaminar dynamics underlie multiplexed computation in motor cortex",
-        "authors": "López-Galdo L, Nougaret S, Battaglia D, Kilavik BE",
-        "year": "",
-        "journal": "bioRxiv:2025.11.26.690660",
-        "url": "https://www.biorxiv.org/content/10.1101/2025.11.26.690660v1.abstract",
-        "doi": "10.1101/2025.11.26.690660"
-      },
-      {
-        "title": "Inferential planning in the frontal cortex",
-        "authors": "Donnarumma F, Parr T, Friston K, Whittington J, Pezzulo G",
-        "year": "",
-        "journal": "bioRxiv:2025.11.26.690672",
-        "url": "https://www.biorxiv.org/content/10.1101/2025.11.26.690672v1.abstract",
-        "doi": "10.1101/2025.11.26.690672"
-      },
-      {
-        "title": "Policy-gradient reinforcement learning as a general theory of practice-based motor skill learning",
-        "authors": "Haith AM",
-        "year": "",
-        "journal": "bioRxiv:2025.10.17.682587",
-        "url": "https://www.biorxiv.org/content/10.1101/2025.10.17.682587v1.abstract",
-        "doi": "10.1101/2025.10.17.682587"
-      },
-      {
-        "title": "A transient neural code for feedback-driven motor corrections during teaching",
-        "authors": "Kudryashova N, Hurwitz C, Perich MG, Hennig MH",
-        "year": "",
-        "journal": "bioRxiv:2025.03.21.644350",
-        "url": "https://www.biorxiv.org/content/10.1101/2025.03.21.644350v2",
-        "doi": "10.1101/2025.03.21.644350"
-      },
-      {
-        "title": "Topological turning points across the human lifespan",
-        "authors": "Mousley A, Bethlehem RAI, Yeh F-C, Astle DE",
-        "year": "",
-        "journal": "Nat Commun 16:10055",
-        "url": "http://dx.doi.org/10.1038/s41467-025-65974-8",
-        "doi": "10.1038/s41467-025-65974-8"
-      },
-      {
-        "title": "Brain-wide analysis reveals movement encoding structured across and within brain areas",
-        "authors": "Wang ZA, Kurgyis B, Chen S, Kang B, Chen F, Liu Y, Liu D, Svoboda K, Li N, Druckmann S",
-        "year": "",
-        "journal": "Nat Neurosci:1–12",
-        "url": "http://dx.doi.org/10.1038/s41593-025-02114-x",
-        "doi": "10.1038/s41593-025-02114-x"
-      },
-      {
-        "title": "An adaptive and flexible role for primary sensory cortex",
-        "authors": "Waiblinger C, Reedy AR, Stanley GB",
-        "year": "",
-        "journal": "Nat Neurosci:1–11",
-        "url": "http://dx.doi.org/10.1038/s41593-025-02124-9",
-        "doi": "10.1038/s41593-025-02124-9"
-      },
-      {
-        "title": "A scalable, causal, and energy efficient framework for neural decoding with spiking neural networks",
-        "authors": "Mentzelopoulos G, Asmanis I, Kording KP, Dyer EL, Daniilidis K, Vitale F",
-        "year": "",
-        "journal": "arXiv [csLG]",
-        "url": "http://arxiv.org/abs/2510.20683",
-        "doi": null
-      },
-      {
-        "title": "Generative inference unifies feedback processing for learning and perception in natural and artificial vision",
-        "authors": "Toosi T, Miller KD",
-        "year": "",
-        "journal": "bioRxiv:2025.10.21.683535",
-        "url": "https://www.biorxiv.org/content/10.1101/2025.10.21.683535v2.abstract",
-        "doi": "10.1101/2025.10.21.683535"
-      },
-      {
-        "title": "Concurrent saliency and intentional maps in posterior parietal cortex",
-        "authors": "Zheng R, Gu Y, Cui H",
-        "year": "",
-        "journal": "bioRxiv:2025.11.27.689962",
-        "url": "https://www.biorxiv.org/content/10.1101/2025.11.27.689962v1.abstract",
-        "doi": "10.1101/2025.11.27.689962"
-      },
-      {
-        "title": "Know thyself by knowing others: Learning neuron identity from population context",
-        "authors": "Arora V, Lachi D, Knight IJ, Azabou M, Richards B, Hurwitz CL, Siegle J, Dyer EL",
-        "year": "",
-        "journal": "arXiv [csLG]",
-        "url": "http://arxiv.org/abs/2512.01199",
-        "doi": null
-      },
-      {
-        "title": "Dynamical principles in neuroscience",
-        "authors": "Rabinovich MI, Varona P, Selverston AI, Abarbanel HDI",
-        "year": "",
-        "journal": "Rev Mod Phys 78:1213–1265",
-        "url": "http://dx.doi.org/10.1103/RevModPhys.78.1213",
-        "doi": "10.1103/RevModPhys.78.1213"
-      },
-      {
-        "title": "Multidimensional motoneuron control using intramuscular microelectrode arrays in tetraplegic spinal cord injury",
-        "authors": "Grison A, Gibbs C, Rawji V, Vila LG, Szczech I, Varghese R, Bryan P, Kundu A, Yang X, Gallego JA, Farina D",
-        "year": "",
-        "journal": "medRxiv:2025.07.17.25331429",
-        "url": "https://www.medrxiv.org/content/10.1101/2025.07.17.25331429v2.abstract",
-        "doi": null
-      },
-      {
-        "title": "Humans actively reconfigure neural task states",
-        "authors": "Ritz H, Jha A, Pillow J, Daw ND, Cohen JD",
-        "year": "2024",
-        "journal": "bioRxiv:2024.09.29.615736",
-        "url": "https://www.biorxiv.org/content/10.1101/2024.09.29.615736v5",
-        "doi": "10.1101/2024.09.29.615736"
       }
     ]
   }

@@ -183,12 +183,24 @@
     "doi": "10.48550/arXiv.2604.12825",
     "url": "https://doi.org/10.48550/arXiv.2604.12825",
     "thumbnail": "thumbnails/16.png",
-    "title": "10.48550/arXiv.2604.12825",
+    "title": "The illusory simplicity of the feedforward pass: evidence for the dynamical nature of stimulus encoding along the primate ventral stream",
     "citation": "Unknown",
-    "pub_date": null,
+    "pub_date": "2026-04-26",
     "upload_date": "2026-05-18T11:02:18.999682",
-    "journal": null,
-    "abstract": null,
+    "journal": "arXiv",
+    "abstract": "In studying primate vision, a large body of work focuses on the first feedforward sweep. During this initial time window, information is thought to pass through ventral stream regions in a stage-like fashion in an effort to extract high-level information from the retinal input. Consequently, electrophysiological analyses commonly focus on spatial response patterns, either by averaging data in time, or by applying decoders in a temporally local fashion. By analysing data recorded simultaneously across multiple arrays placed along the macaque ventral stream, we here show that this prior approach may be missing key aspects of information encoding. First, time-resolved, multivariate analyses of information transfer between V4 and IT reveal temporally and semantically varied information content as being exchanged within the first 100ms of processing. Second, by employing recurrent neural network (RNN) decoding techniques that extend across the temporal domain, we demonstrate that the neural pattern dynamics themselves carry categorical information far beyond the spatially encoded information available at any given time point. These findings challenge the prevailing view of a single, stage-like feedforward process and suggest that even the earliest parts of visual processing are better characterised as a spatiotemporally evolving process that encodes information in its dynamics rather than purely spatial response patterns.",
+    "is_author": false
+  },
+  {
+    "doi": "10.1038/s41586-026-10528-1",
+    "url": "https://doi.org/10.1038/s41586-026-10528-1",
+    "thumbnail": "thumbnails/17.png",
+    "title": "A critical initialization for biological neural networks",
+    "citation": "Pachitariu et al., 2026",
+    "pub_date": "2026-05-20",
+    "upload_date": "2026-05-23T15:03:42.153189",
+    "journal": "Nature",
+    "abstract": "Intrinsically generated, brainwide neural activity displays macroscopic coordination among large populations of neurons that persists beyond the biophysical timescales of individual neurons 1–3 . It is not well understood how these macroscopic behaviours arise from microscopic, short-lived interactions between pairs of neurons. Here we show that the eigenvalue spectrum and dynamical properties of large-scale neural recordings in mice are similar to those produced by linear dynamics governed by a random symmetric matrix that is critically normalized. An exception was population activity in hippocampal area CA1, which resembled an efficient, uncorrelated neural code that may be optimized for information storage capacity. High-dimensional, global activity modes emerged in critically normalized artificial networks and persisted under sparse, clustered or spatial connectivity. These dynamics were useful for solving time-dependent tasks such as a zero-shot working memory task.",
     "is_author": false
   }
 ]

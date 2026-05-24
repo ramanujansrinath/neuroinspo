@@ -247,6 +247,7 @@
 
   <div class="btn-row">
     <button id="pause-btn" title="Pause">⏸</button>
+    <button id="camera-btn" title="Freeze to canvas">📷</button>
     <button id="clear-btn" title="Clear canvas">⟳</button>
   </div>
 </div>
@@ -272,9 +273,11 @@
   let trailLength = 4000;
 
   // ── State ──
-  let angle   = 0;
-  let liftPen = false;
-  let paused  = false;
+  let angle        = 0;
+  let liftPen      = false;
+  let paused       = false;
+  let frozenCanvas = new OffscreenCanvas(1, 1);
+  let frozenCtx    = frozenCanvas.getContext('2d');
   // Each point: { x, y, color, lift }
   // lift=true means don't draw a line from the previous point to this one
   let trail = [];
@@ -285,8 +288,14 @@
     const rect = wrap.getBoundingClientRect();
     const size = Math.floor(Math.min(rect.width, rect.height)) - 4;
     if (size === canvas.width) return;
+    // Scale frozen content to new size before resizing
+    const tmp = new OffscreenCanvas(size, size);
+    tmp.getContext('2d').drawImage(frozenCanvas, 0, 0, size, size);
     canvas.width  = size;
     canvas.height = size;
+    frozenCanvas = new OffscreenCanvas(size, size);
+    frozenCtx    = frozenCanvas.getContext('2d');
+    frozenCtx.drawImage(tmp, 0, 0);
   }
 
   function toCanvas(x, y) {
@@ -306,6 +315,7 @@
 
   function render() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(frozenCanvas, 0, 0);
     if (trail.length < 2) return;
 
     // Draw contiguous same-color segments as single paths for performance
@@ -369,7 +379,14 @@
     if (!paused) liftPen = true;  // don't connect to pre-pause position
   });
 
+  document.getElementById('camera-btn').addEventListener('click', () => {
+    // Stamp current canvas (frozen + live trail) onto the frozen layer
+    frozenCtx.drawImage(canvas, 0, 0);
+    trail = [];
+  });
+
   document.getElementById('clear-btn').addEventListener('click', () => {
+    frozenCtx.clearRect(0, 0, frozenCanvas.width, frozenCanvas.height);
     trail = [];
     angle = 0;
   });

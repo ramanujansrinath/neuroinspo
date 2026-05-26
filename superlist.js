@@ -130,8 +130,10 @@ function openPanel(list, clickedWrapper) {
 
   // Animate open
   setTimeout(() => panel.classList.add('open'), 20);
-  // Scroll into view
-  setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 60);
+  // Scroll into view — skip on mobile to avoid jarring jumps
+  if (window.innerWidth > 540) {
+    setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 60);
+  }
 }
 
 function closePanel(instant = false) {

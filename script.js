@@ -116,8 +116,10 @@ function openPanel(paper, clickedWrapper) {
   // Trigger open animation after a brief delay so the browser has painted the element
   setTimeout(() => panel.classList.add('open'), 20);
 
-  // Scroll panel into view smoothly
-  setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 60);
+  // Scroll panel into view smoothly — skip on mobile to avoid jarring jumps
+  if (window.innerWidth > 540) {
+    setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 60);
+  }
 }
 
 function closePanel(instant = false) {

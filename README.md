@@ -6,10 +6,12 @@ Add a DOI and a thumbnail, run one script, and the paper appears as a card with 
 
 ## Pages
 
-| Page | Description |
-|------|-------------|
-| `index.html` | Main board — personal collection of papers |
-| `superlist.html` | Superlab reading lists — a personal mirror of the [Sensorimotor Superlab](https://superlab.ca/) weekly RSS feed, for my own browsing convenience |
+| Page | URL | Description |
+|------|-----|-------------|
+| `index.html` | `neuroinspo.site` | Main board — personal collection of papers |
+| `superlist.html` | `neuroinspo.site/superlist.html` | Superlab reading lists — a personal mirror of the [Sensorimotor Superlab](https://superlab.ca/) weekly RSS feed, for my own browsing convenience |
+| `spiro.html` | `neuroinspo.site/spiro.html` | Interactive [hypotrochoid](https://en.wikipedia.org/wiki/Hypotrochoid) spirograph generator.|
+
 
 ## Adding a paper (`index.html`)
 
@@ -55,6 +57,7 @@ The site itself is plain HTML + CSS + JS — no framework, no build step.
 .
 ├── index.html               # Main paper board
 ├── superlist.html           # Superlab reading list mirror
+├── spiro.html               # Spirograph generator (standalone, no nav link)
 ├── style.css / script.js    # Main board styles + logic
 ├── superlist.css / .js      # Superlist styles + logic
 ├── process_papers.py        # DOI → papers.json
@@ -62,13 +65,44 @@ The site itself is plain HTML + CSS + JS — no framework, no build step.
 ├── requirements.txt
 ├── dois.text                # One DOI URL per line
 ├── thumbnails/              # thumbnails/N.png (matches line N in dois.text)
+├── wrangler.jsonc           # Cloudflare Workers / Pages deployment config
 └── .github/workflows/
     └── update-data.yml      # Nightly CI refresh
 ```
+
+## Spirograph (`spiro.html`)
+
+An interactive spirograph that draws a [hypotrochoid](https://en.wikipedia.org/wiki/Hypotrochoid) — the path traced by a point on a small circle rolling inside a larger circle:
+
+```
+x = (R − r) · cos(θ) + d · cos((R−r)/r · θ)
+y = (R − r) · sin(θ) − d · sin((R−r)/r · θ)
+```
+
+Each frame, `θ` advances by the **Speed** value and a new point is drawn on an HTML `<canvas>` from a rolling point buffer (which is what makes trail length work).
+
+| Control | What it does |
+|---|---|
+| **R** — outer radius | Radius of the fixed outer circle (10–300) |
+| **r** — inner radius | Radius of the rolling inner circle (10–300) |
+| **d** — pen distance | Distance from the inner circle's centre (10–400). Values larger than `r` produce loops. |
+| **Speed** | How much `θ` advances per frame |
+| **Trail length** | Points kept in the buffer — short = comet tail, long = full pattern |
+| **Color** | Pen color for new segments; old segments keep their color |
+| **⏸ / ▶** | Pause / resume |
+| **⟳** | Clear and restart from `θ = 0` |
+
+Adjusting a slider mid-draw lifts the pen for one frame, so new traces start cleanly without connecting back to the old position. A good workflow: let a pattern complete, hit **⏸**, change color and/or parameters, then hit **▶** to layer a new pattern on top.
+
+## Deploying
+
+The site is deployed on Cloudflare Workers via [Wrangler](https://developers.cloudflare.com/workers/wrangler/). `wrangler.jsonc` serves the whole repo root as static assets.
 
 ## Tech
 
 - Vanilla HTML / CSS / JS — no framework, no build step
 - CSS Grid + `cubic-bezier` spring easing for animations
+- HTML `<canvas>` for the spirograph
 - [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) via Google Fonts
 - CrossRef API + arXiv fallback for metadata
+- Cloudflare Workers for hosting

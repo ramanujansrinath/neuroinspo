@@ -11,24 +11,79 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:          #edeae3;
-      --card-bg:     #ffffff;
-      --text:        #1c1a17;
-      --text-mid:    #6b6760;
-      --text-dim:    #a09c96;
-      --shadow-rest: 0 2px 8px rgba(0,0,0,0.07), 0 0 0 1px rgba(0,0,0,0.04);
-      --shadow-card: 0 16px 48px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
-      --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
-      --radius:      18px;
+      --bg:               #edeae3;
+      --card-bg:          #ffffff;
+      --text:             #1c1a17;
+      --text-mid:         #6b6760;
+      --text-dim:         #a09c96;
+      --shadow-rest:      0 2px 8px rgba(0,0,0,0.07), 0 0 0 1px rgba(0,0,0,0.04);
+      --shadow-card:      0 16px 48px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+      --ease-out:         cubic-bezier(0.22, 1, 0.36, 1);
+      --radius:           18px;
+      --header-h:         60px;
+      --panel-collapsed:  48px;
+      --panel-open:       52vh;
     }
+
+    html, body { height: 100%; overflow: hidden; }
 
     body {
       display: flex;
-      height: 100vh;
+      flex-direction: column;
       background: var(--bg);
       font-family: 'Space Grotesk', system-ui, sans-serif;
-      overflow: hidden;
       -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      height: var(--header-h);
+      flex-shrink: 0;
+      background: rgba(237, 234, 227, 0.92);
+      backdrop-filter: blur(16px) saturate(1.4);
+      -webkit-backdrop-filter: blur(16px) saturate(1.4);
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      display: flex;
+      align-items: center;
+      padding: 0 28px;
+    }
+
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 30px;
+      height: 30px;
+      color: var(--text);
+      flex-shrink: 0;
+    }
+    .logo-icon svg { width: 100%; height: 100%; }
+
+    .logo-text {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text);
+      user-select: none;
+    }
+
+    .logo-by {
+      font-weight: 300;
+      letter-spacing: 0.08em;
+    }
+
+    /* ── Content row ── */
+    #content {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      min-height: 0;
     }
 
     /* ── Sidebar ── */
@@ -40,7 +95,17 @@
       padding: 28px 20px 24px;
       display: flex;
       flex-direction: column;
+      overflow-y: auto;
+    }
+
+    /* Mobile handle — hidden on desktop */
+    #sidebar-handle { display: none; }
+
+    #sidebar-body {
+      display: flex;
+      flex-direction: column;
       gap: 24px;
+      flex: 1;
     }
 
     #sidebar-title {
@@ -102,19 +167,12 @@
       cursor: pointer;
       transition: opacity 0.15s;
     }
-
     input[type="range"]::-webkit-slider-thumb:hover { opacity: 0.65; }
 
     .color-control {
       display: flex;
       flex-direction: column;
       gap: 7px;
-    }
-
-    .color-control .control-name {
-      font-size: 12.5px;
-      color: var(--text-mid);
-      font-weight: 500;
     }
 
     input[type="color"] {
@@ -158,58 +216,20 @@
       color: var(--card-bg);
     }
 
-    /* ── Main ── */
+    /* ── Main (canvas area) ── */
     #main {
       flex: 1;
       display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: center;
       overflow: hidden;
-      padding: 28px 28px 24px;
-      gap: 18px;
-    }
-
-    .logo-group {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      align-self: flex-start;
-      text-decoration: none;
-    }
-
-    .logo-icon-link {
-      display: flex;
-      align-items: center;
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    .logo-icon {
-      width: 30px;
-      height: 30px;
-      color: var(--text);
-      flex-shrink: 0;
-    }
-
-    .logo-icon svg { width: 100%; height: 100%; }
-
-    .logo-text {
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text);
-      user-select: none;
-    }
-
-    .logo-by {
-      font-weight: 300;
-      letter-spacing: 0.08em;
+      padding: 28px;
+      min-width: 0;
     }
 
     #canvas-wrap {
-      flex: 1;
       width: 100%;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -220,104 +240,207 @@
       border-radius: var(--radius);
       box-shadow: var(--shadow-card);
     }
+
+    /* ── Mobile ── */
+    @media (max-width: 540px) {
+
+      header { padding: 0 16px; }
+      .logo-text { font-size: 13px; }
+
+      #content { flex-direction: column; }
+
+      /* Canvas area — sits above the bottom sheet */
+      #main {
+        flex: none;
+        width: 100%;
+        padding: 12px;
+        height: calc(100vh - var(--header-h) - var(--panel-collapsed));
+        transition: height 0.35s var(--ease-out);
+      }
+
+      #content.panel-open #main {
+        height: calc(100vh - var(--header-h) - var(--panel-open));
+      }
+
+      /* Bottom sheet */
+      #sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        min-width: unset;
+        border-right: none;
+        border-top: 1px solid rgba(0,0,0,0.07);
+        border-radius: 18px 18px 0 0;
+        padding: 0;
+        height: var(--panel-collapsed);
+        overflow: hidden;
+        transition: height 0.35s var(--ease-out);
+        z-index: 100;
+        box-shadow: 0 -4px 24px rgba(0,0,0,0.08);
+      }
+
+      #sidebar.open {
+        height: var(--panel-open);
+        overflow-y: auto;
+      }
+
+      /* Handle strip */
+      #sidebar-handle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: var(--panel-collapsed);
+        padding: 0 20px;
+        cursor: pointer;
+        user-select: none;
+        flex-shrink: 0;
+      }
+
+      #handle-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+      }
+
+      #handle-chevron {
+        font-size: 14px;
+        color: var(--text-dim);
+        transition: transform 0.3s var(--ease-out);
+        line-height: 1;
+      }
+
+      #sidebar.open #handle-chevron {
+        transform: rotate(180deg);
+      }
+
+      /* Desktop title hidden on mobile (handle label replaces it) */
+      #sidebar-title { display: none; }
+
+      #sidebar-body {
+        padding: 4px 20px 24px;
+        gap: 20px;
+      }
+
+      .btn-row { margin-top: 0; }
+    }
   </style>
 </head>
 <body>
 
-<div id="sidebar">
-  <div id="sidebar-title">Parameters</div>
-
-  <div class="controls">
-    <div class="control">
-      <div class="control-header">
-        <span class="control-name">R — outer radius</span>
-        <span class="control-value" id="R-val">131</span>
-      </div>
-      <input type="range" id="R" min="10" max="300" value="131" step="1">
-    </div>
-
-    <div class="control">
-      <div class="control-header">
-        <span class="control-name">r — inner radius</span>
-        <span class="control-value" id="r-val">117</span>
-      </div>
-      <input type="range" id="r" min="10" max="300" value="117" step="1">
-    </div>
-
-    <div class="control">
-      <div class="control-header">
-        <span class="control-name">d — pen distance</span>
-        <span class="control-value" id="d-val">221</span>
-      </div>
-      <input type="range" id="d" min="10" max="400" value="221" step="1">
-    </div>
-
-    <div class="control">
-      <div class="control-header">
-        <span class="control-name">Speed</span>
-        <span class="control-value" id="speed-val">0.20</span>
-      </div>
-      <input type="range" id="speed" min="0.01" max="1.0" value="0.2" step="0.01">
-    </div>
-
-    <div class="control">
-      <div class="control-header">
-        <span class="control-name">Trail length</span>
-        <span class="control-value" id="trail-val">4000</span>
-      </div>
-      <input type="range" id="trail" min="50" max="20000" value="4000" step="50">
-    </div>
-
-    <div class="color-control">
-      <span class="control-name">Color</span>
-      <input type="color" id="color" value="#5200AA">
-    </div>
-  </div>
-
-  <div class="btn-row">
-    <button id="pause-btn" title="Pause">⏸</button>
-    <button id="camera-btn" title="Freeze to canvas">📷</button>
-    <button id="clear-btn" title="Clear canvas">⟳</button>
-  </div>
-
-</div>
-
-<div id="main">
+<header>
   <a class="logo-group" href="index.html" aria-label="neuroinspo home">
-    <div class="logo-icon-link" aria-hidden="true">
-      <div class="logo-icon">
-        <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="22" cy="22" r="5.5" fill="currentColor"/>
-          <line x1="22" y1="16" x2="22" y2="4"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          <line x1="22" y1="28" x2="22" y2="40" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          <line x1="16" y1="22" x2="4"  y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          <line x1="28" y1="22" x2="40" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          <line x1="17.5" y1="17.5" x2="8"  y2="8"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          <line x1="26.5" y1="26.5" x2="36" y2="36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          <line x1="26.5" y1="17.5" x2="36" y2="8"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          <line x1="17.5" y1="26.5" x2="8"  y2="36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          <circle cx="22" cy="4"  r="2" fill="currentColor"/>
-          <circle cx="22" cy="40" r="2" fill="currentColor"/>
-          <circle cx="4"  cy="22" r="2" fill="currentColor"/>
-          <circle cx="40" cy="22" r="2" fill="currentColor"/>
-          <circle cx="8"  cy="8"  r="2" fill="currentColor"/>
-          <circle cx="36" cy="36" r="2" fill="currentColor"/>
-          <circle cx="36" cy="8"  r="2" fill="currentColor"/>
-          <circle cx="8"  cy="36" r="2" fill="currentColor"/>
-        </svg>
-      </div>
+    <div class="logo-icon">
+      <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="5.5" fill="currentColor"/>
+        <line x1="22" y1="16" x2="22" y2="4"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="22" y1="28" x2="22" y2="40" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="16" y1="22" x2="4"  y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="28" y1="22" x2="40" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="17.5" y1="17.5" x2="8"  y2="8"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="26.5" y1="26.5" x2="36" y2="36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="26.5" y1="17.5" x2="36" y2="8"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="17.5" y1="26.5" x2="8"  y2="36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="22" cy="4"  r="2" fill="currentColor"/>
+        <circle cx="22" cy="40" r="2" fill="currentColor"/>
+        <circle cx="4"  cy="22" r="2" fill="currentColor"/>
+        <circle cx="40" cy="22" r="2" fill="currentColor"/>
+        <circle cx="8"  cy="8"  r="2" fill="currentColor"/>
+        <circle cx="36" cy="36" r="2" fill="currentColor"/>
+        <circle cx="36" cy="8"  r="2" fill="currentColor"/>
+        <circle cx="8"  cy="36" r="2" fill="currentColor"/>
+      </svg>
     </div>
     <span class="logo-text">SPIROGRAPH <span class="logo-by">by</span> NEUROINSPO</span>
   </a>
-  <div id="canvas-wrap">
-    <canvas id="canvas"></canvas>
+</header>
+
+<div id="content">
+
+  <aside id="sidebar">
+    <!-- Mobile handle (hidden on desktop) -->
+    <div id="sidebar-handle">
+      <span id="handle-label">Controls</span>
+      <span id="handle-chevron">▾</span>
+    </div>
+
+    <!-- Sidebar / panel body -->
+    <div id="sidebar-body">
+      <div id="sidebar-title">Parameters</div>
+
+      <div class="controls">
+        <div class="control">
+          <div class="control-header">
+            <span class="control-name">R — outer radius</span>
+            <span class="control-value" id="R-val">131</span>
+          </div>
+          <input type="range" id="R" min="10" max="300" value="131" step="1">
+        </div>
+
+        <div class="control">
+          <div class="control-header">
+            <span class="control-name">r — inner radius</span>
+            <span class="control-value" id="r-val">117</span>
+          </div>
+          <input type="range" id="r" min="10" max="300" value="117" step="1">
+        </div>
+
+        <div class="control">
+          <div class="control-header">
+            <span class="control-name">d — pen distance</span>
+            <span class="control-value" id="d-val">221</span>
+          </div>
+          <input type="range" id="d" min="10" max="400" value="221" step="1">
+        </div>
+
+        <div class="control">
+          <div class="control-header">
+            <span class="control-name">Speed</span>
+            <span class="control-value" id="speed-val">0.20</span>
+          </div>
+          <input type="range" id="speed" min="0.01" max="1.0" value="0.2" step="0.01">
+        </div>
+
+        <div class="control">
+          <div class="control-header">
+            <span class="control-name">Trail length</span>
+            <span class="control-value" id="trail-val">4000</span>
+          </div>
+          <input type="range" id="trail" min="50" max="20000" value="4000" step="50">
+        </div>
+
+        <div class="color-control">
+          <span class="control-name">Color</span>
+          <input type="color" id="color" value="#5200AA">
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button id="pause-btn" title="Pause">⏸</button>
+        <button id="camera-btn" title="Freeze to canvas">📷</button>
+        <button id="clear-btn" title="Clear canvas">⟳</button>
+      </div>
+    </div>
+  </aside>
+
+  <div id="main">
+    <div id="canvas-wrap">
+      <canvas id="canvas"></canvas>
+    </div>
   </div>
+
 </div>
 
 <script>
-  const canvas = document.getElementById('canvas');
-  const ctx    = canvas.getContext('2d');
-  const wrap   = document.getElementById('canvas-wrap');
+  const canvas  = document.getElementById('canvas');
+  const ctx     = canvas.getContext('2d');
+  const wrap    = document.getElementById('canvas-wrap');
+  const sidebar = document.getElementById('sidebar');
+  const content = document.getElementById('content');
+  const handle  = document.getElementById('sidebar-handle');
 
   // ── Parameters ──
   let R           = 131;
@@ -334,7 +457,6 @@
   let frozenCanvas = new OffscreenCanvas(1, 1);
   let frozenCtx    = frozenCanvas.getContext('2d');
   // Each point: { x, y, color, lift }
-  // lift=true means don't draw a line from the previous point to this one
   let trail = [];
 
   const HALF_RANGE = 720;
@@ -342,8 +464,7 @@
   function resize() {
     const rect = wrap.getBoundingClientRect();
     const size = Math.floor(Math.min(rect.width, rect.height)) - 4;
-    if (size === canvas.width) return;
-    // Scale frozen content to new size before resizing
+    if (size <= 0 || size === canvas.width) return;
     const tmp = new OffscreenCanvas(size, size);
     tmp.getContext('2d').drawImage(frozenCanvas, 0, 0, size, size);
     canvas.width  = size;
@@ -362,8 +483,8 @@
     angle += speed;
     const x = (R - r) * Math.cos(angle) + d * Math.cos(((R - r) / r) * angle);
     const y = (R - r) * Math.sin(angle) - d * Math.sin(((R - r) / r) * angle);
-    const [cx, cy] = toCanvas(x, y);
-    trail.push({ x: cx, y: cy, color, lift: liftPen });
+    // Store math-space coords so the trail rescales correctly on canvas resize
+    trail.push({ x, y, color, lift: liftPen });
     liftPen = false;
     if (trail.length > trailLength) trail.splice(0, trail.length - trailLength);
   }
@@ -373,10 +494,9 @@
     ctx.drawImage(frozenCanvas, 0, 0);
     if (trail.length < 2) return;
 
-    // Draw contiguous same-color segments as single paths for performance
     let segStart = 0;
     for (let i = 1; i <= trail.length; i++) {
-      const atEnd     = i === trail.length;
+      const atEnd      = i === trail.length;
       const colorBreak = !atEnd && trail[i].color !== trail[segStart].color;
       const liftBreak  = !atEnd && trail[i].lift;
 
@@ -386,9 +506,11 @@
         ctx.lineWidth   = 1.5;
         ctx.lineCap     = 'round';
         ctx.lineJoin    = 'round';
-        ctx.moveTo(trail[segStart].x, trail[segStart].y);
+        const [sx, sy] = toCanvas(trail[segStart].x, trail[segStart].y);
+        ctx.moveTo(sx, sy);
         for (let j = segStart + 1; j < i; j++) {
-          ctx.lineTo(trail[j].x, trail[j].y);
+          const [px, py] = toCanvas(trail[j].x, trail[j].y);
+          ctx.lineTo(px, py);
         }
         ctx.stroke();
         segStart = i;
@@ -431,11 +553,10 @@
     paused = !paused;
     pauseBtn.textContent = paused ? '▶' : '⏸';
     pauseBtn.classList.toggle('paused', paused);
-    if (!paused) liftPen = true;  // don't connect to pre-pause position
+    if (!paused) liftPen = true;
   });
 
   document.getElementById('camera-btn').addEventListener('click', () => {
-    // Stamp current canvas (frozen + live trail) onto the frozen layer
     frozenCtx.drawImage(canvas, 0, 0);
     trail = [];
   });
@@ -444,6 +565,14 @@
     frozenCtx.clearRect(0, 0, frozenCanvas.width, frozenCanvas.height);
     trail = [];
     angle = 0;
+  });
+
+  // ── Mobile panel toggle ──
+  handle.addEventListener('click', () => {
+    const isOpen = sidebar.classList.toggle('open');
+    content.classList.toggle('panel-open', isOpen);
+    // Resize canvas after CSS transition finishes
+    setTimeout(resize, 370);
   });
 
   window.addEventListener('resize', resize);

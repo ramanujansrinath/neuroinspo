@@ -202,5 +202,17 @@
     "journal": "Nature",
     "abstract": "Intrinsically generated, brainwide neural activity displays macroscopic coordination among large populations of neurons that persists beyond the biophysical timescales of individual neurons 1–3 . It is not well understood how these macroscopic behaviours arise from microscopic, short-lived interactions between pairs of neurons. Here we show that the eigenvalue spectrum and dynamical properties of large-scale neural recordings in mice are similar to those produced by linear dynamics governed by a random symmetric matrix that is critically normalized. An exception was population activity in hippocampal area CA1, which resembled an efficient, uncorrelated neural code that may be optimized for information storage capacity. High-dimensional, global activity modes emerged in critically normalized artificial networks and persisted under sparse, clustered or spatial connectivity. These dynamics were useful for solving time-dependent tasks such as a zero-shot working memory task.",
     "is_author": false
+  },
+  {
+    "doi": "10.1038/s41593-026-02285-1",
+    "url": "https://doi.org/10.1038/s41593-026-02285-1",
+    "thumbnail": "thumbnails/18.png",
+    "title": "Fixation duration on natural scenes is explained by memory encoding not processing demand",
+    "citation": "Sulewski et al., 2026",
+    "pub_date": "2026-05-25",
+    "upload_date": "2026-05-26T14:15:50.491774",
+    "journal": "Nature Neuroscience",
+    "abstract": "Before each of around 200,000 eye movements we make each day, the brain decides how long to fixate before shifting gaze to new information. Here we investigate this process using a large-scale scene-viewing experiment (4,080 natural scenes, five participants) that combines magnetoencephalography, eye tracking and a semantic captioning task. Using multivariate analysis of magnetoencephalography source-space patterns, behavioral analyses and artificial neural network (ANN) modeling, we show that longer fixations do not reflect prolonged visual processing but relate to downstream memory encoding. First, temporal variability of ventral stream representational dynamics did not explain variability in fixation duration. Second, fixation durations were anticorrelated with ANN-estimated patch classification difficulty. Third, fixation durations correlate positively with ANN-predicted patch memorability and caption-inclusion and co-occur with increased theta–gamma phase–amplitude coupling, particularly in frontal and hippocampal regions. These results indicate that eye-movement timing decisions are shaped by memory-encoding demands rather than by perceptual processing limits.",
+    "is_author": false
   }
 ]

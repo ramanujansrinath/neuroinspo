@@ -176,35 +176,11 @@
       gap: 7px;
     }
 
-    /* ── 3D toggle ── */
-    .control-checkbox {
-      display: flex;
-      align-items: center;
-    }
-
-    .checkbox-label {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .checkbox-label input[type="checkbox"] {
-      width: 14px;
-      height: 14px;
-      cursor: pointer;
-      accent-color: var(--text);
-      flex-shrink: 0;
-    }
-
-    /* Indented 3D sub-controls */
-    .controls-3d {
+    /* z-depth controls — revealed on canvas drag */
+    #controls-3d {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      padding-left: 14px;
-      border-left: 2px solid rgba(0,0,0,0.09);
     }
 
     input[type="color"] {
@@ -455,16 +431,8 @@
           <input type="color" id="color" value="#5200AA">
         </div>
 
-        <!-- 3D toggle -->
-        <div class="control-checkbox">
-          <label class="checkbox-label">
-            <input type="checkbox" id="enable3d">
-            <span class="control-name">3D</span>
-          </label>
-        </div>
-
-        <!-- 3D sub-controls (hidden until checked) -->
-        <div class="controls-3d" id="controls-3d" hidden>
+        <!-- z controls — revealed when canvas is dragged to tilt -->
+        <div id="controls-3d" hidden>
           <div class="control">
             <div class="control-header">
               <span class="control-name">z — depth</span>
@@ -515,17 +483,15 @@
   let trailLength = 4000;
 
   // ── 3D parameters ──
-  let is3D    = false;
   let depth3D = 80;
   let freq3D  = 1.0;
 
-  // 3D view angles (degrees) — controlled by drag on canvas
-  let tiltDeg = 30;   // 0 = top-down, 90 = edge-on
-  let azimDeg = 45;   // rotation around Z axis
+  // View angles — 0/0 = flat top-down (classic look); drag canvas to orbit
+  let tiltDeg = 0;   // 0 = top-down, 90 = edge-on
+  let azimDeg = 0;   // rotation around Z axis
 
   // Orthographic projection: rotate by azim around Z, then tilt around new X
   function project(x, y, z) {
-    if (!is3D) return [x, y];
     const a  = azimDeg * Math.PI / 180;
     const t  = tiltDeg * Math.PI / 180;
     const ca = Math.cos(a), sa = Math.sin(a);
@@ -536,7 +502,6 @@
   }
 
   function drawZPlane() {
-    if (!is3D) return;
     const scale = (canvas.width / 2) / HALF_RANGE;
     const cx    = canvas.width  / 2;
     const cy    = canvas.height / 2;
@@ -607,7 +572,7 @@
     angle += speed;
     const x = (R - r) * Math.cos(angle) + d * Math.cos(((R - r) / r) * angle);
     const y = (R - r) * Math.sin(angle) - d * Math.sin(((R - r) / r) * angle);
-    const z = is3D ? depth3D * Math.sin(freq3D * angle) : 0;
+    const z = depth3D * Math.sin(freq3D * angle);
     // Store math-space coords so the trail rescales correctly on canvas resize
     trail.push({ x, y, z, color, lift: liftPen });
     liftPen = false;
@@ -627,10 +592,11 @@
       const liftBreak  = !atEnd && trail[i].lift;
       // Also break when z crosses zero so each segment belongs to one side
       const startZ = trail[segStart].z || 0;
-      const zBreak = is3D && !atEnd && (startZ < 0) !== ((trail[i].z || 0) < 0);
+      const depthSort = tiltDeg > 1;
+      const zBreak = depthSort && !atEnd && (startZ < 0) !== ((trail[i].z || 0) < 0);
 
       if (atEnd || colorBreak || liftBreak || zBreak) {
-        const onCorrectSide = is3D ? (belowPlane ? startZ < 0 : startZ >= 0) : !belowPlane;
+        const onCorrectSide = depthSort ? (belowPlane ? startZ < 0 : startZ >= 0) : !belowPlane;
         if (onCorrectSide && i - segStart > 1) {
           ctx.beginPath();
           ctx.strokeStyle = trail[segStart].color;
@@ -653,12 +619,13 @@
   function render() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(frozenCanvas, 0, 0);
-    if (is3D) {
+    if (tiltDeg > 1) {
       renderTrailPass(true);   // z < 0  — behind the plane
       drawZPlane();
       renderTrailPass(false);  // z >= 0 — in front of the plane
     } else {
-      renderTrailPass(false);  // 2D — all points
+      drawZPlane();            // flat grid background
+      renderTrailPass(false);  // trail on top
     }
   }
 
@@ -692,13 +659,6 @@
     color = e.target.value;
   });
 
-  document.getElementById('enable3d').addEventListener('change', e => {
-    is3D = e.target.checked;
-    document.getElementById('controls-3d').hidden = !is3D;
-    document.getElementById('camera-btn').disabled = is3D;
-    liftPen = true;
-  });
-
   wire('depth3d', v => depth3D = v, v => parseInt(v));
   wire('freq3d',  v => freq3D  = v, v => parseFloat(v).toFixed(1));
 
@@ -719,6 +679,9 @@
     frozenCtx.clearRect(0, 0, frozenCanvas.width, frozenCanvas.height);
     trail = [];
     angle = 0;
+    tiltDeg = 0;
+    azimDeg = 0;
+    document.getElementById('controls-3d').hidden = true;
   });
 
   // ── Mobile panel toggle ──
@@ -735,15 +698,15 @@
   let isDragging3D = false;
 
   canvas.addEventListener('mousedown', e => {
-    if (!is3D) return;
     isDragging3D = true;
     e.preventDefault();
   });
 
   window.addEventListener('mousemove', e => {
     if (!isDragging3D) return;
-    azimDeg = (azimDeg + e.movementX * 0.4 + 360) % 360;
-    tiltDeg = Math.max(0, Math.min(90, tiltDeg + e.movementY * 0.3));
+    azimDeg = (azimDeg - e.movementX * 0.4 + 360) % 360;
+    tiltDeg = Math.max(0, Math.min(90, tiltDeg - e.movementY * 0.3));
+    if (tiltDeg > 5) document.getElementById('controls-3d').hidden = false;
   });
 
   window.addEventListener('mouseup', () => { isDragging3D = false; });
@@ -752,7 +715,6 @@
   let dragLastX = 0, dragLastY = 0;
 
   canvas.addEventListener('touchstart', e => {
-    if (!is3D) return;
     isDragging3D = true;
     dragLastX = e.touches[0].clientX;
     dragLastY = e.touches[0].clientY;
@@ -765,8 +727,9 @@
     const dy = e.touches[0].clientY - dragLastY;
     dragLastX = e.touches[0].clientX;
     dragLastY = e.touches[0].clientY;
-    azimDeg = (azimDeg + dx * 0.4 + 360) % 360;
-    tiltDeg = Math.max(0, Math.min(90, tiltDeg + dy * 0.3));
+    azimDeg = (azimDeg - dx * 0.4 + 360) % 360;
+    tiltDeg = Math.max(0, Math.min(90, tiltDeg - dy * 0.3));
+    if (tiltDeg > 5) document.getElementById('controls-3d').hidden = false;
     e.preventDefault();
   }, { passive: false });
 

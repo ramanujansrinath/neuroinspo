@@ -682,6 +682,7 @@
     tiltDeg = 0;
     azimDeg = 0;
     document.getElementById('controls-3d').hidden = true;
+    document.getElementById('camera-btn').disabled = false;
   });
 
   // ── Mobile panel toggle ──
@@ -706,7 +707,10 @@
     if (!isDragging3D) return;
     azimDeg = (azimDeg - e.movementX * 0.4 + 360) % 360;
     tiltDeg = Math.max(0, Math.min(90, tiltDeg - e.movementY * 0.3));
-    if (tiltDeg > 5) document.getElementById('controls-3d').hidden = false;
+    if (tiltDeg > 5) {
+      document.getElementById('controls-3d').hidden = false;
+      document.getElementById('camera-btn').disabled = true;
+    }
   });
 
   window.addEventListener('mouseup', () => { isDragging3D = false; });
@@ -729,7 +733,10 @@
     dragLastY = e.touches[0].clientY;
     azimDeg = (azimDeg - dx * 0.4 + 360) % 360;
     tiltDeg = Math.max(0, Math.min(90, tiltDeg - dy * 0.3));
-    if (tiltDeg > 5) document.getElementById('controls-3d').hidden = false;
+    if (tiltDeg > 5) {
+      document.getElementById('controls-3d').hidden = false;
+      document.getElementById('camera-btn').disabled = true;
+    }
     e.preventDefault();
   }, { passive: false });
 

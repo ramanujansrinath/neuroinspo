@@ -239,14 +239,14 @@
     }
 
     #ar-btn {
-      background: #0f766e;
+      background: #be185d;
       color: #fff;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.12em;
     }
     #ar-btn:hover {
-      background: #0d9488 !important;
+      background: #9d174d !important;
       color: #fff !important;
     }
 
@@ -474,7 +474,7 @@
         <button id="pause-btn" title="Pause">⏸</button>
         <button id="camera-btn" title="Freeze to canvas">📷</button>
         <button id="clear-btn" title="Clear canvas">⟳</button>
-        <button id="ar-btn" title="View in Augmented Reality">AR</button>
+        <button id="ar-btn" title="View in Augmented Reality" hidden>AR</button>
       </div>
     </div>
   </aside>
@@ -982,7 +982,11 @@ import { LineGeometry } from 'three/addons/lines/LineGeometry.js';
       try {
         await startAR();
       } catch (err) {
-        alert(`Could not start AR session:\n${err.name}: ${err.message || err}`);
+        const isVisionOS = /iPad|iPhone/.test(navigator.userAgent) && navigator.maxTouchPoints > 1;
+        const msg = err.name === 'NotSupportedError' && isVisionOS
+          ? 'AR is not yet available in visionOS Safari.\n\nApple has not implemented WebXR immersive-ar sessions on Vision Pro. Use Android Chrome, or file feedback at feedbackassistant.apple.com.'
+          : `Could not start AR:\n${err.name}: ${err.message || err}`;
+        alert(msg);
       }
     });
   })();

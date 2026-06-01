@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spirograph — NEUROINSPO</title>
+  <script type="importmap">
+  {
+    "imports": {
+      "three":          "https://cdn.jsdelivr.net/npm/three@0.165/build/three.module.min.js",
+      "three/addons/":  "https://cdn.jsdelivr.net/npm/three@0.165/examples/jsm/"
+    }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -230,6 +238,18 @@
       color: var(--card-bg);
     }
 
+    #ar-btn {
+      background: #be185d;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+    #ar-btn:hover {
+      background: #9d174d !important;
+      color: #fff !important;
+    }
+
     /* ── Main (canvas area) ── */
     #main {
       flex: 1;
@@ -454,6 +474,7 @@
         <button id="pause-btn" title="Pause">⏸</button>
         <button id="camera-btn" title="Freeze to canvas">📷</button>
         <button id="clear-btn" title="Clear canvas">⟳</button>
+        <button id="ar-btn" title="View in Augmented Reality" hidden>AR</button>
       </div>
     </div>
   </aside>
@@ -466,7 +487,23 @@
 
 </div>
 
-<script>
+<!-- WebXR canvas — fullscreen, visible only during AR session -->
+<canvas id="xr-canvas" style="display:none;position:fixed;inset:0;width:100%;height:100%;z-index:10;touch-action:none"></canvas>
+
+<!-- AR dom-overlay — rendered on top of camera feed -->
+<div id="ar-overlay" style="display:none;position:fixed;inset:0;z-index:20;flex-direction:column;align-items:center;justify-content:space-between;padding:56px 24px 48px;pointer-events:none;font-family:'Space Grotesk',system-ui,sans-serif">
+  <span id="ar-hint" style="color:#fff;font-size:14px;font-weight:500;letter-spacing:0.05em;text-shadow:0 1px 6px rgba(0,0,0,0.65)">
+    Point at a flat surface · tap to place
+  </span>
+  <button id="ar-exit-btn" style="pointer-events:auto;padding:10px 28px;background:rgba(0,0,0,0.5);color:#fff;border:1px solid rgba(255,255,255,0.25);border-radius:100px;font-family:inherit;font-size:13px;font-weight:500;cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)">✕ Exit AR</button>
+</div>
+
+<script type="module">
+import * as THREE      from 'three';
+import { Line2 }        from 'three/addons/lines/Line2.js';
+import { LineMaterial } from 'three/addons/lines/LineMaterial.js';
+import { LineGeometry } from 'three/addons/lines/LineGeometry.js';
+
   const canvas  = document.getElementById('canvas');
   const ctx     = canvas.getContext('2d');
   const wrap    = document.getElementById('canvas-wrap');
@@ -547,6 +584,7 @@
   let frozenCtx    = frozenCanvas.getContext('2d');
   // Each point: { x, y, color, lift }
   let trail = [];
+  let inAR  = false;
 
   const HALF_RANGE = 720;
 
@@ -630,6 +668,7 @@
   }
 
   function loop() {
+    if (inAR) return;   // XR loop takes over; restart on AR exit
     if (!paused) {
       const stepsPerFrame = Math.max(1, Math.round(speed / 0.01));
       for (let i = 0; i < stepsPerFrame; i++) step();
@@ -747,6 +786,212 @@
     if (!e.target.closest('#sidebar')) e.preventDefault();
   }, { passive: false });
 
+  // ── WebXR / AR ──────────────────────────────────────────────────────────────
+
+  // 50 cm total diameter (HALF_RANGE * 2 = 1440 math units → 0.5 m)
+  const AR_SCALE = 0.5 / (HALF_RANGE * 2);
+
+  function hexToRgb01(hex) {
+    return [
+      parseInt(hex.slice(1, 3), 16) / 255,
+      parseInt(hex.slice(3, 5), 16) / 255,
+      parseInt(hex.slice(5, 7), 16) / 255,
+    ];
+  }
+
+  // Three.js objects — created once, reused across AR sessions
+  let xrRenderer = null, xrScene = null, xrCamera = null;
+  let xrReticle  = null, xrGroup = null;
+  let xrLine = null, xrGeo = null, xrMat = null;
+  let xrHitSource = null, xrPlaced = false;
+
+  function ensureXRObjects() {
+    if (xrRenderer) return;
+
+    const xrCanvas = document.getElementById('xr-canvas');
+    xrRenderer = new THREE.WebGLRenderer({ canvas: xrCanvas, alpha: true, antialias: true });
+    xrRenderer.setPixelRatio(window.devicePixelRatio);
+    xrRenderer.setSize(window.innerWidth, window.innerHeight);
+    xrRenderer.xr.enabled = true;
+
+    xrScene  = new THREE.Scene();
+    xrCamera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 20);
+
+    // Reticle — ring shown on detected surface while hunting for placement
+    const rGeo = new THREE.RingGeometry(0.08, 0.1, 32).rotateX(-Math.PI / 2);
+    const rMat = new THREE.MeshBasicMaterial({ color: 0xffffff, side: THREE.DoubleSide,
+                                               transparent: true, opacity: 0.75 });
+    xrReticle = new THREE.Mesh(rGeo, rMat);
+    xrReticle.matrixAutoUpdate = false;
+    xrReticle.visible = false;
+    xrScene.add(xrReticle);
+
+    // Group locked to surface after tap — holds the spirograph line
+    xrGroup = new THREE.Group();
+    xrGroup.visible = false;
+    xrScene.add(xrGroup);
+
+    // Line2 for thick antialiased lines (updated every XR frame)
+    xrGeo = new LineGeometry();
+    xrGeo.setPositions([0, 0, 0, 0.001, 0, 0]);   // dummy; replaced each frame
+    xrGeo.setColors([1, 1, 1, 1, 1, 1]);
+    xrMat = new LineMaterial({
+      vertexColors: true,
+      linewidth: 2,   // CSS pixels
+      resolution: new THREE.Vector2(window.innerWidth, window.innerHeight),
+      alphaToCoverage: true,
+    });
+    xrLine = new Line2(xrGeo, xrMat);
+    xrLine.frustumCulled = false;
+    xrGroup.add(xrLine);
+  }
+
+  async function startAR() {
+    ensureXRObjects();
+
+    // Reset per-session state
+    xrPlaced = false;
+    xrReticle.visible = false;
+    xrGroup.visible   = false;
+    xrGroup.matrixAutoUpdate = true;
+
+    const session = await navigator.xr.requestSession('immersive-ar', {
+      requiredFeatures: [],
+      optionalFeatures: ['hit-test'],
+    });
+
+    xrRenderer.xr.setSession(session);
+
+    // Request hit-test source for reticle + surface placement
+    try {
+      const viewerSpace = await session.requestReferenceSpace('viewer');
+      xrHitSource = await session.requestHitTestSource({ space: viewerSpace });
+    } catch {
+      xrHitSource = null;   // no surface detection; tap places at fixed distance
+    }
+
+    session.addEventListener('end', onAREnd);
+    session.addEventListener('select', onARTap);
+    document.getElementById('ar-exit-btn')
+      .addEventListener('click', () => session.end(), { once: true });
+
+    // Switch to AR UI
+    inAR = true;
+    document.getElementById('content').hidden = true;
+    document.querySelector('header').hidden   = true;
+    document.getElementById('xr-canvas').style.display    = 'block';
+    document.getElementById('ar-overlay').style.display   = 'flex';
+    document.getElementById('ar-hint').textContent = 'Point at a flat surface · tap to place';
+    document.getElementById('ar-hint').style.display = '';
+
+    xrRenderer.setAnimationLoop(xrFrame);
+  }
+
+  function onARTap() {
+    if (xrPlaced) return;
+    if (xrReticle.visible) {
+      // Hit-test available — place exactly on the detected surface
+      xrGroup.matrix.copy(xrReticle.matrix);
+    } else {
+      // No surface detection (e.g. visionOS without hit-test) —
+      // place 1.5 m ahead, 0.6 m below the viewer (roughly table height)
+      xrGroup.matrix.makeTranslation(0, -0.6, -1.5);
+    }
+    xrGroup.matrixAutoUpdate = false;
+    xrGroup.visible = true;
+    xrPlaced = true;
+    trail   = [];
+    angle   = 0;
+    liftPen = false;
+    document.getElementById('ar-hint').style.display = 'none';
+  }
+
+  function syncXRGeometry() {
+    if (trail.length < 2) return;
+    // Raise the spiral so its lowest z point sits at surface level (y = 0)
+    const zFloor = -depth3D;
+    const pos = [], col = [];
+    for (const pt of trail) {
+      // math (x, y, z) → Three.js (x, height-above-surface, -y)
+      pos.push(pt.x * AR_SCALE, (pt.z - zFloor) * AR_SCALE, -pt.y * AR_SCALE);
+      const [r, g, b] = hexToRgb01(pt.color);
+      col.push(r, g, b);
+    }
+    xrGeo.setPositions(pos);
+    xrGeo.setColors(col);
+  }
+
+  function xrFrame(timestamp, frame) {
+    if (!frame) return;
+
+    // Advance the spirograph once placement is confirmed
+    if (xrPlaced) {
+      const stepsPerFrame = Math.max(1, Math.round(speed / 0.01));
+      for (let i = 0; i < stepsPerFrame; i++) step();
+      syncXRGeometry();
+    }
+
+    // Move reticle to the detected horizontal surface under the view ray
+    if (xrHitSource && !xrPlaced) {
+      const refSpace = xrRenderer.xr.getReferenceSpace();
+      const hits = frame.getHitTestResults(xrHitSource);
+      if (hits.length > 0) {
+        const pose = hits[0].getPose(refSpace);
+        if (pose) {
+          xrReticle.visible = true;
+          xrReticle.matrix.fromArray(pose.transform.matrix);
+        }
+      } else {
+        xrReticle.visible = false;
+      }
+    }
+
+    xrRenderer.render(xrScene, xrCamera);
+  }
+
+  function onAREnd() {
+    xrHitSource?.cancel();
+    xrHitSource = null;
+    xrRenderer.setAnimationLoop(null);
+
+    // Restore 2D UI
+    inAR = false;
+    document.getElementById('content').hidden = false;
+    document.querySelector('header').hidden   = false;
+    document.getElementById('xr-canvas').style.display  = 'none';
+    document.getElementById('ar-overlay').style.display = 'none';
+
+    liftPen = true;
+    requestAnimationFrame(loop);   // restart 2D loop
+  }
+
+  // Wire AR button.
+  // Skip isSessionSupported — it gives false negatives on some visionOS builds.
+  // Instead, always try requestSession on click and surface any real error.
+  (() => {
+    const btn = document.getElementById('ar-btn');
+    if (!navigator?.xr) {
+      // Clearly unsupported (iPhone/iPad Safari, desktop Firefox, …)
+      btn.style.opacity = '0.45';
+      btn.addEventListener('click', () =>
+        alert('AR is not available in this browser.\nUse Android Chrome or Apple Vision Pro.'));
+      return;
+    }
+    // navigator.xr exists → attempt session on tap; handles Android + visionOS
+    btn.addEventListener('click', async () => {
+      try {
+        await startAR();
+      } catch (err) {
+        const isVisionOS = /iPad|iPhone/.test(navigator.userAgent) && navigator.maxTouchPoints > 1;
+        const msg = err.name === 'NotSupportedError' && isVisionOS
+          ? 'AR is not yet available in visionOS Safari.\n\nApple has not implemented WebXR immersive-ar sessions on Vision Pro. Use Android Chrome, or file feedback at feedbackassistant.apple.com.'
+          : `Could not start AR:\n${err.name}: ${err.message || err}`;
+        alert(msg);
+      }
+    });
+  })();
+
+  // ── Boot ────────────────────────────────────────────────────────────────────
   resize();
   requestAnimationFrame(loop);
 </script>

@@ -1,5 +1,77 @@
 [
   {
+    "list_num": 335,
+    "title": "Reading List 335",
+    "pub_date": "2026-05-29",
+    "url": "https://superlab.ca/posts/2026-05-29-list335.html",
+    "papers": [
+      {
+        "title": "Voluntary Dissociation of Motor Unit Activity in the Vastii Muscles",
+        "authors": "Haller D. et al.",
+        "year": "2026",
+        "journal": "The Journal of Neuroscience e1982252026",
+        "url": "https://doi.org/10.1523/jneurosci.1982-25.2026",
+        "doi": "10.1523/jneurosci.1982-25.2026"
+      },
+      {
+        "title": "Fixation duration on natural scenes is explained by memory encoding not processing demand",
+        "authors": "Sulewski P., Amme C., Hebart M. N., König P., Kietzmann T. C.",
+        "year": "2026",
+        "journal": "Nature Neuroscience",
+        "url": "https://doi.org/10.1038/s41593-026-02285-1",
+        "doi": "10.1038/s41593-026-02285-1"
+      },
+      {
+        "title": "When anticipation is not enough: a mixture of robust and adaptive feedback control strategies improve reaching in dynamic environments",
+        "authors": "Kalidindi H. T., Crevecoeur F.",
+        "year": "2026",
+        "journal": "The Journal of Neuroscience e2158252026",
+        "url": "https://doi.org/10.1523/jneurosci.2158-25.2026",
+        "doi": "10.1523/jneurosci.2158-25.2026"
+      },
+      {
+        "title": "Reward magnitude determines reinforcement learning efficiency",
+        "authors": "Gong S., Martell A., Dudman J. T., Coddington L. T.",
+        "year": "2026",
+        "journal": "Science 392",
+        "url": "https://doi.org/10.1126/science.aeb0813",
+        "doi": "10.1126/science.aeb0813"
+      },
+      {
+        "title": "A critical initialization for biological neural networks",
+        "authors": "Pachitariu M. et al.",
+        "year": "2026",
+        "journal": "Nature",
+        "url": "https://doi.org/10.1038/s41586-026-10528-1",
+        "doi": "10.1038/s41586-026-10528-1"
+      },
+      {
+        "title": "A systematic investigation reveals dissociable effects of ageing on implicit and explicit components of sensorimotor learning",
+        "authors": "Cisneros E., Karny S., Ivry R. B., Tsay J. S.",
+        "year": "2026",
+        "journal": "Nature Human Behaviour",
+        "url": "https://doi.org/10.1038/s41562-026-02468-7",
+        "doi": "10.1038/s41562-026-02468-7"
+      },
+      {
+        "title": "SUITPy: A Python-based toolbox for the analysis of cerebellar functional and anatomical imaging data across the human lifespan",
+        "authors": "Wang Y. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.05.14.724397",
+        "url": "https://doi.org/10.64898/2026.05.14.724397",
+        "doi": "10.64898/2026.05.14.724397"
+      },
+      {
+        "title": "Pseudo-linear summation explains neural geometry of multi-finger movements in human premotor cortex",
+        "authors": "Shah N. P. et al.",
+        "year": "2025",
+        "journal": "Nature Communications 16",
+        "url": "https://doi.org/10.1038/s41467-025-59039-z",
+        "doi": "10.1038/s41467-025-59039-z"
+      }
+    ]
+  },
+  {
     "list_num": 334,
     "title": "Reading List 334",
     "pub_date": "2026-05-22",
@@ -1980,86 +2052,6 @@
         "journal": "arXiv [mathOC]",
         "url": "http://arxiv.org/abs/2502.15014",
         "doi": null
-      }
-    ]
-  },
-  {
-    "list_num": 315,
-    "title": "Reading List 315",
-    "pub_date": "2025-12-12",
-    "url": "https://superlab.ca/posts/2025-12-12-list315.html",
-    "papers": [
-      {
-        "title": "An informational account of anticipatory coarticulation – theoretical considerations and empirical plausibility",
-        "authors": "Kasper J, Kell CA, Perrier P",
-        "year": "",
-        "journal": "J Neurolinguistics 78:101298",
-        "url": "http://dx.doi.org/10.1016/j.jneuroling.2025.101298",
-        "doi": "10.1016/j.jneuroling.2025.101298"
-      },
-      {
-        "title": "Tiny recurrent neural networks for discovering cognitive strategies",
-        "authors": "Ji-An L",
-        "year": "",
-        "journal": "Nat Rev Neurosci",
-        "url": "http://dx.doi.org/10.1038/s41583-025-01007-z",
-        "doi": "10.1038/s41583-025-01007-z"
-      },
-      {
-        "title": "Efficient and reproducible pipelines for spike sorting large-scale electrophysiology data",
-        "authors": "Buccino AP, Sridhar A, Feng D, Svoboda K, Siegle JH",
-        "year": "",
-        "journal": "bioRxiv:2025.11.12.687966",
-        "url": "https://www.biorxiv.org/content/10.1101/2025.11.12.687966v1.abstract",
-        "doi": "10.1101/2025.11.12.687966"
-      },
-      {
-        "title": "A global screen for magnetically induced neuronal activity in the pigeon brain",
-        "authors": "Nordmann GC, Balay SD, Kapuruge TN, Numi M, Leeb C, Nimpf S, Malkemper EP, Landler L, Keays DA",
-        "year": "",
-        "journal": "Science:eaea6425",
-        "url": "http://dx.doi.org/10.1126/science.aea6425",
-        "doi": "10.1126/science.aea6425"
-      },
-      {
-        "title": "Differential controls of forelimb versus whole‑body movements by striatum",
-        "authors": "Cao J, Zhao Y, Yu J",
-        "year": "",
-        "journal": "bioRxiv:2025.11.10.687756",
-        "url": "https://www.biorxiv.org/content/10.1101/2025.11.10.687756v2.abstract",
-        "doi": "10.1101/2025.11.10.687756"
-      },
-      {
-        "title": "Coordination of spike timing among the neurons of the cerebellum",
-        "authors": "Fakharian MA, Taeckens EA, Vasserman AN, Shoup AM, Shadmehr R",
-        "year": "",
-        "journal": "bioRxiv:2025.12.03.692114",
-        "url": "https://www.biorxiv.org/content/10.64898/2025.12.03.692114v1.abstract",
-        "doi": "10.64898/2025.12.03.692114"
-      },
-      {
-        "title": "From skin to cortex: End-to-end spiking neural network simulation of tactile information flow",
-        "authors": "Rault N, Tompos T, Marx EF, Zeldenrust F, Degertekin L, Celikel T",
-        "year": "",
-        "journal": "bioRxiv:2025.12.03.692094",
-        "url": "https://www.biorxiv.org/content/10.64898/2025.12.03.692094v1.abstract",
-        "doi": "10.64898/2025.12.03.692094"
-      },
-      {
-        "title": "Striatal ensembles specify and control granular forelimb actions",
-        "authors": "Rodrigues-Vaz I, Athalye VR, Peterka DS, Costa RM",
-        "year": "",
-        "journal": "bioRxiv:2025.12.03.692128",
-        "url": "https://www.biorxiv.org/content/10.64898/2025.12.03.692128v1.abstract",
-        "doi": "10.64898/2025.12.03.692128"
-      },
-      {
-        "title": "Joint modelling of brain and behaviour dynamics with artificial intelligence",
-        "authors": "Mathis MW, Mathis A",
-        "year": "",
-        "journal": "Nat Rev Neurosci",
-        "url": "http://dx.doi.org/10.1038/s41583-025-00996-1",
-        "doi": "10.1038/s41583-025-00996-1"
       }
     ]
   }

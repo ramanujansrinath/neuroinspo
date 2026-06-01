@@ -617,25 +617,21 @@ import { LineGeometry } from 'three/addons/lines/LineGeometry.js';
     if (trail.length > trailLength) trail.splice(0, trail.length - trailLength);
   }
 
-  // Draw trail segments filtered by z sign (for depth sorting around the z=0 plane).
-  // belowPlane=true  → only segments where z < 0  (drawn behind the plane)
-  // belowPlane=false → only segments where z >= 0 (drawn in front of the plane)
-  // When not in 3D mode belowPlane=false draws everything (z is always 0).
-  function renderTrailPass(belowPlane) {
+  // Draw the full trail in one pass — plane is drawn first so it sits behind.
+  // z-based depth splitting was removed: it silently dropped segments at every
+  // z=0 crossing where consecutive points had opposite signs (1-point segments
+  // fail the i-segStart > 1 guard). The plane is only 12% opaque so the
+  // occlusion difference is imperceptible.
+  function renderTrail() {
     if (trail.length < 2) return;
     let segStart = 0;
     for (let i = 1; i <= trail.length; i++) {
       const atEnd      = i === trail.length;
       const colorBreak = !atEnd && trail[i].color !== trail[segStart].color;
       const liftBreak  = !atEnd && trail[i].lift;
-      // Also break when z crosses zero so each segment belongs to one side
-      const startZ = trail[segStart].z || 0;
-      const depthSort = tiltDeg > 1;
-      const zBreak = depthSort && !atEnd && (startZ < 0) !== ((trail[i].z || 0) < 0);
 
-      if (atEnd || colorBreak || liftBreak || zBreak) {
-        const onCorrectSide = depthSort ? (belowPlane ? startZ < 0 : startZ >= 0) : !belowPlane;
-        if (onCorrectSide && i - segStart > 1) {
+      if (atEnd || colorBreak || liftBreak) {
+        if (i - segStart > 1) {
           ctx.beginPath();
           ctx.strokeStyle = trail[segStart].color;
           ctx.lineWidth   = 1.5;
@@ -657,14 +653,8 @@ import { LineGeometry } from 'three/addons/lines/LineGeometry.js';
   function render() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(frozenCanvas, 0, 0);
-    if (tiltDeg > 1) {
-      renderTrailPass(true);   // z < 0  — behind the plane
-      drawZPlane();
-      renderTrailPass(false);  // z >= 0 — in front of the plane
-    } else {
-      drawZPlane();            // flat grid background
-      renderTrailPass(false);  // trail on top
-    }
+    drawZPlane();   // plane first — trail draws on top
+    renderTrail();
   }
 
   function loop() {

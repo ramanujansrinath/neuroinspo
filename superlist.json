@@ -1,5 +1,53 @@
 [
   {
+    "list_num": 336,
+    "title": "Reading List 336",
+    "pub_date": "2026-06-05",
+    "url": "https://superlab.ca/posts/2026-06-05-list336.html",
+    "papers": [
+      {
+        "title": "Neuropixels Opto: combining high-resolution electrophysiology and optogenetics",
+        "authors": "Lakunina A. A. et al.",
+        "year": "2026",
+        "journal": "Nature Methods",
+        "url": "https://doi.org/10.1038/s41592-026-03076-z",
+        "doi": "10.1038/s41592-026-03076-z"
+      },
+      {
+        "title": "Neural networks learn forward dynamics when freed from numerical integration",
+        "authors": "Bahdasariants S., Yakovenko S.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.05.27.728310",
+        "url": "https://doi.org/10.64898/2026.05.27.728310",
+        "doi": "10.64898/2026.05.27.728310"
+      },
+      {
+        "title": "Dynamic compression of whole-brain neural trajectories during human motor learning",
+        "authors": "Mohseni H. et al.",
+        "year": "2026",
+        "journal": "Proceedings of the National Academy of Sciences 123",
+        "url": "https://doi.org/10.1073/pnas.2601546123",
+        "doi": "10.1073/pnas.2601546123"
+      },
+      {
+        "title": "Spinal cord stimulation for upper limb motor function in people with chronic post-stroke hemiparesis: a feasibility trial",
+        "authors": "de Freitas R. M. et al.",
+        "year": "2026",
+        "journal": "Nature Medicine",
+        "url": "https://doi.org/10.1038/s41591-026-04435-1",
+        "doi": "10.1038/s41591-026-04435-1"
+      },
+      {
+        "title": "Neural similarity predicts whether strangers become friends",
+        "authors": "Shen Y. L. et al.",
+        "year": "2025",
+        "journal": "Nature Human Behaviour 9:2285-2298",
+        "url": "https://doi.org/10.1038/s41562-025-02266-7",
+        "doi": "10.1038/s41562-025-02266-7"
+      }
+    ]
+  },
+  {
     "list_num": 335,
     "title": "Reading List 335",
     "pub_date": "2026-05-29",
@@ -1916,142 +1964,6 @@
         "journal": "bioRxiv:2024.10.18.618983",
         "url": "https://www.biorxiv.org/content/10.1101/2024.10.18.618983v1.abstract",
         "doi": "10.1101/2024.10.18.618983"
-      }
-    ]
-  },
-  {
-    "list_num": 316,
-    "title": "Reading List 316",
-    "pub_date": "2025-12-19",
-    "url": "https://superlab.ca/posts/2025-12-19-list316.html",
-    "papers": [
-      {
-        "title": "Universal scale-free representations in human visual cortex",
-        "authors": "Gauthaman RM, Ménard B, Bonner MF",
-        "year": "",
-        "journal": "PLoS Comput Biol 21:e1013714",
-        "url": "http://dx.doi.org/10.1371/journal.pcbi.1013714",
-        "doi": "10.1371/journal.pcbi.1013714"
-      },
-      {
-        "title": "Convergent information flows explain recurring firing patterns in cerebral cortex",
-        "authors": "Guarino D, Filipchuk A, Destexhe A",
-        "year": "",
-        "journal": "Nat Neurosci:1–9",
-        "url": "http://dx.doi.org/10.1038/s41593-025-02128-5",
-        "doi": "10.1038/s41593-025-02128-5"
-      },
-      {
-        "title": "Distributed neural dynamics underlie the shift from movement preparation to execution",
-        "authors": "Yin Z, Liu JK, Kornysheva K",
-        "year": "",
-        "journal": "bioRxiv:2025.12.09.693175",
-        "url": "https://www.biorxiv.org/content/10.64898/2025.12.09.693175v1.abstract",
-        "doi": "10.64898/2025.12.09.693175"
-      },
-      {
-        "title": "Cerebellar outputs for rapid directional refinement of forelimb movement",
-        "authors": "Thanawalla AR, Wilcox O, Rhee E, Jiang J, Huang KW, Yusufi R, Saklaway D, Nagamori A, Conner JM, Chen AI, Azim E",
-        "year": "",
-        "journal": "bioRxiv:2025.10.01.679895",
-        "url": "https://www.biorxiv.org/content/10.1101/2025.10.01.679895v1.abstract",
-        "doi": "10.1101/2025.10.01.679895"
-      },
-      {
-        "title": "Selective engagement of the primate orbitofrontal cortex during value-based but not perceptual decisions",
-        "authors": "Moll MG, Read RK, Wallis JD, Elston TW",
-        "year": "",
-        "journal": "bioRxiv:2025.11.17.688922",
-        "url": "https://www.biorxiv.org/content/10.1101/2025.11.17.688922v1.abstract",
-        "doi": "10.1101/2025.11.17.688922"
-      },
-      {
-        "title": "Simulated complex cells contribute to object recognition through representational untangling",
-        "authors": "Slapik MB, Shouval HZ",
-        "year": "",
-        "journal": "Neural Comput:1–20",
-        "url": "https://dx.doi.org/10.1162/NECO.a.1480",
-        "doi": "10.1162/NECO.a.1480"
-      },
-      {
-        "title": "Tactile-evoked EEG dataset for natural perception using an integrated stimulation-recording framework",
-        "authors": "Mao L, Liu P, Li J, Wang X, Su H, Zhang X, Sun J, Li T",
-        "year": "",
-        "journal": "Sci Data:1–9",
-        "url": "http://dx.doi.org/10.1038/s41597-025-06250-8",
-        "doi": "10.1038/s41597-025-06250-8"
-      },
-      {
-        "title": "Cell-type-specific manifold analysis discloses independent geometric transformations in the hippocampal spatial code",
-        "authors": "Esparza J, Quintanilla JP, Cid E, Medeiros AC, Gallego JA, de la Prida LM",
-        "year": "",
-        "journal": "Neuron 113:1098-1109.e6",
-        "url": "http://dx.doi.org/10.1016/j.neuron.2025.01.022",
-        "doi": "10.1016/j.neuron.2025.01.022"
-      },
-      {
-        "title": "The hierarchical organization of human praxis: A lesion-connectome mapping study of limb and oral apraxias",
-        "authors": "Nishio Y, Itabashi R, Kataoka Y, Yazawa Y, Mori E",
-        "year": "",
-        "journal": "bioRxiv:2025.12.13.694084",
-        "url": "https://www.biorxiv.org/content/10.64898/2025.12.13.694084v2.abstract",
-        "doi": "10.64898/2025.12.13.694084"
-      },
-      {
-        "title": "BOLD signal changes can oppose oxygen metabolism across the human cortex",
-        "authors": "Epp SM, Castrillón G, Yuan B, Andrews-Hanna J, Preibisch C, Riedl V",
-        "year": "",
-        "journal": "Nat Neurosci:1–12",
-        "url": "http://dx.doi.org/10.1038/s41593-025-02132-9",
-        "doi": "10.1038/s41593-025-02132-9"
-      },
-      {
-        "title": "Reduced rank regression for neural communication: a tutorial for neuroscientists",
-        "authors": "Wu B, Pillow J",
-        "year": "",
-        "journal": "arXiv [q-bioNC]",
-        "url": "http://arxiv.org/abs/2512.12467",
-        "doi": null
-      },
-      {
-        "title": "From skin to cortex: End-to-end spiking neural network simulation of tactile information flow",
-        "authors": "Rault N, Tompos T, Marx EF, Zeldenrust F, Degertekin L, Celikel T",
-        "year": "",
-        "journal": "bioRxiv:2025.12.03.692094",
-        "url": "https://www.biorxiv.org/content/10.64898/2025.12.03.692094v1.abstract",
-        "doi": "10.64898/2025.12.03.692094"
-      },
-      {
-        "title": "Crossmodal attention develops in the first year of life: Cortical signatures of tactile to visual exogenous spatial cuing at 8 but not 5 months of age",
-        "authors": "Orioli G, Thomas RL, Begum Ali J, Mason L, van Velzen JL, Bremner AJ",
-        "year": "",
-        "journal": "bioRxiv:2025.12.03.691887",
-        "url": "https://www.biorxiv.org/content/10.64898/2025.12.03.691887v1.abstract",
-        "doi": "10.64898/2025.12.03.691887"
-      },
-      {
-        "title": "Toward a science of prospective learning",
-        "authors": "Kording KP, Vogelstein JT, Chaudhari P, Verstynen T",
-        "year": "",
-        "journal": "Neuron 113:4103–4106",
-        "url": "http://dx.doi.org/10.1016/j.neuron.2025.11.010",
-        "doi": "10.1016/j.neuron.2025.11.010"
-      },
-      {
-        "title": "Cerebellar-cortical beta oscillations emerge as a predictive signal facilitating the stability of behavioral performance",
-        "authors": "Bracco M, Vasudevan V, Rohira V, Welniarz Q, Razafinimanana M, Richard A, Gitton C, Meunier S, Valero-Cabré A, Schwartz D, Popa T, Gallea C",
-        "year": "",
-        "journal": "Curr Biol",
-        "url": "http://dx.doi.org/10.1016/j.cub.2025.11.049",
-        "doi": "10.1016/j.cub.2025.11.049"
-      },
-      {
-        "title": "Inferring system and optimal control parameters of closed-loop systems from partial observations",
-        "authors": "Geadah V, Arbelaiz J, Ritz H, Daw ND, Cohen JD, Pillow JW",
-        "year": "",
-        "journal": "arXiv [mathOC]",
-        "url": "http://arxiv.org/abs/2502.15014",
-        "doi": null
       }
     ]
   }

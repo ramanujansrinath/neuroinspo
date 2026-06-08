@@ -112,7 +112,7 @@
     "url": "https://doi.org/10.64898/2026.04.10.717847",
     "thumbnail": "thumbnails/10.png",
     "title": "Modulation of feature attention by reward prediction error explains value learning behavior",
-    "citation": "Leukos (李铭泽) et al., 2026",
+    "citation": "Leukos et al., 2026",
     "pub_date": "2026-04-11",
     "upload_date": "2026-05-07T15:42:33.364146",
     "journal": null,
@@ -236,7 +236,7 @@
     "pub_date": "2026-05-01",
     "upload_date": "2026-05-31T22:54:04",
     "journal": "Trends in Neurosciences",
-    "abstract": "",
+    "abstract": "To solve diverse real-world tasks, the brain must flexibly switch between task rules and adjust computations. Recent advances in analyzing neural data and modeling neural networks have revealed their ‘neat’ features: neuronal population activity encodes distinct task states and forms structured, interpretable representations of task variables, enabling efficient task switching. However, ‘messy’ features are also observed: task-irrelevant variables shape neuronal responses, representations become entangled, and behaviors exhibit apparent suboptimalities such as switch costs. We review these dual facets of experimental observations of task-dependent computation in the brain, particularly in primates. Recognizing this duality points to two future directions: refining theories to better capture brain-specific constraints and leveraging network models fitted directly to behavioral and neural data.",
     "is_author": false
   },
   {
@@ -249,6 +249,18 @@
     "upload_date": "2026-05-31T22:54:04",
     "journal": "Science",
     "abstract": "Standard animal learning studies minimize individual reward magnitudes to maximize the repetitions of reinforced behaviors. We investigated how reward magnitude influences initial learning across five behavioral paradigms in naïve mice. Especially large rewards could substantially improve learning efficiency through dissociable effects on within- and across-session learning and task engagement. The duration and magnitude of ventral striatal dopamine release scaled with reward sizes, and prolonged optogenetic enhancement of dopamine reward responses also reproduced much, but not all, of the benefits to learning produced by outsized rewards. These findings indicate that the reinforcement learning efficiency of animals has traditionally been underestimated and that dopamine signaling of rewards mediates task engagement in proportion to absolute reward magnitude.",
+    "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.06.07.730718",
+    "url": "https://doi.org/10.64898/2026.06.07.730718",
+    "thumbnail": "thumbnails/22.png",
+    "title": "A modular neural circuit for computing the motion of objects",
+    "citation": "Trepka et al., 2026",
+    "pub_date": "2026-06-08",
+    "upload_date": "2026-06-08T10:34:44.246948",
+    "journal": null,
+    "abstract": "Computing the direction of a moving object requires integrating motion signals from its component edges into coherent patterns. The representation of pattern motion in visual cortex has been extensively studied, yet its underlying neural circuitry remains unknown. Using high-density recordings in macaque area MT, we show that selectivity to pattern motion emerges from a functionally and anatomically distinct cortical circuit. We demonstrate that neurons specialized for encoding component and pattern motion comprise distinct cell types arranged in a hierarchical circuit in which pattern neurons integrate inputs from a range of component neurons. Furthermore, we show that component and pattern neurons are spatially segregated into modules arranged systematically across cortical columns encoding direction of motion. This architecture and circuit align with a classic solution to the problem of computing the motion of objects.",
     "is_author": false
   }
 ]

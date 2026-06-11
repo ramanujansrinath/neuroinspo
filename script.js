@@ -1,8 +1,9 @@
 /* neuroinspo — main script */
 
-let allPapers  = [];
-let currentSort = 'pub';
-let activeDoi   = null;   // DOI of the paper whose panel is open
+let allPapers    = [];
+let currentSort  = 'pub';
+let currentLayout = 'masonry';
+let activeDoi    = null;   // DOI of the paper whose panel is open
 
 // ─── Data loading ────────────────────────────────────────────────────────────
 
@@ -220,18 +221,46 @@ function makeCard(paper) {
 
 // ─── Render ──────────────────────────────────────────────────────────────────
 
-function renderPapers(initial = false) {
-  closePanel(true);
-  const grid   = document.getElementById('papers-grid');
-  const papers = sorted(allPapers, currentSort);
+function numColumns(containerWidth) {
+  const colMin = 200, gap = 20;
+  return Math.max(1, Math.floor((containerWidth + gap) / (colMin + gap)));
+}
+
+function layoutColumns(papers, initial) {
+  const grid = document.getElementById('papers-grid');
+  const w = grid.offsetWidth || document.querySelector('main').offsetWidth || (window.innerWidth - 56);
 
   grid.innerHTML = '';
+
+  if (currentLayout === 'grid') {
+    grid.classList.add('grid-mode');
+    papers.forEach((paper, i) => {
+      const el = makeCard(paper);
+      grid.appendChild(el);
+      setTimeout(() => el.classList.add('visible'), initial ? i * 55 : 0);
+    });
+    return;
+  }
+
+  grid.classList.remove('grid-mode');
+  const n = numColumns(w);
+  const cols = Array.from({ length: n }, () => {
+    const col = document.createElement('div');
+    col.className = 'masonry-col';
+    grid.appendChild(col);
+    return col;
+  });
   papers.forEach((paper, i) => {
     const el = makeCard(paper);
-    grid.appendChild(el);
-    const delay = initial ? i * 55 : 0;
-    setTimeout(() => el.classList.add('visible'), delay);
+    cols[i % n].appendChild(el);
+    setTimeout(() => el.classList.add('visible'), initial ? i * 55 : 0);
   });
+}
+
+function renderPapers(initial = false) {
+  closePanel(true);
+  const papers = sorted(allPapers, currentSort);
+  layoutColumns(papers, initial);
 }
 
 // ─── Sort controls ───────────────────────────────────────────────────────────
@@ -253,6 +282,29 @@ document.querySelectorAll('.sort-btn').forEach(btn => {
       grid.style.opacity = '1';
     }, 180);
   });
+});
+
+// ─── Layout toggle ───────────────────────────────────────────────────────────
+
+document.querySelectorAll('.layout-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const layout = btn.dataset.layout;
+    if (layout === currentLayout) return;
+    currentLayout = layout;
+    document.querySelectorAll('.layout-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    if (allPapers.length) layoutColumns(sorted(allPapers, currentSort), false);
+  });
+});
+
+// ─── Resize ──────────────────────────────────────────────────────────────────
+
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    if (allPapers.length) layoutColumns(sorted(allPapers, currentSort), false);
+  }, 150);
 });
 
 // ─── Boot ────────────────────────────────────────────────────────────────────

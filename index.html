@@ -73,6 +73,31 @@
     </div>
   </main>
 
-  <script src="script.js"></script>
+  <!-- Layout toggle — fixed bottom-centre -->
+  <div class="layout-toggle" id="layout-toggle" role="group" aria-label="Switch layout">
+    <button class="layout-btn active" data-layout="masonry" title="Masonry layout">
+      <!-- brick-wall icon -->
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="0"  y="0" width="9" height="6" rx="1.2" fill="currentColor"/>
+        <rect x="11" y="0" width="9" height="6" rx="1.2" fill="currentColor"/>
+        <rect x="0"  y="8" width="4" height="6" rx="1.2" fill="currentColor"/>
+        <rect x="6"  y="8" width="8" height="6" rx="1.2" fill="currentColor"/>
+        <rect x="16" y="8" width="4" height="6" rx="1.2" fill="currentColor"/>
+      </svg>
+    </button>
+    <button class="layout-btn" data-layout="grid" title="Grid layout">
+      <!-- aligned grid icon -->
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="0"   y="0" width="5" height="6" rx="1.2" fill="currentColor"/>
+        <rect x="7.5" y="0" width="5" height="6" rx="1.2" fill="currentColor"/>
+        <rect x="15"  y="0" width="5" height="6" rx="1.2" fill="currentColor"/>
+        <rect x="0"   y="8" width="5" height="6" rx="1.2" fill="currentColor"/>
+        <rect x="7.5" y="8" width="5" height="6" rx="1.2" fill="currentColor"/>
+        <rect x="15"  y="8" width="5" height="6" rx="1.2" fill="currentColor"/>
+      </svg>
+    </button>
+  </div>
+
+  <script src="script.js?v=4"></script>
 </body>
 </html>

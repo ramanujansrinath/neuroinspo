@@ -297,6 +297,17 @@ document.querySelectorAll('.layout-btn').forEach(btn => {
   });
 });
 
+// ─── Theme toggle ─────────────────────────────────────────────────────────────
+
+document.querySelectorAll('[data-theme]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const theme = btn.dataset.theme;
+    document.body.classList.toggle('dark', theme === 'dark');
+    document.querySelectorAll('[data-theme]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+
 // ─── Resize ──────────────────────────────────────────────────────────────────
 
 let resizeTimer;

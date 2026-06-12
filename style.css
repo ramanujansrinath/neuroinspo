@@ -467,27 +467,31 @@ main {
   align-items: start;
 }
 
-/* ─── Layout toggle ──────────────────────────────────────────────────────── */
-.layout-toggle {
+/* ─── Bottom controls (theme + layout toggles) ───────────────────────────── */
+.bottom-controls {
   position: fixed;
   bottom: 20px;
   right: 28px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 100;
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+}
+
+.bottom-controls:hover { opacity: 1; }
+
+.ctrl-pill {
   display: flex;
   align-items: center;
   background: rgba(28, 26, 23, 0.07);
   border-radius: 100px;
   padding: 3px;
   gap: 2px;
-  z-index: 100;
-  opacity: 0.45;
-  transition: opacity 0.2s ease;
 }
 
-.layout-toggle:hover {
-  opacity: 1;
-}
-
-.layout-btn {
+.ctrl-btn {
   border: none;
   background: transparent;
   padding: 6px 12px;
@@ -501,14 +505,55 @@ main {
   line-height: 0;
 }
 
-.layout-btn.active {
+.ctrl-btn.active {
   background: rgba(28, 26, 23, 0.1);
-  color: rgba(28, 26, 23, 0.75);
+  color: rgba(28, 26, 23, 0.78);
 }
 
-.layout-btn:hover:not(.active) {
-  color: rgba(28, 26, 23, 0.55);
+.ctrl-btn:hover:not(.active) { color: rgba(28, 26, 23, 0.55); }
+
+/* ─── Dark mode ──────────────────────────────────────────────────────────── */
+body.dark {
+  --bg:        #1c1a17;
+  --card-bg:   #272421;
+  --page1-bg:  #2e2b27;
+  --page2-bg:  #232120;
+  --text:      #c4c0b8;
+  --text-mid:  #968f87;
+  --text-dim:  #635d57;
+  --gold:      #a8880a;
+  --shadow-rest:  0 2px 8px rgba(0,0,0,0.35), 0 0 0 1px rgba(0,0,0,0.2);
+  --shadow-hover: 0 16px 40px rgba(0,0,0,0.55), 0 2px 8px rgba(0,0,0,0.3);
 }
+
+body.dark header {
+  background: rgba(28, 26, 23, 0.88);
+  border-bottom-color: rgba(255,255,255,0.07);
+}
+
+body.dark .sort-btn.active {
+  background: rgba(255,255,255,0.1);
+}
+
+body.dark .card-thumbnail-missing {
+  background: linear-gradient(135deg, #2e2b27 0%, #232120 100%);
+}
+
+/* Controls in dark mode */
+body.dark .ctrl-pill {
+  background: rgba(255,255,255,0.08);
+}
+
+body.dark .ctrl-btn {
+  color: rgba(255,255,255,0.35);
+}
+
+body.dark .ctrl-btn.active {
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.88);
+}
+
+body.dark .ctrl-btn:hover:not(.active) { color: rgba(255,255,255,0.6); }
 
 /* ─── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 540px) {

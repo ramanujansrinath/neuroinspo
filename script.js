@@ -2,7 +2,7 @@
 
 let allPapers    = [];
 let currentSort  = 'pub';
-let currentLayout = 'masonry';
+let currentLayout = 'grid';
 let activeDoi    = null;   // DOI of the paper whose panel is open
 
 // ─── Data loading ────────────────────────────────────────────────────────────

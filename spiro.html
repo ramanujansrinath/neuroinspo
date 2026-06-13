@@ -715,7 +715,7 @@ import { LineGeometry } from 'three/addons/lines/LineGeometry.js';
   // z=0 crossing where consecutive points had opposite signs (1-point segments
   // fail the i-segStart > 1 guard). The plane is only 12% opaque so the
   // occlusion difference is imperceptible.
-  function renderTrail() {
+  function renderTrail(targetCtx = ctx) {
     if (trail.length < 2) return;
     let segStart = 0;
     for (let i = 1; i <= trail.length; i++) {
@@ -725,18 +725,18 @@ import { LineGeometry } from 'three/addons/lines/LineGeometry.js';
 
       if (atEnd || colorBreak || liftBreak) {
         if (i - segStart > 1) {
-          ctx.beginPath();
-          ctx.strokeStyle = trail[segStart].color;
-          ctx.lineWidth   = 1.5;
-          ctx.lineCap     = 'round';
-          ctx.lineJoin    = 'round';
+          targetCtx.beginPath();
+          targetCtx.strokeStyle = trail[segStart].color;
+          targetCtx.lineWidth   = 1.5;
+          targetCtx.lineCap     = 'round';
+          targetCtx.lineJoin    = 'round';
           const [sx, sy] = toCanvas(...project(trail[segStart].x, trail[segStart].y, trail[segStart].z || 0));
-          ctx.moveTo(sx, sy);
+          targetCtx.moveTo(sx, sy);
           for (let j = segStart + 1; j < i; j++) {
             const [px, py] = toCanvas(...project(trail[j].x, trail[j].y, trail[j].z || 0));
-            ctx.lineTo(px, py);
+            targetCtx.lineTo(px, py);
           }
-          ctx.stroke();
+          targetCtx.stroke();
         }
         segStart = i;
       }
@@ -793,7 +793,7 @@ import { LineGeometry } from 'three/addons/lines/LineGeometry.js';
   });
 
   document.getElementById('camera-btn').addEventListener('click', () => {
-    frozenCtx.drawImage(canvas, 0, 0);
+    renderTrail(frozenCtx);  // bake only the trail — no plane
     trail = [];
   });
 

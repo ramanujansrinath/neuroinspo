@@ -361,6 +361,99 @@
 
       .btn-row { margin-top: 0; }
     }
+
+    /* ── Dark mode ── */
+    body.dark {
+      --bg:       #1c1a17;
+      --card-bg:  #272421;
+      --text:     #c4c0b8;
+      --text-mid: #968f87;
+      --text-dim: #635d57;
+      --shadow-rest: 0 2px 8px rgba(0,0,0,0.35), 0 0 0 1px rgba(0,0,0,0.2);
+      --shadow-card: 0 16px 48px rgba(0,0,0,0.45), 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    body.dark header {
+      background: rgba(28, 26, 23, 0.92);
+      border-bottom-color: rgba(255,255,255,0.07);
+    }
+
+    body.dark #sidebar {
+      border-right-color: rgba(255,255,255,0.07);
+    }
+
+    body.dark input[type="range"] {
+      background: rgba(255,255,255,0.12);
+    }
+
+    body.dark input[type="color"] {
+      border-color: rgba(255,255,255,0.12);
+    }
+
+    body.dark .btn-row button {
+      background: rgba(255,255,255,0.07);
+    }
+
+    body.dark .btn-row button:hover {
+      background: rgba(255,255,255,0.13);
+    }
+
+    body.dark #pause-btn.paused {
+      background: var(--text);
+      color: var(--card-bg);
+    }
+
+    @media (max-width: 540px) {
+      body.dark #sidebar {
+        border-top-color: rgba(255,255,255,0.07);
+      }
+    }
+
+    /* ── Theme toggle ── */
+    .bottom-controls {
+      position: fixed;
+      bottom: 20px;
+      right: 28px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 100;
+      opacity: 0.4;
+      transition: opacity 0.2s ease;
+    }
+
+    .bottom-controls:hover { opacity: 1; }
+
+    .ctrl-pill {
+      display: flex;
+      align-items: center;
+      background: rgba(28, 26, 23, 0.07);
+      border-radius: 100px;
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .ctrl-btn {
+      border: none;
+      background: transparent;
+      padding: 6px 12px;
+      border-radius: 100px;
+      cursor: pointer;
+      color: rgba(28, 26, 23, 0.35);
+      transition: background 0.18s ease, color 0.18s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 0;
+    }
+
+    .ctrl-btn.active        { background: rgba(28,26,23,0.1); color: rgba(28,26,23,0.78); }
+    .ctrl-btn:hover:not(.active) { color: rgba(28,26,23,0.55); }
+
+    body.dark .ctrl-pill              { background: rgba(255,255,255,0.08); }
+    body.dark .ctrl-btn               { color: rgba(255,255,255,0.35); }
+    body.dark .ctrl-btn.active        { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.88); }
+    body.dark .ctrl-btn:hover:not(.active) { color: rgba(255,255,255,0.6); }
   </style>
 </head>
 <body>
@@ -984,6 +1077,44 @@ import { LineGeometry } from 'three/addons/lines/LineGeometry.js';
   // ── Boot ────────────────────────────────────────────────────────────────────
   resize();
   requestAnimationFrame(loop);
+
+  // ── Theme ────────────────────────────────────────────────────────────────────
+  function applyTheme(theme) {
+    document.body.classList.toggle('dark', theme === 'dark');
+    document.querySelectorAll('[data-theme]').forEach(b =>
+      b.classList.toggle('active', b.dataset.theme === theme)
+    );
+  }
+
+  applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+  document.querySelectorAll('[data-theme]').forEach(btn => {
+    btn.addEventListener('click', () => applyTheme(btn.dataset.theme));
+  });
 </script>
+
+<div class="bottom-controls">
+  <div class="ctrl-pill" id="theme-toggle" role="group" aria-label="Color theme">
+    <button class="ctrl-btn active" data-theme="light" title="Light mode">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <circle cx="8" cy="8" r="2.8" fill="currentColor"/>
+        <line x1="8" y1="1"    x2="8" y2="3.5"  stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <line x1="8" y1="12.5" x2="8" y2="15"   stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <line x1="1"    y1="8" x2="3.5"  y2="8"  stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <line x1="12.5" y1="8" x2="15"   y2="8"  stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <line x1="2.9"  y1="2.9"  x2="4.7"  y2="4.7"  stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <line x1="11.3" y1="11.3" x2="13.1" y2="13.1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <line x1="13.1" y1="2.9"  x2="11.3" y2="4.7"  stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <line x1="4.7"  y1="11.3" x2="2.9"  y2="13.1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <button class="ctrl-btn" data-theme="dark" title="Dark mode">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M12.4 3.2 A6.5 6.5 0 1 0 12.4 12.8 A5 5 0 1 1 12.4 3.2 Z" fill="currentColor"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
 </body>
 </html>

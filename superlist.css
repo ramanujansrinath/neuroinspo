@@ -493,6 +493,85 @@ main {
   font-size: 12px;
 }
 
+/* ─── Dark mode ──────────────────────────────────────────────────────────── */
+body.dark {
+  --bg:        #1c1a17;
+  --card-bg:   #272421;
+  --page1-bg:  #2e2b27;
+  --page2-bg:  #232120;
+  --text:      #c4c0b8;
+  --text-mid:  #968f87;
+  --text-dim:  #635d57;
+  --shadow-rest:  0 2px 8px rgba(0,0,0,0.35), 0 0 0 1px rgba(0,0,0,0.2);
+  --shadow-hover: 0 16px 40px rgba(0,0,0,0.55), 0 2px 8px rgba(0,0,0,0.3);
+}
+
+body.dark header {
+  background: rgba(28, 26, 23, 0.88);
+  border-bottom-color: rgba(255,255,255,0.07);
+}
+
+body.dark .page-byline { border-bottom-color: rgba(255,255,255,0.07); }
+body.dark .card-preview { border-top-color: rgba(255,255,255,0.07); }
+
+body.dark .list-panel-bar { border-bottom-color: rgba(255,255,255,0.07); }
+body.dark .panel-papers   { background: rgba(255,255,255,0.05); }
+
+body.dark .paper-entry:hover { background: rgba(255,255,255,0.04); }
+
+body.dark .list-action-btn       { background: rgba(255,255,255,0.08); }
+body.dark .list-action-btn:hover { background: rgba(255,255,255,0.13); }
+
+/* ─── Theme toggle ───────────────────────────────────────────────────────── */
+.bottom-controls {
+  position: fixed;
+  bottom: 20px;
+  right: 28px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 100;
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+}
+
+.bottom-controls:hover { opacity: 1; }
+
+.ctrl-pill {
+  display: flex;
+  align-items: center;
+  background: rgba(28, 26, 23, 0.07);
+  border-radius: 100px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.ctrl-btn {
+  border: none;
+  background: transparent;
+  padding: 6px 12px;
+  border-radius: 100px;
+  cursor: pointer;
+  color: rgba(28, 26, 23, 0.35);
+  transition: background 0.18s ease, color 0.18s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.ctrl-btn.active {
+  background: rgba(28, 26, 23, 0.1);
+  color: rgba(28, 26, 23, 0.78);
+}
+
+.ctrl-btn:hover:not(.active) { color: rgba(28, 26, 23, 0.55); }
+
+body.dark .ctrl-pill              { background: rgba(255,255,255,0.08); }
+body.dark .ctrl-btn               { color: rgba(255,255,255,0.35); }
+body.dark .ctrl-btn.active        { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.88); }
+body.dark .ctrl-btn:hover:not(.active) { color: rgba(255,255,255,0.6); }
+
 /* ─── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 540px) {
   :root { --col-min: 100%; }

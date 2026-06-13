@@ -3,6 +3,21 @@
 let allLists  = [];
 let activeUrl = null;   // URL of the reading list whose panel is open
 
+// ─── Theme ───────────────────────────────────────────────────────────────────
+
+function applyTheme(theme) {
+  document.body.classList.toggle('dark', theme === 'dark');
+  document.querySelectorAll('[data-theme]').forEach(b =>
+    b.classList.toggle('active', b.dataset.theme === theme)
+  );
+}
+
+applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+document.querySelectorAll('[data-theme]').forEach(btn => {
+  btn.addEventListener('click', () => applyTheme(btn.dataset.theme));
+});
+
 // ─── Data loading ────────────────────────────────────────────────────────────
 
 async function loadLists() {

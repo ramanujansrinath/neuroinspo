@@ -1,5 +1,109 @@
 [
   {
+    "list_num": 337,
+    "title": "Reading List 337",
+    "pub_date": "2026-06-12",
+    "url": "https://superlab.ca/posts/2026-06-12-list337.html",
+    "papers": [
+      {
+        "title": "Neuropixels Opto: combining high-resolution electrophysiology and optogenetics",
+        "authors": "Lakunina A. A. et al.",
+        "year": "2026",
+        "journal": "Nature Methods 23:1207-1216",
+        "url": "https://doi.org/10.1038/s41592-026-03076-z",
+        "doi": "10.1038/s41592-026-03076-z"
+      },
+      {
+        "title": "Neural networks learn forward dynamics when freed from numerical integration",
+        "authors": "Bahdasariants S., Yakovenko S.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.05.27.728310",
+        "url": "https://doi.org/10.64898/2026.05.27.728310",
+        "doi": "10.64898/2026.05.27.728310"
+      },
+      {
+        "title": "Dynamic compression of whole-brain neural trajectories during human motor learning",
+        "authors": "Mohseni H. et al.",
+        "year": "2026",
+        "journal": "Proceedings of the National Academy of Sciences 123",
+        "url": "https://doi.org/10.1073/pnas.2601546123",
+        "doi": "10.1073/pnas.2601546123"
+      },
+      {
+        "title": "Spinal cord stimulation for upper limb motor function in people with chronic post-stroke hemiparesis: a feasibility trial",
+        "authors": "de Freitas R. M. et al.",
+        "year": "2026",
+        "journal": "Nature Medicine",
+        "url": "https://doi.org/10.1038/s41591-026-04435-1",
+        "doi": "10.1038/s41591-026-04435-1"
+      },
+      {
+        "title": "Neural similarity predicts whether strangers become friends",
+        "authors": "Shen Y. L. et al.",
+        "year": "2025",
+        "journal": "Nature Human Behaviour 9:2285-2298",
+        "url": "https://doi.org/10.1038/s41562-025-02266-7",
+        "doi": "10.1038/s41562-025-02266-7"
+      },
+      {
+        "title": "A motor basis for a foreign accent? Linguistic context constrains the generalization of second language speech motor plans",
+        "authors": "Heyland L., Palatinus S., Shiller D. M., Lametti D. R.",
+        "year": "2026",
+        "journal": "10.31234/osf.io/y6bqg_v1",
+        "url": "https://doi.org/10.31234/osf.io/y6bqg_v1",
+        "doi": "10.31234/osf.io/y6bqg_v1"
+      },
+      {
+        "title": "Human learning of noninvasive brain–computer interfaces via manifold geometry",
+        "authors": "Busch E. L., Fincke E. C., Lajoie G., Krishnaswamy S., Turk-Browne N. B.",
+        "year": "2026",
+        "journal": "Nature Neuroscience",
+        "url": "https://doi.org/10.1038/s41593-026-02311-2",
+        "doi": "10.1038/s41593-026-02311-2"
+      },
+      {
+        "title": "Individual locomotor bias drives counterclockwise motion in pedestrian crowds",
+        "authors": "Echeverría-Huarte I. et al.",
+        "year": "2026",
+        "journal": "Nature Communications 17",
+        "url": "https://doi.org/10.1038/s41467-026-73713-w",
+        "doi": "10.1038/s41467-026-73713-w"
+      },
+      {
+        "title": "Peripheral mechanisms of tactile sensation in fish",
+        "authors": "Tan K., Gracheva E. O., Bagriantsev S. N.",
+        "year": "2026",
+        "journal": "Current Opinion in Neurobiology 99:103226",
+        "url": "https://doi.org/10.1016/j.conb.2026.103226",
+        "doi": "10.1016/j.conb.2026.103226"
+      },
+      {
+        "title": "The cortex as a central pattern generator",
+        "authors": "Yuste R., MacLean J. N., Smith J., Lansner A.",
+        "year": "2005",
+        "journal": "Nature Reviews Neuroscience 6:477-483",
+        "url": "https://doi.org/10.1038/nrn1686",
+        "doi": "10.1038/nrn1686"
+      },
+      {
+        "title": "The puzzling success of overparameterization: Lottery tickets or escape dimensions?",
+        "authors": "Martinelli F, Brea J, Gerstner W",
+        "year": "2026",
+        "journal": "10.5075/EPFL.20.500.14299/263577",
+        "url": "https://dx.doi.org/10.5075/EPFL.20.500.14299/263577",
+        "doi": "10.5075/EPFL.20.500.14299/263577"
+      },
+      {
+        "title": "Online planning of sequential actions",
+        "authors": "Diedrichsen J., Kashefi M., Nazerzadeh A., Pruszynski J. A.",
+        "year": "2026",
+        "journal": "Trends in Cognitive Sciences",
+        "url": "https://doi.org/10.1016/j.tics.2026.05.006",
+        "doi": "10.1016/j.tics.2026.05.006"
+      }
+    ]
+  },
+  {
     "list_num": 336,
     "title": "Reading List 336",
     "pub_date": "2026-06-05",
@@ -1860,110 +1964,6 @@
         "journal": "Elife 14",
         "url": "http://dx.doi.org/10.7554/eLife.108853",
         "doi": "10.7554/eLife.108853"
-      }
-    ]
-  },
-  {
-    "list_num": 317,
-    "title": "Reading List 317",
-    "pub_date": "2026-01-09",
-    "url": "https://superlab.ca/posts/2026-01-09-list317.html",
-    "papers": [
-      {
-        "title": "Mental representation without neural representation: Understanding the evidence",
-        "authors": "Krakauer JW, Ramsey W",
-        "year": "",
-        "journal": "PsyArXiv",
-        "url": "https://osf.io/preprints/psyarxiv/cezjn_v1",
-        "doi": null
-      },
-      {
-        "title": "Janet Shibley Hyde Sinks Stereotypes With Data",
-        "authors": "Armstrong K",
-        "year": "",
-        "journal": "APS Observer 32",
-        "url": "https://www.psychologicalscience.org/observer/janet-shibley-hyde-sinks-stereotypes-with-data",
-        "doi": null
-      },
-      {
-        "title": "EEG is better left alone",
-        "authors": "Delorme A",
-        "year": "",
-        "journal": "Sci Rep 13:2372",
-        "url": "http://dx.doi.org/10.1038/s41598-023-27528-0",
-        "doi": "10.1038/s41598-023-27528-0"
-      },
-      {
-        "title": "Rethinking the centrality of brain areas in understanding functional organization",
-        "authors": "Hayden BY, Heilbronner SR, Yoo SBM",
-        "year": "",
-        "journal": "Nat Neurosci:1–12",
-        "url": "http://dx.doi.org/10.1038/s41593-025-02166-z",
-        "doi": "10.1038/s41593-025-02166-z"
-      },
-      {
-        "title": "Context-dependent low-dimensional neural dynamics unfold in distinct subspaces, dimensionality, and dynamical strength for natural walking and reaching",
-        "authors": "Ling AS, Silvernagel MP, Clarke SE, Jun EJ, Abdulla MU, Nuyujukian P, Brain Interfacing Laboratory",
-        "year": "",
-        "journal": "bioRxivorg:2025.12.19.695640",
-        "url": "https://www.biorxiv.org/content/10.64898/2025.12.19.695640v1.abstract",
-        "doi": "10.64898/2025.12.19.695640"
-      },
-      {
-        "title": "Intuitive, multidimensional motor unit control after paralysing spinal cord injury using non-invasive recordings",
-        "authors": "Yang X, Rawji V, Gibbs C, Jia T, Vila LG, Grison A, Nair A, Farina D, Gallego JA",
-        "year": "",
-        "journal": "medRxiv:2025.12.09.25341760",
-        "url": "https://www.medrxiv.org/content/10.64898/2025.12.09.25341760v4.abstract",
-        "doi": null
-      },
-      {
-        "title": "A system for live sorting of neuronal spiking activity from large-scale recordings",
-        "authors": "Muralidharan S, Leng C, Orts L, Trepka E, Zhu S, Panichello M, Jonikaitis D, Pennington J, Pachitariu M, Moore T",
-        "year": "",
-        "journal": "bioRxiv:2025.12.29.696938",
-        "url": "https://www.biorxiv.org/content/10.64898/2025.12.29.696938v1.abstract",
-        "doi": "10.64898/2025.12.29.696938"
-      },
-      {
-        "title": "Surrogate deep neural networks reveal hierarchical handwriting encoding in the human motor cortex",
-        "authors": "Chen J, Xu T, Xiong X, Yang X, Wang Y, Qi Y",
-        "year": "",
-        "journal": "Cell Rep 45:116837",
-        "url": "http://dx.doi.org/10.1016/j.celrep.2025.116837",
-        "doi": "10.1016/j.celrep.2025.116837"
-      },
-      {
-        "title": "Humans plan for the near future to walk economically on uneven terrain",
-        "authors": "Darici O, Kuo AD",
-        "year": "",
-        "journal": "Proc Natl Acad Sci USA 120:e2211405120",
-        "url": "http://dx.doi.org/10.1073/pnas.2211405120",
-        "doi": "10.1073/pnas.2211405120"
-      },
-      {
-        "title": "How heterogeneity shapes dynamics and computation in the brain",
-        "authors": "Dahmen D, Hutt A, Indiveri G, Kennedy A, Lefebvre J, Mazzucato L, Motter AE, Narayanan R, Payvand M, Planert H, Gast R",
-        "year": "",
-        "journal": "Neuron",
-        "url": "http://dx.doi.org/10.1016/j.neuron.2025.11.023",
-        "doi": "10.1016/j.neuron.2025.11.023"
-      },
-      {
-        "title": "Breath as an internal context: Respiratory phase alignment between encoding and retrieval optimizes memory performance",
-        "authors": "Nakamura NH, Yoshino K, Fukunaga M",
-        "year": "",
-        "journal": "bioRxiv:2025.12.25.696473",
-        "url": "https://www.biorxiv.org/content/10.64898/2025.12.25.696473v1.abstract",
-        "doi": "10.64898/2025.12.25.696473"
-      },
-      {
-        "title": "Multi-timescale neural adaptation underlying long-term musculoskeletal reorganization",
-        "authors": "Philipp R, Hara Y, Uchida N, Ota N, Oya T, Funato T, Seki K",
-        "year": "",
-        "journal": "bioRxiv:2024.10.18.618983",
-        "url": "https://www.biorxiv.org/content/10.1101/2024.10.18.618983v1.abstract",
-        "doi": "10.1101/2024.10.18.618983"
       }
     ]
   }

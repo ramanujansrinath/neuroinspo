@@ -1,5 +1,101 @@
 [
   {
+    "list_num": 338,
+    "title": "Reading List 338",
+    "pub_date": "2026-06-19",
+    "url": "https://superlab.ca/posts/2026-06-19-list338.html",
+    "papers": [
+      {
+        "title": "The Simons Collaboration on Ecological Neuroscience: Studying how the brain interacts with the world",
+        "authors": "Angelaki D. E. et al.",
+        "year": "2026",
+        "journal": "Neuron",
+        "url": "https://doi.org/10.1016/j.neuron.2026.04.036",
+        "doi": "10.1016/j.neuron.2026.04.036"
+      },
+      {
+        "title": "Striatal pathways dissociably control action counting and goal-directed steering",
+        "authors": "Fallon I. P. et al.",
+        "year": "2026",
+        "journal": "Nature Neuroscience",
+        "url": "https://doi.org/10.1038/s41593-026-02330-z",
+        "doi": "10.1038/s41593-026-02330-z"
+      },
+      {
+        "title": "Perineuronal nets in cerebellar nuclei neurons orchestrate social behaviour via regulation of neuronal activity in circuits innervated by the cerebellum",
+        "authors": "Fujita K. et al.",
+        "year": "2026",
+        "journal": "Translational Psychiatry 16",
+        "url": "https://doi.org/10.1038/s41398-026-03952-4",
+        "doi": "10.1038/s41398-026-03952-4"
+      },
+      {
+        "title": "Autism subtypes identified using cross-species functional connectivity analyses",
+        "authors": "Pagani M. et al.",
+        "year": "2026",
+        "journal": "Nature Neuroscience 29:1476-1487",
+        "url": "https://doi.org/10.1038/s41593-026-02287-z",
+        "doi": "10.1038/s41593-026-02287-z"
+      },
+      {
+        "title": "BiXformer: A Bidirectional Cross Attention Transformer for Disentangling Inter-Regional Neural Dynamics",
+        "authors": "El Sayed O., Han Y., Dragoi T., Economo M. N., DePasquale B.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.06.05.730511",
+        "url": "https://doi.org/10.64898/2026.06.05.730511",
+        "doi": "10.64898/2026.06.05.730511"
+      },
+      {
+        "title": "Extreme-value signal detection theory for recognition memory: The parametric road not taken.",
+        "authors": "Meyer-Grant C. G., Kellen D., Harding S. M., Singmann H.",
+        "year": "2026",
+        "journal": "Psychological Review",
+        "url": "https://doi.org/10.1037/rev0000615",
+        "doi": "10.1037/rev0000615"
+      },
+      {
+        "title": "Long-term independent use of an intracortical brain–computer interface for speech and cursor control",
+        "authors": "Card N. S. et al.",
+        "year": "2026",
+        "journal": "Nature Medicine",
+        "url": "https://doi.org/10.1038/s41591-026-04414-6",
+        "doi": "10.1038/s41591-026-04414-6"
+      },
+      {
+        "title": "Two time scales of adaptation in human learning rates",
+        "authors": "Simoens J. et al.",
+        "year": "2026",
+        "journal": "eLife",
+        "url": "https://doi.org/10.7554/elife.108223.2",
+        "doi": "10.7554/elife.108223.2"
+      },
+      {
+        "title": "Cued Recall of Human Motor Memory",
+        "authors": "Lewis-Hoeber E., Darainy M., Ebrahimi S., Ostry D. J.",
+        "year": "2026",
+        "journal": "Journal of Neurophysiology jn.00158.2026",
+        "url": "https://doi.org/10.1152/jn.00158.2026",
+        "doi": "10.1152/jn.00158.2026"
+      },
+      {
+        "title": "Movement planning predictions shape somatosensory sensitivity",
+        "authors": "D’Onofrio Pacheco P. N., Zimmermann E.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.06.12.731893",
+        "url": "https://doi.org/10.64898/2026.06.12.731893",
+        "doi": "10.64898/2026.06.12.731893"
+      },
+      {
+        "title": "Patterns of brain-wide associations reflect socioeconomics",
+        "authors": "Marek S. et al.",
+        "year": "2026",
+        "journal": "Science 392",
+        "url": "https://doi.org/10.1126/science.aee6213",
+        "doi": "10.1126/science.aee6213"
+      }
+    ]
+  },
+  {
     "list_num": 337,
     "title": "Reading List 337",
     "pub_date": "2026-06-12",
@@ -1884,86 +1980,6 @@
         "journal": "bioRxiv:2026.01.19.700321",
         "url": "https://www.biorxiv.org/content/10.64898/2026.01.19.700321v1.abstract",
         "doi": "10.64898/2026.01.19.700321"
-      }
-    ]
-  },
-  {
-    "list_num": 318,
-    "title": "Reading List 318",
-    "pub_date": "2026-01-16",
-    "url": "https://superlab.ca/posts/2026-01-16-list318.html",
-    "papers": [
-      {
-        "title": "Preserved cerebellar functions despite structural degeneration in older adults",
-        "authors": "de Witte A, Matthijs A, Parrell B, Mantini D, Gooijers J, Orban de Xivry J-J",
-        "year": "",
-        "journal": "eLife",
-        "url": "http://dx.doi.org/10.7554/eLife.109440.1",
-        "doi": "10.7554/eLife.109440.1"
-      },
-      {
-        "title": "High performance sorting of motor unit action potentials with EMUsort",
-        "authors": "O’Connell S, Michaels JA, Wang R, Mamidipaka S, Venkatesh M, Aresh N, Pachitariu M, Pruszynski JA, Sober SJ, Pandarinath C",
-        "year": "",
-        "journal": "bioRxiv:2026.01.06.697952",
-        "url": "https://www.biorxiv.org/content/10.64898/2026.01.06.697952v1.abstract",
-        "doi": "10.64898/2026.01.06.697952"
-      },
-      {
-        "title": "Repeatable, low-drift recordings in behaving non-human primates using flexible microelectrodes",
-        "authors": "Woods DP, Adams GM, Mozumder R, Dang W, Chen AY, Constantinidis C, Gonzales DL",
-        "year": "",
-        "journal": "bioRxiv:2026.01.09.698500",
-        "url": "https://www.biorxiv.org/content/10.64898/2026.01.09.698500v1.abstract",
-        "doi": "10.64898/2026.01.09.698500"
-      },
-      {
-        "title": "Facial gestures are enacted through a cortical hierarchy of dynamic and stable codes",
-        "authors": "Ianni GR, Vázquez Y, Rouse AG, Schieber MH, Prut Y, Freiwald WA",
-        "year": "",
-        "journal": "Science 391:eaea0890",
-        "url": "http://dx.doi.org/10.1126/science.aea0890",
-        "doi": "10.1126/science.aea0890"
-      },
-      {
-        "title": "Evidence accumulation from experience and observation in the cingulate cortex",
-        "authors": "Chen R, Radkani S, Valluru N, Yoo SBM, Jazayeri M",
-        "year": "",
-        "journal": "Nature:1–9",
-        "url": "http://dx.doi.org/10.1038/s41586-025-09885-0",
-        "doi": "10.1038/s41586-025-09885-0"
-      },
-      {
-        "title": "Dynamic engagement of the motor cortex in controlling movement",
-        "authors": "Dragoi T, Loschinskey Z, Hasnain MA, DePasquale B, Economo MN",
-        "year": "",
-        "journal": "bioRxiv:2026.01.13.699314",
-        "url": "https://www.biorxiv.org/content/10.64898/2026.01.13.699314v1.abstract",
-        "doi": "10.64898/2026.01.13.699314"
-      },
-      {
-        "title": "Enabling skilled human-computer interaction after paralysis via a wearable sEMG interface",
-        "authors": "Despradel Rumaldo DL et al.",
-        "year": "",
-        "journal": "bioRxiv:2026.01.09.698484",
-        "url": "https://www.biorxiv.org/content/10.64898/2026.01.09.698484v2.abstract",
-        "doi": "10.64898/2026.01.09.698484"
-      },
-      {
-        "title": "The Story behind the Science: Preprints of pandemic potential-how bioRxiv and medRxiv brought preprints to the life sciences",
-        "authors": "Sever R",
-        "year": "",
-        "journal": "MBio:e0298925",
-        "url": "http://dx.doi.org/10.1128/mbio.02989-25",
-        "doi": "10.1128/mbio.02989-25"
-      },
-      {
-        "title": "The SAFE Labs Handbook as a tool for improving lab culture",
-        "authors": "Donà E, Gahan JM, Lau P, Jeschke J, Ott T, Reinhard K, Sinigaglia C, Treur JL, Vogl T, Bugeon S, Mariotti L, Rossi LF, Coen P",
-        "year": "",
-        "journal": "Elife 14",
-        "url": "http://dx.doi.org/10.7554/eLife.108853",
-        "doi": "10.7554/eLife.108853"
       }
     ]
   }

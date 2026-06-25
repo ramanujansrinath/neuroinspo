@@ -344,7 +344,19 @@
     "pub_date": "2026-06-24",
     "upload_date": "2026-06-24T15:40:07.842036",
     "journal": "Nature Communications",
-    "abstract": "",
+    "abstract": "Flexible visually guided behavior requires visual generalization, mapping diverse inputs to a common inference, and behavioral generalization, mapping one inference to multiple actions. Here, we tested whether visual neurons support both by maintaining a relatively fixed mapping between visual information amid many variations in stimuli and actions. We recorded neuronal populations in visual cortex in two male monkeys while they estimated the curvature of random 3D objects and flexibly mapped those judgments to different eye movements. Although visual responses varied substantially across objects, perceptual judgments were best explained by a common, shape-general readout of activity in V1 and V4, rather than by shape-specific strategies. V4 population activity additionally encoded impending saccades while maintaining a stable representation of stimulus curvature, allowing a single perceptual estimate to be linked to multiple behavioral outputs. Together, our findings suggest that visual cortex populations contain the ingredients necessary to implement multiple forms of flexible generalization.",
     "is_author": true
+  },
+  {
+    "doi": "10.1038/s41593-026-02333-w",
+    "url": "https://doi.org/10.1038/s41593-026-02333-w",
+    "thumbnail": "thumbnails/30.png",
+    "title": "Learning shapes neural geometry in the primate prefrontal cortex",
+    "citation": "Wójcik et al., 2026",
+    "pub_date": "2026-06-25",
+    "upload_date": "2026-06-25T18:31:21.423801",
+    "journal": "Nature Neuroscience",
+    "abstract": "The relationship between the geometry of neural representations and the task being performed is a central question in neuroscience. The primate prefrontal cortex (PFC) is a primary focus of inquiry, as it can encode information with geometries that either rely on past experience or are experience agnostic. One hypothesis is that PFC representations should evolve with learning, from a format that supports exploration of all possible task rules to a format that minimizes the encoding of task-irrelevant features and supports generalization. Here we test this idea by recording neural activity from the macaque PFC when learning a new rule (‘XOR rule’) from scratch. We show that PFC representations progress from being high dimensional, nonlinear and randomly mixed to low dimensional and rule selective. Upon generalizing the rule to new stimuli, these representations further evolve into an abstract, stimulus-invariant geometry. These findings reconcile previously conflicting accounts of PFC function by demonstrating how neural representations adapt across distinct stages of learning.",
+    "is_author": false
   }
 ]

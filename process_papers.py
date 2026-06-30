@@ -208,6 +208,10 @@ def process():
 
             print(f"  ✓ {citation}")
             print(f"  ✓ {title[:70]}{'...' if len(title) > 70 else ''}")
+            if abstract:
+                print(f"  ✓ abstract: {abstract[:120]}{'...' if len(abstract) > 120 else ''}")
+            else:
+                print(f"  ✗ abstract: MISSING — add manually to papers.json")
 
         records.append({
             "doi":         doi,

@@ -358,5 +358,41 @@
     "journal": "Nature Neuroscience",
     "abstract": "The relationship between the geometry of neural representations and the task being performed is a central question in neuroscience. The primate prefrontal cortex (PFC) is a primary focus of inquiry, as it can encode information with geometries that either rely on past experience or are experience agnostic. One hypothesis is that PFC representations should evolve with learning, from a format that supports exploration of all possible task rules to a format that minimizes the encoding of task-irrelevant features and supports generalization. Here we test this idea by recording neural activity from the macaque PFC when learning a new rule (‘XOR rule’) from scratch. We show that PFC representations progress from being high dimensional, nonlinear and randomly mixed to low dimensional and rule selective. Upon generalizing the rule to new stimuli, these representations further evolve into an abstract, stimulus-invariant geometry. These findings reconcile previously conflicting accounts of PFC function by demonstrating how neural representations adapt across distinct stages of learning.",
     "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.06.14.732142",
+    "url": "https://doi.org/10.64898/2026.06.14.732142",
+    "thumbnail": "thumbnails/31.png",
+    "title": "Parallel processing of orthogonal manifolds enables zero-shot composition in recurrent networks",
+    "citation": "Osako et al., 2026",
+    "pub_date": "2026-06-17",
+    "upload_date": "2026-06-26T15:40:50.819718",
+    "journal": null,
+    "abstract": "Animals flexibly combine learned behaviors into novel actions without practicing their combinations, yet the computational mechanisms that enable independently acquired computations to be expressed in parallel remain unclear. Here we show that feedback geometry during learning determines whether recurrent dynamics can be recombined through zero-shot parallel composition. Using recurrent networks trained by a local predictive plasticity rule, we found that distinct feedback vectors embed independently learned computations in separable dynamical subspaces, allowing novel input combinations to co-activate these components and generate composite outputs without joint training. In contrast, aligned feedback vectors, as well as networks trained by backpropagation through time, exhibited accurate single-task performance but failed to support parallel composition, demonstrating that task acquisition and future reusability are dissociable properties of learning. A combined input evoked a single composite population trajectory, whose projections onto feedback-shaped task subspaces recovered the independently learned component dynamics. The same principle reproduced additive reach-posture geometry observed in motor cortex and generalized to higher-dimensional movement primitives. These results identify feedback geometry as a computational principle by which learning systems structure recurrent dynamics for future compositional reuse.",
+    "is_author": false
+  },
+  {
+    "doi": "10.1038/s41586-026-10691-5",
+    "url": "https://doi.org/10.1038/s41586-026-10691-5",
+    "thumbnail": "thumbnails/32.png",
+    "title": "Mapping the neuronal building blocks of human language with language models",
+    "citation": "Cai et al., 2026",
+    "pub_date": "2026-06-17",
+    "upload_date": "2026-06-29T19:17:24",
+    "journal": "Nature",
+    "abstract": "Humans can convey new and highly diverse information through language. This ability to form and combine words into elaborate phrases and sentences enables us to express inexhaustible meanings and is fundamental to human cognition1,2,3,4,5. However, understanding the microscopic cellular building blocks and cortical landscape that precisely underlie human language has remained a challenge. Here we used wide-scale single-neuronal recordings combined with natural language processing models to identify fine-grained linguistic representations across the human frontotemporal cortex during language production. We find that, whereas certain neurons represented the detailed grammatical relationships between words or their parts of speech, others tracked the sentences’ higher-order syntactic structure, their phrase transitions and sequence. Collectively, these neurons reliably captured the words’ syntactic and semantic properties but also dynamically incorporated their specific sentence contexts, therefore enabling them to encode information combinatorially and at highly granular levels of detail. We show how these cell populations were locally organized and how their microscale representations differed from that of their wider field potential patterns. We also show how these neurons were distributed broadly across the frontotemporal cortex, but how their ability to encode linguistic information was left-lateralized and varied between cortical regions. Together, these findings identify some of the most basic cellular building blocks by which linguistic information is encoded in humans and begin to define the cortical landscape of language at a combined micro (cellular), meso (local population) and macro (regional) scale.",
+    "is_author": false
+  },
+  {
+    "doi": "10.1038/s41593-026-02303-2",
+    "url": "https://doi.org/10.1038/s41593-026-02303-2",
+    "thumbnail": "thumbnails/33.png",
+    "title": "Noninvasive decoding of typed sentences from human brain activity",
+    "citation": "Lévy et al., 2026",
+    "pub_date": "2026-06-29",
+    "upload_date": "2026-06-30T09:06:32.440083",
+    "journal": "Nature Neuroscience",
+    "abstract": "Modern neuroprostheses can now restore communication in patients who have lost the ability to speak or move. However, implanting these invasive devices comes with risks inherent to neurosurgery. Here we introduce a noninvasive method to decode the production of sentences from brain activity and demonstrate its efficacy in a cohort of 35 healthy volunteers. For this, we present Brain2Qwerty, a new deep learning architecture trained to decode sentences from either electro- or magnetoencephalography, while participants typed briefly memorized sentences on a QWERTY keyboard. With magnetoencephalography, Brain2Qwerty reaches, on average, a character error rate of 29% and substantially outperforms electroencephalography (character error rate: 65%). For the best participants, the model achieves a character error rate of 18%, and can perfectly decode a variety of sentences outside of the training set. Overall, these results narrow the gap between invasive and noninvasive methods and thus open the path for developing safe brain–computer interfaces for noncommunicating patients.",
+    "is_author": false
   }
 ]

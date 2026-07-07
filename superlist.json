@@ -1,5 +1,85 @@
 [
   {
+    "list_num": 340,
+    "title": "Reading List 340",
+    "pub_date": "2026-07-03",
+    "url": "https://superlab.ca/posts/2026-07-03-list340.html",
+    "papers": [
+      {
+        "title": "Interpretable compositional computation with recurrent neural networks",
+        "authors": "Pezon L., van Meegen A.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.06.23.733979",
+        "url": "https://doi.org/10.64898/2026.06.23.733979",
+        "doi": "10.64898/2026.06.23.733979"
+      },
+      {
+        "title": "Rigid control of motor unit firing rates in the human tibialis anterior muscle persists during neurofeedback",
+        "authors": "Lee M. J. et al.",
+        "year": "2026",
+        "journal": "Journal of Neurophysiology 135:1499-1517",
+        "url": "https://doi.org/10.1152/jn.00070.2025",
+        "doi": "10.1152/jn.00070.2025"
+      },
+      {
+        "title": "Arm dominance is an emergent effect of practice executing complex trajectory shapes required by tools and objects",
+        "authors": "Arac A., Lee N. Y. H. J., Krakauer J. W.",
+        "year": "2026",
+        "journal": "PNAS 123",
+        "url": "https://doi.org/10.1073/pnas.2601569123",
+        "doi": "10.1073/pnas.2601569123"
+      },
+      {
+        "title": "Connectomic evidence that ordered activity drives neuromuscular network formation",
+        "authors": "Meirovitch Y. et al.",
+        "year": "2026",
+        "journal": "Nature Neuroscience",
+        "url": "https://doi.org/10.1038/s41593-026-02344-7",
+        "doi": "10.1038/s41593-026-02344-7"
+      },
+      {
+        "title": "Cortical sculpting of a rhythmic motor program",
+        "authors": "Kirk E. A., Cai K., Sauerbrei B. A.",
+        "year": "2025",
+        "journal": "bioRxiv:2025.06.20.660772",
+        "url": "https://doi.org/10.1101/2025.06.20.660772",
+        "doi": "10.1101/2025.06.20.660772"
+      },
+      {
+        "title": "Composing trajectories for rapid inference of navigational goals",
+        "authors": "AbdelRahman N. Y. et al.",
+        "year": "2026",
+        "journal": "Neuron",
+        "url": "https://doi.org/10.1016/j.neuron.2026.05.030",
+        "doi": "10.1016/j.neuron.2026.05.030"
+      },
+      {
+        "title": "Motor cortex directly excites the substantia nigra pars reticulata, the basal ganglia output nucleus",
+        "authors": "Thompson W. S., Wekwejt P., Grillner S., Silberberg G.",
+        "year": "2026",
+        "journal": "Nature Communications 17",
+        "url": "https://doi.org/10.1038/s41467-026-74569-w",
+        "doi": "10.1038/s41467-026-74569-w"
+      },
+      {
+        "title": "Cerebellar aging is spatially heterogeneous and supports cognitive resilience in later life",
+        "authors": "d’Oleire Uquillas F. et al.",
+        "year": "2026",
+        "journal": "Nature Neuroscience",
+        "url": "https://doi.org/10.1038/s41593-026-02289-x",
+        "doi": "10.1038/s41593-026-02289-x"
+      },
+      {
+        "title": "Shared neural geometries for bilingual semantic representations in human hippocampal neurons",
+        "authors": "Yan X. et al.",
+        "year": "2026",
+        "journal": "Cell",
+        "url": "https://doi.org/10.1016/j.cell.2026.05.020",
+        "doi": "10.1016/j.cell.2026.05.020"
+      }
+    ]
+  },
+  {
     "list_num": 339,
     "title": "Reading List 339",
     "pub_date": "2026-06-26",
@@ -12211,7 +12291,7 @@
         "year": "",
         "journal": "bioRxiv:2023.12.19.572460",
         "url": "https://biorxiv.org/content/early/2023/12/20/2023.12.19.572460.abstract",
-        "doi": "early/2023/12/20/2023.12.19.572460"
+        "doi": null
       },
       {
         "title": "A tridimensional atlas of the developing human head",
@@ -12235,7 +12315,7 @@
         "year": "",
         "journal": "bioRxiv:2023.11.22.568315",
         "url": "https://biorxiv.org/content/early/2023/11/23/2023.11.22.568315.abstract",
-        "doi": "early/2023/11/23/2023.11.22.568315"
+        "doi": null
       },
       {
         "title": "Why the simplest explanation isn’t always the best",
@@ -12411,7 +12491,7 @@
         "year": "",
         "journal": "bioRxiv:2023.12.12.571359",
         "url": "https://biorxiv.org/content/early/2023/12/13/2023.12.12.571359.abstract",
-        "doi": "early/2023/12/13/2023.12.12.571359"
+        "doi": null
       },
       {
         "title": "The neuronal implementation of representational geometry in primate prefrontal cortex",

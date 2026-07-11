@@ -146,7 +146,6 @@ def process():
         except Exception:
             pass
 
-    records = []
     for item in items:
         link     = (item.findtext('link') or '').strip()
         title    = (item.findtext('title') or '').strip()
@@ -155,25 +154,27 @@ def process():
 
         print(f"→ {title}  ({pub_date})")
 
+        if link in existing:
+            print("  ✓ cached — reached already-processed lists, stopping")
+            break
+
         num_m    = re.search(r'(\d+)', title)
         list_num = int(num_m.group(1)) if num_m else 0
-
-        if link in existing:
-            records.append(existing[link])
-            print("  ✓ cached — skipping parse")
-            continue
 
         content = get_item_content(item, content_ns)
         papers  = parse_papers_from_html(content)
         print(f"  ✓ {len(papers)} papers")
 
-        records.append({
+        existing[link] = {
             "list_num": list_num,
             "title":    title,
             "pub_date": pub_date,
             "url":      link,
             "papers":   papers,
-        })
+        }
+
+    # Keep all cached lists, not just the ones in the current feed window
+    records = sorted(existing.values(), key=lambda r: r.get("list_num", 0), reverse=True)
 
     OUTPUT.write_text(json.dumps(records, indent=2, ensure_ascii=False))
     print(f"\n✓ Wrote {len(records)} reading lists to {OUTPUT}")

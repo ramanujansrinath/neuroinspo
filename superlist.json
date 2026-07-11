@@ -1,5 +1,77 @@
 [
   {
+    "list_num": 341,
+    "title": "Reading List 341",
+    "pub_date": "2026-07-10",
+    "url": "https://superlab.ca/posts/2026-07-10-list341.html",
+    "papers": [
+      {
+        "title": "Anticipatory organization of neural population dynamics speeds behavioral decisions",
+        "authors": "Gorman J. C., Sainburg T., McPherson T. S., Gentner T. Q.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.06.30.735699",
+        "url": "https://doi.org/10.64898/2026.06.30.735699",
+        "doi": "10.64898/2026.06.30.735699"
+      },
+      {
+        "title": "The Premotor Language Area Encodes a Full Acoustic-to-semantic Speech Hierarchy",
+        "authors": "Guo S. S., Huth A. G.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.07.01.735929",
+        "url": "https://doi.org/10.64898/2026.07.01.735929",
+        "doi": "10.64898/2026.07.01.735929"
+      },
+      {
+        "title": "Neural timescales from a computational perspective",
+        "authors": "Zeraati R., Levina A., Macke J. H., Gao R.",
+        "year": "2026",
+        "journal": "Nature Neuroscience 29:1534-1547",
+        "url": "https://doi.org/10.1038/s41593-026-02343-8",
+        "doi": "10.1038/s41593-026-02343-8"
+      },
+      {
+        "title": "Distinct neural processes link speech planning and execution",
+        "authors": "Duraivel S. et al.",
+        "year": "2024",
+        "journal": "bioRxiv:2024.10.07.617122",
+        "url": "https://doi.org/10.1101/2024.10.07.617122",
+        "doi": "10.1101/2024.10.07.617122"
+      },
+      {
+        "title": "Learning-related population dynamics in right and left dorsal premotor cortex during typing skill acquisition",
+        "authors": "Hashimoto H. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.07.02.736059",
+        "url": "https://doi.org/10.64898/2026.07.02.736059",
+        "doi": "10.64898/2026.07.02.736059"
+      },
+      {
+        "title": "Independent Online Visuomotor Control to Cursor and Target Motion",
+        "authors": "Franklin S., Dimitriou M., Franklin D. W.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.06.28.735032",
+        "url": "https://doi.org/10.64898/2026.06.28.735032",
+        "doi": "10.64898/2026.06.28.735032"
+      },
+      {
+        "title": "Learning Shapes the Energy Cost of Neural Tasks",
+        "authors": "Xue K. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.07.01.735889",
+        "url": "https://doi.org/10.64898/2026.07.01.735889",
+        "doi": "10.64898/2026.07.01.735889"
+      },
+      {
+        "title": "The Importance of Synchrony in the Neural Control of Movement",
+        "authors": "Hasegawa M. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.06.26.734805",
+        "url": "https://doi.org/10.64898/2026.06.26.734805",
+        "doi": "10.64898/2026.06.26.734805"
+      }
+    ]
+  },
+  {
     "list_num": 340,
     "title": "Reading List 340",
     "pub_date": "2026-07-03",

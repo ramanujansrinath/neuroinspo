@@ -442,5 +442,17 @@
     "journal": null,
     "abstract": "Perception and action form a loop as an organism interacts with its environment. Here, we probe the interdependence between the two in the context of choice-history effects, the tendency of past choices and their outcomes to bias current choices. We investigated if the modulation by previous choices depended on the coupling between perceptual choices and the motor responses reporting these choices. We analyzed data from non-human primates (Macaca mulatta; three females and five males) performing two different perceptual decision-making tasks. Each task had a coupled variant with a fixed mapping between perceptual choices and motor plans used to report the choice, and an uncoupled variant, in which this mapping varied randomly across trials. We found that, in both tasks, the animals in the coupled variant had larger choice-history effects compared to the animals in the uncoupled variant. Decoupling choices from motor responses was further associated with an inability by the animals to learn experimentally induced stimulus sequence regularities. Together, these findings identify choice-response coupling as a factor shaping animals ability to use recent history to guide behavior and highlight the tight link between cognitive and motor processes.",
     "is_author": false
+  },
+  {
+    "doi": "10.1146/annurev-neuro-112723-040446",
+    "url": "https://doi.org/10.1146/annurev-neuro-112723-040446",
+    "thumbnail": "thumbnails/38.png",
+    "title": "Ecological Visual Processing in the Mouse",
+    "citation": "Niell et al., 2026",
+    "pub_date": "2026-07-08",
+    "upload_date": "2026-07-13T12:57:33.779009",
+    "journal": "Annual Review of Neuroscience",
+    "abstract": "Visual systems evolved to extract behaviorally relevant information while animals move through and interact with their world. Such ecological vision differs fundamentally from standard laboratory paradigms in many key aspects, making this a much harder problem for the brain to solve, and for the neuroscientist to study. However, emerging technologies and experimental approaches have enabled investigation of visual computations under these ecological conditions. These approaches are particularly powerful in the mouse, combining well-developed genetic tools, high-throughput recordings, and quantifiable ethological tasks. Here we review computations that are engaged in ecological contexts, including active sensing, motion processing, scene analysis, distance estimation, and spatial perception. We delineate experimental approaches that engage these computations and synthesize current understanding of their neural implementations based on mouse research. These studies reveal how ecological vision engages distinct processing strategies and novel neural circuitry, while highlighting the vast territory that remains unexplored in understanding real-world visual computation.",
+    "is_author": false
   }
 ]

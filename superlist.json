@@ -1,5 +1,69 @@
 [
   {
+    "list_num": 342,
+    "title": "Reading List 342",
+    "pub_date": "2026-07-17",
+    "url": "https://superlab.ca/posts/2026-07-17-list342.html",
+    "papers": [
+      {
+        "title": "Structural Composition Enables Very Fast Learning",
+        "authors": "Riveland R., Pouget A., Latham P.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.07.14.738142",
+        "url": "https://doi.org/10.64898/2026.07.14.738142",
+        "doi": "10.64898/2026.07.14.738142"
+      },
+      {
+        "title": "Effects of peripheral nerve damage on promoting maladaptive plasticity in the spinal cord and brain",
+        "authors": "Dalrymple A. N. et al.",
+        "year": "2026",
+        "journal": "Neuroscience 610:408-467",
+        "url": "https://doi.org/10.1016/j.neuroscience.2026.05.016",
+        "doi": "10.1016/j.neuroscience.2026.05.016"
+      },
+      {
+        "title": "Rarely categorical, highly separable representations along the cortical hierarchy",
+        "authors": "Posani L., Wang S., Muscinelli S. P., Paninski L., Fusi S.",
+        "year": "2026",
+        "journal": "Nature",
+        "url": "https://doi.org/10.1038/s41586-026-10668-4",
+        "doi": "10.1038/s41586-026-10668-4"
+      },
+      {
+        "title": "Hierarchical sensory processing in zebrafish thalamocortical-like circuits",
+        "authors": "Trinh A. T. et al.",
+        "year": "2026",
+        "journal": "Science eaec2171",
+        "url": "https://doi.org/10.1126/science.aec2171",
+        "doi": "10.1126/science.aec2171"
+      },
+      {
+        "title": "Planning in the Brain: It’s Not What You Think It Is",
+        "authors": "Mattar M. G., Daw N. D.",
+        "year": "2026",
+        "journal": "Annual Review of Neuroscience 49:435-450",
+        "url": "https://doi.org/10.1146/annurev-neuro-102124-015847",
+        "doi": "10.1146/annurev-neuro-102124-015847"
+      },
+      {
+        "title": "Flexible neuronal participation within a reliable motor sequence",
+        "authors": "Peng J. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.07.10.737866",
+        "url": "https://doi.org/10.64898/2026.07.10.737866",
+        "doi": "10.64898/2026.07.10.737866"
+      },
+      {
+        "title": "A dexterous soft hand exoskeleton restores intentional grasping in individuals with severe hand impairment",
+        "authors": "Nassour J., Berberich N., Utpadel-Fischler D., Wächter T., Cheng G.",
+        "year": "2026",
+        "journal": "Nature Machine Intelligence",
+        "url": "https://doi.org/10.1038/s42256-026-01263-3",
+        "doi": "10.1038/s42256-026-01263-3"
+      }
+    ]
+  },
+  {
     "list_num": 341,
     "title": "Reading List 341",
     "pub_date": "2026-07-10",

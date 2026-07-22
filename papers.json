@@ -478,5 +478,17 @@
     "journal": null,
     "abstract": "Uncovering the circuit mechanisms of flexible behavior requires characterizing how neural signals propagate across large-scale networks and tracking how those networks evolve over time. Signal propagation through networks can be characterized by injecting activity and analyzing signals propagation, thereby measuring causal connectivity. However, current techniques cannot measure causal connectivity at centimeter scales over weeklong periods of time, especially in non-human primates. Here, we present a stimulation and recording method to longitudinally measure causal connectivity across centimeter-scale cortical networks in macaques. We combined multi-site optogenetic stimulation with micro-electrocorticography using a semi-chronic implant approach that enables stable daily measurements over weeks-long periods spanning years. Stimulation evoked activity reflected a mixture of local, stimulation-driven responses and secondary, delayed activity presumably driven through connections. We applied phase-based spectral analysis to disentangle stimulation-driven and secondary activity related to causal connections. We validated this approach by tracking connectivity across weeks. We demonstrated improved stability over long durations while preserving sensitivity to eyes-open vs. closed behavioral states. This platform provides a robust means to investigate the large-scale circuit dynamics underlying complex behavior in the primate brain.",
     "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.07.16.738953",
+    "url": "https://doi.org/10.64898/2026.07.16.738953",
+    "thumbnail": "thumbnails/41.png",
+    "title": "A metric for comparing complex systems by their dynamics",
+    "citation": "Ostrow et al., 2026",
+    "pub_date": "2026-07-21",
+    "upload_date": "2026-07-22T07:22:09",
+    "journal": null,
+    "abstract": "Comparisons are fundamental to science: experiment against model, one organism against another, a system against itself across time. Because many systems, from brains to climate, are characterized by how they evolve in time, it is a natural goal to compare their dynamics. Dynamical systems comparison is well defined, but has been intractable for nonlinear, high-dimensional, noisy, and partially observed data. As a result, standard comparison metrics have focused on the geometry or topology of data.Here we present Dynamical Similarity Analysis (DSA), a class of methods to compare systems by their temporal evolution. Its foundation is Koopman Operator theory, which recasts nonlinear systems as linear operators. We estimate these operators from data, then compare the operators across systems. The computation is fast, scalable, and robust to noise and partial observation. It is also differentiable. DSA identifies dynamical structure that geometric and topological methods miss. It matches recordings from the head direction circuit to ring attractor models. It shows that macaque motor cortex dynamics for two reaching tasks drift apart across years despite preserved behavior, and that primary motor cortex breaks from premotor cortex as movement begins. As an optimization objective, it induces neural networks to learn never-before hypothesized solutions that run counter to their inductive biases. Thus, DSA transforms the dynamics of a system into an object that can be measured, compared, and optimized.",
+    "is_author": false
   }
 ]

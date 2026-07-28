@@ -1,5 +1,61 @@
 [
   {
+    "list_num": 343,
+    "title": "Reading List 343",
+    "pub_date": "2026-07-24",
+    "url": "https://superlab.ca/posts/2026-07-24-list343.html",
+    "papers": [
+      {
+        "title": "Unsupervised nonmotor learning in the human cerebellum",
+        "authors": "Trach J. E., Ou Y., Turk-Browne N. B., McDougle S. D.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.07.22.740142",
+        "url": "https://doi.org/10.64898/2026.07.22.740142",
+        "doi": "10.64898/2026.07.22.740142"
+      },
+      {
+        "title": "Motor Learning and Transfer Are Symmetric Across Hands",
+        "authors": "Nyamsuren I. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.07.17.739258",
+        "url": "https://doi.org/10.64898/2026.07.17.739258",
+        "doi": "10.64898/2026.07.17.739258"
+      },
+      {
+        "title": "Exploring unintentional drifts in finger force production and muscle activity: a study of finger independence",
+        "authors": "Tilley P. M., Mulla D. M., Keir P. J.",
+        "year": "2026",
+        "journal": "Experimental Brain Research 244",
+        "url": "https://doi.org/10.1007/s00221-026-07351-5",
+        "doi": "10.1007/s00221-026-07351-5"
+      },
+      {
+        "title": "Response duration tracks confidence",
+        "authors": "Zhou H., Goh R. Z., Phillips I., Firestone C.",
+        "year": "2026",
+        "journal": "Proceedings of the National Academy of Sciences 123",
+        "url": "https://doi.org/10.1073/pnas.2612367123",
+        "doi": "10.1073/pnas.2612367123"
+      },
+      {
+        "title": "Arm movement control in gravity",
+        "authors": "Kistemaker D. A., Staa R., van der Sar M., van Beers R. J.",
+        "year": "2026",
+        "journal": "Journal of Neurophysiology jn.00610.2025",
+        "url": "https://doi.org/10.1152/jn.00610.2025",
+        "doi": "10.1152/jn.00610.2025"
+      },
+      {
+        "title": "Cerebellar Purkinje cells change dendritic architecture during primate evolution",
+        "authors": "Ferrell A., Busch S. E., Hillegas M., Sherwood C. C., Hansel C.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.06.07.728033",
+        "url": "https://doi.org/10.64898/2026.06.07.728033",
+        "doi": "10.64898/2026.06.07.728033"
+      }
+    ]
+  },
+  {
     "list_num": 342,
     "title": "Reading List 342",
     "pub_date": "2026-07-17",

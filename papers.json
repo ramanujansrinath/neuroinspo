@@ -502,5 +502,29 @@
     "journal": null,
     "abstract": "Learning the value of environmental stimuli from reward experience allows animals to make advantageous choices. Existing biological accounts of reinforcement learning (RL) often assume that this value is represented as a single, motor-system-invariant neural signal. Here we recorded neuronal activity across eight nodes of the macaque cortico-basal ganglia system — from limbic to neocortical regions — while monkeys learned stimulus-reward associations using either saccades or reaches as the required motor response. The geometry of population activity revealed largely distinct value-coding dimensions for saccades and reaches, including in limbic regions typically associated with motor-system-invariant value coding. Consequently, value information was substantially reduced when read out across motor systems. These results provide circuit-wide evidence that challenges existing neural implementations of RL. They link biological accounts of value learning to embodied frameworks in cognitive science and artificial intelligence, in which behavior is grounded in an agent’s physical structure rather than abstracted from it.",
     "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.07.27.741046",
+    "url": "https://doi.org/10.64898/2026.07.27.741046",
+    "thumbnail": "thumbnails/43.png",
+    "title": "Immersive display systems for simulating natural vision",
+    "citation": "Katti et al., 2026",
+    "pub_date": "2026-07-30",
+    "upload_date": "2026-07-30T15:10:01",
+    "journal": null,
+    "abstract": "Vision is traditionally studied using simplified stimuli presented briefly near the center of a flat display while subjects maintain visual fixation. This paradigm contrasts sharply with real-world vision, which is immersive, dynamic and strongly influenced by self-initiated actions. Traditional approaches have allowed researchers to systematically study the neural encoding of visual features and the influence of cognitive operations such as attention. However, other methods are needed to study more holistic and first-person perspectives on vision, such as those related to physical space, continuous time, and self-movement. To enable the study of these and other aspects of real-world vision, we developed hemispherical (\"dome\") display systems for macaque visual neuroscience. For functional MRI experiments, a compact rear-projection dome display fits within the bore of a clinical MRI scanner. For electrophysiological recordings, a larger front-projection dome display is illuminated from above using a spherical mirror. Both setups complete and dynamic stimulation of approximately 180 degrees of the subject's field of view, thus facilitating studies requiring visual immersion. To ensure accurate angular geometry across the hemispherical display, we present unified rendering and calibration software that supports natural fisheye videos, conventional visual stimuli, and virtual 3D environments. The calibration procedure automatically compensates for projector, mirror, and dome distortions through geometric pre-warping, ensuring correct visual-angle representation across the display. Pilot fMRI experiments demonstrate robust activation of peripheral visual cortex during both conventional pattern stimulation and naturalistic self-movement. Together, these dome systems provide a flexible platform for investigating aspects of vision that are difficult to study with conventional displays, including peripheral processing, visual immersion, optic flow, self-motion, and holistic scene perception.",
+    "is_author": false
+  },
+  {
+    "doi": "10.1038/s41593-026-02381-2",
+    "url": "https://doi.org/10.1038/s41593-026-02381-2",
+    "thumbnail": "thumbnails/44.png",
+    "title": "Creating true and false memories from forgotten information in Drosophila",
+    "citation": "Yang et al., 2026",
+    "pub_date": "2026-07-30",
+    "upload_date": "2026-08-02T21:46:29.248582",
+    "journal": "Nature Neuroscience",
+    "abstract": "Recovering forgotten memories is a double-edged sword. While regaining access to forgotten information can be advantageous, targeted memory recovery carries the risk of generating false memories. The neuronal processes governing true memory recovery and false memory formation remain poorly understood. Here we show in Drosophila that reminder cues recover forgotten aversive memories. Forgotten memories persist as silent memory traces in behaviorally neutral mushroom body output neurons. From this silent state, reminders recover memory expression by reinstating the original memory trace in mushroom body output neurons that guide behavior. However, manipulating reminders can distort recovery, leading to false memory formation. The effectiveness of this distortion depends on whether misleading reminder cues were present during the original training event. Both true memory recovery and false memory formation are context-dependent processes gated by separable dopaminergic pathways. Together, these findings suggest that forgotten memories can re-emerge through a reconstructive process that flexibly integrates stored information and recent experiences.",
+    "is_author": false
   }
 ]

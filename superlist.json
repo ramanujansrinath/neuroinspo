@@ -1,5 +1,93 @@
 [
   {
+    "list_num": 344,
+    "title": "Reading List 344",
+    "pub_date": "2026-07-31",
+    "url": "https://superlab.ca/posts/2026-07-31-list344.html",
+    "papers": [
+      {
+        "title": "Cued recall of human motor memory",
+        "authors": "Lewis-Hoeber E., Darainy M., Ebrahimi S., Ostry D. J.",
+        "year": "2026",
+        "journal": "Journal of Neurophysiology 136:156-164",
+        "url": "https://doi.org/10.1152/jn.00158.2026",
+        "doi": "10.1152/jn.00158.2026"
+      },
+      {
+        "title": "Movement effort does not alter the planning horizon of sequential reaching movements",
+        "authors": "Bellmann A., Oostwoud Wijdenes L., Medendorp W. P.",
+        "year": "2026",
+        "journal": "Journal of Neurophysiology 136:285-293",
+        "url": "https://doi.org/10.1152/jn.00457.2025",
+        "doi": "10.1152/jn.00457.2025"
+      },
+      {
+        "title": "Replay of procedural memory is independent of the hippocampus",
+        "authors": "Thompson E. J. et al.",
+        "year": "2026",
+        "journal": "Nature Neuroscience",
+        "url": "https://doi.org/10.1038/s41593-026-02362-5",
+        "doi": "10.1038/s41593-026-02362-5"
+      },
+      {
+        "title": "Spinal rotational dynamics orchestrate locomotor recovery",
+        "authors": "Colard J., Harnie J., Berg R. W., Frigon A.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.07.21.739844",
+        "url": "https://doi.org/10.64898/2026.07.21.739844",
+        "doi": "10.64898/2026.07.21.739844"
+      },
+      {
+        "title": "Internal perturbation reveals the flexible and adaptive nature of the coordination between decisions and movements",
+        "authors": "Thura D., Gardechaux G., Saleri C.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.07.23.740304",
+        "url": "https://doi.org/10.64898/2026.07.23.740304",
+        "doi": "10.64898/2026.07.23.740304"
+      },
+      {
+        "title": "Spatial and network principles behind neural generation of locomotion",
+        "authors": "Komi S. et al.",
+        "year": "2026",
+        "journal": "Nature Communications 17",
+        "url": "https://doi.org/10.1038/s41467-026-74228-0",
+        "doi": "10.1038/s41467-026-74228-0"
+      },
+      {
+        "title": "Climbing fibers encode the gradient of a loss function for the cerebellum",
+        "authors": "Doostmohammadi J. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.07.27.741034",
+        "url": "https://doi.org/10.64898/2026.07.27.741034",
+        "doi": "10.64898/2026.07.27.741034"
+      },
+      {
+        "title": "Gradual consolidation of skilled sequential movements in primary motor cortex of non-human primates",
+        "authors": "Ohbayashi M., Picard N.",
+        "year": "2024",
+        "journal": "bioRxiv:2024.10.06.616850",
+        "url": "https://doi.org/10.1101/2024.10.06.616850",
+        "doi": "10.1101/2024.10.06.616850"
+      },
+      {
+        "title": "Creating true and false memories from forgotten information in Drosophila",
+        "authors": "Yang W. et al.",
+        "year": "2026",
+        "journal": "Nature Neuroscience",
+        "url": "https://doi.org/10.1038/s41593-026-02381-2",
+        "doi": "10.1038/s41593-026-02381-2"
+      },
+      {
+        "title": "All living things emit a faint glow. Could this light be useful?",
+        "authors": "Marchant J.",
+        "year": "2026",
+        "journal": "Nature 655:1116-1119",
+        "url": "https://doi.org/10.1038/d41586-026-02311-z",
+        "doi": "10.1038/d41586-026-02311-z"
+      }
+    ]
+  },
+  {
     "list_num": 343,
     "title": "Reading List 343",
     "pub_date": "2026-07-24",

@@ -526,5 +526,17 @@
     "journal": "Nature Neuroscience",
     "abstract": "Recovering forgotten memories is a double-edged sword. While regaining access to forgotten information can be advantageous, targeted memory recovery carries the risk of generating false memories. The neuronal processes governing true memory recovery and false memory formation remain poorly understood. Here we show in Drosophila that reminder cues recover forgotten aversive memories. Forgotten memories persist as silent memory traces in behaviorally neutral mushroom body output neurons. From this silent state, reminders recover memory expression by reinstating the original memory trace in mushroom body output neurons that guide behavior. However, manipulating reminders can distort recovery, leading to false memory formation. The effectiveness of this distortion depends on whether misleading reminder cues were present during the original training event. Both true memory recovery and false memory formation are context-dependent processes gated by separable dopaminergic pathways. Together, these findings suggest that forgotten memories can re-emerge through a reconstructive process that flexibly integrates stored information and recent experiences.",
     "is_author": false
+  },
+  {
+    "doi": "10.1038/s41593-026-02380-3",
+    "url": "https://doi.org/10.1038/s41593-026-02380-3",
+    "thumbnail": "thumbnails/45.png",
+    "title": "Comparative insights into insula structure and function",
+    "citation": "Charbonneau et al., 2026",
+    "pub_date": "2026-08-06",
+    "upload_date": "2026-08-06T13:30:22.594187",
+    "journal": "Nature Neuroscience",
+    "abstract": "The insular cortex has become an increasingly important focus of neuroscientific research because of its broad involvement in psychological and behavioral processes and its dysfunction in neuropsychiatric, developmental, degenerative and metabolic disorders. The insula is easily imaged in the human brain and is also a key target for both fundamental and translational studies in nonhuman animals. However, owing to a dearth of truly comparative studies on the insula, the extent to which this region shares structural and functional homologies between humans, monkeys and rodents remains incompletely understood. Here, we systematically evaluate current knowledge regarding homologies in the insula among model species and humans. We examine the strengths and limitations of various laboratory species for investigating the insula, and discuss how these factors influence the interpretation of findings and their application to the human insula. Finally, we propose research directions aimed at strengthening translational insula research and enhancing our understanding of cross-species similarities and differences.",
+    "is_author": false
   }
 ]

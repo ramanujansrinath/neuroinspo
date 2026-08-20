@@ -6,7 +6,7 @@
     "title": "Loss of neuronal population organization links pathology to behavior in a model of Alzheimer’s disease",
     "citation": "Ruff et al., 2026",
     "pub_date": "2026-03-18",
-    "upload_date": "2026-06-11T22:28:24",
+    "upload_date": "2026-06-11T22:28:24.838630",
     "journal": null,
     "abstract": "Alzheimer’s disease (AD) and related dementias (ADRD) are defined by molecular and cellular pathology and cognitive decline, but linking these levels requires understanding how pathology alters large-scale neuronal activity. We longitudinally tracked behavior, multi-area neuronal population activity, and fluid and histological biomarkers in a macaque model of early-stage ADRD. As pathology progressed, visually guided behavior became increasingly disorganized, reflected in less structured exploration despite preserved task performance. Guided by systems neuroscience principles linking neuronal population activity with organized goal-directed behavior, we found progressive reductions in coordinated neuronal population activity within and between visual and parietal cortices, even as single-neuron tuning and basic feature encoding remained stable. These changes emerged when tau pathology was largely confined to regions providing feedback to visual cortex. This disorganized state appears modifiable: proof-of-concept methylphenidate administration was associated with transient improvement in behavioral organization. Together, these findings identify disruption of neuronal population organization as a defining feature of early-stage ADRD and frame early dysfunction as a disorder of coordinated population activity.",
     "is_author": true
@@ -18,7 +18,7 @@
     "title": "Adaptive problem solving in the primate frontal cortex",
     "citation": "Ramadan et al., 2026",
     "pub_date": "2026-05-06",
-    "upload_date": "2026-05-06T17:05:35.854894",
+    "upload_date": "2026-05-06T17:05:35",
     "journal": null,
     "abstract": "Humans solve problems adaptively by selecting strategies suited to the situation. For example, when missing the bus to an appointment, we may wait for the next bus, call a taxi, cancel, or reschedule depending on the circumstances. Yet the neural and computational principles that support such flexible problem solving remain poorly understood. To address this question, we designed a moderately complex decision task for monkeys that allows multiple plausible solution strategies. Animals learned the task rapidly, generalized to novel maze geometries, and their choices were inconsistent with any single fixed strategy. We then recorded large-scale neural activity from the frontal cortex and found that population dynamics varied systematically with maze geometry. Neural responses clustered into two distinct dynamical regimes with separable initial states, consistent with hierarchical and sequential strategies. A decoder trained on population activity revealed time-resolved decision dynamics that aligned with these regimes, and an unsupervised latent-space analysis provided convergent evidence that strategy use varied across trials. A behavioral model grounded in neurally inferred strategies accounted for choices better than fixed-strategy alternatives and captured trial-by-trial variability. Together, these results provide a neural and computational account of how the brain selects and implements distinct strategies during adaptive problem solving.",
     "is_author": false
@@ -30,7 +30,7 @@
     "title": "Causal Interpretation of Neural Network Computations with Contribution Decomposition",
     "citation": "Melander et al., 2026",
     "pub_date": "2026-03-06",
-    "upload_date": "2026-06-11T22:28:24",
+    "upload_date": "2026-06-11T22:28:24.853687",
     "journal": "arXiv",
     "abstract": "Understanding how neural networks transform inputs into outputs is crucial for interpreting and manipulating their behavior. Most existing approaches analyze internal representations by identifying hidden-layer activation patterns correlated with human-interpretable concepts. Here we take a direct approach to examine how hidden neurons act to drive network outputs. We introduce CODEC (Contribution Decomposition), a method that uses sparse autoencoders to decompose network behavior into sparse motifs of hidden-neuron contributions, revealing causal processes that cannot be determined by analyzing activations alone. Applying CODEC to benchmark image-classification networks, we find that contributions grow in sparsity and dimensionality across layers and, unexpectedly, that they progressively decorrelate positive and negative effects on network outputs. We further show that decomposing contributions into sparse modes enables greater control and interpretation of intermediate layers, supporting both causal manipulations of network output and human-interpretable visualizations of distinct image components that combine to drive that output. Finally, by analyzing state-of-the-art models of neural activity in the vertebrate retina, we demonstrate that CODEC uncovers combinatorial actions of model interneurons and identifies the sources of dynamic receptive fields. Overall, CODEC provides a rich and interpretable framework for understanding how nonlinear computations evolve across hierarchical layers, establishing contribution modes as an informative unit of analysis for mechanistic insights into artificial neural networks.",
     "is_author": false
@@ -42,7 +42,7 @@
     "title": "Neuronal tuning aligns dynamically with object and texture manifolds across the visual hierarchy",
     "citation": "Wang and Ponce, 2026",
     "pub_date": "2026-03-10",
-    "upload_date": "2026-05-06T17:06:52.141933",
+    "upload_date": "2026-05-06T17:06:52",
     "journal": "Nature Neuroscience",
     "abstract": "Visual neurons respond to a vast range of images, from textures to objects, but the rules linking these responses remain unclear. Although tuning to simple features is well established in the primary visual cortex, this framework breaks down in higher areas, where neurons encode diverse and unpredictable features. To ask what features neurons prioritize, we used generative models (deep networks that synthesize new images from a learned latent space), allowing neurons in V1, V4 and the posterior inferotemporal cortex (PIT) to guide image synthesis through closed-loop optimization. We compared models that emphasize texture versus those that emphasize object structure. Although V1 and V4 aligned more strongly with texture-based spaces, many PIT neurons responded equally well to both types of optimized images, revealing a focus on shared local motifs rather than whole-object templates, and this alignment to objects emerged later in their response. These findings reveal coding principles across the ventral stream and clarify the limits of current vision models.",
     "is_author": false
@@ -54,7 +54,7 @@
     "title": "A communication subspace relays context-dependent actions from human prefrontal to motor cortex",
     "citation": "Binish et al., 2026",
     "pub_date": "2026-05-01",
-    "upload_date": "2026-05-06T17:07:28.535246",
+    "upload_date": "2026-05-06T17:07:28",
     "journal": "Nature Neuroscience",
     "abstract": "Adaptive behavior relies on the ability to translate abstract rules and goals into actions suited to the current context. Neural population activity in the prefrontal cortex (PFC) has been proposed to support such flexible computations through high-dimensional dynamics, whereas activity in the primary motor cortex (M1) is related more directly to movement execution. How contextual representations in PFC are transformed into ensuing action plans within M1 remains unknown. Previous work suggests that low-dimensional coding subspaces might organize interareal communication, but direct evidence for such population-level communication mechanisms in humans is lacking. Here we use intracranial recordings from human PFC and M1 to identify a communication subspace embedded within high-dimensional PFC activity, that selectively relays behaviorally relevant information at the single-trial level. Activity in this subspace predicts context-dependent action more strongly than either region, revealing a fundamental coding principle by which coordinated interareal population dynamics filter and relay predictive information to guide context-dependent actions.",
     "is_author": false
@@ -66,7 +66,7 @@
     "title": "Universal Geometry of Compositional Construction in Prefrontal Cortex",
     "citation": "Manakov et al., 2026",
     "pub_date": "2026-04-23",
-    "upload_date": "2026-06-11T22:28:24",
+    "upload_date": "2026-06-11T22:28:24.855041",
     "journal": null,
     "abstract": "Summary Compositional generation underlies the systematic and essentially unlimited construction of complex concepts from simpler parts, as is foundational to intelligent behavior, but its underlying neural mechanisms remain unclear. Here we reveal a neural implementation of hierarchical compositional construction of abstract sequences. We demonstrate that in an open-ended setting with very sparse feedback, rats innately utilize hierarchical composition to construct adaptive action sequences that would have been difficult to discover from scratch. Prefrontal neural population representations of these abstract sequences adhere to a low-dimensional format that encodes the orderly progression of elemental units comprising the sequence while converging to a sequence-general endpoint. Higher-level compositions in the hierarchy are systematically related to their lower-level constituent parts, reusing much of the representation, while providing context separation and satisfying format constraints. These neural representations are geometrically identical across animals, pointing to a convergent solution for how knowledge is hierarchically assembled via a compositional mechanism.",
     "is_author": false
@@ -78,7 +78,7 @@
     "title": "Neural representation of action grammar structure in primate frontal cortex",
     "citation": "Tian et al., 2026",
     "pub_date": "2026-01-19",
-    "upload_date": "2026-05-07T11:20:24",
+    "upload_date": "2026-05-07T11:20:24.591523",
     "journal": null,
     "abstract": "Humans and other animals can solve new problems, even on the first attempt. This capacity to generate novel problem-solving behavior has been hypothesized to depend on brain mechanisms for recombining units of knowledge using systems of procedural rules, or grammars . Yet, whether and how the brain represents and implements grammars remains unclear, in large part due to the lack of neural recordings (typically performed in animal models) during grammar-based problem solving (typically studied in humans). Here, we address that gap, and in turn identify an underlying neural basis of grammatical behavior. We designed a visual–motor construction task in which macaque monkeys trace complex, often novel, geometric figures by generating a sequence of strokes, each a distinct shape, like a circle, dash, or chevron (action symbols 1 ). Critically, sequencing was guided by a learned hierarchical action grammar A n B m C k , meaning “repeat shape A, then repeat shape B, then repeat shape C”, where the number of repetitions (n, m, and k) varied across problems. Behavior was internally generated (no cues guiding stroke order), problem-directed (to construct a specific image), and exhibited zero-shot generalization (successful on the first trial for novel problems, including harder ones)--key hallmarks of grammar use. To identify underlying neural substrates, we recorded from multiple frontal cortical areas previously implicated in rule use or action sequencing. Activity during drawing encoded key structural properties of the action grammar: (i) shape index (A, B, C), (ii) abstract role (e.g., the role A independent of the specific shape), and (iii) ordinal position within a shape repeat. Moreover, all three properties were strongest in a single region, the pre-supplementary motor area (preSMA). We suggest the possibility that this conjunction of representations is a signature of an implementation of an iterative algorithm resembling a “for-loop” program: internally tracking how many repetitions remain for each shape index and switching to the next when complete. Our study establishes a paradigm for studying the neural basis of grammar-guided novel behavior and identifies in preSMA a dynamic representation of grammatical structure supporting such behavior.",
     "is_author": false
@@ -90,7 +90,7 @@
     "title": "Visual semantic tuning across the cortex shifts between tasks",
     "citation": "Zhang and Gallant, 2026",
     "pub_date": "2026-02-20",
-    "upload_date": "2026-06-11T22:28:24",
+    "upload_date": "2026-06-11T22:28:24.855943",
     "journal": null,
     "abstract": "Attention is a powerful mechanism that dynamically optimizes brain representations to prioritize behaviorally-relevant information. While previous studies focusing on single tasks have demonstrated that attention shifts tuning towards attended targets, real-world behavior often requires humans to switch between tasks with different demands. How does visual semantic tuning in the human brain shift to support the behavioral demands of different naturalistic tasks? To answer this question, we used voxelwise encoding models to compare visual semantic tuning across the human cerebral cortex between two distinct naturalistic tasks, movie watching and navigation. Results show that visual semantic tuning in the cortex differed substantially between tasks. Principal component analysis reveals that during navigation, tuning shifts increase the representation of vehicles and traffic signs compared to movie watching, and that these shifts were localized to distinct functional networks. These tuning shifts reconfigure the human brain’s representations of object categories based on their behavioral relevance. These findings demonstrate that visual semantic tuning in the brain dynamically shifts towards task-relevant information across naturalistic tasks, optimizing functional representations to achieve diverse behavioral goals. Significance statement In real-world situations, we switch between many tasks with behaviorally distinct goals that require us to attend to different targets. Here we show that visual semantic tuning across the human cortex shifts between passive movie-watching and active navigation. These tuning shifts increase the representation of behaviorally-relevant objects, such as cars during navigation. Tuning shifts towards different object categories are distributed across distinct functional networks, suggesting that they engage different cognitive mechanisms. These results show that visual semantic tuning in the human brain is highly task-dependent and is optimized to represent behaviorally-relevant information.",
     "is_author": false
@@ -102,7 +102,7 @@
     "title": "Distinct tasks engage a shared neural subspace in human hippocampus and anterior cingulate cortex",
     "citation": "Lu et al., 2026",
     "pub_date": "2026-04-28",
-    "upload_date": "2026-05-07T11:22:20",
+    "upload_date": "2026-05-07T11:22:20.175681",
     "journal": null,
     "abstract": "A hallmark of human cognitive flexibility is the ability to perform a wide range of unrelated tasks. While much is known about how neural circuits support individual tasks, less is understood about how these circuits support multiple tasks. Are neural representations largely task-specific, or do they retain a shared structure across distinct behaviors? To investigate this question, we recorded neural population activity from the hippocampus and anterior cingulate cortex, two regions linked to generalization and cognitive control, in eleven human patients performing three distinct tasks. Using dimensionality reduction, we estimated the neural subspace associated with each task and compared subspace geometry across tasks. We found that task-related subspaces were not independent: across tasks, approximately half of the subspace dimensions were shared, and these were primarily the dimensions containing most of the shared neural covariance. These findings indicate that neural population activity in these regions is not purely task-specific. This suggests a stable, low-dimensional circuit structure may persist even across unrelated behaviors, potentially providing a common substrate for flexible cognition.",
     "is_author": false
@@ -114,7 +114,7 @@
     "title": "Modulation of feature attention by reward prediction error explains value learning behavior",
     "citation": "Leukos et al., 2026",
     "pub_date": "2026-04-11",
-    "upload_date": "2026-05-07T15:42:33",
+    "upload_date": "2026-05-07T15:42:33.364146",
     "journal": null,
     "abstract": "Adaptive behavior requires learning the value of environmental features while selectively attending to those most likely to yield reward. Reward prediction errors (RPEs) drive value learning and learned values guide attention, yet the computational function linking RPEs to attentional modulation remains unspecified. Here, we developed a reinforcement learning model with a perceptual front-end to investigate how value and RPE signals modulate attentional gain during learning. We compared five candidate RPE-attention transfer functions, each combined with either single- or multi-focus attention, against behavioral data from two adult male rhesus macaques performing a color-value learning task with shifting reward contingencies. Monkeys exhibited rapid initial learning followed by sub-optimal asymptotic accuracy. Overall, single-focus architectures consistently outperformed multi-focus counterparts on matching monkey errors, indicating that macaques collapse the value distribution into a winner-take-all attentional focus. Furthermore, the “Switch” model, in which attention targets the highest-valued feature but transiently inverts following negative RPEs, produced the fastest exploration dynamics following target switches and, together with the Absolute Value model, yielded decision confidence trajectories that positively correlated with empirical reaction times. In support of this, single-neuron correlation analyses revealed that 27 − 42% of neurons in prefrontal cortex, frontal eye fields, and lateral intraparietal area encoded previous-trial RPE at the time of next trial onset. In total, we conclude that capacity constrained attention that inverts its focus after negative RPE best explains value learning dynamics. These results provide a normative account for why biological learners sacrifice asymptotic precision for rapid adaptation in volatile environments. Significance Statement Learning which features of the environment predict reward requires both reinforcement learning and selective attention, yet how these processes interact algorithmically remains unknown. We developed a computational model that specifies how reward prediction errors dynamically adjust the gain of feature-based attention during value learning. Testing competing hypotheses against macaque behavioral data, we show that a “Switch” mechanism, in which negative prediction errors transiently invert attentional focus away from the highest-valued feature, best captures primate learning dynamics. This architecture reveals a principled trade-off: the brain sacrifices asymptotic accuracy for rapid detection of environmental change, using error-triggered attentional inversion as a directed exploration strategy. These findings bridge reinforcement learning theory and attention research by identifying the transfer function linking prediction errors to sensory gain modulation.",
     "is_author": false
@@ -126,7 +126,7 @@
     "title": "A global dopaminergic learning rate enables adaptive foraging across many options",
     "citation": "Grima et al., 2026",
     "pub_date": "2026-05-01",
-    "upload_date": "2026-06-11T22:28:24",
+    "upload_date": "2026-06-11T22:28:24.839754",
     "journal": "Neuron",
     "abstract": "In natural environments, animals must allocate choices across multiple concurrently available resources when foraging, a complex decision-making process not fully captured by existing models. To understand how rodents learn to navigate this challenge, we developed a novel paradigm in which naive, water-restricted mice freely sampled six options of varying quality arranged around a large (∼2 m) arena. Mice exhibited rapid learning, matching their choices to integrated reward probabilities across six options within tens of minutes. A reinforcement learning model with distinct states for staying vs. leaving an option, as well as a dynamic global learning rate, accurately reproduced behavior. Fiber photometry recordings revealed that dopamine in the nucleus accumbens core (NAcC), but not the dorsomedial striatum (DMS), reflected this learning rate. Moreover, optogenetic manipulation of NAcC dopamine bidirectionally altered learning in quantitative agreement with model predictions. Together, we identified a neural substrate of a learning algorithm enabling efficient multi-option foraging in large spatial environments.",
     "is_author": false
@@ -138,7 +138,7 @@
     "title": "A neural state space for episodic memories",
     "citation": "Horner, 2026",
     "pub_date": "2026-05-01",
-    "upload_date": "2026-05-11T11:29:10",
+    "upload_date": "2026-05-11T11:29:10.270421",
     "journal": "Trends in Cognitive Sciences",
     "abstract": "Episodic memories are highly dynamic and change in nonlinear ways over time. This dynamism is not captured by existing systems consolidation theories that predict a unidirectional process where memories are first supported by the hippocampus and then the neocortex. Here, I propose a 3D state space for episodic memories. The first two dimensions relate to whether episodic retrieval is driven by the hippocampus and the neocortex, critically allowing for independent and additive contributions from both regions. The third dimension relates to the episodic specificity of retrieval. Memories can be located at any point in this state space and move to any other location. The state space captures the dynamic nature of episodic memory and broadens the search space of possible memory states and transformations across time.",
     "is_author": false
@@ -150,7 +150,7 @@
     "title": "Enhanced processing of cartoons in infant visual cortex",
     "citation": "Yates et al., 2026",
     "pub_date": "2026-05-11",
-    "upload_date": "2026-05-12T12:38:20",
+    "upload_date": "2026-05-12T12:38:20.719199",
     "journal": null,
     "abstract": "Developing sensory systems may have heightened sensitivity to exaggerated features that emphasize diagnostic information, as shown by the benefits of infant-directed speech for language acquisition. Here, we examine this sensory exaggeration hypothesis in the visual domain by testing whether cartoons elicit stronger and more consistent neural representations than realistic movies in human infants. We collected fMRI data while 24 awake infants (4-15 months) watched the same 3-minute clip of the opening sequence from the original animated version of The Lion King (1994) and its shot-for-shot remake with photorealistic CGI (2019). A computer vision model confirmed that the movies differed in low-level features while depicting similar high-level content. Consistent with sensory exaggeration, the animated version yielded more reliable neural responses and better decoding of visual features than the CGI version throughout occipital cortex. This effect was not observed in adults nor in higher-order regions in infants and could not be explained by differential head motion or looking time. These results suggest that the developing visual system may be attuned to diagnostic features and that cartoons may (unwittingly) exploit this early neural preference.",
     "is_author": false
@@ -162,7 +162,7 @@
     "title": "Fluctuating internal states mediate neural–behavioral covariations in V1",
     "citation": "Li et al., 2026",
     "pub_date": "2026-05-13",
-    "upload_date": "2026-06-11T22:28:24",
+    "upload_date": "2026-06-11T22:28:24.842269",
     "journal": "Nature Neuroscience",
     "abstract": "Our perception of the world depends on a complex interplay between external sensory inputs and our internal states. How and where in the brain these interactions are implemented remain poorly understood. To address these questions, we measured membrane potential (Vm) of single V1 neurons in macaque monkeys performing a reaction-time visual detection task. Here we show that most V1 neurons gradually depolarize in preparation for target onset, and that variations in this buildup are correlated with the monkey’s reaction times. Further, we show that fluctuations in Vm after target onset are correlated with choice, and that these covariations strongly depend on the location and contrast of the target. Finally, we show that a simple computational model with fluctuating multiplicative gain can account for our results. Thus, the surprising covariations between Vm of single V1 neurons and behavior are implemented by internal-state-related nonlinear modulations operating at, or before, V1.",
     "is_author": false
@@ -174,7 +174,7 @@
     "title": "Behavioral phenotypes and neuronal biomarkers in F1 mutant macaque model of SHANK3-associated autism spectrum disorders",
     "citation": "Jiang et al., 2026",
     "pub_date": "2026-05-01",
-    "upload_date": "2026-05-15T12:40:12",
+    "upload_date": "2026-05-15T12:40:12.888956",
     "journal": "Neuron",
     "abstract": "Haploinsufficiency of the SHANK3 gene is the primary cause of Phelan-McDermid syndrome (PMS), a severe neurodevelopmental disorder with intellectual disability and autism spectrum disorder. We previously reported that founder SHANK3 macaques had behaviors reminiscent of some aspects of PMS. However, insights into behavioral, physiological, and cognitive changes were limited due to the small cohort and mosaicism. We therefore generated a larger, F1 generation of heterozygous SHANK3+/− macaques to conduct more thorough studies. We found sleep disturbances, diminished exploration, atypical social interactions, stereotypical behaviors, and altered brain functional connectivity in SHANK3+/− macaques. Electroencephalogram recordings revealed a markedly diminished response to auditory stimulation. Cognitively, SHANK3+/− monkeys did not show major deficits in working memory tests but exhibited an impaired ability to learn and execute a paired-association memory task. We further developed a multi-task array to systemically evaluate autism-related phenotypes, which revealed the heterogeneity of phenotypes and established potential biomarkers for testing therapeutics.",
     "is_author": false
@@ -186,7 +186,7 @@
     "title": "The illusory simplicity of the feedforward pass: evidence for the dynamical nature of stimulus encoding along the primate ventral stream",
     "citation": "Unknown",
     "pub_date": "2026-04-26",
-    "upload_date": "2026-06-11T22:28:24",
+    "upload_date": "2026-06-11T22:28:24.844296",
     "journal": "arXiv",
     "abstract": "In studying primate vision, a large body of work focuses on the first feedforward sweep. During this initial time window, information is thought to pass through ventral stream regions in a stage-like fashion in an effort to extract high-level information from the retinal input. Consequently, electrophysiological analyses commonly focus on spatial response patterns, either by averaging data in time, or by applying decoders in a temporally local fashion. By analysing data recorded simultaneously across multiple arrays placed along the macaque ventral stream, we here show that this prior approach may be missing key aspects of information encoding. First, time-resolved, multivariate analyses of information transfer between V4 and IT reveal temporally and semantically varied information content as being exchanged within the first 100ms of processing. Second, by employing recurrent neural network (RNN) decoding techniques that extend across the temporal domain, we demonstrate that the neural pattern dynamics themselves carry categorical information far beyond the spatially encoded information available at any given time point. These findings challenge the prevailing view of a single, stage-like feedforward process and suggest that even the earliest parts of visual processing are better characterised as a spatiotemporally evolving process that encodes information in its dynamics rather than purely spatial response patterns.",
     "is_author": false
@@ -198,7 +198,7 @@
     "title": "A critical initialization for biological neural networks",
     "citation": "Pachitariu et al., 2026",
     "pub_date": "2026-05-20",
-    "upload_date": "2026-05-23T15:03:42",
+    "upload_date": "2026-05-23T15:03:42.153189",
     "journal": "Nature",
     "abstract": "Intrinsically generated, brainwide neural activity displays macroscopic coordination among large populations of neurons that persists beyond the biophysical timescales of individual neurons 1–3 . It is not well understood how these macroscopic behaviours arise from microscopic, short-lived interactions between pairs of neurons. Here we show that the eigenvalue spectrum and dynamical properties of large-scale neural recordings in mice are similar to those produced by linear dynamics governed by a random symmetric matrix that is critically normalized. An exception was population activity in hippocampal area CA1, which resembled an efficient, uncorrelated neural code that may be optimized for information storage capacity. High-dimensional, global activity modes emerged in critically normalized artificial networks and persisted under sparse, clustered or spatial connectivity. These dynamics were useful for solving time-dependent tasks such as a zero-shot working memory task.",
     "is_author": false
@@ -210,7 +210,7 @@
     "title": "Fixation duration on natural scenes is explained by memory encoding not processing demand",
     "citation": "Sulewski et al., 2026",
     "pub_date": "2026-05-25",
-    "upload_date": "2026-05-26T14:15:50",
+    "upload_date": "2026-05-26T14:15:50.491774",
     "journal": "Nature Neuroscience",
     "abstract": "Before each of around 200,000 eye movements we make each day, the brain decides how long to fixate before shifting gaze to new information. Here we investigate this process using a large-scale scene-viewing experiment (4,080 natural scenes, five participants) that combines magnetoencephalography, eye tracking and a semantic captioning task. Using multivariate analysis of magnetoencephalography source-space patterns, behavioral analyses and artificial neural network (ANN) modeling, we show that longer fixations do not reflect prolonged visual processing but relate to downstream memory encoding. First, temporal variability of ventral stream representational dynamics did not explain variability in fixation duration. Second, fixation durations were anticorrelated with ANN-estimated patch classification difficulty. Third, fixation durations correlate positively with ANN-predicted patch memorability and caption-inclusion and co-occur with increased theta–gamma phase–amplitude coupling, particularly in frontal and hippocampal regions. These results indicate that eye-movement timing decisions are shaped by memory-encoding demands rather than by perceptual processing limits.",
     "is_author": false
@@ -222,7 +222,7 @@
     "title": "Conscious and nonconscious thought: Insights from the neuroscience of decision-making",
     "citation": "Shadlen, 2026",
     "pub_date": "2026-05-26",
-    "upload_date": "2026-05-31T22:54:04.309485",
+    "upload_date": "2026-05-31T22:54:04",
     "journal": "Proceedings of the National Academy of Sciences",
     "abstract": "Conscious thought is often treated as a special class of neural processing, distinct from the nonconscious computations that guide most behavior. Here I offer a different perspective, grounded in the neuroscience of decision-making. I argue that conscious thought arises not from a unique mechanism but from a distinctive use of neural representations already engaged in nonconscious thought. Nonconscious thoughts are structured as interrogations that yield provisional intentions—decision-like commitments that guide action or inquiry without entering awareness. Using examples from perceptual decision-making and neurophysiology, I suggest that such thoughts depend on persistent neural representations that encode not only potential actions but the questions that give them meaning. These knowledge states may also preserve source-sensitive structure that supports a minimal experiential organization even when they remain nonconscious. Conscious thought, on this account, emerges when such a state is reformatted for potential report to another mind, or to oneself, recruiting theory of mind and narrative structure and placing its content in a space presumed to be shared. This proposal identifies a tractable bridge from nonconscious decision mechanisms to phenomenal consciousness, thereby placing part of the hard problem within empirical reach.",
     "is_author": false
@@ -234,7 +234,7 @@
     "title": "The ‘neat’ and ‘messy’ in task-dependent neural geometry and computation",
     "citation": "Xue and Okazawa, 2026",
     "pub_date": "2026-05-01",
-    "upload_date": "2026-06-11T22:28:24",
+    "upload_date": "2026-06-11T22:28:24.847409",
     "journal": "Trends in Neurosciences",
     "abstract": "To solve diverse real-world tasks, the brain must flexibly switch between task rules and adjust computations. Recent advances in analyzing neural data and modeling neural networks have revealed their ‘neat’ features: neuronal population activity encodes distinct task states and forms structured, interpretable representations of task variables, enabling efficient task switching. However, ‘messy’ features are also observed: task-irrelevant variables shape neuronal responses, representations become entangled, and behaviors exhibit apparent suboptimalities such as switch costs. We review these dual facets of experimental observations of task-dependent computation in the brain, particularly in primates. Recognizing this duality points to two future directions: refining theories to better capture brain-specific constraints and leveraging network models fitted directly to behavioral and neural data.",
     "is_author": false
@@ -246,7 +246,7 @@
     "title": "Reward magnitude determines reinforcement learning efficiency",
     "citation": "Gong et al., 2026",
     "pub_date": "2026-05-21",
-    "upload_date": "2026-06-11T22:28:24",
+    "upload_date": "2026-06-11T22:28:24.849393",
     "journal": "Science",
     "abstract": "Standard animal learning studies minimize individual reward magnitudes to maximize the repetitions of reinforced behaviors. We investigated how reward magnitude influences initial learning across five behavioral paradigms in naïve mice. Especially large rewards could substantially improve learning efficiency through dissociable effects on within- and across-session learning and task engagement. The duration and magnitude of ventral striatal dopamine release scaled with reward sizes, and prolonged optogenetic enhancement of dopamine reward responses also reproduced much, but not all, of the benefits to learning produced by outsized rewards. These findings indicate that the reinforcement learning efficiency of animals has traditionally been underestimated and that dopamine signaling of rewards mediates task engagement in proportion to absolute reward magnitude.",
     "is_author": false
@@ -258,7 +258,7 @@
     "title": "A modular neural circuit for computing the motion of objects",
     "citation": "Trepka et al., 2026",
     "pub_date": "2026-06-08",
-    "upload_date": "2026-06-08T10:34:44",
+    "upload_date": "2026-06-08T10:34:44.246948",
     "journal": null,
     "abstract": "Computing the direction of a moving object requires integrating motion signals from its component edges into coherent patterns. The representation of pattern motion in visual cortex has been extensively studied, yet its underlying neural circuitry remains unknown. Using high-density recordings in macaque area MT, we show that selectivity to pattern motion emerges from a functionally and anatomically distinct cortical circuit. We demonstrate that neurons specialized for encoding component and pattern motion comprise distinct cell types arranged in a hierarchical circuit in which pattern neurons integrate inputs from a range of component neurons. Furthermore, we show that component and pattern neurons are spatially segregated into modules arranged systematically across cortical columns encoding direction of motion. This architecture and circuit align with a classic solution to the problem of computing the motion of objects.",
     "is_author": false
@@ -270,7 +270,7 @@
     "title": "Learning using switching synaptic plasticity rules",
     "citation": "Turcu et al., 2026",
     "pub_date": "2026-06-11",
-    "upload_date": "2026-06-11T22:27:07",
+    "upload_date": "2026-06-11T22:27:07.459116",
     "journal": null,
     "abstract": "Hebbian-like learning has been repeatedly confirmed experimentally, yet computational models usually require non-local signals, such as backpropagating errors, to solve complex cognitive tasks. Recent cortical electron microscopy data suggests a model where synapses follow different plasticity rules depending on whether they are in a large or small state. Large synapses often include a spine apparatus, a calcium reservoir that influences synaptic dynamics and can alter rules of synaptic plasticity. Here, we test the computational outcomes of networks which compute with synapses switching their plasticity rules based on their strength. We designed a recurrent neural network (RNN) with synapses that switch between two learning rules: a Hebbian-like rule for weak synapses and a credit-assignment rule (backpropagation, BP) for strong synapses. We found that our plasticity-switching RNN (psRNN) learns cognitive tasks (e.g. working memory) in fewer trials than BP-only RNNs, despite fewer synapses using credit assignment. Three mechanisms underlie this advantage: BP samples multiple parameter configurations for better gradient estimation, Hebbian plasticity creates a dynamic task-relevant initialization, and the switching mechanism prevents Hebbian synapses from growing into unfavorable parameter regions. The interaction between rules also produces lower-rank, more feedforward recurrent structure, providing testable connectomic predictions and a framework for reconciling local learning rules observed in the brain with non-local rules used in computational models.",
     "is_author": false
@@ -282,7 +282,7 @@
     "title": "Autism subtypes identified using cross-species functional connectivity analyses",
     "citation": "Pagani et al., 2026",
     "pub_date": "2026-05-15",
-    "upload_date": "2026-06-22T12:36:13",
+    "upload_date": "2026-06-22T12:36:13.421994",
     "journal": "Nature Neuroscience",
     "abstract": "It is often assumed that phenotypic heterogeneity in autism reflects underlying pathobiological variation. However, direct evidence supporting this link is lacking. Leveraging cross-species functional neuroimaging, we show that brain dysconnectivity patterns in autism can be parsed into biologically dissociable subtypes. Specifically, we found that functional magnetic resonance imaging (fMRI) connectivity alterations in 20 distinct genetic mouse models of autism cluster into hypoconnectivity-dominant and hyperconnectivity-dominant subtypes. These subtypes are linked to distinct biological pathways, with hypoconnectivity being associated with synaptic dysfunction and hyperconnectivity reflecting transcriptional and immune-related alterations. Here we identified analogous hypoconnectivity and hyperconnectivity subtypes in a multicenter human fMRI dataset of n = 940 individuals with idiopathic autism and n = 1,036 neurotypical individuals. The human autism subtypes are highly replicable, are associated with distinct functional network architectures and behavioral profiles and recapitulate the synaptic and immune-related pathways identified in the rodent dataset. Our work provides a new empirical framework for targeted subtyping of the autism spectrum.",
     "is_author": false
@@ -294,7 +294,7 @@
     "title": "Distinct Response Selectivity Changes in the Primary Visual and Parietal Cortex during Visual Discrimination Learning",
     "citation": "McClure et al., 2026",
     "pub_date": "2026-05-13",
-    "upload_date": "2026-06-22T12:38:31",
+    "upload_date": "2026-06-22T12:38:31.918735",
     "journal": "The Journal of Neuroscience",
     "abstract": "When animals learn the behavioral relevance of sensory features, response selectivity in primary sensory areas increases for those features. However, the effect of learning on neuronal activity in higher-level areas associated with decision-making in the parietal cortex, compared with primary sensory cortex, is not yet known. We used two-photon calcium imaging to determine how learning modifies neural representations in the primary visual cortex (V1) and posterior parietal cortex (PPC) in a visual go/no-go orientation discrimination task in male and female mice. We found that behavior improvements after learning were associated with increased neuronal selectivity in both V1 and PPC. The increased selectivity in PPC was mainly driven by neurons preferring the rewarded go stimulus, while neurons in V1 increased their selectivity for both the rewarded go and unrewarded no-go stimulus. Furthermore, feature preference was robust in V1 neurons but reorganized in PPC after learning. Finally, feature preference after learning was preserved across contexts in V1 but not in PPC, where many neurons switched their preference to the rewarded feature during active task engagement. Our results demonstrate that learning a visually guided discrimination task increased information about relevant sensory features through distinct changes in the bottom and top levels of the visual cortical hierarchy. Visual cortex neurons encode visual features with increased reliability but with preserved feature preferences after learning, while parietal neurons reorganize their feature preferences in a task-dependent manner.",
     "is_author": false
@@ -306,7 +306,7 @@
     "title": "Early Vision Shapes Recurrent Processing in the Human Visual Cortex",
     "citation": "Heitmann et al., 2026",
     "pub_date": "2026-06-22",
-    "upload_date": "2026-06-22T12:42:23",
+    "upload_date": "2026-06-22T12:42:23.828153",
     "journal": null,
     "abstract": "Recurrent processing involves feedforward, feedback and lateral connections and is thought to allow efficient visual processing. Anatomical and behavioral studies in humans have suggested that feedback connections mature later in development than feedforward connections and thus were proposed to depend to a larger degree on experience. In order to isolate feedforward from feedback activity and to investigate the role of early visual experience, we assessed seven individuals with reversed congenital cataracts and nine sighted controls using an occlusion paradigm with 7T magnetic resonance imaging (Smith &amp; Muckli, 2010): Grayscale images of scenes were presented with the lower right quadrant covered by a white rectangle. We examined whether information about category (beaches, buildings, highways) and individual scenes could be extracted from early visual region vertices (V1 to V3) associated with the occluded quadrant of the visual field, in the absence of bottom-up visual input. This was achieved by decoding individual category or scene context utilizing a linear support vector machine. In addition, bidirectional information flow was assessed using connective field modeling. While both groups showed successful decoding of scene and category from vertices receiving bottom-up visual input, the accuracy was higher in normally sighted individuals than in individuals with reversed congenital cataracts. When bottom-up input was removed, decoding of categories remained successful in both groups, but decoding of individual scenes was only possible in normally sighted control individuals. Connective field modeling results indicated a less precise alignment of feedforward and feedback processing during visual stimulation in individuals with reversed congenital cataracts. These findings suggest that early visual experience is crucial for the refinement of feedback activity which in turn is crucial for well-tuned feedforward processing.",
     "is_author": false
@@ -318,7 +318,7 @@
     "title": "Distinct roles of hippocampus and neocortex in symbolic compositional generalization",
     "citation": "Liang et al., 2026",
     "pub_date": "2026-06-01",
-    "upload_date": "2026-06-22T12:44:33",
+    "upload_date": "2026-06-22T12:44:33.924284",
     "journal": "Neuron",
     "abstract": "Humans can combine symbols to generate new meanings. Here, we studied the regional neural mechanisms that might make this possible. We asked participants to combine two discrete, symbolic features (a shape and a color) to make a novel spatial inference. Blood-oxygen-level-dependent (BOLD) data suggested that the hippocampus encoded elementary visual attributes in a high-dimensional, parallel format that permitted flexible individuation. In the ventromedial prefrontal cortex (vmPFC), posterior parietal cortex (PPC), and primary visual cortex (V1), neural patterns for novel stimuli (composites) could be predicted as a linear combination of signals for familiar stimuli (elements). In the vmPFC, this composition occurred in a high-dimensional format, but in PPC and V1, it took place in a low-dimensional, spatial frame of reference that was aligned with the response space. These data offer new insights into the neural circuits underlying compositional generalization.",
     "is_author": false
@@ -330,7 +330,7 @@
     "title": "Conceptual priorities shape individual gaze patterns during naturalistic visual attention",
     "citation": "Haskins et al., 2026",
     "pub_date": "2026-06-12",
-    "upload_date": "2026-06-23T22:26:51.406159",
+    "upload_date": "2026-06-23T22:26:51",
     "journal": "Proceedings of the National Academy of Sciences",
     "abstract": "Our visual landscape consists of not only people, places, and objects (e.g., “soldier,” “stadium,” “flag”) but also the conceptual relationships that unite them (e.g., “patriotism”). Because conceptual knowledge varies across individuals, this level of structure may support individualized patterns of attentional selection during naturalistic scene viewing. Here, we ask whether individuals’ gaze patterns reflect, in part, latent attentional priorities organized in conceptual space. Participants (N = 61) freely explored a diverse set of immersive real-world scenes (N = 100) in head-mounted VR while their gaze position was continuously recorded. We modeled gaze behavior using spatial, visual, and conceptual feature spaces, leveraging embeddings from large vision and language models, to uncover the latent priorities guiding individuals’ unique patterns of selective attention across environments. Individuals exhibited stable and idiosyncratic gaze patterns across scenes and test–retest sessions, consistent with trait-like individual differences in attention. Spatial, visual, and conceptual feature spaces each explained unique variance in individual gaze patterns, with conceptual features contributing variance beyond that explained by spatial and visual features alone. Notably, language-model–based predictions were particularly effective at capturing these individualized patterns. Together, these findings indicate that naturalistic visual attention is structured at multiple levels—including a conceptual level—revealing stable individual differences in how people sample and prioritize information across complex visual environments.",
     "is_author": false
@@ -342,7 +342,7 @@
     "title": "Stable readout of visual representations mediates flexible generalization",
     "citation": "Srinath et al., 2026",
     "pub_date": "2026-06-24",
-    "upload_date": "2026-06-24T15:40:07",
+    "upload_date": "2026-06-24T15:40:07.842036",
     "journal": "Nature Communications",
     "abstract": "Flexible visually guided behavior requires visual generalization, mapping diverse inputs to a common inference, and behavioral generalization, mapping one inference to multiple actions. Here, we tested whether visual neurons support both by maintaining a relatively fixed mapping between visual information amid many variations in stimuli and actions. We recorded neuronal populations in visual cortex in two male monkeys while they estimated the curvature of random 3D objects and flexibly mapped those judgments to different eye movements. Although visual responses varied substantially across objects, perceptual judgments were best explained by a common, shape-general readout of activity in V1 and V4, rather than by shape-specific strategies. V4 population activity additionally encoded impending saccades while maintaining a stable representation of stimulus curvature, allowing a single perceptual estimate to be linked to multiple behavioral outputs. Together, our findings suggest that visual cortex populations contain the ingredients necessary to implement multiple forms of flexible generalization.",
     "is_author": true
@@ -354,7 +354,7 @@
     "title": "Learning shapes neural geometry in the primate prefrontal cortex",
     "citation": "Wójcik et al., 2026",
     "pub_date": "2026-06-25",
-    "upload_date": "2026-06-25T18:31:21",
+    "upload_date": "2026-06-25T18:31:21.423801",
     "journal": "Nature Neuroscience",
     "abstract": "The relationship between the geometry of neural representations and the task being performed is a central question in neuroscience. The primate prefrontal cortex (PFC) is a primary focus of inquiry, as it can encode information with geometries that either rely on past experience or are experience agnostic. One hypothesis is that PFC representations should evolve with learning, from a format that supports exploration of all possible task rules to a format that minimizes the encoding of task-irrelevant features and supports generalization. Here we test this idea by recording neural activity from the macaque PFC when learning a new rule (‘XOR rule’) from scratch. We show that PFC representations progress from being high dimensional, nonlinear and randomly mixed to low dimensional and rule selective. Upon generalizing the rule to new stimuli, these representations further evolve into an abstract, stimulus-invariant geometry. These findings reconcile previously conflicting accounts of PFC function by demonstrating how neural representations adapt across distinct stages of learning.",
     "is_author": false
@@ -366,7 +366,7 @@
     "title": "Parallel processing of orthogonal manifolds enables zero-shot composition in recurrent networks",
     "citation": "Osako et al., 2026",
     "pub_date": "2026-06-17",
-    "upload_date": "2026-06-26T15:40:50",
+    "upload_date": "2026-06-26T15:40:50.819718",
     "journal": null,
     "abstract": "Animals flexibly combine learned behaviors into novel actions without practicing their combinations, yet the computational mechanisms that enable independently acquired computations to be expressed in parallel remain unclear. Here we show that feedback geometry during learning determines whether recurrent dynamics can be recombined through zero-shot parallel composition. Using recurrent networks trained by a local predictive plasticity rule, we found that distinct feedback vectors embed independently learned computations in separable dynamical subspaces, allowing novel input combinations to co-activate these components and generate composite outputs without joint training. In contrast, aligned feedback vectors, as well as networks trained by backpropagation through time, exhibited accurate single-task performance but failed to support parallel composition, demonstrating that task acquisition and future reusability are dissociable properties of learning. A combined input evoked a single composite population trajectory, whose projections onto feedback-shaped task subspaces recovered the independently learned component dynamics. The same principle reproduced additive reach-posture geometry observed in motor cortex and generalized to higher-dimensional movement primitives. These results identify feedback geometry as a computational principle by which learning systems structure recurrent dynamics for future compositional reuse.",
     "is_author": false
@@ -390,7 +390,7 @@
     "title": "Noninvasive decoding of typed sentences from human brain activity",
     "citation": "Lévy et al., 2026",
     "pub_date": "2026-06-29",
-    "upload_date": "2026-06-30T09:06:32",
+    "upload_date": "2026-06-30T09:06:32.440083",
     "journal": "Nature Neuroscience",
     "abstract": "Modern neuroprostheses can now restore communication in patients who have lost the ability to speak or move. However, implanting these invasive devices comes with risks inherent to neurosurgery. Here we introduce a noninvasive method to decode the production of sentences from brain activity and demonstrate its efficacy in a cohort of 35 healthy volunteers. For this, we present Brain2Qwerty, a new deep learning architecture trained to decode sentences from either electro- or magnetoencephalography, while participants typed briefly memorized sentences on a QWERTY keyboard. With magnetoencephalography, Brain2Qwerty reaches, on average, a character error rate of 29% and substantially outperforms electroencephalography (character error rate: 65%). For the best participants, the model achieves a character error rate of 18%, and can perfectly decode a variety of sentences outside of the training set. Overall, these results narrow the gap between invasive and noninvasive methods and thus open the path for developing safe brain–computer interfaces for noncommunicating patients.",
     "is_author": false
@@ -414,7 +414,7 @@
     "title": "Multiregional single-cell profiling reveals shared and specialized cellular vulnerability in Alzheimer’s disease",
     "citation": "Travaglini et al., 2026",
     "pub_date": "2026-07-02",
-    "upload_date": "2026-07-07T10:12:34",
+    "upload_date": "2026-07-07T10:12:34.825683",
     "journal": null,
     "abstract": "Alzheimer’s disease (AD) is defined and staged by the stereotyped, progressive accumulation of amyloid-beta (Aβ) plaques and hyperphosphorylated tau (pTau) tangles across brain regions. These regions differ substantially in their architecture and function but share largely conserved cellular composition, with some regional specialization. As pathology accumulates, specific neurons are lost and non-neuronal cells shift toward disease-associated states, but whether the cell types affected in any one region are the same across the others has remained unclear. Here we extended the Seattle Alzheimer’s Disease Brain Cell Atlas (SEA-AD) to ten neo- and allocortical regions spanning the cortical arc of canonical AD staging, profiling approximately seven million nuclei from 84 donors with single-nucleus RNA-seq, ATAC-seq, and Multiome alongside quantitative neuropathology and whole-genome sequencing. Nuclei were mapped to an expanded BRAIN Initiative reference taxonomy of 207 cell types, and a hierarchical pseudo-progression framework derived continuous, donor-level measures of AD pathological burden within each region and across the brain by jointly modeling Aβ and pTau. Cellular changes were both highly selective and strikingly consistent: only ∼30% of cell types shifted in relative abundance, but those that did changed in a coherent direction across regions. Specific subsets of Sst, Lamp5, Vip, Sncg, and Pvalb inhibitory interneurons and myelinating oligodendrocytes were lost earliest in preclinical donors with minimal pathology, alongside initial emergence of AD-associated microglia; loss of L2/3 and selected deep-layer excitatory types, sharper microglial increases, and reactive astrocyte emergence followed in later-stage donors. Regionally specialized populations were also vulnerable, including expected allocortical types and, unexpectedly, primary visual cortex (V1C)-specialized layer 4 (L4 IT) excitatory neurons and intermixed Sst and Pvalb interneurons. Key changes replicated across three independent cohorts encompassing over 700 additional donors. We examined two complementary vulnerable populations in mechanistic detail: regionally specialized V1C L4 IT neurons lost late despite being widely considered resilient, and pan-cortical Sst interneurons lost earliest in disease. Applying a multi-agentic AI workflow that constructed literature-grounded hypotheses from differential expression to L4 IT neurons nominated hyperexcitability, mediated in part by high NMDA receptor expression, as a convergent vulnerability phenotype. Vulnerable Sst interneurons converged on hyperexcitability through partly distinct pathways, and were enriched for expression of AD GWAS-prioritized genes, linking their vulnerability to the genetic architecture of AD. These data, available at SEA-AD.org, provide a multiregional framework for the community to explore the molecular and cellular changes of AD progression.",
     "is_author": false
@@ -426,7 +426,7 @@
     "title": "Tracking claim changes from preprint to publication across 72,644 biomedical studies using large language models",
     "citation": "Yin and Rust, 2026",
     "pub_date": "2026-07-01",
-    "upload_date": "2026-07-07T10:13:48",
+    "upload_date": "2026-07-07T10:13:48.466268",
     "journal": null,
     "abstract": "Preprints now disseminate a large share of biomedical research before peer review. Because they have not yet passed peer review, some scientists regard preprint claims as unverified or potentially unreliable, yet how much those claims change before publication has so far been quantified only in smaller cohorts, with results that vary by field and topic. Here, we compiled every bioRxiv preprint posted between 2018 and 2025 that we could match by DOI to a peer-reviewed published version, yielding 72,644 preprint-publication pairs. Using a large language model (Claude Sonnet 4.6), we parsed every preprint-publication abstract pair into one primary and two secondary claims, and classified each pair for content change (unchanged, minor, major) and hedging shift (more cautious, more confident, unchanged). On a validation subsample, the model agreed with two independent domain experts about as well as the experts agreed with each other (Cohen’s kappa 0.63 to 0.66). The primary claim was unchanged in 39.9% of abstracts, minorly revised in 50.0%, and substantially revised in only 10.2%. Hedging shifts were uncommon and asymmetric, with twice as many claims becoming more cautious as more confident (8.4% vs 4.2%). Major revisions were more frequent after long peer review (14.1% in the slowest versus 7.0% in the fastest tertile of review time) and declined over the study period (17.0% in 2019 to 5.7% in 2024). Over the same period, biomedical papers that were never posted as preprints were retracted at roughly twice the rate of those that were. Together, these data show that the move from preprint to peer-reviewed publication leaves the central claims of most biomedical abstracts intact, indicating that preprints are a reliable source of biomedical research.",
     "is_author": false
@@ -450,7 +450,7 @@
     "title": "Ecological Visual Processing in the Mouse",
     "citation": "Niell et al., 2026",
     "pub_date": "2026-07-08",
-    "upload_date": "2026-07-13T12:57:33",
+    "upload_date": "2026-07-13T12:57:33.779009",
     "journal": "Annual Review of Neuroscience",
     "abstract": "Visual systems evolved to extract behaviorally relevant information while animals move through and interact with their world. Such ecological vision differs fundamentally from standard laboratory paradigms in many key aspects, making this a much harder problem for the brain to solve, and for the neuroscientist to study. However, emerging technologies and experimental approaches have enabled investigation of visual computations under these ecological conditions. These approaches are particularly powerful in the mouse, combining well-developed genetic tools, high-throughput recordings, and quantifiable ethological tasks. Here we review computations that are engaged in ecological contexts, including active sensing, motion processing, scene analysis, distance estimation, and spatial perception. We delineate experimental approaches that engage these computations and synthesize current understanding of their neural implementations based on mouse research. These studies reveal how ecological vision engages distinct processing strategies and novel neural circuitry, while highlighting the vast territory that remains unexplored in understanding real-world visual computation.",
     "is_author": false
@@ -462,7 +462,7 @@
     "title": "Rarely categorical, highly separable representations along the cortical hierarchy",
     "citation": "Posani et al., 2026",
     "pub_date": "2026-07-15",
-    "upload_date": "2026-07-15T21:32:43.924313",
+    "upload_date": "2026-07-15T21:32:43",
     "journal": "Nature",
     "abstract": "A long-standing debate in neuroscience concerns whether individual neurons are organized into functionally distinct populations that encode information differently (categorical representations) and the implications for neural computation. Here we systematically analysed how cortical neurons encode cognitive, sensory and movement variables across 43 cortical regions during a complex task (14,000+ units from the International Brain Laboratory public Brainwide Map dataset) and studied how these properties change across the sensory–cognitive cortical hierarchy. We found that the structure of the neural code was scale dependent. At the whole-cortex scale, neural selectivity was categorical and organized across regions in a way that reflected their anatomical connectivity. However, within individual regions, categorical representations were rare and limited to primary sensory areas, and neuronal responses were instead very diverse. With theoretical arguments and empirical evidence, we demonstrate that the diversity of neural responses enables high-dimensional representations and therefore high separability, allowing linear readouts to separate experimental conditions in many arbitrary ways. Indeed, when accounting for information that is actually encoded in each area, all cortical regions exhibit maximal separability. Our results indicate that cortical circuits prioritize diversity over categorical structure, supporting a computational regime geared towards high-dimensional, highly separable neural representations.",
     "is_author": false
@@ -474,7 +474,7 @@
     "title": "Combining phase analysis and causal stimulation enables longitudinal mesoscale connectivity mapping",
     "citation": "Scholl et al., 2026",
     "pub_date": "2026-07-14",
-    "upload_date": "2026-07-15T21:40:54.446267",
+    "upload_date": "2026-07-15T21:40:54",
     "journal": null,
     "abstract": "Uncovering the circuit mechanisms of flexible behavior requires characterizing how neural signals propagate across large-scale networks and tracking how those networks evolve over time. Signal propagation through networks can be characterized by injecting activity and analyzing signals propagation, thereby measuring causal connectivity. However, current techniques cannot measure causal connectivity at centimeter scales over weeklong periods of time, especially in non-human primates. Here, we present a stimulation and recording method to longitudinally measure causal connectivity across centimeter-scale cortical networks in macaques. We combined multi-site optogenetic stimulation with micro-electrocorticography using a semi-chronic implant approach that enables stable daily measurements over weeks-long periods spanning years. Stimulation evoked activity reflected a mixture of local, stimulation-driven responses and secondary, delayed activity presumably driven through connections. We applied phase-based spectral analysis to disentangle stimulation-driven and secondary activity related to causal connections. We validated this approach by tracking connectivity across weeks. We demonstrated improved stability over long durations while preserving sensitivity to eyes-open vs. closed behavioral states. This platform provides a robust means to investigate the large-scale circuit dynamics underlying complex behavior in the primate brain.",
     "is_author": false
@@ -486,7 +486,7 @@
     "title": "A metric for comparing complex systems by their dynamics",
     "citation": "Ostrow et al., 2026",
     "pub_date": "2026-07-21",
-    "upload_date": "2026-07-22T07:22:09.318980",
+    "upload_date": "2026-07-22T07:22:09",
     "journal": null,
     "abstract": "Comparisons are fundamental to science: experiment against model, one organism against another, a system against itself across time. Because many systems, from brains to climate, are characterized by how they evolve in time, it is a natural goal to compare their dynamics. Dynamical systems comparison is well defined, but has been intractable for nonlinear, high-dimensional, noisy, and partially observed data. As a result, standard comparison metrics have focused on the geometry or topology of data.Here we present Dynamical Similarity Analysis (DSA), a class of methods to compare systems by their temporal evolution. Its foundation is Koopman Operator theory, which recasts nonlinear systems as linear operators. We estimate these operators from data, then compare the operators across systems. The computation is fast, scalable, and robust to noise and partial observation. It is also differentiable. DSA identifies dynamical structure that geometric and topological methods miss. It matches recordings from the head direction circuit to ring attractor models. It shows that macaque motor cortex dynamics for two reaching tasks drift apart across years despite preserved behavior, and that primary motor cortex breaks from premotor cortex as movement begins. As an optimization objective, it induces neural networks to learn never-before hypothesized solutions that run counter to their inductive biases. Thus, DSA transforms the dynamics of a system into an object that can be measured, compared, and optimized.",
     "is_author": false
@@ -498,7 +498,7 @@
     "title": "Embodied reinforcement learning in the primate cortico-basal ganglia system",
     "citation": "Giarrocco and Averbeck, 2026",
     "pub_date": "2026-07-23",
-    "upload_date": "2026-07-27T21:37:02",
+    "upload_date": "2026-07-27T21:37:02.440458",
     "journal": null,
     "abstract": "Learning the value of environmental stimuli from reward experience allows animals to make advantageous choices. Existing biological accounts of reinforcement learning (RL) often assume that this value is represented as a single, motor-system-invariant neural signal. Here we recorded neuronal activity across eight nodes of the macaque cortico-basal ganglia system — from limbic to neocortical regions — while monkeys learned stimulus-reward associations using either saccades or reaches as the required motor response. The geometry of population activity revealed largely distinct value-coding dimensions for saccades and reaches, including in limbic regions typically associated with motor-system-invariant value coding. Consequently, value information was substantially reduced when read out across motor systems. These results provide circuit-wide evidence that challenges existing neural implementations of RL. They link biological accounts of value learning to embodied frameworks in cognitive science and artificial intelligence, in which behavior is grounded in an agent’s physical structure rather than abstracted from it.",
     "is_author": false
@@ -510,7 +510,7 @@
     "title": "Immersive display systems for simulating natural vision",
     "citation": "Katti et al., 2026",
     "pub_date": "2026-07-30",
-    "upload_date": "2026-07-30T15:10:01.324031",
+    "upload_date": "2026-07-30T15:10:01",
     "journal": null,
     "abstract": "Vision is traditionally studied using simplified stimuli presented briefly near the center of a flat display while subjects maintain visual fixation. This paradigm contrasts sharply with real-world vision, which is immersive, dynamic and strongly influenced by self-initiated actions. Traditional approaches have allowed researchers to systematically study the neural encoding of visual features and the influence of cognitive operations such as attention. However, other methods are needed to study more holistic and first-person perspectives on vision, such as those related to physical space, continuous time, and self-movement. To enable the study of these and other aspects of real-world vision, we developed hemispherical (\"dome\") display systems for macaque visual neuroscience. For functional MRI experiments, a compact rear-projection dome display fits within the bore of a clinical MRI scanner. For electrophysiological recordings, a larger front-projection dome display is illuminated from above using a spherical mirror. Both setups complete and dynamic stimulation of approximately 180 degrees of the subject's field of view, thus facilitating studies requiring visual immersion. To ensure accurate angular geometry across the hemispherical display, we present unified rendering and calibration software that supports natural fisheye videos, conventional visual stimuli, and virtual 3D environments. The calibration procedure automatically compensates for projector, mirror, and dome distortions through geometric pre-warping, ensuring correct visual-angle representation across the display. Pilot fMRI experiments demonstrate robust activation of peripheral visual cortex during both conventional pattern stimulation and naturalistic self-movement. Together, these dome systems provide a flexible platform for investigating aspects of vision that are difficult to study with conventional displays, including peripheral processing, visual immersion, optic flow, self-motion, and holistic scene perception.",
     "is_author": false
@@ -522,7 +522,7 @@
     "title": "Creating true and false memories from forgotten information in Drosophila",
     "citation": "Yang et al., 2026",
     "pub_date": "2026-07-30",
-    "upload_date": "2026-08-02T21:46:29",
+    "upload_date": "2026-08-02T21:46:29.248582",
     "journal": "Nature Neuroscience",
     "abstract": "Recovering forgotten memories is a double-edged sword. While regaining access to forgotten information can be advantageous, targeted memory recovery carries the risk of generating false memories. The neuronal processes governing true memory recovery and false memory formation remain poorly understood. Here we show in Drosophila that reminder cues recover forgotten aversive memories. Forgotten memories persist as silent memory traces in behaviorally neutral mushroom body output neurons. From this silent state, reminders recover memory expression by reinstating the original memory trace in mushroom body output neurons that guide behavior. However, manipulating reminders can distort recovery, leading to false memory formation. The effectiveness of this distortion depends on whether misleading reminder cues were present during the original training event. Both true memory recovery and false memory formation are context-dependent processes gated by separable dopaminergic pathways. Together, these findings suggest that forgotten memories can re-emerge through a reconstructive process that flexibly integrates stored information and recent experiences.",
     "is_author": false
@@ -534,7 +534,7 @@
     "title": "Comparative insights into insula structure and function",
     "citation": "Charbonneau et al., 2026",
     "pub_date": "2026-08-06",
-    "upload_date": "2026-08-06T13:30:22",
+    "upload_date": "2026-08-06T13:30:22.594187",
     "journal": "Nature Neuroscience",
     "abstract": "The insular cortex has become an increasingly important focus of neuroscientific research because of its broad involvement in psychological and behavioral processes and its dysfunction in neuropsychiatric, developmental, degenerative and metabolic disorders. The insula is easily imaged in the human brain and is also a key target for both fundamental and translational studies in nonhuman animals. However, owing to a dearth of truly comparative studies on the insula, the extent to which this region shares structural and functional homologies between humans, monkeys and rodents remains incompletely understood. Here, we systematically evaluate current knowledge regarding homologies in the insula among model species and humans. We examine the strengths and limitations of various laboratory species for investigating the insula, and discuss how these factors influence the interpretation of findings and their application to the human insula. Finally, we propose research directions aimed at strengthening translational insula research and enhancing our understanding of cross-species similarities and differences.",
     "is_author": false
@@ -546,7 +546,7 @@
     "title": "Inferring brain-wide interactions using data-constrained recurrent neural network models",
     "citation": "Perich et al., 2026",
     "pub_date": "2026-08-01",
-    "upload_date": "2026-08-08T14:05:48",
+    "upload_date": "2026-08-08T14:05:48.472073",
     "journal": "Neuron",
     "abstract": "Behavior arises from the coordinated activity across anatomically and functionally distinct brain regions. Modern experimental tools allow unprecedented access to large neural populations spanning many interacting regions brain-wide. Yet, understanding such large-scale datasets necessitates robust, scalable computational models to extract meaningful features of inter-region communication and principled theories to interpret those features. Here, we introduce current-based decomposition (CURBD), an approach for inferring brain-wide interactions using data-constrained recurrent neural network models that autonomously produce dynamics consistent with experimentally obtained neural data. CURBD leverages the functional interactions inferred from such models to reveal directional currents between multiple brain regions simultaneously. We first show that CURBD accurately isolates inter-region currents in simulated, ground-truth networks with known connectivity and dynamics. We then apply CURBD to multi-region neural recordings obtained from many species—larval zebrafish, mice, macaques, and humans—to demonstrate the widespread applicability of CURBD in untangling brain-wide interactions and inter-area communication principles underlying behavior.",
     "is_author": false
@@ -558,9 +558,21 @@
     "title": "Monkeys learn to report their own sensory cortical population activity",
     "citation": "Hu and Okazawa, 2026",
     "pub_date": "2026-08-13",
-    "upload_date": "2026-08-14T13:32:46.931388",
+    "upload_date": "2026-08-14T13:32:46",
     "journal": null,
     "abstract": "How sensory cortical activity is read out by downstream circuits to guide behavior is a fundamental unsolved problem. Substantial work has examined correlations between sensory neural responses and animals' perceptual judgments, but their interpretations remained controversial due to many intervening variables, such as responses of unrecorded neurons. Furthermore, stimulus and choice encoding in sensory populations are often not well aligned, and it remains contested whether this misalignment indicates a limitation in sensory readout. Here, we introduce a closed-loop, neurofeedback paradigm that directly interrogates the capacity of sensory readout: the key idea is to train subjects to report specific patterns of population activity in a sensory area recorded online, rather than the actual stimuli presented. To test this, we trained macaque monkeys on a visual change-detection task using shape stimuli, implanted an electrode array in visual area V4, and tested whether they could be further trained to rely on their own V4 activity along specific axes in neural state space. Strikingly, monkeys successfully increased the neuron-choice correlation along trained axes in neural population state space. No detectable changes in stimulus selectivity or noise correlations were found within the recorded population, and further model simulations confirmed that adjustment of sensory readouts best accounted for the results. A control experiment that merely disrupted the stimulus-reward contingency without a closed loop failed to enhance neuron-choice correlation. Together, these results demonstrate that closed-loop neural feedback achieves neuron-choice alignment beyond the ceiling of natural perceptual training, suggesting that the misalignment in perceptual tasks reflects constraints on learning within naturally available training regimes.",
+    "is_author": false
+  },
+  {
+    "doi": "10.1038/s42003-026-10270-4",
+    "url": "https://doi.org/10.1038/s42003-026-10270-4",
+    "thumbnail": "thumbnails/48.png",
+    "title": "Direct electrical stimulation of the human amygdala enhances recognition memory for objects but not scenes",
+    "citation": "Wahlstrom et al., 2026",
+    "pub_date": "2026-05-22",
+    "upload_date": "2026-08-19T20:41:20.906564",
+    "journal": "Communications Biology",
+    "abstract": "Research from studies using invasive neuroanatomy-inspired direct manipulations suggests the basolateral amygdala (BLA) mediates a generalized modulation of many different types of memory. In contrast, noninvasive indirect correlations suggest that specificity exists in how the BLA prioritizes experiences in memory. We used direct electrical stimulation of the BLA to investigate the specificity of the memory enhancement in the human brain. Patients undergoing intracranial monitoring via depth electrodes viewed object and scene images, half of which were followed by BLA stimulation. Stimulation enhanced long-term memory for object but not scene images. Furthermore, BLA stimulation elicited stronger evoked responses in the anterior vs. posterior medial temporal lobe (MTL), regions that preferentially process object and scene learning, respectively. These results suggest the BLA exerts an important influence over the specificity of what information is prioritized in memory, rather than a general enhancement of all memory, and provide insight into how BLA-MTL projections contribute to the dynamics of memory prioritization.",
     "is_author": false
   }
 ]

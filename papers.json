@@ -586,5 +586,17 @@
     "journal": null,
     "abstract": "Humans often collaborate under asymmetric information, for example when two people carry a table and only one knows the destination. They coordinate without speech using cues from movement kinematics, interaction forces, and object states. Characterizing this sensorimotor communication is difficult because these signals both execute the task and convey information, whose meaning is context-dependent. Here, we investigated a virtual table-carrying task where one partner knew the target while the other inferred it from visuo-haptic feedback. Participants flexibly adapted kinematic and haptic cues across contexts to convey intention. We introduce an explainable machine-learning framework that decodes intent from ongoing multimodal signals and quantifies where individual features are informative. Incorporating the decoded signals into a drift-diffusion model accurately predicted the uninformed partner's target choices and decision times. Together, our framework explains how humans communicate through action and offers principles for collaborative robots to infer and express intent through physical interaction.",
     "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.08.16.744304",
+    "url": "https://doi.org/10.64898/2026.08.16.744304",
+    "thumbnail": "thumbnails/50.png",
+    "title": "Precise Functional Localization of the Foveolar Representation in Anesthetized Macaque Visual Cortex",
+    "citation": "Qian et al., 2026",
+    "pub_date": "2026-08-20",
+    "upload_date": "2026-08-20T19:46:46.180507",
+    "journal": null,
+    "abstract": "The foveola–the central ~1° of the visual field–supports the highest-acuity spatial vision, yet localizing its cortical representation in the primate brain is technically demanding, particularly under anesthesia where gaze cannot be behaviorally controlled. Here we describe a hierarchical, meridian-based 7T BOLD fMRI strategy for sub-degree functional localization of the foveolar representation in anesthetized macaques. Using drifting grating bars presented at three successively finer spatial scales (4.5°, 1.5°, and 0.5°), we independently mapped the vertical and horizontal meridian representations in early visual cortex through a coarse-to-fine refinement scheme. The vertical meridian was identified by the progressive transition from unilateral to bilaterally symmetric activation converging at the V1/V2 border, whereas the horizontal meridian was defined by simultaneous activation of dorsal and ventral V2/V3 borders at the fundus of the calcarine sulcus. The functional intersection of the two meridia defined candidate foveolar coordinates, which were then refined using localized 0.2° spot stimuli. Brain surface-based rendering revealed multiple discrete foveolar loci, one at the lateral end of each of the V1/V2, V2/V3, V3/V4, and V4/TEO borders. These distributed loci define the \"foveolar core\", a newly discovered visual area with distinct functional properties. This meridian-based hierarchical approach provides a reproducible framework for resolving central visual representations in anesthetized primates, providing a new avenue for studying foveolar cortex and circuitry.",
+    "is_author": false
   }
 ]

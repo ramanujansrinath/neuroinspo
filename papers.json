@@ -574,5 +574,17 @@
     "journal": "Communications Biology",
     "abstract": "Research from studies using invasive neuroanatomy-inspired direct manipulations suggests the basolateral amygdala (BLA) mediates a generalized modulation of many different types of memory. In contrast, noninvasive indirect correlations suggest that specificity exists in how the BLA prioritizes experiences in memory. We used direct electrical stimulation of the BLA to investigate the specificity of the memory enhancement in the human brain. Patients undergoing intracranial monitoring via depth electrodes viewed object and scene images, half of which were followed by BLA stimulation. Stimulation enhanced long-term memory for object but not scene images. Furthermore, BLA stimulation elicited stronger evoked responses in the anterior vs. posterior medial temporal lobe (MTL), regions that preferentially process object and scene learning, respectively. These results suggest the BLA exerts an important influence over the specificity of what information is prioritized in memory, rather than a general enhancement of all memory, and provide insight into how BLA-MTL projections contribute to the dynamics of memory prioritization.",
     "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.08.17.745075",
+    "url": "https://doi.org/10.64898/2026.08.17.745075",
+    "thumbnail": "thumbnails/49.png",
+    "title": "Explainable Decoding of Sensorimotor Communication in Joint Object Manipulation",
+    "citation": "Liu et al., 2026",
+    "pub_date": "2026-08-20",
+    "upload_date": "2026-08-20T19:40:09.576213",
+    "journal": null,
+    "abstract": "Humans often collaborate under asymmetric information, for example when two people carry a table and only one knows the destination. They coordinate without speech using cues from movement kinematics, interaction forces, and object states. Characterizing this sensorimotor communication is difficult because these signals both execute the task and convey information, whose meaning is context-dependent. Here, we investigated a virtual table-carrying task where one partner knew the target while the other inferred it from visuo-haptic feedback. Participants flexibly adapted kinematic and haptic cues across contexts to convey intention. We introduce an explainable machine-learning framework that decodes intent from ongoing multimodal signals and quantifies where individual features are informative. Incorporating the decoded signals into a drift-diffusion model accurately predicted the uninformed partner's target choices and decision times. Together, our framework explains how humans communicate through action and offers principles for collaborative robots to infer and express intent through physical interaction.",
+    "is_author": false
   }
 ]

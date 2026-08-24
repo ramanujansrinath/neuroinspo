@@ -610,5 +610,29 @@
     "journal": null,
     "abstract": "Behavioral experiments are often infeasible when stimulus spaces have many dimensions or when testing time is limited. One way to address this challenge is adaptive stimulus selection, where informative stimuli are chosen dynamically based on participants’ responses. However, in high-dimensional spaces, identifying such stimuli is computationally demanding. Here, we describe High-dimensional Online Particle Estimation (HOPE), which selects informative stimuli in less than a second for up to 50 dimensions, enabling efficient estimation of high-dimensional psychometric functions. We validate HOPE through simulations and a face-categorization experiment in an 18-dimensional parameter space with human participants. Compared to uniform stimulus presentation, HOPE reduces uncertainty over model parameters two-to three-times faster, reaching the same certainty in half the trials or fewer. This efficiency enables psychophysical studies that were previously impractical due to the exponential scaling of trial requirements.",
     "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.08.18.742749",
+    "url": "https://doi.org/10.64898/2026.08.18.742749",
+    "thumbnail": "thumbnails/52.png",
+    "title": "Self-regulation of neuronal activity in prefrontal cortex",
+    "citation": "Ki et al., 2026",
+    "pub_date": "2026-08-23",
+    "upload_date": "2026-08-24T11:06:29.895525",
+    "journal": null,
+    "abstract": "Despite our best efforts to stay focused on a task, our arousal waxes and wanes over time. Lower levels of arousal are typically associated with drowsiness, whereas higher levels are often associated with stress. These changes in arousal move us away from ideal task performance and manifest as fluctuations in neural activity. We asked whether moment-by-moment neurofeedback could be used to counteract neural fluctuations and thereby regulate arousal levels. Here, we developed an intracortical brain-computer interface (BCI) in which animals used visual neurofeedback to maintain neural population activity in prefrontal cortex near a pre-specified activity target. We found animals used moment-to-moment neurofeedback to reduce neural fluctuations on timescales of seconds to hundreds of milliseconds, and that arousal-related regulation of neural activity was associated with BCI use. Our findings suggest that neurofeedback may enhance or restore regulation of neural activity, with potential clinical applications in conditions where such regulation is impaired.",
+    "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.08.18.745594",
+    "url": "https://doi.org/10.64898/2026.08.18.745594",
+    "thumbnail": "thumbnails/53.png",
+    "title": "Shared Representation Discovery for Multi-Subject Neural Data Analysis",
+    "citation": "Taschbach and Benna, 2026",
+    "pub_date": "2026-08-23",
+    "upload_date": "2026-08-24T11:14:32.129773",
+    "journal": null,
+    "abstract": "Neural recordings from different individuals vary substantially even when behavior is broadly shared. The sampled neurons differ, and the same behavior occurs at different times. Standard cross-subject analyses rely on matched time points or anatomical correspondence, which excludes many datasets. We recently introduced Shared Representation Discovery (ShaReD), which identifies neural-behavioral relationships conserved across subjects by learning a shared behavioral projection together with subject-specific neural projections. Here we develop and benchmark this method using synthetic, primate, and rat data. On synthetic data, ShaReD recovers common structure across noise levels, sample sizes, and subject counts, and separates components confined to different groups of subjects. In non-human primate motor cortex, ShaReD identifies kinematic representations that generalize across individuals and across reaching tasks with different movement statistics. In rats navigating a spatial alternation task, ShaReD isolates behavior-aligned directions within the CA1-to-PFC communication subspace. ShaReD thus extends multi-subject analysis to datasets in which comparable behaviors occur without cross-subject temporal correspondence.",
+    "is_author": false
   }
 ]

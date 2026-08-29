@@ -1,0 +1,21 @@
+# Only the files actually served by index.html / superlist.html / spiro.html
+# need to be uploaded as Worker assets. Everything else here is source
+# tooling for generating papers.json / superlist.json and shouldn't ship.
+
+.git
+.github
+.gitignore
+.assetsignore
+.claude
+.DS_Store
+.wrangler
+node_modules
+
+__pycache__
+*.pyc
+*.py
+requirements.txt
+
+README.md
+dois.text
+wrangler.jsonc

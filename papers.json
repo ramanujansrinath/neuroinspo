@@ -658,5 +658,17 @@
     "journal": "Proceedings of the National Academy of Sciences",
     "abstract": "The absence of input from one sense can lead to a greater emphasis on the remaining senses, resulting in heightened performance. Numerous behavioral studies demonstrate that adults who have been deaf from an early age have superior visual sensitivity, particularly to far-peripheral stimuli. We asked whether the increased demand on peripheral vision throughout development that comes with early, profound deafness might be reflected in changes in early visual brain structures. Using functional MRI, we mapped visual field representations in 16 early, profoundly D/deaf adults and 16 hearing age-matched controls. D/deaf individuals exhibited a larger representation of the far-peripheral visual field in both the primary visual cortex and the lateral geniculate nucleus of the thalamus. Importantly, this was not due to a total expansion of the visual map, as there was no difference between groups in overall size of either structure, but a smaller representation of the central visual field in the D/deaf group, suggesting a redistribution of neural resources. Here, we demonstrate that the demands placed on vision due to lifelong deafness can sculpt first level visual map input, to increase neural processing resources for far-peripheral visual stimuli.",
     "is_author": false
+  },
+  {
+    "doi": "10.1016/j.cub.2026.08.016",
+    "url": "https://doi.org/10.1016/j.cub.2026.08.016",
+    "thumbnail": "thumbnails/56.png",
+    "title": "Compression as a neural mechanism of mnemonic chunking in prefrontal cortex",
+    "citation": "Chiang and Rich, 2026",
+    "pub_date": "2026-09-01",
+    "upload_date": "2026-09-06T11:14:18.835418",
+    "journal": "Current Biology",
+    "abstract": "Chunking is the mental process of grouping information into meaningful units and plays a central role in many cognitive processes such as working memory, yet the neural mechanisms that form chunks remain unknown. Here, we investigated how chunking impacts the representation of mnemonic information in the dorsolateral prefrontal cortex (dlPFC). Macaque monkeys performed a self-ordered visuospatial working memory task, in which spontaneous chunking could be behaviorally characterized. We found that chunking improved memory performance overall and produced lower accuracies and longer reaction times at chunk boundaries. In the dlPFC, chunking systematically biased neural representations of spatial targets toward common chunk centers. At the same time, chunking reduced the dimensionality of population activity, indicating a compression of mnemonic information. Memory-guided behavior was also biased in the same direction as the neural distortions, which suggests that the compression mechanisms are lossy rather than lossless. Together, these results offer a mechanistic account of chunking as a form of lossy compression in neural coding that sacrifices detail within a chunk but improves overall memory retention.",
+    "is_author": false
   }
 ]

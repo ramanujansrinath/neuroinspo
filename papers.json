@@ -670,5 +670,17 @@
     "journal": "Current Biology",
     "abstract": "Chunking is the mental process of grouping information into meaningful units and plays a central role in many cognitive processes such as working memory, yet the neural mechanisms that form chunks remain unknown. Here, we investigated how chunking impacts the representation of mnemonic information in the dorsolateral prefrontal cortex (dlPFC). Macaque monkeys performed a self-ordered visuospatial working memory task, in which spontaneous chunking could be behaviorally characterized. We found that chunking improved memory performance overall and produced lower accuracies and longer reaction times at chunk boundaries. In the dlPFC, chunking systematically biased neural representations of spatial targets toward common chunk centers. At the same time, chunking reduced the dimensionality of population activity, indicating a compression of mnemonic information. Memory-guided behavior was also biased in the same direction as the neural distortions, which suggests that the compression mechanisms are lossy rather than lossless. Together, these results offer a mechanistic account of chunking as a form of lossy compression in neural coding that sacrifices detail within a chunk but improves overall memory retention.",
     "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.08.29.747979",
+    "url": "https://doi.org/10.64898/2026.08.29.747979",
+    "thumbnail": "thumbnails/57.png",
+    "title": "Brainwide representation of navigation",
+    "citation": "van Beest et al., 2026",
+    "pub_date": "2026-09-03",
+    "upload_date": "2026-09-06T11:18:14.529711",
+    "journal": null,
+    "abstract": "Tracking your position in the environment during navigation requires integrating multiple signals into a spatial representation. This process is thought to occur primarily in the hippocampal formation, but evidence for it has also been observed in other regions. To investigate it across the brain, we recorded from over 20,000 neurons in mice navigating a virtual corridor that decoupled position from correlated signals. Spatial position was encoded in every region, and was more common in neurons tuned to visual landmarks. Most neurons brainwide were also modulated by running speed, likely reflecting arousal, and many by rewards. The hippocampal formation represented spatial position slightly more uniformly than other regions, but less precisely than visual cortex. Spatial position and other navigational signals are thus represented widely across the brain.",
+    "is_author": false
   }
 ]

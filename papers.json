@@ -778,5 +778,17 @@
     "journal": "Neuron",
     "abstract": "Ten years ago, two landmark papers discussed open problems in AI research from the standpoint of neuroscience and cognitive science. Today, many of these problems have been solved, mostly without direct inspiration from the study of the human brain. In this paper, we consider what is still shared between the twin endeavors of understanding natural brains and building artificial ones. We argue that, as well as understanding the “ingredients” of intelligence (its component parts), both fields are now coming to grasp the “recipe” for intelligence (how they fit together). Surprisingly, this recipe has many parallels in biological and artificial systems. Despite rapid progress in AI research, there are many computational problems that remain unsolved. We discuss how these problems may be addressed in natural intelligence.",
     "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.09.11.750920",
+    "url": "https://doi.org/10.64898/2026.09.11.750920",
+    "thumbnail": "thumbnails/66.png",
+    "title": "Behavioral demands organize a decision process into distinct yet coordinated neural representations in parietal cortex",
+    "citation": "So et al., 2026",
+    "pub_date": "2026-09-18",
+    "upload_date": "2026-09-21T11:38:59.310557",
+    "journal": null,
+    "abstract": "Perceptual decisions are widely modeled as the accumulation of evidence to a bound. In the lateral intraparietal area (LIP), this computation is thought to be implemented in a low-dimensional population representation organized around the single action used to report the choice, consistent with an intentional framework. The intentional framework, however, implies that changing the behavioral demands on the report should change the representation itself, raising a question about the generality of the low-dimensional decision representation described in LIP: is it a special case of decisions reported through a single action, or does it reflect a more general computational architecture that can support multiple behavioral outputs? We tested this by training monkeys to report the \\textit{termination} of a motion-discrimination decision with a saccade to a choice-neutral target, and its \\textit{content} only later, with a saccade to one of two choice targets. Even though the two reports were behaviorally separable, the timing of termination remained systematically linked to the accumulation of sensory evidence supporting the eventual choice in both monkeys, indicating that both reports continued to draw on a common underlying computation. Using high-density Neuropixels recordings from LIP, however, we found that decision termination and decision content were represented along orthogonal population coding directions supported by largely non-overlapping groups of neurons. Yet the two representations were not independent: trial-by-trial fluctuations in the population encoding content predicted subsequent fluctuations in the population encoding termination, with their coupling strengthening as the decision evolved. These results suggest that a single decision computation can be flexibly reformatted into distinct, action-specific representations, coordinated by selective transfer of information between neural populations.",
+    "is_author": false
   }
 ]

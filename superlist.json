@@ -1,5 +1,157 @@
 [
   {
+    "list_num": 348,
+    "title": "Reading List 348",
+    "pub_date": "2026-10-02",
+    "url": "https://superlab.ca/posts/2026-10-02-list348.html",
+    "papers": [
+      {
+        "title": "Reversible, Sexually Dimorphic Sympathetic Aging: Distal Axon Withdrawal Shaped by Prepubertal Gonadal Influences",
+        "authors": "Pangilinan G. R. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.09.03.748995",
+        "url": "https://doi.org/10.64898/2026.09.03.748995",
+        "doi": "10.64898/2026.09.03.748995"
+      },
+      {
+        "title": "A neural architecture for imagined and overt speech motor dynamics",
+        "authors": "Zhao Z. et al.",
+        "year": "2026",
+        "journal": "Nature Neuroscience",
+        "url": "https://doi.org/10.1038/s41593-026-02456-0",
+        "doi": "10.1038/s41593-026-02456-0"
+      },
+      {
+        "title": "Distinct sensorimotor encoding in tuft dendrites and somata associated with action, correction, and learning",
+        "authors": "Scheib J. et al.",
+        "year": "2026",
+        "journal": "eLife 15",
+        "url": "https://doi.org/10.7554/elife.111876.3",
+        "doi": "10.7554/elife.111876.3"
+      },
+      {
+        "title": "Population coding under the scale invariance of high-dimensional noise",
+        "authors": "Moosavi S. A., Hindupur S. S. R., Shimazaki H.",
+        "year": "2026",
+        "journal": "Science Advances 12",
+        "url": "https://doi.org/10.1126/sciadv.adz9632",
+        "doi": "10.1126/sciadv.adz9632"
+      },
+      {
+        "title": "Learning reveals invisible structure in low-rank RNNs",
+        "authors": "Ger Y., Barak O.",
+        "year": "2026",
+        "journal": "arXiv:2605.04115",
+        "url": "https://doi.org/10.48550/arxiv.2605.04115",
+        "doi": "10.48550/arxiv.2605.04115"
+      },
+      {
+        "title": "Motor learning refines premotor cortical constraint during skilled forelimb behavior",
+        "authors": "Chen D., Jia F., Huang Q., Guo Y., Li Y.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.09.24.754238",
+        "url": "https://doi.org/10.64898/2026.09.24.754238",
+        "doi": "10.64898/2026.09.24.754238"
+      },
+      {
+        "title": "Attractor dynamics underlie sequence working memory in data-constrained recurrent neural networks",
+        "authors": "Pals M., Macke J. H.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.09.30.755565",
+        "url": "https://doi.org/10.64898/2026.09.30.755565",
+        "doi": "10.64898/2026.09.30.755565"
+      },
+      {
+        "title": "Effects of modified proprioceptive feedback on intra-muscle synergies: An exploration using muscle vibration",
+        "authors": "De S. D., Jahanian S., Sinha O., Latash M. L.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.09.24.754249",
+        "url": "https://doi.org/10.64898/2026.09.24.754249",
+        "doi": "10.64898/2026.09.24.754249"
+      },
+      {
+        "title": "Encoding of bimanual movement directions across the human sensorimotor system",
+        "authors": "Ghavampour A. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.09.18.752753",
+        "url": "https://doi.org/10.64898/2026.09.18.752753",
+        "doi": "10.64898/2026.09.18.752753"
+      }
+    ]
+  },
+  {
+    "list_num": 347,
+    "title": "Reading List 347",
+    "pub_date": "2026-09-25",
+    "url": "https://superlab.ca/posts/2026-09-25-list347.html",
+    "papers": [
+      {
+        "title": "Deviations from global coupling in adaptive oscillator networks: a mean-field theory for the variance of coupling weights",
+        "authors": "Gast R., Takasu S., Kurths J., Kennedy A.",
+        "year": "2026",
+        "journal": "arXiv:2609.22597",
+        "url": "https://doi.org/10.48550/arxiv.2609.22597",
+        "doi": "10.48550/arxiv.2609.22597"
+      },
+      {
+        "title": "Action potential waveforms are state-dependent",
+        "authors": "Martin-Burgos B., Juavinett A., Riviere P. D., Hammonds R., Voytek B.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.09.15.751814",
+        "url": "https://doi.org/10.64898/2026.09.15.751814",
+        "doi": "10.64898/2026.09.15.751814"
+      },
+      {
+        "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
+        "authors": "Jokhai R. T. et al.",
+        "year": "2026",
+        "journal": "Nature Neuroscience",
+        "url": "https://doi.org/10.1038/s41593-026-02433-7",
+        "doi": "10.1038/s41593-026-02433-7"
+      },
+      {
+        "title": "Deliberation is a controllable process governed by desirability and cognitive effort",
+        "authors": "Calalo J. A. et al.",
+        "year": "2026",
+        "journal": "Journal of Neurophysiology 136:1162-1170",
+        "url": "https://doi.org/10.1152/jn.00193.2026",
+        "doi": "10.1152/jn.00193.2026"
+      },
+      {
+        "title": "Cognitive Dark Matter: Measuring What AI Misses",
+        "authors": "Mineault P. J., Griffiths T. L., Escola S.",
+        "year": "2026",
+        "journal": "arXiv:2603.03414",
+        "url": "https://doi.org/10.48550/arxiv.2603.03414",
+        "doi": "10.48550/arxiv.2603.03414"
+      },
+      {
+        "title": "Observation-related activity in the human motor cortex increases with effector anthropomorphicity",
+        "authors": "Gusman J. T. et al.",
+        "year": "2026",
+        "journal": "Proceedings of the National Academy of Sciences 123",
+        "url": "https://doi.org/10.1073/pnas.2537457123",
+        "doi": "10.1073/pnas.2537457123"
+      },
+      {
+        "title": "Instrumental-Motor Transfer: The Relative Value of Competing Movement Goals Modulates Implicit Motor Learning",
+        "authors": "Al-Fawakhiri N., Chib V. S., McDougle S. D.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.06.22.733849",
+        "url": "https://doi.org/10.64898/2026.06.22.733849",
+        "doi": "10.64898/2026.06.22.733849"
+      },
+      {
+        "title": "Movement initiation-related signals differ across the caudal cingulate motor area, supplementary motor area, and primary motor cortex for contralateral but less so for ipsilateral movements in monkeys",
+        "authors": "Nakayama Y., Yokoyama O., Nishimura Y.",
+        "year": "2026",
+        "journal": "Neuroscience Research 105123",
+        "url": "https://doi.org/10.1016/j.neures.2026.105123",
+        "doi": "10.1016/j.neures.2026.105123"
+      }
+    ]
+  },
+  {
     "list_num": 346,
     "title": "Reading List 346",
     "pub_date": "2026-09-18",

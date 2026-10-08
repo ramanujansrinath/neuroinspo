@@ -802,5 +802,29 @@
     "journal": null,
     "abstract": "Comparing brain responses across species is essential for identifying models of human cognition and testing theories of brain evolution, but differences in brain size, measurement techniques, and signal dynamics make it challenging. Here we collected dense fMRI data in macaques and humans using the same movies, static-image sequences, and tasks, and developed a multivariate analysis method that aligns neural representations temporally and spatially. The resulting data-driven framework provides a quantitative translation of brain responses among individuals and between species. Using this framework, we uncovered a broadly conserved cross-species hierarchy of retinotopic visual areas and whole-brain correspondence. Yet within this structure, we found that higher-order macaque areas shared more information with lower-order human areas, particularly during movies, providing evidence of species differences. We also identified potential macaque precursors to human regions involved in high-level cognition, including theory-of-mind and reading. These results offer a blueprint for common representational principles across species.",
     "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.09.29.755544",
+    "url": "https://doi.org/10.64898/2026.09.29.755544",
+    "thumbnail": "thumbnails/68.png",
+    "title": "High-level visual and motor regions are doubly dissociated in controlled tasks but only at specific times during natural behaviors",
+    "citation": "Saha et al., 2026",
+    "pub_date": "2026-10-06",
+    "upload_date": "2026-10-06T18:37:52.734217",
+    "journal": null,
+    "abstract": "Our knowledge of the neural basis of sensory and motor information processing comes largely from recording brain activity in controlled settings. This approach, while insightful, blinds us from understanding natural behaviors, which involve far richer visual inputs and far larger range of movements. The prevailing belief is that, during natural behaviors, movement information would modulate visual cortex, and visual inputs would modulate motor cortex. Alternatively, this mixing might only reflect correlations between sensory inputs and movements present during natural behavior. To resolve this issue, we performed wireless recordings from high-level visual (IT) and motor regions (PMv/PFC) in freely moving monkeys while they performed a natural task and a fixation task. In each task, we extracted visual and movement features and asked to what degree these features explained neural activity. In the fixation task, we found a striking double dissociation whereby visual (but not movement) features predicted neural activity in IT, whereas motor (but not visual) features predicted neural activity in PMv &amp; PFC. This dissociation was far weaker in the natural task but present particularly at key events when the visual and motor features were less correlated. Thus, high-level sensory and motor regions in the brain are doubly dissociated under controlled conditions, and remain so at specific times during natural behavior.",
+    "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.10.01.755960",
+    "url": "https://doi.org/10.64898/2026.10.01.755960",
+    "thumbnail": "thumbnails/69.png",
+    "title": "Neural circuit mechanisms for multi-tasking",
+    "citation": "Beiran et al., 2026",
+    "pub_date": "2026-10-08",
+    "upload_date": "2026-10-08T13:12:00",
+    "journal": null,
+    "abstract": "Neural activity during performance of a cognitive or motor task is often described as lying on a low-dimensional manifold in the space of all possible activity patterns. When multiple tasks are performed, an individual brain region's activity may generate multiple such manifolds. Several models have been introduced to explain this capability, each with different assumptions concerning architecture and inputs. Here, we develop a theory of multi-tasking according to which models and experimental paradigms can be organized. We introduce a distinction between sequential and simultaneous multi-tasking, the performance of one task at a time or multiple in parallel. We show that interference between tasks often prevents multi-tasking and introduce a model of ``task barcodes\" that circumvents this problem and parameterizes a neuronal population's task selectivity. Our theory reveals categorical distinctions between neural circuit mechanisms supporting multi-tasking that can be probed using physiological recordings.",
+    "is_author": false
   }
 ]

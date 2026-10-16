@@ -1,5 +1,181 @@
 [
   {
+    "list_num": 350,
+    "title": "Reading List 350",
+    "pub_date": "2026-10-16",
+    "url": "https://superlab.ca/posts/2026-10-16-list350.html",
+    "papers": [
+      {
+        "title": "Eye versus hand effector-specificity in the parieto-frontal cortex and cerebellum in humans",
+        "authors": "Rubino C., Masoudi K., Gallivan J., Crawford J. D.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.10.13.759011",
+        "url": "https://doi.org/10.64898/2026.10.13.759011",
+        "doi": "10.64898/2026.10.13.759011"
+      },
+      {
+        "title": "Near-random behavior in strategic games",
+        "authors": "Boger T., Amir D., Yousif S. R.",
+        "year": "2027",
+        "journal": "Cognition 278:106737",
+        "url": "https://doi.org/10.1016/j.cognition.2026.106737",
+        "doi": "10.1016/j.cognition.2026.106737"
+      },
+      {
+        "title": "Targeted stimulation of motor cortex ensembles drives learned movements",
+        "authors": "Chen Q. et al.",
+        "year": "2026",
+        "journal": "Nature",
+        "url": "https://doi.org/10.1038/s41586-026-11174-3",
+        "doi": "10.1038/s41586-026-11174-3"
+      },
+      {
+        "title": "Neural circuit mechanisms for multi-tasking",
+        "authors": "Beiran M. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.10.01.755960",
+        "url": "https://doi.org/10.64898/2026.10.01.755960",
+        "doi": "10.64898/2026.10.01.755960"
+      },
+      {
+        "title": "A high-dimensional population code in the bat motor cortex during natural dexterous flight",
+        "authors": "Styr B., Qi K. K., Chen X., Liberti W. A., Yartsev M. M.",
+        "year": "2026",
+        "journal": "Cell",
+        "url": "https://doi.org/10.1016/j.cell.2026.09.029",
+        "doi": "10.1016/j.cell.2026.09.029"
+      },
+      {
+        "title": "Mitigating Partial Observability in Sequential Decision Processes via the Lambda Discrepancy",
+        "authors": "Allen C. et al.",
+        "year": "2024",
+        "journal": "arXiv:2407.07333",
+        "url": "https://doi.org/10.48550/arxiv.2407.07333",
+        "doi": "10.48550/arxiv.2407.07333"
+      },
+      {
+        "title": "Older adults do not have a higher metabolic cost than younger adults in outdoor overground walking",
+        "authors": "van der Kruk E., Jongbloed K. J. P., Orlandi M., Miller M. F., Silverman A. K.",
+        "year": "2026",
+        "journal": "Journal of Experimental Biology 229",
+        "url": "https://doi.org/10.1242/jeb.252654",
+        "doi": "10.1242/jeb.252654"
+      },
+      {
+        "title": "RoboJEPA: Scaling Robotic Latent World Models",
+        "authors": "Zholus A. et al.",
+        "year": "2026",
+        "journal": "arXiv:2610.10515",
+        "url": "https://doi.org/10.48550/arxiv.2610.10515",
+        "doi": "10.48550/arxiv.2610.10515"
+      },
+      {
+        "title": "Temporal prediction captures retinal spiking responses across animal species",
+        "authors": "Taylor L., Zenke F., King A. J., Harper N. S.",
+        "year": "2026",
+        "journal": "Nature Communications 17",
+        "url": "https://doi.org/10.1038/s41467-026-77399-y",
+        "doi": "10.1038/s41467-026-77399-y"
+      },
+      {
+        "title": "Human claustrum neurons encode uncertainty and prediction errors during aversive learning",
+        "authors": "Hu M. et al.",
+        "year": "2026",
+        "journal": "Nature Neuroscience",
+        "url": "https://doi.org/10.1038/s41593-026-02475-x",
+        "doi": "10.1038/s41593-026-02475-x"
+      },
+      {
+        "title": "Structured and flexible representations in medial-frontal cortex support goal-directed navigation",
+        "authors": "Doohan P. T. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.06.09.729603",
+        "url": "https://doi.org/10.64898/2026.06.09.729603",
+        "doi": "10.64898/2026.06.09.729603"
+      },
+      {
+        "title": "A metric for comparing complex systems by their dynamics",
+        "authors": "Ostrow M., Eisen A. J., Kozachkov L., Redman W. T., Fiete I.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.07.16.738953",
+        "url": "https://doi.org/10.64898/2026.07.16.738953",
+        "doi": "10.64898/2026.07.16.738953"
+      },
+      {
+        "title": "Eyes on the prize: a neural basis of perceptual choking under pressure",
+        "authors": "McDonnell M. E. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.09.30.755534",
+        "url": "https://doi.org/10.64898/2026.09.30.755534",
+        "doi": "10.64898/2026.09.30.755534"
+      },
+      {
+        "title": "Reaching movements in virtual reality depend on the seen avatar arm and not just the acting arm",
+        "authors": "Ipwanshek O., Babin K., Gribble P. L., Culham J. C.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.10.05.756878",
+        "url": "https://doi.org/10.64898/2026.10.05.756878",
+        "doi": "10.64898/2026.10.05.756878"
+      }
+    ]
+  },
+  {
+    "list_num": 349,
+    "title": "Reading List 349",
+    "pub_date": "2026-10-09",
+    "url": "https://superlab.ca/posts/2026-10-09-list349.html",
+    "papers": [
+      {
+        "title": "Probing inter-areal computations with a two-photon holographic mesoscope",
+        "authors": "Abdeladim L., Jagadisan U. K., Shin H., Ogando M. B., Adesnik H.",
+        "year": "2026",
+        "journal": "Nature Neuroscience 29:2023-2035",
+        "url": "https://doi.org/10.1038/s41593-026-02350-9",
+        "doi": "10.1038/s41593-026-02350-9"
+      },
+      {
+        "title": "A split attractor design for rapidly writing a navigational goal",
+        "authors": "Lanz A. J., Kathman N. D., Hao E., Ermentrout B., Nagel K. I.",
+        "year": "2026",
+        "journal": "Nature",
+        "url": "https://doi.org/10.1038/s41586-026-11144-9",
+        "doi": "10.1038/s41586-026-11144-9"
+      },
+      {
+        "title": "Cognitive Expert Language Models Better Align with the Corresponding Brain Systems",
+        "authors": "Sourati Z. et al.",
+        "year": "2026",
+        "journal": "arXiv:2609.36239",
+        "url": "https://doi.org/10.48550/arxiv.2609.36239",
+        "doi": "10.48550/arxiv.2609.36239"
+      },
+      {
+        "title": "The macaque IT cortex but not current artificial vision networks encode object position in perceptually aligned coordinates",
+        "authors": "Yakubovskaya E., Ramezanpour H., Dunnhofer M., Kar K.",
+        "year": "2026",
+        "journal": "Current Biology",
+        "url": "https://doi.org/10.1016/j.cub.2026.09.019",
+        "doi": "10.1016/j.cub.2026.09.019"
+      },
+      {
+        "title": "TERRA: Terrain-Aware Reconstruction, Retargeting and Control for Musculoskeletal Locomotion",
+        "authors": "Simos M., Li C., Ziliotto B., Mathis A.",
+        "year": "2026",
+        "journal": "arXiv:2609.38653",
+        "url": "https://doi.org/10.48550/arxiv.2609.38653",
+        "doi": "10.48550/arxiv.2609.38653"
+      },
+      {
+        "title": "Beyond single-cell sensory representations in cortex",
+        "authors": "Willard K. J., Bruno R. M.",
+        "year": "2026",
+        "journal": "Current Opinion in Neurobiology 101:103280",
+        "url": "https://doi.org/10.1016/j.conb.2026.103280",
+        "doi": "10.1016/j.conb.2026.103280"
+      }
+    ]
+  },
+  {
     "list_num": 348,
     "title": "Reading List 348",
     "pub_date": "2026-10-02",

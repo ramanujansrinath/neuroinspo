@@ -826,5 +826,29 @@
     "journal": null,
     "abstract": "Neural activity during performance of a cognitive or motor task is often described as lying on a low-dimensional manifold in the space of all possible activity patterns. When multiple tasks are performed, an individual brain region's activity may generate multiple such manifolds. Several models have been introduced to explain this capability, each with different assumptions concerning architecture and inputs. Here, we develop a theory of multi-tasking according to which models and experimental paradigms can be organized. We introduce a distinction between sequential and simultaneous multi-tasking, the performance of one task at a time or multiple in parallel. We show that interference between tasks often prevents multi-tasking and introduce a model of ``task barcodes\" that circumvents this problem and parameterizes a neuronal population's task selectivity. Our theory reveals categorical distinctions between neural circuit mechanisms supporting multi-tasking that can be probed using physiological recordings.",
     "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.10.08.757540",
+    "url": "https://doi.org/10.64898/2026.10.08.757540",
+    "thumbnail": "thumbnails/70.png",
+    "title": "Ordinal position in auditory sequences is encoded in population dynamics in macaque frontal cortex",
+    "citation": "Errington et al., 2026",
+    "pub_date": "2026-10-11",
+    "upload_date": "2026-10-12T17:46:56",
+    "journal": null,
+    "abstract": "The ability to extract structure from sensory sequences requires tracking not only stimulus identity but also ordinal position within a sequence. How and where ordinal information is represented in the primate brain remains unclear. Here, we recorded activity in populations of single neurons simultaneously from auditory cortex and ventrolateral prefrontal cortex in macaques passively listening to structured auditory sequences. Population-level analyses revealed that frontal cortex activity evolved progressively across the sequence, occupying distinct regions of neural state space for successive ordinal positions. In contrast, auditory cortex population activity reset with each element, producing stereotyped, stimulus-locked trajectories. Consistent with this dissociation, frontal cortex populations robustly decoded ordinal position independently of stimulus identity, whereas auditory cortex showed weak positional decoding despite strong identity representations. Frontal neurons further exhibited longer intrinsic timescales and reduced synchronization to element presentation, supporting integration of information across multiple elements. Together, these findings identify frontal cortex activity as a key substrate for ordinal position encoding during auditory sequence processing, while auditory cortex primarily supports element-specific sensory representations.",
+    "is_author": false
+  },
+  {
+    "doi": "10.1038/s41586-026-11174-3",
+    "url": "https://doi.org/10.1038/s41586-026-11174-3",
+    "thumbnail": "thumbnails/71.png",
+    "title": "Targeted stimulation of motor cortex ensembles drives learned movements",
+    "citation": "Chen et al., 2026",
+    "pub_date": "2026-10-14",
+    "upload_date": "2026-10-16T12:23:56.300473",
+    "journal": "Nature",
+    "abstract": "During the execution of learned motor skills, the neural population in layer 2/3 (L2/3) of primary motor cortex (M1) expresses a reproducible spatiotemporal activity pattern1. It is debated whether M1 actively participates in generating this learned pattern and whether this pattern causally drives the learned movement2,3,4,5. Here we combined in vivo two-photon calcium imaging and holographic optogenetic stimulation of functionally defined M1 L2/3 ensembles in mice performing a skilled lever-pressing task. Brief synchronous stimulation of about 20 neurons whose activity onset precedes voluntary movement onset induced movements resembling the learned movement, while producing activity patterns in other M1 neurons resembling the learned activity. Moreover, trial-by-trial variability of optogenetically triggered population activity correlated with variability in the induced movements. These variabilities were predicted by the initial state of M1 activity preceding stimulation. In some trials, stimulation induced the learned activity without inducing movements, indicating that the learned activity is not simply a reflection of movements but can arise internally. Stimulation failed to generate movements or learned activity in task-disengaged mice. Stimulation of neurons whose activity followed movement onsets failed to induce the learned movement in task-engaged mice. Together, the learned activity in M1 L2/3 can be generated when M1 is prepared at the optimal initial state and receives precise triggering inputs, supporting the active role of M1 in generating learned activity and learned movements.",
+    "is_author": false
   }
 ]

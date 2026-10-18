@@ -862,5 +862,41 @@
     "journal": null,
     "abstract": "ABSTRACT The ventral lateral geniculate nucleus (GLv) is a conserved retinorecipient structure positioned between visual and premotor systems, yet its role in visuomotor transformations remains poorly understood. Here, we examined whether the pigeon GLv contains a spatially organized motor representation linking visual-field locations to orienting movements. Anatomical tracing identified descending projections from neurons in the GLv inner lamina (GLv-li) through pretectal and tegmental regions toward pontine targets. GLv-li projection neurons are GABAergic, yet electrical microstimulation of GLv-li in awake pigeons evoked rapid head movements followed by smaller eye movements. Each stimulation locus produced a reproducible characteristic motor vector whose direction and duration were largely insensitive to stimulation parameters, whereas movement amplitude and velocity approached site-specific plateaus. Movements initiated from different head positions were better explained by repetition of a fixed displacement than by convergence toward a common spatial goal. Critically, motor-vector direction was systematically related to the direction of the visual receptive field represented at the same GLv locus, while motor-vector amplitude covaried with receptive-field eccentricity. These defining features persisted after optic tectum ablation. Together, these findings reveal a retinotopically-organized map of fixed-vector head movements in the avian GLv and identify a tectum-independent route through which visual spatial representations can access descending orienting circuitry. SIGNIFICANCE Orienting toward an object requires the brain to translate visual locations into movements. This transformation is classically associated with the optic tectum, or superior colliculus in mammals, but how other visual structures contribute remains less clear. We show that the pigeon ventral lateral geniculate nucleus contains a map of head movements aligned with its established visual map. Head movements evoked by stimulating this nucleus persist after tectal removal, revealing an additional route through which visual spatial representations can access orienting circuits. These findings establish a spatially organized motor role for a conserved inhibitory visual thalamic structure and broaden our understanding of how the brain controls gaze.",
     "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.10.15.759299",
+    "url": "https://doi.org/10.64898/2026.10.15.759299",
+    "thumbnail": "thumbnails/73.png",
+    "title": "Rapid alternation of conscious and suppressed stimulus representations in the primate brain",
+    "citation": "Hesse et al., 2026",
+    "pub_date": "2026-10-16",
+    "upload_date": "2026-10-18T11:11:36.282817",
+    "journal": null,
+    "abstract": "The neural correlates of consciousness remain elusive [1]. Previous studies found that high-level visual cortex is weakly modulated by conscious perception [2,3], yet a pure signal of conscious perception has not been found anywhere in the brain. Here, we employed Neuropixels recordings across multiple face patches in inferotemporal and prefrontal cortex during a binocular flash suppression paradigm [4], in which one of two images is consciously perceived while the other, though continuously present, is suppressed from awareness. We found that, during a constant stimulus and percept, the brain rapidly alternates, about 15 times per second, between conscious and suppressed micro-epochs. During conscious micro-epochs, a pure signal of conscious perception was present, allowing accurate reconstruction of the conscious image from neural activity. During suppressed micro-epochs this reversed: the pure signal now tracked the suppressed stimulus, allowing accurate reconstruction of the suppressed image. At the single-cell level, neurons responded selectively to the conscious stimulus and not to the suppressed stimulus during conscious micro-epochs; conversely, during suppressed micro-epochs, neurons responded selectively to the suppressed stimulus. Despite this apparent symmetry, the two epochs could be reliably distinguished, with feature tuning amplified during conscious micro-epochs. Recordings in prefrontal cortex yielded qualitatively similar results. Together, these findings show that both inferotemporal and prefrontal cortex rapidly interleave conscious with suppressed content, indicating that conscious access requires temporal selection beyond localization.",
+    "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.05.20.724014",
+    "url": "https://doi.org/10.64898/2026.05.20.724014",
+    "thumbnail": "thumbnails/74.png",
+    "title": "Shared and Distinct High-Dimensional Object Spaces in Human and Macaque Inferotemporal Cortex",
+    "citation": "van Bree and Hebart, 2026",
+    "pub_date": "2026-05-21",
+    "upload_date": "2026-10-18T11:11:55.928566",
+    "journal": null,
+    "abstract": "Human and macaque studies of inferotemporal cortex (IT) have shaped our understanding of object vision, yet the extent of their representational alignment and the precise nature of this correspondence have remained unclear. To address these questions, we applied multi-variate cross-species alignment to large-scale macaque multi-unit recordings and human fMRI responses to the same 8,640 naturalistic object images. The resulting shared space revealed a surprisingly rich, high-dimensional geometry that extended well beyond coarse correspondences such as animacy and shape and included a wide range of interpretable visual and conceptual dimensions, as well as specific conjunctions of the two. Unexpectedly, the space also uncovered a shared neural signature for orthography-related content, consistent with precursor mechanisms in macaques. Contrasting the within-species spaces revealed systematic differences in the expression of living and artificial categories, conspecific content, and visual versus conceptual structure. Together, these findings uncover a high-dimensional shared object space along with species-specific divergences, clarifying the scope and limits of cross-species comparability.",
+    "is_author": false
+  },
+  {
+    "doi": "10.1016/j.cognition.2026.106698",
+    "url": "https://doi.org/10.1016/j.cognition.2026.106698",
+    "thumbnail": "thumbnails/75.png",
+    "title": "What primates know about other minds and how often they use it: A computational approach to comparative theory of mind",
+    "citation": "Berke et al., 2027",
+    "pub_date": "2027-01-01",
+    "upload_date": "2026-10-18T11:12:15.831858",
+    "journal": "Cognition",
+    "abstract": "Can non-human primates (NHPs) represent other minds? Answering this question is difficult because primates can fail tasks due to a lack of motivation or succeed through simpler strategies. Here, we address these challenges through a computational theory-testing framework for NHP Theory of Mind. In this framework, each theory combines a proposed social representation with a parameter for how often it is used. Fitting these models makes explicit an assumption that existing accounts leave unstated: how often NHPs must rely on a posited representation for that account to fit the data. This allows us to move beyond dichotomous positions about the presence or absence of Theory of Mind and instead analyze graded patterns of behavior as a combination of cognitive representations and their use. We apply this approach to one of the most foundational and well-studied aspects of Theory of Mind: the relation between seeing and knowing. Our results show that only theories in which NHPs have some representation of other minds can capture the qualitative pattern of successes and failures across five classic perspective-taking paradigms. However, these theories vary in their reliance on their representations, each showing significantly lower reliance than a human baseline. These results suggest that human and NHP social cognition differ in terms of reliance and possibly also in terms of representational complexity.",
+    "is_author": false
   }
 ]

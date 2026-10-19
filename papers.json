@@ -898,5 +898,17 @@
     "journal": "Cognition",
     "abstract": "Can non-human primates (NHPs) represent other minds? Answering this question is difficult because primates can fail tasks due to a lack of motivation or succeed through simpler strategies. Here, we address these challenges through a computational theory-testing framework for NHP Theory of Mind. In this framework, each theory combines a proposed social representation with a parameter for how often it is used. Fitting these models makes explicit an assumption that existing accounts leave unstated: how often NHPs must rely on a posited representation for that account to fit the data. This allows us to move beyond dichotomous positions about the presence or absence of Theory of Mind and instead analyze graded patterns of behavior as a combination of cognitive representations and their use. We apply this approach to one of the most foundational and well-studied aspects of Theory of Mind: the relation between seeing and knowing. Our results show that only theories in which NHPs have some representation of other minds can capture the qualitative pattern of successes and failures across five classic perspective-taking paradigms. However, these theories vary in their reliance on their representations, each showing significantly lower reliance than a human baseline. These results suggest that human and NHP social cognition differ in terms of reliance and possibly also in terms of representational complexity.",
     "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.09.30.755534",
+    "url": "https://doi.org/10.64898/2026.09.30.755534",
+    "thumbnail": "thumbnails/76.png",
+    "title": "Eyes on the prize: a neural basis of perceptual choking under pressure",
+    "citation": "McDonnell et al., 2026",
+    "pub_date": "2026-10-08",
+    "upload_date": "2026-10-18T12:35:38.689830",
+    "journal": null,
+    "abstract": "SUMMARY Even professional athletes sometimes fail to perform when it matters most. This phenomenon, known as choking under pressure, has been observed in a variety of motor and cognitive tasks. Can inordinately large rewards influence even sensory processing, and if so, what might be its neural basis? To probe this, we studied rhesus monkeys performing a challenging color change detection task and recorded from populations of neurons in visual area V4. We found that monkeys underperformed when offered rare “jackpot” rewards and uncovered associated detrimental alterations in V4 population activity. These findings were consistent with misallocated spatial attention, providing a potential neural basis for perceptual choking under pressure.",
+    "is_author": false
   }
 ]

@@ -893,7 +893,7 @@
     "thumbnail": "thumbnails/75.png",
     "title": "What primates know about other minds and how often they use it: A computational approach to comparative theory of mind",
     "citation": "Berke et al., 2027",
-    "pub_date": "2027-01-01",
+    "pub_date": "2026-10-18",
     "upload_date": "2026-10-18T11:12:15.831858",
     "journal": "Cognition",
     "abstract": "Can non-human primates (NHPs) represent other minds? Answering this question is difficult because primates can fail tasks due to a lack of motivation or succeed through simpler strategies. Here, we address these challenges through a computational theory-testing framework for NHP Theory of Mind. In this framework, each theory combines a proposed social representation with a parameter for how often it is used. Fitting these models makes explicit an assumption that existing accounts leave unstated: how often NHPs must rely on a posited representation for that account to fit the data. This allows us to move beyond dichotomous positions about the presence or absence of Theory of Mind and instead analyze graded patterns of behavior as a combination of cognitive representations and their use. We apply this approach to one of the most foundational and well-studied aspects of Theory of Mind: the relation between seeing and knowing. Our results show that only theories in which NHPs have some representation of other minds can capture the qualitative pattern of successes and failures across five classic perspective-taking paradigms. However, these theories vary in their reliance on their representations, each showing significantly lower reliance than a human baseline. These results suggest that human and NHP social cognition differ in terms of reliance and possibly also in terms of representational complexity.",
@@ -933,6 +933,30 @@
     "upload_date": "2026-10-20T09:25:26.067396",
     "journal": null,
     "abstract": "When we remember a scene, we recall both the locations of individual objects and their spatial arrangement. Yet, how neurons encode this arrangement alongside individual locations is unknown. In this work, we recorded large-scale neural activity from the frontal and supplementary eye fields of monkeys performing a two-object spatial working-memory task. Using a continuum of two object configurations, we tested whether neurons encoded individual object locations or the spatial relationship between them. Many neurons had well-defined position tuning when a single object was presented. With two objects, responses spanned a continuum from retinotopic to relational tuning. Surprisingly, most units were better explained by relational tuning than retinotopic tuning. Relational and retinotopic units encoded complementary dimensions of the stimulus, and their observed mixture supported near-optimal population decoding of object locations. Relational tuning was systematically aligned with single-object receptive fields, enabling a readout that produced repulsive biases resembling those observed in behavior. Standard multi-object models such as averaging and normalization failed to reproduce the observed continuum, whereas a model integrating receptive fields over potential saccades captured it. These findings show that the frontal oculomotor cortex represents not only where objects are, but also how they are arranged with respect to one another.",
+    "is_author": false
+  },
+  {
+    "doi": "10.7554/eLife.109757.3",
+    "url": "https://doi.org/10.7554/eLife.109757.3",
+    "thumbnail": "thumbnails/79.png",
+    "title": "A mechanistic theory of planning in prefrontal cortex",
+    "citation": "Jensen et al., 2026",
+    "pub_date": "2026-10-21",
+    "upload_date": "2026-10-23T14:26:02",
+    "journal": "eLife",
+    "abstract": "Planning is critical for adaptive behaviour in a changing world, because it lets us anticipate the future and adjust our actions accordingly. While prefrontal cortex is crucial for this process, it remains unknown how planning is implemented in neural circuits. Prefrontal representations were recently discovered in simpler sequence memory tasks, where different populations of neurons represent different future time points. We demonstrate that combining such representations with the ubiquitous principle of neural attractor dynamics allows circuits to solve much richer problems, including planning. This is achieved by embedding the environment structure directly in synaptic connections to implement an attractor network that infers desirable futures. The resulting ‘spacetime attractor’ excels at planning in challenging tasks known to depend on the prefrontal cortex. Recurrent neural networks trained by gradient descent on such tasks learn a solution that precisely recapitulates the spacetime attractor – in representation, in dynamics, and in connectivity. Analyses of networks trained across different environment structures reveal a generalisation mechanism that rapidly reconfigures the world model used for planning, without the need for synaptic plasticity. The spacetime attractor is a testable mechanistic theory of planning. If true, it would provide a path towards detailed mechanistic understanding of how prefrontal cortex structures adaptive behaviour.",
+    "is_author": false
+  },
+  {
+    "doi": "10.1073/pnas.2625018123",
+    "url": "https://doi.org/10.1073/pnas.2625018123",
+    "thumbnail": "thumbnails/80.png",
+    "title": "Action features dominate cortical representation during natural vision",
+    "citation": "Jung et al., 2026",
+    "pub_date": "2026-10-23",
+    "upload_date": "2026-10-24T11:21:10.257844",
+    "journal": "Proceedings of the National Academy of Sciences",
+    "abstract": "Cortical resources are allocated into systems specialized for processing ecologically relevant features of the world. These features are typically studied in isolation using controlled experimental stimuli, making it difficult to assess the relative importance of different kinds of features that tend to overlap during natural vision. In the current study, we evaluated the relative contributions of action, agent, and scene features in predicting cortical activity while participants viewed a 1-h nature documentary. We tested four sets of model features: semantic vectors capturing the observed action, agent, and scene features derived from an annotation of the stimulus, as well as low-level visual motion-energy features. We used banded ridge regression to fit vertex-wise encoding models from the combination of all four sets of features. While each set of features predicted neural activity in the expected areas, the action features predicted more widespread activity. A variance partitioning analysis revealed that the action features captured the most unique variance in neural activity across a much larger extent of cortex than the agent or scene features. Our findings suggest that cortical activity during dynamic, natural vision is dominated by features for understanding the actions of others.",
     "is_author": false
   }
 ]

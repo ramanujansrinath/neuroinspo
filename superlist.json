@@ -1,5 +1,109 @@
 [
   {
+    "list_num": 351,
+    "title": "Reading List 351",
+    "pub_date": "2026-10-23",
+    "url": "https://superlab.ca/posts/2026-10-23-list351.html",
+    "papers": [
+      {
+        "title": "Koopman operator theory: fundamentals, control, and applications",
+        "authors": "Mezić I., Cortés J., Worthmann K., Lazar M., Lederer A.",
+        "year": "2026",
+        "journal": "arXiv:2607.01819",
+        "url": "https://doi.org/10.48550/arxiv.2607.01819",
+        "doi": "10.48550/arxiv.2607.01819"
+      },
+      {
+        "title": "Chunking: What working memory gains and loses",
+        "authors": "Xie Y., Zhang H., Wang L.",
+        "year": "2026",
+        "journal": "Current Biology 36:R1076-R1078",
+        "url": "https://doi.org/10.1016/j.cub.2026.09.028",
+        "doi": "10.1016/j.cub.2026.09.028"
+      },
+      {
+        "title": "Functional architecture of the human insula",
+        "authors": "Quabs J. et al.",
+        "year": "2026",
+        "journal": "Nature",
+        "url": "https://doi.org/10.1038/s41586-026-11175-2",
+        "doi": "10.1038/s41586-026-11175-2"
+      },
+      {
+        "title": "Ring attractor networks go full circle",
+        "authors": "Mastrogiuseppe F., Ostojic S.",
+        "year": "2026",
+        "journal": "Nature Neuroscience",
+        "url": "https://doi.org/10.1038/s41593-026-02394-x",
+        "doi": "10.1038/s41593-026-02394-x"
+      },
+      {
+        "title": "A mechanistic theory of planning in prefrontal cortex",
+        "authors": "Jensen K. T. et al.",
+        "year": "2026",
+        "journal": "eLife 15",
+        "url": "https://doi.org/10.7554/elife.109757.3",
+        "doi": "10.7554/elife.109757.3"
+      },
+      {
+        "title": "Dendritic computation for abstract rule-based flexible decision-making",
+        "authors": "Zhang Y. et al.",
+        "year": "2026",
+        "journal": "Science 394",
+        "url": "https://doi.org/10.1126/science.adz5323",
+        "doi": "10.1126/science.adz5323"
+      },
+      {
+        "title": "Cellular scaling laws in the mammalian brain",
+        "authors": "Chen F., Macosko E. Z.",
+        "year": "2026",
+        "journal": "Cell 189:6564-6573",
+        "url": "https://doi.org/10.1016/j.cell.2026.08.044",
+        "doi": "10.1016/j.cell.2026.08.044"
+      },
+      {
+        "title": "A corticohypothalamic circuit that mediates maternal awakening to pup cries",
+        "authors": "Tang P. et al.",
+        "year": "2026",
+        "journal": "Nature Neuroscience",
+        "url": "https://doi.org/10.1038/s41593-026-02458-y",
+        "doi": "10.1038/s41593-026-02458-y"
+      },
+      {
+        "title": "Motor abstraction training generalizes to the refinement of specific movement patterns",
+        "authors": "Sun Z., Xie Z., McDougle S. D.",
+        "year": "2026",
+        "journal": "Nature Human Behaviour",
+        "url": "https://doi.org/10.1038/s41562-026-02597-z",
+        "doi": "10.1038/s41562-026-02597-z"
+      },
+      {
+        "title": "Rapid alternation of conscious and suppressed stimulus representations in the primate brain",
+        "authors": "Hesse J. K. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.10.15.759299",
+        "url": "https://doi.org/10.64898/2026.10.15.759299",
+        "doi": "10.64898/2026.10.15.759299"
+      },
+      {
+        "title": "Complete or Sparse: A Tale of Two Identifiabilities",
+        "authors": "Zhou J., Klindt D.",
+        "year": "2026",
+        "journal": "arXiv:2610.20851",
+        "url": "https://doi.org/10.48550/arxiv.2610.20851",
+        "doi": "10.48550/arxiv.2610.20851"
+      },
+      {
+        "title": "Dynamics of dopamine transients in human olfactory epithelium during reward learning",
+        "authors": "Paul Sands L. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.10.07.757414",
+        "url": "https://doi.org/10.64898/2026.10.07.757414",
+        "doi": "10.64898/2026.10.07.757414"
+      }
+    ]
+  },
+  {
     "list_num": 350,
     "title": "Reading List 350",
     "pub_date": "2026-10-16",

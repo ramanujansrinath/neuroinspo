@@ -67,6 +67,7 @@ def fetch_arxiv(arxiv_id: str) -> dict | None:
             "published":       {"date-parts": [[int(p) for p in published.split("-") if p]]},
             "container-title": ["arXiv"],
             "abstract":        summary,
+            "type":            "posted-content",
         }
     except Exception as e:
         print(f"  ⚠ arXiv error: {e}")
@@ -97,19 +98,16 @@ def format_citation(authors: list, year: str) -> str:
     return f"{names[0]} et al., {year}"
 
 
-def format_full_citation(authors: list, year: str, journal: str | None = None) -> str:
-    """Same style as format_citation, but spells out every author instead of
-    'et al.', and appends the journal (abbreviated, if available) if given."""
+def format_full_citation(authors: list, year: str) -> str:
+    """Same style as format_citation, but spells out every author instead of 'et al.'."""
     names = [a.get("family", a.get("name", "Unknown")) for a in authors]
     if not names:
-        base = f"Unknown, {year}"
-    elif len(names) == 1:
-        base = f"{names[0]}, {year}"
-    elif len(names) == 2:
-        base = f"{names[0]} and {names[1]}, {year}"
-    else:
-        base = f"{', '.join(names[:-1])}, and {names[-1]}, {year}"
-    return f"{base}, {journal}" if journal else base
+        return f"Unknown, {year}"
+    if len(names) == 1:
+        return f"{names[0]}, {year}"
+    if len(names) == 2:
+        return f"{names[0]} and {names[1]}, {year}"
+    return f"{', '.join(names[:-1])}, and {names[-1]}, {year}"
 
 
 def pick_short_journal(meta: dict) -> str | None:
@@ -119,6 +117,16 @@ def pick_short_journal(meta: dict) -> str | None:
         return short_titles[0]
     full_titles = meta.get("container-title", [])
     return full_titles[0] if full_titles else None
+
+
+def is_preprint(meta: dict) -> bool:
+    """True for bioRxiv/medRxiv/arXiv and any other CrossRef 'posted-content' entry."""
+    return meta.get("type") == "posted-content" or meta.get("subtype") == "preprint"
+
+
+def citation_journal_label(meta: dict) -> str | None:
+    """What to show where the journal name goes in a citation."""
+    return "(preprint)" if is_preprint(meta) else pick_short_journal(meta)
 
 
 def is_ramanujan_srinath(authors: list) -> bool:
@@ -192,9 +200,10 @@ def process():
             continue
 
         # Fetch metadata
-        title         = doi
-        citation      = "Unknown"
-        full_citation = "Unknown"
+        title            = doi
+        citation         = "Unknown"
+        full_citation    = "Unknown"
+        citation_journal = None
         pub_date  = None
         journal   = None
         abstract  = None
@@ -216,8 +225,9 @@ def process():
             authors  = meta.get("author", [])
             pub_date = parse_pub_date(meta)
             year     = pub_date[:4] if pub_date else "n.d."
-            citation      = format_citation(authors, year)
-            full_citation = format_full_citation(authors, year, pick_short_journal(meta))
+            citation         = format_citation(authors, year)
+            full_citation    = format_full_citation(authors, year)
+            citation_journal = citation_journal_label(meta)
 
             journals = meta.get("container-title", [])
             journal  = journals[0] if journals else None
@@ -246,6 +256,7 @@ def process():
             "title":       title,
             "citation":    citation,
             "full_citation": full_citation,
+            "citation_journal": citation_journal,
             "pub_date":    pub_date,
             "upload_date": upload_date,
             "journal":     journal,

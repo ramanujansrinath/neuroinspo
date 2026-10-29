@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
 backfill_citations.py — One-time script to fill in "full_citation" (all
-authors spelled out plus the abbreviated journal name, instead of just
-"First et al.") for existing papers.json records that predate that field.
+authors spelled out instead of "First et al.") and "citation_journal" (the
+abbreviated journal name, or "(preprint)") for existing papers.json records
+that predate those fields.
 
-process_papers.py computes full_citation for any paper it fetches fresh;
-this script re-fetches metadata only for records missing it, unless
---force is passed to redo every record (e.g. after a format change).
+process_papers.py computes both for any paper it fetches fresh; this script
+re-fetches metadata only for records missing full_citation, unless --force
+is passed to redo every record (e.g. after a format change).
 
 Usage:
     python3 backfill_citations.py [--force]
@@ -19,11 +20,11 @@ from pathlib import Path
 
 from process_papers import (
     OUTPUT_FILE,
+    citation_journal_label,
     fetch_arxiv,
     fetch_crossref,
     format_full_citation,
     parse_pub_date,
-    pick_short_journal,
 )
 
 
@@ -63,8 +64,10 @@ def main():
         pub_date = parse_pub_date(meta) or rec.get("pub_date")
         year     = pub_date[:4] if pub_date else "n.d."
 
-        rec["full_citation"] = format_full_citation(authors, year, pick_short_journal(meta))
-        print(f"✓ {rec['full_citation']}")
+        rec["full_citation"]    = format_full_citation(authors, year)
+        rec["citation_journal"] = citation_journal_label(meta)
+        journal_suffix = f", {rec['citation_journal']}" if rec["citation_journal"] else ""
+        print(f"✓ {rec['full_citation']}{journal_suffix}")
 
     OUTPUT_FILE.write_text(json.dumps(records, indent=2, ensure_ascii=False))
     print(f"\n✓ Wrote {len(records)} papers to {OUTPUT_FILE}")

@@ -97,6 +97,30 @@ def format_citation(authors: list, year: str) -> str:
     return f"{names[0]} et al., {year}"
 
 
+def format_full_citation(authors: list, year: str, journal: str | None = None) -> str:
+    """Same style as format_citation, but spells out every author instead of
+    'et al.', and appends the journal (abbreviated, if available) if given."""
+    names = [a.get("family", a.get("name", "Unknown")) for a in authors]
+    if not names:
+        base = f"Unknown, {year}"
+    elif len(names) == 1:
+        base = f"{names[0]}, {year}"
+    elif len(names) == 2:
+        base = f"{names[0]} and {names[1]}, {year}"
+    else:
+        base = f"{', '.join(names[:-1])}, and {names[-1]}, {year}"
+    return f"{base}, {journal}" if journal else base
+
+
+def pick_short_journal(meta: dict) -> str | None:
+    """Prefer CrossRef's abbreviated journal name; fall back to the full name."""
+    short_titles = meta.get("short-container-title", [])
+    if short_titles and short_titles[0]:
+        return short_titles[0]
+    full_titles = meta.get("container-title", [])
+    return full_titles[0] if full_titles else None
+
+
 def is_ramanujan_srinath(authors: list) -> bool:
     for a in authors:
         family = a.get("family", "").lower().strip()
@@ -168,8 +192,9 @@ def process():
             continue
 
         # Fetch metadata
-        title     = doi
-        citation  = "Unknown"
+        title         = doi
+        citation      = "Unknown"
+        full_citation = "Unknown"
         pub_date  = None
         journal   = None
         abstract  = None
@@ -191,7 +216,8 @@ def process():
             authors  = meta.get("author", [])
             pub_date = parse_pub_date(meta)
             year     = pub_date[:4] if pub_date else "n.d."
-            citation = format_citation(authors, year)
+            citation      = format_citation(authors, year)
+            full_citation = format_full_citation(authors, year, pick_short_journal(meta))
 
             journals = meta.get("container-title", [])
             journal  = journals[0] if journals else None
@@ -219,6 +245,7 @@ def process():
             "thumbnail":   thumbnail,
             "title":       title,
             "citation":    citation,
+            "full_citation": full_citation,
             "pub_date":    pub_date,
             "upload_date": upload_date,
             "journal":     journal,

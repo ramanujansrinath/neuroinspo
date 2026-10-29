@@ -79,7 +79,7 @@ function buildPanel(paper) {
   panel.innerHTML = `
     <div class="pdf-panel-handle"><div class="pdf-panel-handle-pill"></div></div>
     <div class="pdf-panel-header">
-      <span class="pdf-panel-citation">${paper.citation}</span>
+      <span class="pdf-panel-citation">${paper.full_citation || paper.citation}</span>
       <button class="pdf-close-btn" title="Close">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
           <path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
@@ -107,7 +107,7 @@ function openPanel(paper, clickedWrapper) {
   // If panel is already open, swap content in-place (no slide animation)
   const existing = document.getElementById('pdf-panel');
   if (existing && existing.classList.contains('open')) {
-    existing.querySelector('.pdf-panel-citation').textContent = paper.citation;
+    existing.querySelector('.pdf-panel-citation').textContent = paper.full_citation || paper.citation;
     const body = existing.querySelector('.pdf-panel-body');
     body.innerHTML = panelBodyHtml(paper);
     body.scrollTop = 0;

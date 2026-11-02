@@ -1230,5 +1230,47 @@
     "abstract": "Human posterior parietal cortex (PPC) is known to play a role in hand-eye (H-E) coordination, yet the underlying encoding mechanisms remain uncertain. We recorded 412 single neurons across 11 sessions from motor cortex (MC; n = 251) and PPC (n = 161) in a single human participant performing an H-E coordinated center-out task. While MC neurons showed negligible modulation by eye movements, 79% of PPC neurons had neural representations that were additively separable into independent hand- and eye-movement tuning curves. Due to this separability, representations could be separated and additively recomposed while maintaining structural similarity. Consequently, compositional decoders trained solely on single-effector movements could match the performance of decoders trained on coordinated H-E movements (hand: 66% vs. 69%; eye: 34% vs. 36%). These results show that, during simple center-out tasks, MC hand-movement codes are unaffected by eye movements and that compositionality can be used to modularly decode H-E coordinated movements in PPC.",
     "is_author": false,
     "citation_journal": "Cell Reports"
+  },
+  {
+    "doi": "10.64898/2026.10.05.755559",
+    "url": "https://doi.org/10.64898/2026.10.05.755559",
+    "thumbnail": "thumbnails/89.png",
+    "title": "Neural Representations of Visual Anagrams in Macaque Inferotemporal Cortex",
+    "citation": "Li et al., 2026",
+    "full_citation": "Li, Zhang, Luo, Zhao, Liu, Gong, Jin, Li, and Bao, 2026",
+    "citation_journal": "(preprint)",
+    "pub_date": "2026-10-13",
+    "upload_date": "2026-11-01T21:30:57.231502",
+    "journal": null,
+    "abstract": "Visual recognition requires stable representations of object identity despite large changes in the retinal image. Yet this stability must be selective: some transformations change not only how an image looks, but also what object it appears to depict. Visual anagrams highlight this challenge: a single image can resemble two different objects at different orientations, such as an elephant and a rabbit. Here, we asked how macaque inferotemporal (IT) cortex represents such transformations. We recorded large neuronal populations while presenting visual anagrams and unambiguous exemplars of their two interpretations across rotations. Neurons preferring one exemplar tended to prefer anagram orientations supporting the corresponding interpretation. At each of the two interpretation-relevant canonical angles, population responses more closely resembled those to the matching exemplar than those to the nonmatching exemplar. This matching advantage persisted when both exemplars were presented at the alternative canonical angle. Decoders trained exclusively on exemplars across rotations also tracked the shifts in anagram representations. Visual models showed anagram–exemplar alignment as well, with stronger alignment in models with greater relative shape preference. These findings suggest that transformation tolerance in IT is sensitive to what an image appears to depict, while relative shape preference is associated with similar representational organization in visual models.",
+    "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.10.30.762936",
+    "url": "https://doi.org/10.64898/2026.10.30.762936",
+    "thumbnail": "thumbnails/90.png",
+    "title": "A Unified World Model in Human Posterior Parietal Cortex",
+    "citation": "Bougou et al., 2026",
+    "full_citation": "Bougou, Pramod, Rosario, Pejsa, Bari, Tenenbaum, Kanwisher, and Andersen, 2026",
+    "citation_journal": "(preprint)",
+    "pub_date": "2026-11-01",
+    "upload_date": "2026-11-01T21:36:39.843514",
+    "journal": null,
+    "abstract": "How does the brain understand the physical world, predict future events, and plan actions? Are these problems solved by a unified world model, as hypothesized by cognitive scientists and artificial intelligence researchers? Posterior parietal cortex has been implicated in all these functions, but whether the same neurons support each of them is unknown. We recorded from the superior parietal lobule (SPL) of two tetraplegic participants implanted with microelectrode arrays. SPL units preferentially engaged by intuitive physics, judging block-tower stability and viewing naturalistic physical events, also predicted whether moving objects would collide hundreds of milliseconds before contact, generalizing between different physical scenarios. These populations also encoded which hand action the participant intended to perform. These findings identify SPL as a substrate for physical world modeling.",
+    "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.10.06.756930",
+    "url": "https://doi.org/10.64898/2026.10.06.756930",
+    "thumbnail": "thumbnails/91.png",
+    "title": "Attentional modulation of persistent visual representations after stimulus offset is coordinated across primary visual and anterior cingulate cortices",
+    "citation": "Safaryan et al., 2026",
+    "full_citation": "Safaryan, Bhalodia, Shenassa, and Golshani, 2026",
+    "citation_journal": "(preprint)",
+    "pub_date": "2026-10-13",
+    "upload_date": "2026-11-01T21:43:22.290054",
+    "journal": null,
+    "abstract": "Flexible behavior in complex environments requires animals to infer which sensory inputs are relevant for guiding action and which need to be ignored. Yet, how cognitive control circuits apply contextual knowledge during decision-making is poorly understood. To address this question, we trained head-fixed mice on a cross-modal, context-dependent two-alternative forced-choice (2-AFC) decision-making task. In this task, animals simultaneously received visual and auditory inputs, and the behaviorally relevant modality switched covertly between blocks of trials, requiring animals to infer rule changes from reward feedback alone. Mice successfully adapted their behavior after rule switches and recovered to expert performance. Using simultaneous Neuropixels recordings in the primary visual cortex (V1) and the anterior cingulate cortex (ACC) during task performance, we found that neuronal responses in both regions showed mixed selectivity, multiplexing sensory, choice, and outcome signals. However, V1 neural responses more strongly encoded visual stimulus orientation, while ACC neural responses preferentially encoded outcome. Population decoding further revealed that V1 and ACC neurons maintained a persistent representation of task context throughout the trial, occupying a subspace approximately orthogonal to visual stimulus coding. This contextual representation strengthened progressively as mice adapted their behavior following each switch. Critically, context representations emerged in parallel in V1 and ACC, and decoding accuracies in these two regions were strongly correlated with each other and with behavioral performance across trial blocks. Orthogonal to this shared emergent and sustained context signal, visual stimulus decoding was enhanced when vision was task-relevant. This attentional enhancement in V1 occurred not only during the stimulus presentation period but also after stimulus offset. Similarly, in ACC, a persistent increase of visual stimulus identity encoding in visually relevant session blocks was present after stimulus offset. Taken together, these findings reveal a distributed, inter-areal representation of task context spanning sensory and frontal cortices, suggesting that V1 and ACC contribute to maintaining task-relevant sensory information beyond the immediate sensory response period to provide a circuit-level mechanism for cross-modal attentional control.",
+    "is_author": false
   }
 ]

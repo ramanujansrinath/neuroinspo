@@ -42,16 +42,15 @@
       </div>
 
       <nav class="controls">
-        <div class="sort-toggle" role="group" aria-label="Sort papers by">
-          <button class="sort-btn active" data-sort="pub">
-            <span class="btn-full">Publication date</span>
-            <span class="btn-short">Pub. date</span>
-          </button>
-          <button class="sort-btn" data-sort="upload">
-            <span class="btn-full">Recently added</span>
-            <span class="btn-short">Recent</span>
-          </button>
-        </div>
+        <label class="sort-select-wrap">
+          <span class="sort-select-label">Sort by</span>
+          <select id="sort-select" aria-label="Sort papers by">
+            <option value="pub">Publication date</option>
+            <option value="upload" selected>Recently added</option>
+            <option value="first-author">First author (A–Z)</option>
+            <option value="last-author">Last author (A–Z)</option>
+          </select>
+        </label>
       </nav>
     </div>
   </header>

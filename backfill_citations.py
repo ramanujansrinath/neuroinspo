@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-backfill_citations.py — One-time script to fill in "full_citation" (all
-authors spelled out instead of "First et al.") and "citation_journal" (the
-abbreviated journal name, or "(preprint)") for existing papers.json records
-that predate those fields.
+backfill_citations.py — One-time script to fill in derived citation fields
+("full_citation", "citation_journal", "first_author", "last_author") for
+existing papers.json records that predate those fields.
 
-process_papers.py computes both for any paper it fetches fresh; this script
-re-fetches metadata only for records missing full_citation, unless --force
-is passed to redo every record (e.g. after a format change).
+process_papers.py computes all of them for any paper it fetches fresh; this
+script re-fetches metadata only for records missing full_citation, unless
+--force is passed to redo every record (e.g. after a format change).
 
 Usage:
     python3 backfill_citations.py [--force]
@@ -23,6 +22,8 @@ from process_papers import (
     citation_journal_label,
     fetch_arxiv,
     fetch_crossref,
+    first_last_author,
+    format_citation,
     format_full_citation,
     parse_pub_date,
 )
@@ -64,8 +65,10 @@ def main():
         pub_date = parse_pub_date(meta) or rec.get("pub_date")
         year     = pub_date[:4] if pub_date else "n.d."
 
+        rec["citation"]         = format_citation(authors, year)
         rec["full_citation"]    = format_full_citation(authors, year)
         rec["citation_journal"] = citation_journal_label(meta)
+        rec["first_author"], rec["last_author"] = first_last_author(authors)
         journal_suffix = f", {rec['citation_journal']}" if rec["citation_journal"] else ""
         print(f"✓ {rec['full_citation']}{journal_suffix}")
 

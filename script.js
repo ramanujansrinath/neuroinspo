@@ -1,7 +1,7 @@
 /* neuroinspo — main script */
 
 let allPapers    = [];
-let currentSort  = 'pub';
+let currentSort  = 'upload';
 let currentLayout = 'grid';
 let activeDoi    = null;   // DOI of the paper whose panel is open
 
@@ -40,6 +40,12 @@ async function loadPapers() {
 // ─── Sort ────────────────────────────────────────────────────────────────────
 
 function sorted(papers, by) {
+  if (by === 'first-author' || by === 'last-author') {
+    const key = by === 'first-author' ? 'first_author' : 'last_author';
+    return [...papers].sort((a, b) =>
+      (a[key] || '￿').localeCompare(b[key] || '￿', undefined, { sensitivity: 'base' })
+    );
+  }
   return [...papers].sort((a, b) => {
     const da = new Date(by === 'upload' ? a.upload_date : (a.pub_date ?? '1900-01-01'));
     const db = new Date(by === 'upload' ? b.upload_date : (b.pub_date ?? '1900-01-01'));
@@ -167,7 +173,7 @@ document.addEventListener('click', e => {
   if (!activeDoi) return;
   if (e.target.closest('.card-wrapper')) return;  // card handled by its own listener
   if (e.target.closest('#pdf-panel'))   return;  // inside the panel
-  if (e.target.closest('.sort-toggle')) return;  // sort buttons
+  if (e.target.closest('.sort-select-wrap')) return;  // sort dropdown
   closePanel();
 });
 
@@ -272,23 +278,19 @@ function renderPapers(initial = false) {
 
 // ─── Sort controls ───────────────────────────────────────────────────────────
 
-document.querySelectorAll('.sort-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const sort = btn.dataset.sort;
-    if (sort === currentSort) return;
-    currentSort = sort;
-    document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+document.getElementById('sort-select').addEventListener('change', e => {
+  const sort = e.target.value;
+  if (sort === currentSort) return;
+  currentSort = sort;
 
-    const grid = document.getElementById('papers-grid');
-    grid.style.transition = 'opacity 0.18s ease';
-    grid.style.opacity    = '0';
-    setTimeout(() => {
-      renderPapers(false);
-      grid.querySelectorAll('.card-wrapper').forEach(el => el.classList.add('visible'));
-      grid.style.opacity = '1';
-    }, 180);
-  });
+  const grid = document.getElementById('papers-grid');
+  grid.style.transition = 'opacity 0.18s ease';
+  grid.style.opacity    = '0';
+  setTimeout(() => {
+    renderPapers(false);
+    grid.querySelectorAll('.card-wrapper').forEach(el => el.classList.add('visible'));
+    grid.style.opacity = '1';
+  }, 180);
 });
 
 // ─── Layout toggle ───────────────────────────────────────────────────────────

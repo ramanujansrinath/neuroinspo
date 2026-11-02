@@ -87,8 +87,20 @@ def parse_pub_date(meta: dict) -> str | None:
     return None
 
 
+def author_last_names(authors: list) -> list[str]:
+    return [a.get("family", a.get("name", "Unknown")) for a in authors]
+
+
+def first_last_author(authors: list) -> tuple[str | None, str | None]:
+    """Last names of the first and last author (same person for single-author papers)."""
+    names = author_last_names(authors)
+    if not names:
+        return None, None
+    return names[0], names[-1]
+
+
 def format_citation(authors: list, year: str) -> str:
-    names = [a.get("family", a.get("name", "Unknown")) for a in authors]
+    names = author_last_names(authors)
     if not names:
         return f"Unknown, {year}"
     if len(names) == 1:
@@ -100,7 +112,7 @@ def format_citation(authors: list, year: str) -> str:
 
 def format_full_citation(authors: list, year: str) -> str:
     """Same style as format_citation, but spells out every author instead of 'et al.'."""
-    names = [a.get("family", a.get("name", "Unknown")) for a in authors]
+    names = author_last_names(authors)
     if not names:
         return f"Unknown, {year}"
     if len(names) == 1:
@@ -204,6 +216,8 @@ def process():
         citation         = "Unknown"
         full_citation    = "Unknown"
         citation_journal = None
+        first_author     = None
+        last_author      = None
         pub_date  = None
         journal   = None
         abstract  = None
@@ -228,6 +242,7 @@ def process():
             citation         = format_citation(authors, year)
             full_citation    = format_full_citation(authors, year)
             citation_journal = citation_journal_label(meta)
+            first_author, last_author = first_last_author(authors)
 
             journals = meta.get("container-title", [])
             journal  = journals[0] if journals else None
@@ -257,6 +272,8 @@ def process():
             "citation":    citation,
             "full_citation": full_citation,
             "citation_journal": citation_journal,
+            "first_author": first_author,
+            "last_author":  last_author,
             "pub_date":    pub_date,
             "upload_date": upload_date,
             "journal":     journal,

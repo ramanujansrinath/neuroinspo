@@ -1,5 +1,85 @@
 [
   {
+    "list_num": 352,
+    "title": "Reading List 352",
+    "pub_date": "2026-10-30",
+    "url": "https://superlab.ca/posts/2026-10-30-list352.html",
+    "papers": [
+      {
+        "title": "Neural subspaces encode sequential working memory without detectable neural sequences",
+        "authors": "Santo-Angles A. et al.",
+        "year": "2026",
+        "journal": "Nature Communications",
+        "url": "https://doi.org/10.1038/s41467-026-78895-x",
+        "doi": "10.1038/s41467-026-78895-x"
+      },
+      {
+        "title": "A Mechanistic Theory Unifying Value and Schema in the Prefrontal Cortex",
+        "authors": "Warren J., Jensen K. T., Behrens T. E. J., Whittington J. C. R.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.10.17.759791",
+        "url": "https://doi.org/10.64898/2026.10.17.759791",
+        "doi": "10.64898/2026.10.17.759791"
+      },
+      {
+        "title": "Connectome simulations identify a central pattern generator for fly walking",
+        "authors": "Pugliese S. M. et al.",
+        "year": "2026",
+        "journal": "Nature",
+        "url": "https://doi.org/10.1038/s41586-026-11195-y",
+        "doi": "10.1038/s41586-026-11195-y"
+      },
+      {
+        "title": "Representational manifolds in olfactory cortex",
+        "authors": "Friedrich R. W., Zenke F.",
+        "year": "2026",
+        "journal": "Current Opinion in Neurobiology 101:103286",
+        "url": "https://doi.org/10.1016/j.conb.2026.103286",
+        "doi": "10.1016/j.conb.2026.103286"
+      },
+      {
+        "title": "Multitasking Recurrent Networks Utilize Compositional Strategies for Control of Movement",
+        "authors": "Lazzari J., Saxena S.",
+        "year": "2025",
+        "journal": "bioRxiv:2025.09.10.675375",
+        "url": "https://doi.org/10.1101/2025.09.10.675375",
+        "doi": "10.1101/2025.09.10.675375"
+      },
+      {
+        "title": "Ultrarapid decision-making in an avian brain",
+        "authors": "Schmidbauer P., Nieder A.",
+        "year": "2026",
+        "journal": "Science 394:445-449",
+        "url": "https://doi.org/10.1126/science.aed6459",
+        "doi": "10.1126/science.aed6459"
+      },
+      {
+        "title": "Neuroscience gave AI its start. What happens now?",
+        "authors": "Singer E.",
+        "year": "2026",
+        "journal": "The Transmitter",
+        "url": "https://doi.org/10.53053/zrta6912",
+        "doi": "10.53053/zrta6912"
+      },
+      {
+        "title": "AI and The Enclosure of the Scientific Commons",
+        "authors": "Williams P. K. G.",
+        "year": "2026",
+        "journal": "arXiv:2610.27251",
+        "url": "https://doi.org/10.48550/arxiv.2610.27251",
+        "doi": "10.48550/arxiv.2610.27251"
+      },
+      {
+        "title": "A metric for comparing complex systems by their dynamics",
+        "authors": "Ostrow M., Eisen A. J., Kozachkov L., Redman W. T., Fiete I.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.07.16.738953",
+        "url": "https://doi.org/10.64898/2026.07.16.738953",
+        "doi": "10.64898/2026.07.16.738953"
+      }
+    ]
+  },
+  {
     "list_num": 351,
     "title": "Reading List 351",
     "pub_date": "2026-10-23",

@@ -1470,5 +1470,21 @@
     "journal": "Nature",
     "abstract": "Cognitive reappraisal refers to changing how one thinks about a situation to alter its emotional impact. It is central to well-being 1 and engages prefrontal regulatory circuits 2 , prompting the assumption that their activity reflects a person’s capacity to regulate emotions 3–5 . Yet evidence for this assumption remains inconclusive and has not been established at scale. Here we analysed 40 task-based functional magnetic resonance imaging (fMRI) datasets in a preregistered consortium with 2,175 participants and show that three widely used indicators of reappraisal capacity—trait questionnaires, task-based affective ratings and amygdala down-regulation—do not converge on a common core. Moreover, none of the three indicators showed the expected association with canonical prefrontal regulatory circuits. Trait questionnaires showed no detectable neural associations across the brain and task-based affective ratings were instead associated with responses in the amygdala and sensorimotor cortices. At the process level, canonical control circuits were engaged during both emotion generation and reappraisal, challenging their presumed specificity for emotion regulation. These findings caution against using activation in putatively regulatory brain regions to infer how well a person regulates emotions, with implications for neural biomarkers, interventions and psychoeducation that link emotion regulation difficulties to specific regional brain deficits.",
     "is_author": false
+  },
+  {
+    "doi": "10.1038/s41593-026-02496-6",
+    "url": "https://doi.org/10.1038/s41593-026-02496-6",
+    "thumbnail": "thumbnails/93.png",
+    "title": "Single-neuron encoding of rapidly learned visual information reshapes human perception",
+    "citation": "Armendariz et al., 2026",
+    "full_citation": "Armendariz, Blumberg, Singer, Aiple, Kim, Domínguez-Iturza, Brandt, Reinacher, Schulze-Bonhage, and Kreiman, 2026",
+    "citation_journal": "Nat Neurosci",
+    "first_author": "Armendariz",
+    "last_author": "Kreiman",
+    "pub_date": "2026-11-04",
+    "upload_date": "2026-11-04T09:36:22.064723",
+    "journal": "Nature Neuroscience",
+    "abstract": "Humans can swiftly learn to recognize visual objects after minimal exposure. Integrating new information with existing knowledge requires forming enduring neuronal representations to enable future recognition. Yet, the neuronal mechanisms in the human brain underlying such rapid perceptual changes remain unclear. Here we recorded single-neuron activity in occipital cortex (OC) and medial temporal lobe (MTL) regions as participants rapidly learned to recognize degraded images. OC and MTL neurons modulated their activity to encode newly learned visual information and reshape perception. Population decoding revealed that OC neurons required additional processing time to resolve the identity of learned images, with delayed neuronal responses in the MTL. Our findings suggest that OC supports recognition after rapid learning via extensive recurrent processing, potentially involving higher-order neocortical areas, without relying on feedback from MTL. These results provide mechanistic constraints for biologically plausible models of visual recognition and few-shot visual learning.",
+    "is_author": false
   }
 ]

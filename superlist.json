@@ -1,5 +1,69 @@
 [
   {
+    "list_num": 353,
+    "title": "Reading List 353",
+    "pub_date": "2026-11-06",
+    "url": "https://superlab.ca/posts/2026-11-06-list353.html",
+    "papers": [
+      {
+        "title": "Case Report: Representational geometry of multi-digit coordination in the macaque grasping network for intracortical BCIs",
+        "authors": "Sheng W. A., Agudelo-Toro A., Dann B., Scherberger H.",
+        "year": "2026",
+        "journal": "Frontiers in Neuroscience 20",
+        "url": "https://doi.org/10.3389/fnins.2026.1933898",
+        "doi": "10.3389/fnins.2026.1933898"
+      },
+      {
+        "title": "Meet Neuropixels: how probes that track hundreds of brain cells at once are revolutionizing neuroscience",
+        "authors": "Kwon D.",
+        "year": "2026",
+        "journal": "Nature 659:259-261",
+        "url": "https://doi.org/10.1038/d41586-026-03511-3",
+        "doi": "10.1038/d41586-026-03511-3"
+      },
+      {
+        "title": "Peripersonal space: a neural system mapping self–environment interaction ‘here and now’",
+        "authors": "Serino A.",
+        "year": "2026",
+        "journal": "Trends in Cognitive Sciences",
+        "url": "https://doi.org/10.1016/j.tics.2026.10.002",
+        "doi": "10.1016/j.tics.2026.10.002"
+      },
+      {
+        "title": "Somatostatin-excitatory coordination emerges with dexterous motor skill learning",
+        "authors": "Wheeler Fox G., Wiener E. T., MacLean J. N.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.10.28.762594",
+        "url": "https://doi.org/10.64898/2026.10.28.762594",
+        "doi": "10.64898/2026.10.28.762594"
+      },
+      {
+        "title": "Angular speed should not be used to test the speed–curvature power law",
+        "authors": "Matic A.",
+        "year": "2026",
+        "journal": "Behavior Research Methods 58",
+        "url": "https://doi.org/10.3758/s13428-026-03227-2",
+        "doi": "10.3758/s13428-026-03227-2"
+      },
+      {
+        "title": "Recurrent Spiking Neural Networks for Continuous Motor Control: A Biologically Plausible Model of Motor Cortex",
+        "authors": "Imamura H., Imamura F., Igarashi J., Isomura Y., Hira R.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.10.26.756490",
+        "url": "https://doi.org/10.64898/2026.10.26.756490",
+        "doi": "10.64898/2026.10.26.756490"
+      },
+      {
+        "title": "Pervasive patterns in bird songs resemble those in human speech and song and are independent of vocal learning",
+        "authors": "James L. S. et al.",
+        "year": "2026",
+        "journal": "Science 394:556-561",
+        "url": "https://doi.org/10.1126/science.adr9983",
+        "doi": "10.1126/science.adr9983"
+      }
+    ]
+  },
+  {
     "list_num": 352,
     "title": "Reading List 352",
     "pub_date": "2026-10-30",

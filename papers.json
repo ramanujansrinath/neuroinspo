@@ -1566,5 +1566,21 @@
     "journal": null,
     "abstract": "Adaptive behavior requires not only accumulating evidence toward a choice but also monitoring its reliability in real time. A central question is whether such concurrent uncertainty is read out directly from the circuit that accumulates perceptual evidence, or is computed by a separate process that runs alongside it. We trained two macaques on a perceptual discrimination task in which they could abandon deliberation at any moment and request assistance, so that uncertainty responses were in parallel with, rather than appended to, evidence accumulation. Behaviorally, a race between distinct perceptual and uncertainty accumulators outperformed models in which the opt-out decision was derived from the perceptual decision variable alone. To ask where the second accumulator resides, we recorded single units in the lateral intraparietal area (LIP), a canonical sensory-motor transformation area, and compared population dynamics with recurrent neural networks instantiating two architectures: one in which uncertainty is computed within the perceptual accumulator, and one in which it is computed outside and triggers the uncertainty response there. LIP exhibited all of these signatures for perceptual choices and none for uncertainty responses. Uncertainty-related activity rose late and stereotypically, lacking the coherence-scaled ramp of an accumulator, and separable from the perceptual accumulation. They are all predicted by the segregated architecture. Concurrent uncertainty is thus represented in LIP but is unlikely to be computed within LIP, indicating that metacognitive monitoring during deliberation is a dissociable operation rather than a derivative readout of the LIP perceptual circuit; its anatomical substrate is not localized here.",
     "is_author": false
+  },
+  {
+    "doi": "10.1016/j.cub.2026.10.029",
+    "url": "https://doi.org/10.1016/j.cub.2026.10.029",
+    "thumbnail": "thumbnails/99.png",
+    "title": "The representation of object-concept primitives across the macaque brain",
+    "citation": "Loggia et al., 2026",
+    "full_citation": "Loggia, Feibes, Duffield, Kasi, and Conway, 2026",
+    "citation_journal": "Current Biology",
+    "first_author": "Loggia",
+    "last_author": "Conway",
+    "pub_date": "2026-11-01",
+    "upload_date": "2026-11-09T10:13:03",
+    "journal": "Current Biology",
+    "abstract": "Object concepts are mental representations that provide information beyond immediate sensory input, but where and how the brain encodes them remains unresolved. Here, macaques spent years learning a set of object-concept primitives: two-dimensional stimuli, each defined by a paired association between a unique color and a unique shape. During fMRI, the animals were cued with one feature (shapeless color or colorless shape) and rewarded for subsequently identifying the associated feature. Using a new whole-brain searchlight inspired by convolutional networks, we identified regions that carried information about the unshown feature during cue presentation. Cross-feature decoding was absent in retinotopic cortex but present bilaterally in discrete foci in anterior inferior temporal cortex (aIT), the temporal pole (TP), and frontal cortex (FC). In aIT and TP, the geometry of the neural representation of shapes matched the color-circle geometry of the associated colors, whereas FC supported the best decoding of error trials. Additional passive-viewing experiments showed univariate fMRI response biases to the learned associations in extrastriate visual cortex, which may reflect feedback from regions identified by cross-feature decoding. Together, the results provide a blueprint for how the brain encodes object concepts and suggest how concept representations engage perceptual representations through feedback during vision.",
+    "is_author": false
   }
 ]

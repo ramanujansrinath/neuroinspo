@@ -24,7 +24,13 @@
   --ease-out:     cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* Prevent the browser's native pull-to-refresh / rubber-band bounce —
+     it repaints the sticky, blurred header on every frame of the gesture
+     and that shows up as flicker on mobile. */
+  overscroll-behavior-y: contain;
+}
 
 body {
   font-family: var(--font-body);
@@ -32,6 +38,7 @@ body {
   color: var(--text);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: contain;
 }
 
 /* ─── Header ─────────────────────────────────────────────────────────────── */

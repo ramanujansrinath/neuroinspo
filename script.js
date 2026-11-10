@@ -267,9 +267,14 @@ function makeCard(paper) {
 
 // ─── Render ──────────────────────────────────────────────────────────────────
 
+// Columns grow with available width up to MAX_COLS; beyond that, cards
+// widen to fill the space instead of adding more columns.
+const MAX_COLS = 5;
+
 function numColumns(containerWidth) {
   const colMin = 260, gap = 20;
-  return Math.max(1, Math.floor((containerWidth + gap) / (colMin + gap)));
+  const fit = Math.floor((containerWidth + gap) / (colMin + gap));
+  return Math.min(MAX_COLS, Math.max(1, fit));
 }
 
 function layoutColumns(papers, initial) {
@@ -280,6 +285,7 @@ function layoutColumns(papers, initial) {
 
   if (currentLayout === 'grid') {
     grid.classList.add('grid-mode');
+    grid.style.gridTemplateColumns = `repeat(${numColumns(w)}, 1fr)`;
     papers.forEach((paper, i) => {
       const el = makeCard(paper);
       grid.appendChild(el);
@@ -289,6 +295,7 @@ function layoutColumns(papers, initial) {
   }
 
   grid.classList.remove('grid-mode');
+  grid.style.gridTemplateColumns = '';
   const n = numColumns(w);
   const cols = Array.from({ length: n }, () => {
     const col = document.createElement('div');

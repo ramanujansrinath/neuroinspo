@@ -5,6 +5,8 @@
 [hidden] { display: none !important; }
 
 :root {
+  --font-body:    'Stack Sans Text', system-ui, sans-serif;
+  --font-display: 'Stack Sans Headline', system-ui, sans-serif;
   --bg:           #edeae3;
   --card-bg:      #ffffff;
   --page1-bg:     #f0ece1;
@@ -27,7 +29,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
@@ -173,6 +175,7 @@ main {
 /* ─── Card wrapper ───────────────────────────────────────────────────────── */
 .card-wrapper {
   width: 100%;
+  min-width: 0;   /* let it shrink to its grid track instead of its content's natural width */
   position: relative;
   cursor: pointer;
   opacity: 0;
@@ -266,6 +269,7 @@ main {
 }
 
 .card-list-num {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 52px;
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -362,7 +366,8 @@ main {
 }
 
 .list-panel-title {
-  font-size: 13px;
+  font-family: var(--font-display);
+  font-size: 14.5px;
   font-weight: 600;
   color: var(--text);
   white-space: nowrap;
@@ -423,7 +428,8 @@ main {
 }
 
 .paper-entry-title {
-  font-size: 13px;
+  font-family: var(--font-display);
+  font-size: 14px;
   font-weight: 600;
   color: var(--text);
   line-height: 1.4;

@@ -413,13 +413,16 @@ document.querySelectorAll('[data-theme]').forEach(btn => {
 
 // ─── Resize ──────────────────────────────────────────────────────────────────
 
+// ResizeObserver (not a window 'resize' listener) so column counts stay correct
+// for any container-size change — devtools viewport emulation, orientation
+// changes, sidebar toggles — not just an actual window resize.
 let resizeTimer;
-window.addEventListener('resize', () => {
+new ResizeObserver(() => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => {
     if (allPapers.length) layoutColumns(sorted(allPapers, currentSort), false);
   }, 150);
-});
+}).observe(document.querySelector('main'));
 
 // ─── Boot ────────────────────────────────────────────────────────────────────
 

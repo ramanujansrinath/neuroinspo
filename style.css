@@ -5,6 +5,8 @@
 [hidden] { display: none !important; }
 
 :root {
+  --font-body:    'Stack Sans Text', system-ui, sans-serif;
+  --font-display: 'Stack Sans Headline', system-ui, sans-serif;
   --bg:           #edeae3;
   --card-bg:      #ffffff;
   --page1-bg:     #f0ece1;   /* warm paper behind card */
@@ -25,7 +27,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
@@ -164,6 +166,7 @@ main {
 /* Outer wrapper handles layout & is the hover target */
 .card-wrapper {
   width: 100%;
+  min-width: 0;   /* let it shrink to its grid/flex track instead of its content's natural width */
   position: relative;
   cursor: pointer;
   opacity: 0;
@@ -259,9 +262,10 @@ main {
 }
 
 .card-title {
-  font-size: 16px;
+  font-family: var(--font-display);
+  font-size: 17px;
   font-weight: 600;
-  line-height: 1.45;
+  line-height: 1.4;
   color: var(--text);
   margin-bottom: 7px;
   display: -webkit-box;
@@ -277,8 +281,9 @@ main {
 }
 
 .card-journal {
+  font-family: var(--font-display);
   margin-top: 3px;
-  font-size: 11px;
+  font-size: 11.5px;
   color: var(--text-dim);
   font-style: italic;
   white-space: nowrap;
@@ -396,6 +401,11 @@ main {
   line-height: 1.4;
 }
 
+.pdf-panel-citation em {
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
 .pdf-close-btn {
   display: flex;
   align-items: center;
@@ -444,16 +454,18 @@ main {
 .panel-thumbnail-btn:hover .panel-thumbnail { transform: scale(1.015); }
 
 .panel-title {
-  font-size: 18px;
+  font-family: var(--font-display);
+  font-size: 20px;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.35;
   color: var(--text);
   margin-bottom: 10px;
 }
 
 .panel-journal {
+  font-family: var(--font-display);
   display: inline-block;
-  font-size: 12px;
+  font-size: 12.5px;
   font-style: italic;
   color: var(--text-dim);
   margin-bottom: 16px;
@@ -662,6 +674,9 @@ body.dark .ctrl-btn:hover:not(.active) { color: rgba(255,255,255,0.6); }
   .header-inner { padding: 0 16px; }
   main { padding: 20px 16px 60px; }
   .logo-text { font-size: 13px; }
+
+  /* Only one column fits — grid vs masonry is meaningless here */
+  #layout-toggle { display: none; }
 
   /* Drop the "Sort by" label on narrow screens to save space */
   .sort-select-label { display: none; }

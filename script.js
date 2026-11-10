@@ -62,11 +62,39 @@ function panelCitationHtml(paper) {
     : base;
 }
 
+const ABSTRACT_WORD_LIMIT = 150;
+
+// Truncate to the last full sentence that ends at or before the word limit,
+// so we never cut off mid-sentence. Falls back to a hard word cut (+ ellipsis)
+// if there's no sentence break within the limit at all.
+function truncateAbstract(text, wordLimit) {
+  const words = text.trim().split(/\s+/);
+  if (words.length <= wordLimit) return null;
+
+  let cutAt = -1;
+  for (let i = 0; i < wordLimit; i++) {
+    if (/[.!?]["')]*$/.test(words[i])) cutAt = i;
+  }
+
+  return cutAt >= 0
+    ? words.slice(0, cutAt + 1).join(' ')
+    : words.slice(0, wordLimit).join(' ') + '…';
+}
+
 function panelBodyHtml(paper) {
   const escapedTitle = paper.title.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  const abstractHtml = paper.abstract
-    ? `<p class="panel-abstract">${paper.abstract.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</p>`
-    : '';
+  let abstractHtml = '';
+  if (paper.abstract) {
+    const shortText = truncateAbstract(paper.abstract, ABSTRACT_WORD_LIMIT);
+    if (shortText !== null) {
+      const shortEscaped = shortText.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      abstractHtml = `
+        <p class="panel-abstract" data-expanded="false">${shortEscaped}</p>
+        <button class="abstract-toggle-btn" type="button" data-doi="${paper.doi}">Show more</button>`;
+    } else {
+      abstractHtml = `<p class="panel-abstract">${paper.abstract.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</p>`;
+    }
+  }
   const journalHtml = paper.journal
     ? `<span class="panel-journal">${paper.journal}</span>`
     : '';
@@ -208,6 +236,27 @@ document.addEventListener('click', e => {
   if (!btn) return;
   const img = btn.querySelector('img');
   openLightbox(img.src, img.alt);
+});
+
+// ─── Abstract "show more" toggle ──────────────────────────────────────────────
+
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.abstract-toggle-btn');
+  if (!btn) return;
+  const paper = allPapers.find(p => p.doi === btn.dataset.doi);
+  if (!paper) return;
+
+  const p = btn.previousElementSibling;
+  const expanded = p.dataset.expanded === 'true';
+  if (expanded) {
+    p.textContent = truncateAbstract(paper.abstract, ABSTRACT_WORD_LIMIT);
+    p.dataset.expanded = 'false';
+    btn.textContent = 'Show more';
+  } else {
+    p.textContent = paper.abstract;
+    p.dataset.expanded = 'true';
+    btn.textContent = 'Show less';
+  }
 });
 
 // ─── Card factory ────────────────────────────────────────────────────────────

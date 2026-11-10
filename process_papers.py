@@ -13,6 +13,7 @@ Dependencies:
 import json
 import os
 import re
+import subprocess
 import time
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -72,6 +73,14 @@ def fetch_arxiv(arxiv_id: str) -> dict | None:
     except Exception as e:
         print(f"  ⚠ arXiv error: {e}")
     return None
+
+
+def open_in_safari(url: str) -> None:
+    """Open a URL in Safari so a missing abstract can be copied over by hand."""
+    try:
+        subprocess.run(["open", "-a", "Safari", url], check=False)
+    except Exception as e:
+        print(f"  ⚠ couldn't open Safari: {e}")
 
 
 # ─── Formatting helpers ───────────────────────────────────────────────────────
@@ -263,6 +272,10 @@ def process():
                 print(f"  ✓ abstract: {abstract[:120]}{'...' if len(abstract) > 120 else ''}")
             else:
                 print(f"  ✗ abstract: MISSING — add manually to papers.json")
+                open_in_safari(f"https://doi.org/{doi}")
+        else:
+            print(f"  ✗ no metadata found — add manually to papers.json")
+            open_in_safari(f"https://doi.org/{doi}")
 
         records.append({
             "doi":         doi,

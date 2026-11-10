@@ -268,7 +268,7 @@ function makeCard(paper) {
 // ─── Render ──────────────────────────────────────────────────────────────────
 
 function numColumns(containerWidth) {
-  const colMin = 200, gap = 20;
+  const colMin = 260, gap = 20;
   return Math.max(1, Math.floor((containerWidth + gap) / (colMin + gap)));
 }
 

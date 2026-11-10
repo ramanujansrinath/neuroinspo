@@ -103,6 +103,6 @@ The site is deployed on Cloudflare Workers via [Wrangler](https://developers.clo
 - Vanilla HTML / CSS / JS — no framework, no build step
 - CSS Grid + `cubic-bezier` spring easing for animations
 - HTML `<canvas>` for the spirograph
-- [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) via Google Fonts
+- [Stack Sans Headline](https://fonts.google.com/specimen/Stack+Sans+Headline) (titles) + [Stack Sans Text](https://fonts.google.com/specimen/Stack+Sans+Text) (body) via Google Fonts, with [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) kept for the Superlist reading-list numbers
 - CrossRef API + arXiv fallback for metadata
 - Cloudflare Workers for hosting

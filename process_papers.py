@@ -206,9 +206,9 @@ def process():
         if thumb_path.exists():
             stat = os.stat(thumb_path)
             upload_ts = getattr(stat, "st_birthtime", None) or stat.st_mtime
-            upload_date = datetime.fromtimestamp(upload_ts).isoformat()
+            upload_date = datetime.fromtimestamp(upload_ts).isoformat(timespec="seconds")
         else:
-            upload_date = datetime.now().isoformat()
+            upload_date = datetime.now().isoformat(timespec="seconds")
 
         # Serve cached metadata but always refresh thumbnail path & upload date
         # (in case dois.text was reordered)

@@ -420,6 +420,29 @@ main {
   padding: 24px 24px 40px;
 }
 
+.panel-thumbnail-btn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: zoom-in;
+  background: var(--page2-bg);
+  line-height: 0;
+}
+
+.panel-thumbnail {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.25s ease;
+}
+
+.panel-thumbnail-btn:hover .panel-thumbnail { transform: scale(1.015); }
+
 .panel-title {
   font-size: 18px;
   font-weight: 600;
@@ -479,6 +502,37 @@ main {
 .pdf-backdrop {
   display: none;
 }
+
+/* ─── Image lightbox (full-size view of a panel thumbnail) ──────────────── */
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0,0,0,0);
+  cursor: zoom-out;
+  opacity: 0;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.image-lightbox.open {
+  background: rgba(0,0,0,0.85);
+  opacity: 1;
+}
+
+.image-lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  transform: scale(0.96);
+  transition: transform 0.2s ease;
+}
+
+.image-lightbox.open img { transform: scale(1); }
 
 /* ─── Grid mode override ─────────────────────────────────────────────────── */
 .papers-grid.grid-mode {

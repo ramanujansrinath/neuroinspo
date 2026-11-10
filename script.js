@@ -70,10 +70,16 @@ function panelBodyHtml(paper) {
   const journalHtml = paper.journal
     ? `<span class="panel-journal">${paper.journal}</span>`
     : '';
+  const thumbnailHtml = paper.thumbnail
+    ? `<button class="panel-thumbnail-btn" type="button" aria-label="View full-size image">
+         <img class="panel-thumbnail" src="${paper.thumbnail}" alt="${escapedTitle}" loading="lazy">
+       </button>`
+    : '';
   return `
     <h2 class="panel-title">${escapedTitle}</h2>
     ${journalHtml}
     ${abstractHtml}
+    ${thumbnailHtml}
     <p class="panel-doi">doi: <a href="${paper.url}" target="_blank" rel="noopener">${paper.doi}</a></p>
     <a class="pdf-action-btn" href="${paper.url}" target="_blank" rel="noopener">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -165,6 +171,7 @@ function closePanel(instant = false) {
 
 // Close on Escape
 document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && document.getElementById('image-lightbox')) { closeLightbox(); return; }
   if (e.key === 'Escape' && activeDoi) closePanel();
 });
 
@@ -175,6 +182,32 @@ document.addEventListener('click', e => {
   if (e.target.closest('#pdf-panel'))   return;  // inside the panel
   if (e.target.closest('.sort-select-wrap')) return;  // sort dropdown
   closePanel();
+});
+
+// ─── Image lightbox (tap a panel thumbnail to view it full-size) ─────────────
+
+function openLightbox(src, alt) {
+  const overlay = document.createElement('div');
+  overlay.id        = 'image-lightbox';
+  overlay.className = 'image-lightbox';
+  overlay.innerHTML = `<img src="${src}" alt="${alt}">`;
+  overlay.addEventListener('click', closeLightbox);
+  document.body.appendChild(overlay);
+  requestAnimationFrame(() => overlay.classList.add('open'));
+}
+
+function closeLightbox() {
+  const overlay = document.getElementById('image-lightbox');
+  if (!overlay) return;
+  overlay.classList.remove('open');
+  setTimeout(() => overlay.remove(), 200);
+}
+
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.panel-thumbnail-btn');
+  if (!btn) return;
+  const img = btn.querySelector('img');
+  openLightbox(img.src, img.alt);
 });
 
 // ─── Card factory ────────────────────────────────────────────────────────────

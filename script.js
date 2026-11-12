@@ -316,14 +316,9 @@ function makeCard(paper) {
 
 // ─── Render ──────────────────────────────────────────────────────────────────
 
-// Columns grow with available width up to MAX_COLS; beyond that, cards
-// widen to fill the space instead of adding more columns.
-const MAX_COLS = 5;
-
 function numColumns(containerWidth) {
-  const colMin = 260, gap = 20;
-  const fit = Math.floor((containerWidth + gap) / (colMin + gap));
-  return Math.min(MAX_COLS, Math.max(1, fit));
+  const colMin = 200, gap = 20;
+  return Math.max(1, Math.floor((containerWidth + gap) / (colMin + gap)));
 }
 
 function layoutColumns(papers, initial) {
@@ -334,7 +329,6 @@ function layoutColumns(papers, initial) {
 
   if (currentLayout === 'grid') {
     grid.classList.add('grid-mode');
-    grid.style.gridTemplateColumns = `repeat(${numColumns(w)}, 1fr)`;
     papers.forEach((paper, i) => {
       const el = makeCard(paper);
       grid.appendChild(el);
@@ -344,7 +338,6 @@ function layoutColumns(papers, initial) {
   }
 
   grid.classList.remove('grid-mode');
-  grid.style.gridTemplateColumns = '';
   const n = numColumns(w);
   const cols = Array.from({ length: n }, () => {
     const col = document.createElement('div');
@@ -413,16 +406,13 @@ document.querySelectorAll('[data-theme]').forEach(btn => {
 
 // ─── Resize ──────────────────────────────────────────────────────────────────
 
-// ResizeObserver (not a window 'resize' listener) so column counts stay correct
-// for any container-size change — devtools viewport emulation, orientation
-// changes, sidebar toggles — not just an actual window resize.
 let resizeTimer;
-new ResizeObserver(() => {
+window.addEventListener('resize', () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => {
     if (allPapers.length) layoutColumns(sorted(allPapers, currentSort), false);
   }, 150);
-}).observe(document.querySelector('main'));
+});
 
 // ─── Boot ────────────────────────────────────────────────────────────────────
 

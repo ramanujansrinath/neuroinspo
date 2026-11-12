@@ -43,14 +43,22 @@ body {
 
 /* ─── Header ─────────────────────────────────────────────────────────────── */
 header {
-  position: sticky;
+  /* `position: fixed` instead of `sticky`: Safari (both macOS and iOS) can
+     repaint a sticky + backdrop-filter element on every frame of the elastic
+     scroll bounce, which shows up as flicker. A fixed element always gets
+     its own compositor layer in WebKit, which sidesteps that repaint. */
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 200;
   height: var(--header-h);
   background: rgba(237, 234, 227, 0.82);
-  backdrop-filter: blur(16px) saturate(1.4);
-  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(0,0,0,0.07);
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .header-inner {
@@ -149,7 +157,7 @@ header {
 main {
   max-width: 2400px;
   margin: 0 auto;
-  padding: 32px 28px 80px;
+  padding: calc(var(--header-h) + 32px) 28px 80px;
   overflow-anchor: none; /* prevent browser scroll anchoring from fighting our scroll restore */
 }
 

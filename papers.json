@@ -1662,5 +1662,37 @@
     "journal": null,
     "abstract": "Efficient coding hypothesizes that neural activity optimally represents information under resource constraints. The global structures of such optimal population codes are difficult to study theoretically, and previous works have usually resorted to either focusing on local properties like fine discrimination or placing restrictions on the parametric forms of neural tuning. We address the general problem by analytically deriving the neural representation that minimizes the all-pairs average classification error of a one-dimensional circular variable under various forms of neural response noise. Our method is based on formulating the space of neural response distributions as a statistical manifold whose geometry can be simplified through a generalized version of variance-stabilizing transformations. The theory fully characterizes the complete family of optimal population codes and allows us to make two novel predictions. First, an optimal code should allow the existence of oppositely peaked bimodal tuning curves. Second, there should be a correlation between spike count variability and tuning sharpness. We validate both of these predictions in the mouse head direction system.",
     "is_author": false
+  },
+  {
+    "doi": "10.1016/j.tics.2026.10.003",
+    "url": "https://doi.org/10.1016/j.tics.2026.10.003",
+    "thumbnail": "thumbnails/105.png",
+    "title": "What can behavior tell us about neural dynamics?",
+    "citation": "Cazettes and Schölvinck, 2026",
+    "full_citation": "Cazettes and Schölvinck, 2026",
+    "citation_journal": "Trends in Cognitive Sciences",
+    "first_author": "Cazettes",
+    "last_author": "Schölvinck",
+    "pub_date": "2026-11-01",
+    "upload_date": "2026-11-21T00:42:15",
+    "journal": "Trends in Cognitive Sciences",
+    "abstract": "For decades, systems neuroscience treated behavior as an endpoint: a simplified output, such as a button press, lick, or saccade, used to isolate neural computations. Richer behavioral measurements have expanded this view by revealing neural dynamics hidden by simple outputs. Yet behavior is not a direct readout of brain activity, because similar behavioral outputs can arise from different neural mechanisms. Interpreting neural dynamics is therefore an inverse problem with no straightforward solution. Behavior can constrain this problem by exposing sensorimotor loops, narrowing plausible explanations for population activity, and formalizing neural–behavioral relationships in joint models. Together, these approaches position behavior as a principled constraint on interpreting neural dynamics and latent cognitive, affective, and computational states.",
+    "is_author": false
+  },
+  {
+    "doi": "10.1038/s41593-026-02491-x",
+    "url": "https://doi.org/10.1038/s41593-026-02491-x",
+    "thumbnail": "thumbnails/106.png",
+    "title": "Circuit mechanisms for disentangled representations and generalization in the hippocampus",
+    "citation": "Tang et al., 2026",
+    "full_citation": "Tang, Chang, Liu, Perez-Hernandez, Zheng, Park, Karaba, Oliva, and Fernandez-Ruiz, 2026",
+    "citation_journal": "Nat Neurosci",
+    "first_author": "Tang",
+    "last_author": "Fernandez-Ruiz",
+    "pub_date": "2026-10-27",
+    "upload_date": "2026-11-21T00:45:55",
+    "journal": "Nature Neuroscience",
+    "abstract": "Understanding how the heterogeneous activity patterns of individual neurons give rise to coherent population dynamics and cognition is a central challenge in neuroscience. In the hippocampus, neurons are tuned to spatial location, yet their activity is also modulated by multiple external and internal variables and appears to drift randomly over time, making it difficult to link hippocampal computations to behavior. By analyzing hippocampal population dynamics in behaving mice, we reveal a structured organization underlying the diversity of single-neuron responses—the hippocampus encodes different aspects of experience as disentangled variables represented in the co-activity dynamics of cell assemblies. The temporal and contextual components of these representations are governed by local inhibitory interactions and input-driven cell–assembly dynamics, respectively. Our findings reveal the circuit basis of disentangled hippocampal representations, offering a unifying geometric principle of population coding that supports flexible memory representations and enables rapid generalization of prior knowledge to new situations.",
+    "is_author": false
   }
 ]

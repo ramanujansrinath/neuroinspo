@@ -1,9 +1,225 @@
 [
   {
+    "list_num": 355,
+    "title": "Reading List 355",
+    "pub_date": "2026-11-20",
+    "url": "https://superlab.ca/posts/2026-11-20-list355.html",
+    "papers": [
+      {
+        "title": "The hippocampus as a latent diffusion engine for memory, perception and cognitive dysfunction",
+        "authors": "Jones D. T., Breakspear M.",
+        "year": "2026",
+        "journal": "Brain",
+        "url": "https://doi.org/10.1093/brain/awag325",
+        "doi": "10.1093/brain/awag325"
+      },
+      {
+        "title": "LUC3D: Multi-animal 3D pose tracking in the browser",
+        "authors": "Leonardis E. J. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.11.17.767188",
+        "url": "https://doi.org/10.64898/2026.11.17.767188",
+        "doi": "10.64898/2026.11.17.767188"
+      },
+      {
+        "title": "A neural code for generative speech production in human Wernicke’s area",
+        "authors": "Silva A. B. et al.",
+        "year": "2026",
+        "journal": "Science 394",
+        "url": "https://doi.org/10.1126/science.aef8963",
+        "doi": "10.1126/science.aef8963"
+      },
+      {
+        "title": "Motor unit mechanisms of speed control in mouse locomotion",
+        "authors": "Thomas K., Gibbs R., Marques H., Carey M. R., Sober S. J.",
+        "year": "2026",
+        "journal": "eLife 14",
+        "url": "https://doi.org/10.7554/elife.105829.4",
+        "doi": "10.7554/elife.105829.4"
+      },
+      {
+        "title": "Dissociable cerebellar pathways for reach correction and learning",
+        "authors": "Dobrott C. I., Nashef A., Becker M. I., Person A. L.",
+        "year": "2026",
+        "journal": "Neuron",
+        "url": "https://doi.org/10.1016/j.neuron.2026.10.010",
+        "doi": "10.1016/j.neuron.2026.10.010"
+      },
+      {
+        "title": "Motor cortex retains and reorients neural dynamics during motor imagery",
+        "authors": "Dekleva B. M. et al.",
+        "year": "2024",
+        "journal": "Nature Human Behaviour 8:729-742",
+        "url": "https://doi.org/10.1038/s41562-023-01804-5",
+        "doi": "10.1038/s41562-023-01804-5"
+      },
+      {
+        "title": "Same Movements, Different Skills: How Context Shapes Learning in Humans and Neural Networks",
+        "authors": "Gupta M. W., Taylor J. A.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.11.08.764653",
+        "url": "https://doi.org/10.64898/2026.11.08.764653",
+        "doi": "10.64898/2026.11.08.764653"
+      },
+      {
+        "title": "The transformer as a candidate canonical cortical microcircuit",
+        "authors": "Shah Y., Yamins D. L. K.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.11.01.763457",
+        "url": "https://doi.org/10.64898/2026.11.01.763457",
+        "doi": "10.64898/2026.11.01.763457"
+      },
+      {
+        "title": "Development of appropriate sensorimotor recalibration for a de novo skill",
+        "authors": "Wang T., Li Y., Taylor J. A., Ivry R. B.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.11.02.763836",
+        "url": "https://doi.org/10.64898/2026.11.02.763836",
+        "doi": "10.64898/2026.11.02.763836"
+      }
+    ]
+  },
+  {
     "list_num": 354,
     "title": "Reading List 354",
     "pub_date": "2026-11-13",
     "url": "https://superlab.ca/posts/2026-11-14-list354.html",
+    "papers": [
+      {
+        "title": "Simple, static, spiking nonlinearities can account for seemingly complex interactions between visual, motor and cognitive variables in the visual cortex.",
+        "authors": "Zajkowski W. K. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.11.01.763479",
+        "url": "https://doi.org/10.64898/2026.11.01.763479",
+        "doi": "10.64898/2026.11.01.763479"
+      },
+      {
+        "title": "Optimization principles, revisited",
+        "authors": "Bialek W.",
+        "year": "2026",
+        "journal": "arXiv:2611.14381",
+        "url": "https://doi.org/10.48550/arxiv.2611.14381",
+        "doi": "10.48550/arxiv.2611.14381"
+      },
+      {
+        "title": "Interpreting computational mechanism from multi-area neural recordings",
+        "authors": "Versteeg C. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.11.09.765426",
+        "url": "https://doi.org/10.64898/2026.11.09.765426",
+        "doi": "10.64898/2026.11.09.765426"
+      },
+      {
+        "title": "Parkinson Disease vs Aging Features Impairments in Formation and Release of a Power Grip in Real and Pantomimed String-Pulling",
+        "authors": "Kia M. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.10.29.762925",
+        "url": "https://doi.org/10.64898/2026.10.29.762925",
+        "doi": "10.64898/2026.10.29.762925"
+      },
+      {
+        "title": "Bayesian brain mapping: A population-informed framework for personalized functional network topography and connectivity",
+        "authors": "Derman D. et al.",
+        "year": "2026",
+        "journal": "Imaging Neuroscience 4",
+        "url": "https://doi.org/10.1162/imag.a.1411",
+        "doi": "10.1162/imag.a.1411"
+      },
+      {
+        "title": "Dissociation of gravity and limb dynamics in motor control",
+        "authors": "Gritsenko V. et al.",
+        "year": "2026",
+        "journal": "Proceedings of the National Academy of Sciences 123",
+        "url": "https://doi.org/10.1073/pnas.2613283123",
+        "doi": "10.1073/pnas.2613283123"
+      },
+      {
+        "title": "Motivation-dependent communication between cortex and brainstem",
+        "authors": "Machado T. A. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.11.05.764652",
+        "url": "https://doi.org/10.64898/2026.11.05.764652",
+        "doi": "10.64898/2026.11.05.764652"
+      },
+      {
+        "title": "Circuit mechanisms for disentangled representations and generalization in the hippocampus",
+        "authors": "Tang W. et al.",
+        "year": "2026",
+        "journal": "Nature Neuroscience",
+        "url": "https://doi.org/10.1038/s41593-026-02491-x",
+        "doi": "10.1038/s41593-026-02491-x"
+      },
+      {
+        "title": "Transient feedforward communication between somatosensory and premotor cortex supports goal-directed behavior",
+        "authors": "Ranjbar-Slamloo Y., Kamigaki T.",
+        "year": "2026",
+        "journal": "PLOS Biology 24:e3004095",
+        "url": "https://doi.org/10.1371/journal.pbio.3004095",
+        "doi": "10.1371/journal.pbio.3004095"
+      },
+      {
+        "title": "What can behavior tell us about neural dynamics?",
+        "authors": "Cazettes F., Schölvinck M. L.",
+        "year": "2026",
+        "journal": "Trends in Cognitive Sciences",
+        "url": "https://doi.org/10.1016/j.tics.2026.10.003",
+        "doi": "10.1016/j.tics.2026.10.003"
+      },
+      {
+        "title": "Influence of force direction on motor-unit activity during low-force isometric contractions with the first dorsal interosseous muscle",
+        "authors": "Koger K. et al.",
+        "year": "2026",
+        "journal": "Journal of Neurophysiology 136:1392-1404",
+        "url": "https://doi.org/10.1152/jn.00269.2026",
+        "doi": "10.1152/jn.00269.2026"
+      },
+      {
+        "title": "Transcranial magnetic stimulation to the dorsolateral prefrontal cortex modulates single-neuron activity in humans",
+        "authors": "Dickey C. W. et al.",
+        "year": "2026",
+        "journal": "Proceedings of the National Academy of Sciences 123",
+        "url": "https://doi.org/10.1073/pnas.2610803123",
+        "doi": "10.1073/pnas.2610803123"
+      },
+      {
+        "title": "The first 1000 days: Modeling language learning from individual children’s everyday speech",
+        "authors": "Raviv H. et al.",
+        "year": "2026",
+        "journal": "Science 394",
+        "url": "https://doi.org/10.1126/science.aeh9311",
+        "doi": "10.1126/science.aeh9311"
+      },
+      {
+        "title": "Increased activity without changes in coupling between somata and apical dendrites during visual mismatches",
+        "authors": "Henley T. M. et al.",
+        "year": "2026",
+        "journal": "bioRxiv:2026.11.04.764139",
+        "url": "https://doi.org/10.64898/2026.11.04.764139",
+        "doi": "10.64898/2026.11.04.764139"
+      },
+      {
+        "title": "A ‘Basin of Attraction’ Theory of Speech Initiation and Stuttering",
+        "authors": "Guenther F. H. H., Chang S. E., Cannon J.",
+        "year": "2026",
+        "journal": "10.31234/osf.io/jf9eu_v2",
+        "url": "https://doi.org/10.31234/osf.io/jf9eu_v2",
+        "doi": "10.31234/osf.io/jf9eu_v2"
+      },
+      {
+        "title": "OpenMotor: Open data for motor control and motor learning",
+        "authors": "Tsay J., Padmanabhan S., Nyamsuren I.",
+        "year": "",
+        "journal": "https://physicalintelligencelab.github.io/openmotor",
+        "url": "https://physicalintelligencelab.github.io/openmotor",
+        "doi": null
+      }
+    ]
+  },
+  {
+    "list_num": 354,
+    "title": "Reading List 354",
+    "pub_date": "2026-11-13",
+    "url": "https://superlab.ca/posts/2026-11-13-list354.html",
     "papers": [
       {
         "title": "Simple, static, spiking nonlinearities can account for seemingly complex interactions between visual, motor and cognitive variables in the visual cortex.",

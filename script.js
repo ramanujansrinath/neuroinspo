@@ -5,6 +5,48 @@ let currentSort  = 'upload';
 let currentLayout = 'grid';
 let activeDoi    = null;   // DOI of the paper whose panel is open
 
+// ─── Deep links (e.g. neuroinspo.site/#56 opens that paper's panel) ───────────
+// Uses a hash, not a path, so it works with plain static hosting (no server-side
+// rewrite needed) and doesn't change how any other relative URL on the page resolves.
+
+function paperNumber(paper) {
+  const m = /thumbnails\/(\d+)\.png$/.exec(paper.thumbnail || '');
+  return m ? Number(m[1]) : null;
+}
+
+function parsePaperNumberFromHash() {
+  const m = /^#(\d+)$/.exec(window.location.hash);
+  return m ? Number(m[1]) : null;
+}
+
+// mode: 'push' | 'replace' | falsy (leave history/URL alone)
+function syncHash(mode) {
+  if (!mode) return;
+  const paper = allPapers.find(p => p.doi === activeDoi);
+  const n = paper ? paperNumber(paper) : null;
+  const url = new URL(window.location.href);
+  url.hash = n ? String(n) : '';
+  if (url.toString() === window.location.href) return;
+  history[mode === 'replace' ? 'replaceState' : 'pushState'](null, '', url);
+}
+
+function openPaperFromHash() {
+  const n = parsePaperNumberFromHash();
+  if (!n) return;
+  const paper = allPapers.find(p => paperNumber(p) === n);
+  if (paper) openPanel(paper, { historyMode: 'replace' });
+}
+
+window.addEventListener('popstate', () => {
+  const n = parsePaperNumberFromHash();
+  const paper = n ? allPapers.find(p => paperNumber(p) === n) : null;
+  if (paper) {
+    openPanel(paper, { historyMode: null });
+  } else if (activeDoi) {
+    closePanel(true, null);
+  }
+});
+
 // ─── Data loading ────────────────────────────────────────────────────────────
 
 async function loadPapers() {
@@ -35,6 +77,7 @@ async function loadPapers() {
   }
 
   renderPapers(true /* initial */);
+  openPaperFromHash();
 }
 
 // ─── Sort ────────────────────────────────────────────────────────────────────
@@ -142,9 +185,9 @@ function buildPanel(paper) {
   return panel;
 }
 
-function openPanel(paper, clickedWrapper) {
+function openPanel(paper, { historyMode = 'push' } = {}) {
   // Same card clicked again — close
-  if (activeDoi === paper.doi) { closePanel(); return; }
+  if (activeDoi === paper.doi) { closePanel(false, historyMode); return; }
 
   // Update active-card highlight
   activeDoi = paper.doi;
@@ -158,11 +201,12 @@ function openPanel(paper, clickedWrapper) {
     const body = existing.querySelector('.pdf-panel-body');
     body.innerHTML = panelBodyHtml(paper);
     body.scrollTop = 0;
+    syncHash(historyMode);
     return;
   }
 
   // First open — slide in from right (desktop) or bottom (mobile)
-  closePanel(true);
+  closePanel(true, null);
 
   // Add backdrop (mobile only — CSS hides it on desktop)
   const backdrop = document.createElement('div');
@@ -177,15 +221,18 @@ function openPanel(paper, clickedWrapper) {
     panel.classList.add('open');
     backdrop.classList.add('open');
   });
+
+  syncHash(historyMode);
 }
 
-function closePanel(instant = false) {
+function closePanel(instant = false, historyMode = 'push') {
   const panel    = document.getElementById('pdf-panel');
   const backdrop = document.getElementById('pdf-backdrop');
   if (!panel) return;
 
   document.querySelectorAll('.card-wrapper').forEach(el => el.classList.remove('active'));
   activeDoi = null;
+  syncHash(historyMode);
 
   if (instant) {
     panel.remove();
@@ -310,7 +357,7 @@ function makeCard(paper) {
   card.appendChild(info);
   wrapper.appendChild(card);
 
-  wrapper.addEventListener('click', () => openPanel(paper, wrapper));
+  wrapper.addEventListener('click', () => openPanel(paper));
   return wrapper;
 }
 

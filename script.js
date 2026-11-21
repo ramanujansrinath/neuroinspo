@@ -34,7 +34,10 @@ function openPaperFromHash() {
   const n = parsePaperNumberFromHash();
   if (!n) return;
   const paper = allPapers.find(p => paperNumber(p) === n);
-  if (paper) openPanel(paper, { historyMode: 'replace' });
+  if (!paper) return;
+  openPanel(paper, { historyMode: 'replace' });
+  document.querySelector(`.card-wrapper[data-doi="${paper.doi}"]`)
+    ?.scrollIntoView({ block: 'center' });
 }
 
 window.addEventListener('popstate', () => {

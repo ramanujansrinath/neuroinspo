@@ -1726,5 +1726,21 @@
     "journal": "Neuron",
     "abstract": "One hallmark of intelligent behavior is the ability to optimize how much time is devoted to decisions. Yet the principles governing decision timing remain unclear. Here, we developed a novel paradigm for directly comparing decision-making between mice and humans. This approach allowed us to combine widefield and 2-photon imaging in the mouse frontal cortex with optogenetic inhibition to examine the underlying mechanisms. We found that history-dependent refinement of sequences in the medial frontal cortex (MFC), versus a thresholding mechanism in the lateral frontal cortex (LFC), provides a unified logic for decision strategy on a trial-by-trial basis. Notably, behavioral performance and strategy were profoundly disrupted by optogenetic inhibition of the MFC compared with that of the LFC, revealing a dominant cognitive role for MFC in decision selection and timing. These dynamics reflect reinforcement-learning updates that explain timing variability better than sensory evidence. Our findings provide a computational framework that unifies voluntary decision-making across species.",
     "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.11.19.767952",
+    "url": "https://doi.org/10.64898/2026.11.19.767952",
+    "thumbnail": "thumbnails/109.png",
+    "title": "Neural mechanisms of lightness constancy",
+    "citation": "Didehvar et al., 2026",
+    "full_citation": "Didehvar, Vanstiphout, Cavanagh, and Franken, 2026",
+    "citation_journal": "(preprint)",
+    "first_author": "Didehvar",
+    "last_author": "Franken",
+    "pub_date": "2026-11-20",
+    "upload_date": "2026-11-23T14:53:04",
+    "journal": null,
+    "abstract": "Object-specific variables are entangled in sensory input. For example, lightness, whether a surface is white or black, not only depends on the surface reflectance but also on the incident illumination. The brain must thus perform inference to achieve a reliable percept of lightness irrespective of illumination (lightness constancy). Whether this results from simple luminance contrast operations early in the visual system or computations at higher levels remains unresolved. We find that neural lightness signals only appear in the extragranular layers of cortical Area V4, and dominate for shadow regions, as opposed to the comparison of local and surrounding luminance (simultaneous contrast). This suggests that lightness is computed downstream from simultaneous contrast, ruling out simple low-level mechanisms, and instead supporting mid-level anchoring theory.",
+    "is_author": false
   }
 ]

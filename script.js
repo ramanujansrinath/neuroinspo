@@ -92,9 +92,16 @@ function sorted(papers, by) {
       (a[key] || '￿').localeCompare(b[key] || '￿', undefined, { sensitivity: 'base' })
     );
   }
+  if (by === 'upload') {
+    // Paper numbers (from thumbnails/<n>.png) are assigned in the order
+    // papers are appended to dois.text, so higher number = added more
+    // recently — a reliable signal, unlike upload_date (a filesystem
+    // timestamp that git checkouts/clones can scramble).
+    return [...papers].sort((a, b) => (paperNumber(b) ?? -1) - (paperNumber(a) ?? -1));
+  }
   return [...papers].sort((a, b) => {
-    const da = new Date(by === 'upload' ? a.upload_date : (a.pub_date ?? '1900-01-01'));
-    const db = new Date(by === 'upload' ? b.upload_date : (b.pub_date ?? '1900-01-01'));
+    const da = new Date(a.pub_date ?? '1900-01-01');
+    const db = new Date(b.pub_date ?? '1900-01-01');
     return db - da;
   });
 }

@@ -11,13 +11,11 @@ Dependencies:
 """
 
 import json
-import os
 import re
 import subprocess
 import time
 import xml.etree.ElementTree as ET
 from pathlib import Path
-from datetime import datetime
 
 import requests
 
@@ -202,20 +200,11 @@ def process():
         if not thumbnail:
             print(f"  ⚠ no thumbnail at thumbnails/{i}.png")
 
-        # Thumbnail mtime = "upload date" (when you added it to the board)
-        if thumb_path.exists():
-            stat = os.stat(thumb_path)
-            upload_ts = getattr(stat, "st_birthtime", None) or stat.st_mtime
-            upload_date = datetime.fromtimestamp(upload_ts).isoformat(timespec="seconds")
-        else:
-            upload_date = datetime.now().isoformat(timespec="seconds")
-
-        # Serve cached metadata but always refresh thumbnail path & upload date
-        # (in case dois.text was reordered)
+        # Serve cached metadata but refresh the thumbnail path (in case
+        # dois.text was reordered).
         if doi in existing:
             rec = dict(existing[doi])
-            rec["thumbnail"]   = thumbnail
-            rec["upload_date"] = upload_date
+            rec["thumbnail"] = thumbnail
             records.append(rec)
             print("  ✓ cached — skipping API call")
             continue
@@ -288,7 +277,6 @@ def process():
             "first_author": first_author,
             "last_author":  last_author,
             "pub_date":    pub_date,
-            "upload_date": upload_date,
             "journal":     journal,
             "abstract":    abstract,
             "is_author":   is_author,

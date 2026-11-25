@@ -1633,5 +1633,20 @@
     "journal": null,
     "abstract": "Object-specific variables are entangled in sensory input. For example, lightness, whether a surface is white or black, not only depends on the surface reflectance but also on the incident illumination. The brain must thus perform inference to achieve a reliable percept of lightness irrespective of illumination (lightness constancy). Whether this results from simple luminance contrast operations early in the visual system or computations at higher levels remains unresolved. We find that neural lightness signals only appear in the extragranular layers of cortical Area V4, and dominate for shadow regions, as opposed to the comparison of local and surrounding luminance (simultaneous contrast). This suggests that lightness is computed downstream from simultaneous contrast, ruling out simple low-level mechanisms, and instead supporting mid-level anchoring theory.",
     "is_author": false
+  },
+  {
+    "doi": "10.1038/s41593-026-02520-9",
+    "url": "https://doi.org/10.1038/s41593-026-02520-9",
+    "thumbnail": "thumbnails/110.png",
+    "title": "Highly selective visual circuits in mouse frontal cortex",
+    "citation": "Lien and Haider, 2026",
+    "full_citation": "Lien and Haider, 2026",
+    "citation_journal": "Nat Neurosci",
+    "first_author": "Lien",
+    "last_author": "Haider",
+    "pub_date": "2026-11-24",
+    "journal": "Nature Neuroscience",
+    "abstract": "It is thought that elementary stimulus encoding happens primarily in the sensory cortex. We found that frontal cortex neurons in awake mice show highly selective visual spatial receptive fields, akin to the visual cortex. These neurons were most sensitive to binocular visual space, required retinotopically aligned V1 input and sent functional axonal feedback throughout the visual cortex, particularly binocular V1. This reveals a cortex-wide circuit suitable for selective feedback control of spatial vision.",
+    "is_author": false
   }
 ]

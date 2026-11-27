@@ -1708,5 +1708,20 @@
     "journal": null,
     "abstract": "In humans, hands are animate effectors and tools are visually dissimilar inanimate objects, yet the brain represents them in closely related cortical systems. Whether this coupling depends uniquely on human tool knowledge or reflects a conserved property of primate cortex is unknown. Using whole brain fMRI (0.22 cubic mm voxels) in macaques viewing images of hands, tools, and other objects, we found that inferotemporal cortex largely followed the animate/inanimate division, with only a few small hand-tool preferring sites. In contrast, parietal and prefrontal areas showed hand-tool representational similarities that were best matched by a neural-network model trained on fine-grained human hand-object interactions rather than by networks optimized for static object recognition or general action recognition. Volumetric functional ultrasound imaging (0.0023 cubic mm voxels) independently showed that tool responses were spatially aligned with human hand, but not monkey hand, responses in posterior parietal cortex. Macaque cortex thus represents tools in relation to the hand even without habitual tool use, consistent with an evolutionarily conserved action related scaffold that may be shaped by longterm visual exposure to human hand tool interactions.",
     "is_author": false
+  },
+  {
+    "doi": "10.64898/2026.11.19.767518",
+    "url": "https://doi.org/10.64898/2026.11.19.767518",
+    "thumbnail": "thumbnails/115.png",
+    "title": "Seeing new 'stuff' for the very first time",
+    "citation": "Cheeseman et al., 2026",
+    "full_citation": "Cheeseman, Schmidt, Sun, Liao, Xiao, and Fleming, 2026",
+    "citation_journal": "(preprint)",
+    "first_author": "Cheeseman",
+    "last_author": "Fleming",
+    "pub_date": "2026-11-25",
+    "journal": null,
+    "abstract": "Humans are excellent at recognizing materials like food, soil or paper, which is crucial for many everyday tasks. We generally enjoy vivid intuitions about what surfaces would feel like, without reaching out and touching them. While this capability is understandable for familiar materials, how does the brain interpret stuff we have never encountered before? We hypothesized that the need to distinguish useful or hazardous substances by sight led to the ability to infer material properties from the very first encounter. To test this, we used generative AI to synthesize realistic images of new 'hybrid' materials, by fusing characteristics of images from different 'parent' categories (e.g., bark × carpet). Even though the hybrid materials have never existed in the real world—and observers judged them to be far less familiar than their parents—we found that they elicited a rich and compelling phenomenology, and yielded consistent inferences about their likely physical and multisensory properties, such as what they would feel like to touch. Their perceived properties occupied the same broad multidimensional space as familiar materials, whereas phase-scrambled controls did not. Our findings suggest that the visual system exploits generalizable relationships between visual appearance and physical properties, enabling instantaneous interpretation of new kinds of 'stuff'.",
+    "is_author": false
   }
 ]
